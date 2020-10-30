@@ -24,3 +24,5 @@ Here you can find a list of awesome ontologies that could be relevant for the kn
 - [Framester](http://w3id.org/framester/)
 
 ### Knowledge Area: Script (interpreation and reflection)
+
+- [Hico](http://hico.sourceforge.net/owl/hico.owl)
