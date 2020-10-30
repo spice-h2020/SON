@@ -1,0 +1,25 @@
+# Awesome ontologies for SPICE
+
+Here you can find a list of awesome ontologies that could be relevant for the knowledge areas of the  SPICE project.
+
+### Knowledge Area: Emotion
+
+- [ArsEmotica](http://130.192.212.225/fuseki/ArsEmotica-core)
+- [Framester's DepecheMood](https://github.com/framester/Framester/blob/master/fn-mood-mappings/depechemood2wn_r.ttl)
+- [Framester's SentiWordNet](https://github.com/framester/Framester/blob/master/fn-mood-mappings/swn30.ttl)
+
+### Knowledge Area: Narrative
+
+- [Labyrinth](http://130.192.212.225/fuseki/Labyrinth-Narrative)
+
+### Knowledge Area: Symbolism
+
+### Knowledge Area: Artwork Description
+
+- [ArCo's Denotative Description](https://w3id.org/arco/ontology/denotative-description)
+
+### Knowledge Area: Linguistic Knowledge
+
+- [Framester](http://w3id.org/framester/)
+
+### Knowledge Area: Script (interpreation and reflection)
