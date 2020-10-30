@@ -11,6 +11,8 @@ Here you can find a list of awesome ontologies that could be relevant for the kn
 ### Knowledge Area: Narrative
 
 - [Labyrinth](http://130.192.212.225/fuseki/Labyrinth-Narrative)
+- [Drammar](http://purl.org/drammar)
+
 
 ### Knowledge Area: Symbolism
 
