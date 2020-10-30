@@ -1,2 +1,2 @@
 # SON
-This repository contains the source of the SPICE Ontology Network
+This repository contains the source code of the SPICE Ontology Network
