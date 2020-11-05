@@ -18,3 +18,12 @@ Provide a description of the story.
 **Competency Questions**
 
 Provide one or more competency questions the ontology shall be able to answer.
+
+**SPARQL Questions**
+
+Provide one or more SPARQL queries that express the compentency questions.
+
+**Toy Dataset**
+
+Provide the link to or upload a toy dataset that can be used for unit test.
+
