@@ -28,3 +28,5 @@ Here you can find a list of awesome ontologies that could be relevant for the kn
 ### Knowledge Area: Scripting (Interpretation and Reflection)
 
 - [Hico](http://hico.sourceforge.net/owl/hico.owl)
+
+### Knowledge Area: User and Community Modelling 
