@@ -62,14 +62,14 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
                             <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
                             <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
                             <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
+                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Manifestation"/>
                             <rdf:Description rdf:about="http://w3id.org/vir#IC9_Representation"/>
                             <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
                                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
                             </owl:Restriction>
                         </owl:unionOf>
@@ -126,10 +126,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
                             <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
                             <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
                             <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
+                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Manifestation"/>
                             <rdf:Description rdf:about="http://w3id.org/vir#IC9_Representation"/>
                             <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
                             <owl:Restriction>

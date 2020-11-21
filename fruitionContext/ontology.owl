@@ -215,6 +215,14 @@
     
 
 
+    <!-- https://w3id.org/spice/son/fruitionContext/Gustative -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/son/fruitionContext/Gustative">
+        <rdf:type rdf:resource="https://w3id.org/spice/son/fruitionContext/Modality"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/spice/son/fruitionContext/Olfactive -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/son/fruitionContext/Olfactive">
