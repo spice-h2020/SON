@@ -1,4 +1,4 @@
-/SON/<?xml version="1.0"?>
+<?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/spice/SON/emotion/"
      xml:base="https://w3id.org/spice/SON/emotion/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
