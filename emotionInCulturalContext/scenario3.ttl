@@ -1,0 +1,72 @@
+
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix e: <https://w3id.org/spice/SON/emotion/> .
+@prefix eic: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix fc: <https://w3id.org/spice/SON/fruitionContext/occursWithin> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+
+
+
+# PEOPLE
+
+e:A a dul:Person .
+e:B a dul:Person .
+
+
+
+# FRUITION CONTEXT
+
+e:ALFVirtualExhibition fc:occursWithin e:VirtualExhibition;
+    a fc:RemoteFruitionContext;
+    fc:isSupportedBy fc:ADevice;
+    dul:hasParticipant e:A.
+
+e:BLFVirtualExhibition fc:occursWithin e:VirtualExhibition;
+    a fc:RemoteFruitionContext;
+    fc:isSupportedBy fc:BDevice;
+    dul:hasParticipant e:B.
+
+
+
+
+# CULTURAL ENTITIES
+
+e:LFVirtualCollection a cis:CulturalEntity ;
+    e:triggers e:HappynessOfA, e:ContentmentOfA , e:SenseOfRepetitivenessOfB, e:BoredomOfB .
+
+
+# EMOTIONS
+
+e:HappynessOfA a e:Emotion .
+e:ContentmentOfA a e:Emotion .
+e:SenseOfRepetitivenessOfB a e:Emotion .
+e:BoredomOfB a e:Emotion .
+
+
+
+
+# EMOTIONAL RELATIONS
+
+#for A
+
+e:ALFVirtualCollectionER a cis:EmotionRelationInCulturalContext;
+    e:stimulus e:LFVirtualCollection;
+    e:emotion e:HappynessOfA;
+    e:emotion e:ContentmentOfA ;
+    e:experiencer e:A ;
+    fc:hasFruitionContext e:LFVirtualExhibition .
+    
+
+#for B
+
+e:BLFVirtualCollectionER a cis:EmotionRelationInCulturalContext;
+    e:stimulus e:LFVirtualCollection;
+    e:emotion e:SenseOfRepetitivenessofB;
+    e:emotion e:BoredomOfB ;
+    e:experiencer e:B ;
+    fc:hasFruitionContext e:LFVirtualExhibition .
+
+
+

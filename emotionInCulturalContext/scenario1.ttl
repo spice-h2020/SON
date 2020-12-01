@@ -1,0 +1,109 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix e: <https://w3id.org/spice/SON/emotion/> .
+@prefix eic: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+
+
+# PEOPLE
+
+
+e:A a dul:Person .
+
+
+e:B a dul:Person .
+
+
+e:C a dul:Person .
+
+
+# CULTURAL ENTITIES or QUALITIES or PARTS OF THEM
+
+
+e:Painting a cis:CulturalEntity ;
+    dul:hasQuality e:PaintingSize ;
+    e:triggers e:SadnessOfA , e:AngerOfC .  # how do I represent this?
+
+
+e:PaintingSize a dul:Quality ;
+    e:triggers e:SurpriseOfB .
+
+# again is this a quality?
+
+
+e:Manuscript a cis:CulturalEntity ;
+    dul:hasQuality e:ManuscriptColor ;
+    e:triggers e:ApathyOfA , e:ConfusionOfA , e:SadnessOfC .
+
+
+e:ManuscriptColor a dul:Quality ;
+    e:triggers e:JoyOfB .  # same question
+
+
+
+# EMOTIONS
+
+
+e:SadnessOfA a e:Emotion .
+
+
+e:SadnessOfC a e:Emotion .
+
+
+e:SurpriseOfB a e:Emotion .
+
+
+e:AngerOfC a e:Emotion .
+
+
+e:JoyOfB a e:Emotion .
+
+
+e:ApathyOfA a e:Emotion .
+
+
+e:ConfusionOfA a e:Emotion .  # is it??
+
+
+# EMOTON RELATIONS
+
+
+e:APaintingER a cis:EmotionRelationInCulturalContext ;
+    e:stimulus e:Painting ;
+    e:emotion e:SadnessOfA ;
+    e:experiencer e:A .  # Expression, Manifestation, Work?
+
+
+e:AManuscriptER a cis:EmotionRelationInCulturalContext ;
+    e:experiencer e:A ;
+    e:emotion e:ApathyOfA , e:ConfusionOfA ;
+    e:stimulus e:Manuscript .  # item
+
+
+e:BPaintingER a cis:EmotionRelationInCulturalContext ;
+    e:experiencer e:B ;
+    e:emotion e:SurpriseOfB ;
+    e:stimulus e:PaintingSize .  # item
+
+
+e:BManuscriptER a cis:EmotionRelationInCulturalContext ;
+    e:experiencer e:B ;
+    e:emotion e:JoyOfB ;
+    e:stimulus e:ManuscriptColor .  # item
+
+
+e:CPaintingER a cis:EmotionRelationInCulturalContext ;
+    e:experiencer e:C ;
+    e:emotion e:AngerOfC ;
+    e:stimulus e:Painting .  # Expression, Manifestation, Work..?
+
+
+e:CManuscriptER a cis:EmotionRelationInCulturalContext ;
+    e:experiencer e:C ;
+    e:emotion e:SadnessOfC ;
+    e:stimulus e:Manuscript .  # item
+
+
+
+
