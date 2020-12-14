@@ -28,6 +28,7 @@
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/emotionInCulturalContext">
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/emotionInCulturalContext/0.0.1"/>
         <owl:imports rdf:resource="http://purl.org/spar/frbr/2018-03-29"/>
+				<dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/emotionInCulturalContext/EmotionInCulturalContext.png" />
         <owl:imports rdf:resource="http://w3id.org/vir#"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/Cultural-ON/v3.2/Cultural-ON-AP_IT.rdf"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/fruitionContext/0.0.1"/>
