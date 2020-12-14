@@ -12,7 +12,7 @@
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/ekmanEmotions">
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/ekmanEmotions/0.0.1"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
-        <dc:description>https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/EkmanEmotions.png</dc:description>
+        <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/EkmanEmotions.png"/>
     </owl:Ontology>
     
 
