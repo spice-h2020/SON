@@ -23,6 +23,7 @@
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/Cultural-ON/v3.2/Cultural-ON-AP_IT.rdf"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
+				<dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/fruitionContext/FruitionContext.png" />
         <owl:imports rdf:resource="https://w3id.org/spice/SON/curatorialContext/0.0.1"/>
     </owl:Ontology>
 

@@ -12,6 +12,7 @@
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+				<dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/emotion/Emotion.png" />
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/curatorialContext/0.0.1"/>
     </owl:Ontology>
