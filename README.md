@@ -6,9 +6,10 @@ This repository contains the source code of the SPICE Ontology Network
 ## Contributors and Roles
 
 - Luigi Asprino (UNIBO) - Maintainer
+- Rossana Damiano (UNITO)
 - Marilena Daquino (UNIBO)
-- Aldo Gangemi (CNR-UNIBO)
 - Stefano De Giorgis (UNIBO)
+- Aldo Gangemi (CNR-UNIBO)
 - Antonio Lieto (UNITO)
 - Bruno Sartini (UNIBO)
 
