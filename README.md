@@ -6,11 +6,19 @@ This repository contains the source code of the SPICE Ontology Network
 ## Contributors and Roles
 
 - Luigi Asprino (UNIBO) - Maintainer
+- Rossana Damiano (UNITO)
 - Marilena Daquino (UNIBO)
+- Stefano De Giorgis (UNIBO)
 - Aldo Gangemi (CNR-UNIBO)
-- Stefano de Giorgis (UNIBO)
 - Antonio Lieto (UNITO)
 - Bruno Sartini (UNIBO)
+
+## Modules
+
+- [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
+- [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion``
+- [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) ``https://w3id.org/spice/SON/emotionInCulturalContext``
+- [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext``
 
 ## License
 

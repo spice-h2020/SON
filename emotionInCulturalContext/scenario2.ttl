@@ -1,0 +1,71 @@
+
+
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix e: <https://w3id.org/spice/SON/emotion/> .
+@prefix eic: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+
+
+
+
+# PEOPLE
+
+e:A a dul:Person .
+e:B a dul:Person .
+
+
+
+# CULTURAL ENTITIES
+
+e:SampleOpera1 a cis:CulturalEntity ;
+    e:triggers e:SurpriseOfA , e:AmusementOfA , e:EnthusiasmOfA , e:EnthusiasmOfB .
+
+e:ChairLegs dul:isPartOf e:SampleOpera1 ;
+    e:triggers e:AdmirationOfB .
+
+
+
+# EMOTIONS
+
+e:SurpriseOfA a e:Emotion .
+e:AmusementOfA a e:Emotion .
+e:EnthusiasmOfA a e:Emotion;
+    e:intensity "7" .
+e:EnthusiasmOfB a e:Emotion;
+    e:intensity "9" .
+e:SadnessOfB a e:Emotion .
+e:AdmirationOfB a e:Emotion;
+    e:description "it's pure genius!" .
+
+
+
+# EMOTIONS RELATIONS
+
+
+# for A
+
+e:ASampleOpera1ER a cis:EmotionRelationInCulturalContext;
+    e:stimulus e:SampleOpera1;
+    e:emotion e:SurpriseOfA;
+    e:emotion e:AmusementOfA;
+    e:emotion e:EnthusiasmOfA ;
+    e:experiencer e:A .
+
+# for B
+
+e:BSampleOpera1ER a cis:EmotionRelationInCulturalContext;
+    e:stimulus e:SampleOpera1;
+    e:emotion e:EnthusiasmOfB ;
+    e:emotion e:SadnessOfB .
+
+
+e:BPartOfSampleOpera1ER e:stimulus e:ChairLegs;
+    e:experiencer e:B ;
+    a BSampleOperaER .
+
+
+
+
+
