@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/spice/SON/emotion/"
      xml:base="https://w3id.org/spice/SON/emotion/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-		 xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -13,14 +13,31 @@
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
-				<dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/emotion/Emotion.png" />
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/curatorialContext/0.0.1"/>
+        <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/emotion/Emotion.png"/>
     </owl:Ontology>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <!--
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -28,7 +45,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting -->
@@ -36,13 +53,13 @@
     <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting">
         <owl:equivalentProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
     </rdf:Description>
-
+    
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting -->
 
     <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/emotion -->
@@ -50,7 +67,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/emotion/emotion">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/experiencer -->
@@ -59,7 +76,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/stimulus -->
@@ -67,7 +84,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/emotion/stimulus">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/triggers -->
@@ -82,10 +99,10 @@
             <rdf:Description rdf:about="https://w3id.org/spice/SON/emotion/emotion"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -93,13 +110,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/arco/ontology/core/description -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/description"/>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/confidenceScore -->
@@ -108,7 +125,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/emotion/EmotionRelation"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/description -->
@@ -117,7 +134,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/intensity -->
@@ -126,7 +143,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/emotion/EmotionRelation"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/label -->
@@ -134,10 +151,10 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/spice/SON/emotion/label">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -145,7 +162,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation -->
@@ -153,7 +170,7 @@
     <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
         <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
     </rdf:Description>
-
+    
 
 
     <!-- http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval -->
@@ -161,25 +178,24 @@
     <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval">
         <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
     </rdf:Description>
-
+    
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
 
     <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
-
+    
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval -->
 
     <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/Emotion -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/emotion/Emotion">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
@@ -193,7 +209,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/emotion/EmotionRelation -->
@@ -243,3 +259,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
