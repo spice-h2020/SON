@@ -18,8 +18,9 @@ This repository contains the source code of the SPICE Ontology Network
 Scripting
 - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
 - [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext``
+- [Scripting manifest](https://w3id.org/spice/SON/scripting) ``https://w3id.org/spice/SON/scripting``
 
-Emotion 
+Emotion
 - [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion``
 - [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) ``https://w3id.org/spice/SON/emotionInCulturalContext``
 - [Ekman emotions](https://w3id.org/spice/SON/ekmanEmotions) ``https://w3id.org/spice/SON/ekmanEmotions``
