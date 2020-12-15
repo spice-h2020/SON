@@ -1,13 +1,24 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/spice/SON/scripting/"
      xml:base="https://w3id.org/spice/SON/scripting/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:data-view="http://www.w3.org/2003/g/data-view#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/scripting">
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/scripting/0.0.1"/>
+        <owl:imports rdf:resource="http://purl.org/net/p-plan#"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2002/07/owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
     </owl:Ontology>
 
 
@@ -26,6 +37,12 @@
     <!-- http://purl.org/net/p-plan#correspondsToVariable -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#correspondsToVariable"/>
+
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expands -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expands"/>
 
 
 
@@ -55,6 +72,7 @@
     <!-- https://w3id.org/spice/SON/scripting/definesStage -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/definesStage">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expands"/>
         <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/scripting/isStageOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Script"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Stage"/>
@@ -67,6 +85,7 @@
     <!-- https://w3id.org/spice/SON/scripting/definesTask -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/definesTask">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -85,6 +104,7 @@
     <!-- https://w3id.org/spice/SON/scripting/executedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/executedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExecutedIn"/>
         <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/scripting/executesTask"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
@@ -97,6 +117,7 @@
     <!-- https://w3id.org/spice/SON/scripting/executesTask -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/executesTask">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#executesTask"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:comment xml:lang="en">The relation between the execution of a task (an action) and the task executed.</rdfs:comment>
@@ -108,6 +129,8 @@
     <!-- https://w3id.org/spice/SON/scripting/follows -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/follows">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyFollows"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/scripting/precedes"/>
         <rdfs:comment xml:lang="en">The relation between an entity and the entity that follows it in a sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">follows</rdfs:label>
     </owl:ObjectProperty>
@@ -117,6 +140,7 @@
     <!-- https://w3id.org/spice/SON/scripting/forAction -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/forAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
         <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/scripting/hasRoleInTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/RoleInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
@@ -129,6 +153,7 @@
     <!-- https://w3id.org/spice/SON/scripting/generated -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/generated">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generated"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">The relation between an action and the entity generated by the action.</rdfs:comment>
@@ -140,6 +165,7 @@
     <!-- https://w3id.org/spice/SON/scripting/hasInputVariable -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasInputVariable">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Variable"/>
         <rdfs:comment xml:lang="en">The relation between a task and the expected input variable used in the task (possibly to generate an output variable).</rdfs:comment>
@@ -151,6 +177,7 @@
     <!-- https://w3id.org/spice/SON/scripting/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
         <rdfs:comment xml:lang="en">The (physical or abstract) location of an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">has location</rdfs:label>
     </owl:ObjectProperty>
@@ -160,6 +187,7 @@
     <!-- https://w3id.org/spice/SON/scripting/hasOutputVariable -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasOutputVariable">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasOutputVar"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Variable"/>
         <rdfs:comment xml:lang="en">The relation between a task and the expected output variable generated by the task.</rdfs:comment>
@@ -171,6 +199,7 @@
     <!-- https://w3id.org/spice/SON/scripting/hasPurpose -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
         <rdfs:comment xml:lang="en">The purpose or goal of an event, an activity, or a plan (e.g. a script).</rdfs:comment>
         <rdfs:label xml:lang="en">has purpose</rdfs:label>
@@ -181,6 +210,7 @@
     <!-- https://w3id.org/spice/SON/scripting/hasRoleInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasRoleInTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/RoleInTime"/>
         <rdfs:comment xml:lang="en">The relation between an action and a time-indexed situation.</rdfs:comment>
@@ -192,6 +222,7 @@
     <!-- https://w3id.org/spice/SON/scripting/hasSetting -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasSetting">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
         <rdfs:comment xml:lang="en">The relation between an action and the setting for the action.</rdfs:comment>
@@ -203,6 +234,7 @@
     <!-- https://w3id.org/spice/SON/scripting/hasTimeInterval -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasTimeInterval">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTimeInterval"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
         <rdfs:comment xml:lang="en">The relation between an entity and the time interval in which it occurs.</rdfs:comment>
         <rdfs:label xml:lang="en">has time interval</rdfs:label>
@@ -213,6 +245,7 @@
     <!-- https://w3id.org/spice/SON/scripting/includesAction -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/includesAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/ScriptExecution"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
         <rdfs:comment xml:lang="en">The relation between the execution of a script and the actions involved.</rdfs:comment>
@@ -224,6 +257,7 @@
     <!-- https://w3id.org/spice/SON/scripting/isRoleInTimeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/isRoleInTimeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/RoleInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Agent"/>
         <rdfs:comment xml:lang="en">The relation between a time-indexed situation and an agent.</rdfs:comment>
@@ -235,6 +269,7 @@
     <!-- https://w3id.org/spice/SON/scripting/isStageOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/isStageOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpandedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Stage"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Script"/>
         <rdfs:comment xml:lang="en">The relation between a stage and the script that planned it.</rdfs:comment>
@@ -246,6 +281,7 @@
     <!-- https://w3id.org/spice/SON/scripting/isTaskOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/isTaskOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
         <rdfs:comment xml:lang="en">The relation between a task and its role in the script.</rdfs:comment>
@@ -257,6 +293,7 @@
     <!-- https://w3id.org/spice/SON/scripting/occursWithin -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/occursWithin">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
         <rdfs:comment xml:lang="en">The hierarchical relation between (actions and) events.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs within</rdfs:label>
@@ -267,6 +304,7 @@
     <!-- https://w3id.org/spice/SON/scripting/precedes -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/precedes">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyPrecedes"/>
         <rdfs:comment xml:lang="en">The relation between an entity and the entity that precedes it in a sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
     </owl:ObjectProperty>
@@ -276,6 +314,7 @@
     <!-- https://w3id.org/spice/SON/scripting/used -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/used">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Action"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">The relation between an action and the entity used during the action (possibly to generate a new entity).</rdfs:comment>
@@ -287,6 +326,7 @@
     <!-- https://w3id.org/spice/SON/scripting/withRole -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/withRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/RoleInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
         <rdfs:comment xml:lang="en">The relation between a time-indexed situation and the role held by an agent in the situation.</rdfs:comment>
