@@ -19,9 +19,26 @@
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2002/07/owl"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <dc:description>https://raw.githubusercontent.com/spice-h2020/SON/main/scripting/scripting.jpg</dc:description>
         <dc:title xml:lang="en">Scripting module</dc:title>
-        <terms:description>https://raw.githubusercontent.com/spice-h2020/SON/main/scripting/scripting.jpg</terms:description>
     </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
 
 
 
