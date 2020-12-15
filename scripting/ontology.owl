@@ -20,6 +20,7 @@
         <owl:imports rdf:resource="http://www.w3.org/2002/07/owl"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:title xml:lang="en">Scripting module</dc:title>
+        <terms:description>https://raw.githubusercontent.com/spice-h2020/SON/main/scripting/scripting.jpg</terms:description>
     </owl:Ontology>
 
 
@@ -308,6 +309,16 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyPrecedes"/>
         <rdfs:comment xml:lang="en">The relation between an entity and the entity that precedes it in a sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/spice/SON/scripting/satisfies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/satisfies">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+        <rdfs:comment>The relation between a script execution and the script it relies on.</rdfs:comment>
+        <rdfs:label>satisfies</rdfs:label>
     </owl:ObjectProperty>
 
 
