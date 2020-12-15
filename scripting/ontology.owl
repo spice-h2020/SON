@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/spice/SON/scripting/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/spice/SON/scripting/"
+     versionIRI="https://w3id.org/spice/SON/scripting/0.0.1">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://purl.org/net/p-plan#MultiStep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/net/p-plan#Step"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/net/p-plan#Variable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#WorkflowExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Class"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Plan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RoleInTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Script"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ScriptExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Stage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Variable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="correspondsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="definesStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="definesTask"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="executedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="executesTask"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="follows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="forAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="generated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasInputVariable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOutputVariable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPurpose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRoleInTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSetting"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTimeInterval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="includesAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isRoleInTimeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isStageOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isTaskOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="occursWithin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="precedes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="used"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="withRole"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasIntervalDate"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#WorkflowExecution"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Action"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Action"/>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Agent"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Agent"/>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Role"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Role"/>
+        <Class IRI="http://www.w3.org/ns/prov#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RoleInTime"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Script"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Script"/>
+        <Class IRI="http://www.w3.org/ns/prov#Plan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Script"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="definesStage"/>
+                <Class IRI="Stage"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="definesTask"/>
+                <Class IRI="Task"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ScriptExecution"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#WorkflowExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Stage"/>
+        <Class IRI="http://purl.org/net/p-plan#MultiStep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Stage"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Task"/>
+        <Class IRI="http://purl.org/net/p-plan#Step"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Task"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Variable"/>
+        <Class IRI="http://purl.org/net/p-plan#Variable"/>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="definesStage"/>
+        <ObjectProperty IRI="isStageOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="executedIn"/>
+        <ObjectProperty IRI="executesTask"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="forAction"/>
+        <ObjectProperty IRI="hasRoleInTime"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="belongsTo"/>
+        <Class IRI="Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="correspondsTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="definesStage"/>
+        <Class IRI="Script"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="definesTask"/>
+        <ObjectUnionOf>
+            <Class IRI="Script"/>
+            <Class IRI="Stage"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="executedIn"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="executesTask"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="forAction"/>
+        <Class IRI="RoleInTime"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="generated"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasInputVariable"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOutputVariable"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasRoleInTime"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSetting"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="includesAction"/>
+        <Class IRI="ScriptExecution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isRoleInTimeOf"/>
+        <Class IRI="RoleInTime"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isStageOf"/>
+        <Class IRI="Stage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isTaskOf"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="used"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="withRole"/>
+        <Class IRI="RoleInTime"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="belongsTo"/>
+        <Class abbreviatedIRI="owl:Class"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="correspondsTo"/>
+        <Class IRI="Variable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="definesStage"/>
+        <Class IRI="Stage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="definesTask"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="executedIn"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="executesTask"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="forAction"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="generated"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasInputVariable"/>
+        <Class IRI="Variable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOutputVariable"/>
+        <Class IRI="Variable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPurpose"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasRoleInTime"/>
+        <Class IRI="RoleInTime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSetting"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTimeInterval"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="includesAction"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isRoleInTimeOf"/>
+        <Class IRI="Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isStageOf"/>
+        <Class IRI="Script"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isTaskOf"/>
+        <Class IRI="Role"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="occursWithin"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="used"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="withRole"/>
+        <Class IRI="Role"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event</IRI>
+        <Literal xml:lang="en">An event in which a script is executed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event</IRI>
+        <Literal xml:lang="en">Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal</IRI>
+        <Literal xml:lang="en">The purpose of an entity, such as a script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal</IRI>
+        <Literal xml:lang="en">Goal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation</IRI>
+        <Literal xml:lang="en">The context situation in which a script is executed or an agent holds a role.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation</IRI>
+        <Literal xml:lang="en">Situation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval</IRI>
+        <Literal xml:lang="en">A representation of a time interval, characterised by a start and an end.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval</IRI>
+        <Literal xml:lang="en">Time interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Action</IRI>
+        <Literal xml:lang="en">An action is the execution of a task specified in a script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Action</IRI>
+        <Literal xml:lang="en">Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Agent</IRI>
+        <Literal xml:lang="en">An entity involved in an action executing a task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Agent</IRI>
+        <Literal xml:lang="en">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Role</IRI>
+        <Literal xml:lang="en">The role of an agent or a task in a script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Role</IRI>
+        <Literal xml:lang="en">Role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>RoleInTime</IRI>
+        <Literal xml:lang="en">A time-indexed situation in which an agent holds a role.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RoleInTime</IRI>
+        <Literal xml:lang="en">Role in time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Script</IRI>
+        <Literal xml:lang="en">The plan of tasks to be executed in sequence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Script</IRI>
+        <Literal xml:lang="en">Script</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ScriptExecution</IRI>
+        <Literal xml:lang="en">The execution of a number of sequential actions, as planned in a script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ScriptExecution</IRI>
+        <Literal xml:lang="en">Script execution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Stage</IRI>
+        <Literal xml:lang="en">The grouping of tasks to be executed in sequence, as planned in a script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Stage</IRI>
+        <Literal xml:lang="en">Stage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Task</IRI>
+        <Literal xml:lang="en">A task to be accomplished as specified in a script or a stage of the script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Task</IRI>
+        <Literal xml:lang="en">Task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Variable</IRI>
+        <Literal xml:lang="en">A variable entity used as input or generated as output of a task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Variable</IRI>
+        <Literal xml:lang="en">Variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>belongsTo</IRI>
+        <Literal xml:lang="en">A property using punning to define a restriction on the type associated to a Variable for validating the result of an action in script execution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>belongsTo</IRI>
+        <Literal xml:lang="en">belongs to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>correspondsTo</IRI>
+        <Literal xml:lang="en">The relation between an input/output of an action and the variable defined in the task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>correspondsTo</IRI>
+        <Literal xml:lang="en">corresponds to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>definesStage</IRI>
+        <Literal xml:lang="en">The relation between a script and the stages defined by the script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>definesStage</IRI>
+        <Literal xml:lang="en">defines stage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>definesTask</IRI>
+        <Literal xml:lang="en">The relation between a script or a stage and the task that is there defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>definesTask</IRI>
+        <Literal xml:lang="en">defines task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>executedIn</IRI>
+        <Literal xml:lang="en">The relation between a task (defined in a script) and its execution in an action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>executedIn</IRI>
+        <Literal xml:lang="en">executed in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>executesTask</IRI>
+        <Literal xml:lang="en">The relation between the execution of a task (an action) and the task executed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>executesTask</IRI>
+        <Literal xml:lang="en">executes task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>follows</IRI>
+        <Literal xml:lang="en">The relation between an entity and the entity that follows it in a sequence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>follows</IRI>
+        <Literal xml:lang="en">follows</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>forAction</IRI>
+        <Literal xml:lang="en">The relation between a situation (a role in time) and the action to which it is relevant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>forAction</IRI>
+        <Literal xml:lang="en">for action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>generated</IRI>
+        <Literal xml:lang="en">The relation between an action and the entity generated by the action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>generated</IRI>
+        <Literal xml:lang="en">generated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasInputVariable</IRI>
+        <Literal xml:lang="en">The relation between a task and the expected input variable used in the task (possibly to generate an output variable).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasInputVariable</IRI>
+        <Literal xml:lang="en">has input variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasIntervalDate</IRI>
+        <Literal>A property that encodes values from xsd:dateTime for a TimeInterval.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasIntervalDate</IRI>
+        <Literal>has interval date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasLocation</IRI>
+        <Literal xml:lang="en">The (physical or abstract) location of an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasLocation</IRI>
+        <Literal xml:lang="en">has location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasOutputVariable</IRI>
+        <Literal xml:lang="en">The relation between a task and the expected output variable generated by the task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasOutputVariable</IRI>
+        <Literal xml:lang="en">has output variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPurpose</IRI>
+        <Literal xml:lang="en">The purpose or goal of an event, an activity, or a plan (e.g. a script).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPurpose</IRI>
+        <Literal xml:lang="en">has purpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasRoleInTime</IRI>
+        <Literal xml:lang="en">The relation between an action and a time-indexed situation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRoleInTime</IRI>
+        <Literal xml:lang="en">has role in time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasSetting</IRI>
+        <Literal xml:lang="en">The relation between an action and the setting for the action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSetting</IRI>
+        <Literal xml:lang="en">has setting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTimeInterval</IRI>
+        <Literal xml:lang="en">The relation between an entity and the time interval in which it occurs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTimeInterval</IRI>
+        <Literal xml:lang="en">has time interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>includesAction</IRI>
+        <Literal xml:lang="en">The relation between the execution of a script and the actions involved.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>includesAction</IRI>
+        <Literal xml:lang="en">includes action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isRoleInTimeOf</IRI>
+        <Literal xml:lang="en">The relation between a time-indexed situation and an agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isRoleInTimeOf</IRI>
+        <Literal xml:lang="en">is role in time of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isStageOf</IRI>
+        <Literal xml:lang="en">The relation between a stage and the script that planned it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isStageOf</IRI>
+        <Literal xml:lang="en">is stage of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isTaskOf</IRI>
+        <Literal xml:lang="en">The relation between a task and its role in the script.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isTaskOf</IRI>
+        <Literal xml:lang="en">is task of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>occursWithin</IRI>
+        <Literal xml:lang="en">The hierarchical relation between (actions and) events.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>occursWithin</IRI>
+        <Literal xml:lang="en">occurs within</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>precedes</IRI>
+        <Literal xml:lang="en">The relation between an entity and the entity that precedes it in a sequence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>precedes</IRI>
+        <Literal xml:lang="en">precedes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>used</IRI>
+        <Literal xml:lang="en">The relation between an action and the entity used during the action (possibly to generate a new entity).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>used</IRI>
+        <Literal xml:lang="en">used</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>withRole</IRI>
+        <Literal xml:lang="en">The relation between a time-indexed situation and the role held by an agent in the situation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>withRole</IRI>
+        <Literal xml:lang="en">with role</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
