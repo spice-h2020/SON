@@ -17,15 +17,14 @@
         <owl:imports rdf:resource="http://purl.org/net/p-plan#"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
-        <owl:imports rdf:resource="http://www.w3.org/2002/07/owl"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/scripting/scripting.jpg"/>
         <dc:title xml:lang="en">Scripting module</dc:title>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -33,16 +32,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
 
 
-    <!-- 
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -50,19 +55,25 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/net/p-plan#correspondsToVariable -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#correspondsToVariable"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expands -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expands"/>
-    
+
+
+
+    <!-- http://www.w3.org/2002/07/owl#unionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#unionOf"/>
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/belongsTo -->
@@ -73,7 +84,7 @@
         <rdfs:comment xml:lang="en">A property using punning to define a restriction on the type associated to a Variable for validating the result of an action in script execution.</rdfs:comment>
         <rdfs:label xml:lang="en">belongs to</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/conditionallyFollows -->
@@ -82,7 +93,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/scripting/conditionallyPrecedes"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/conditionallyPrecedes -->
@@ -90,7 +101,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/conditionallyPrecedes">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/correspondsTo -->
@@ -102,7 +113,7 @@
         <rdfs:comment xml:lang="en">The relation between an input/output of an action and the variable defined in the task.</rdfs:comment>
         <rdfs:label xml:lang="en">corresponds to</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/definesStage -->
@@ -115,7 +126,7 @@
         <rdfs:comment xml:lang="en">The relation between a script and the stages defined by the script.</rdfs:comment>
         <rdfs:label xml:lang="en">defines stage</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/definesTask -->
@@ -134,7 +145,7 @@
         <rdfs:comment xml:lang="en">The relation between a script or a stage and the task that is there defined.</rdfs:comment>
         <rdfs:label xml:lang="en">defines task</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/executedIn -->
@@ -147,7 +158,7 @@
         <rdfs:comment xml:lang="en">The relation between a task (defined in a script) and its execution in an action.</rdfs:comment>
         <rdfs:label xml:lang="en">executed in</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/executesTask -->
@@ -159,7 +170,7 @@
         <rdfs:comment xml:lang="en">The relation between the execution of a task (an action) and the task executed.</rdfs:comment>
         <rdfs:label xml:lang="en">executes task</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/follows -->
@@ -170,7 +181,7 @@
         <rdfs:comment xml:lang="en">The relation between an entity and the entity that follows it in a sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">follows</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/forAction -->
@@ -183,7 +194,7 @@
         <rdfs:comment xml:lang="en">The relation between a situation (a role in time) and the action to which it is relevant.</rdfs:comment>
         <rdfs:label xml:lang="en">for action</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/generated -->
@@ -195,7 +206,29 @@
         <rdfs:comment xml:lang="en">The relation between an action and the entity generated by the action.</rdfs:comment>
         <rdfs:label xml:lang="en">generated</rdfs:label>
     </owl:ObjectProperty>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/scripting/hasConditionalInput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasConditionalInput">
+        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:range rdf:resource="http://purl.org/net/p-plan#Variable"/>
+        <rdfs:comment xml:lang="en">The relation between a task and the expected input variable used by the task. The specified input has to be considered as optional for the task. Use hasInput to specify mandatory inputs of the task.</rdfs:comment>
+        <rdfs:label xml:lang="en">has conditional input</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/spice/SON/scripting/hasConditionalOutput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/hasConditionalOutput">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+        <rdfs:range rdf:resource="http://purl.org/net/p-plan#Variable"/>
+        <rdfs:comment xml:lang="en">The relation between a task and the expected output variable generated by the task. The specified output has to be considered as optional for the task. Use hasOutput to specify mandatory outputs of the task.</rdfs:comment>
+        <rdfs:label xml:lang="en">has conditional output</rdfs:label>
+    </owl:ObjectProperty>
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasInputVariable -->
@@ -204,10 +237,10 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Variable"/>
-        <rdfs:comment xml:lang="en">The relation between a task and the expected input variable used in the task (possibly to generate an output variable).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The relation between a task and the expected input variable used in the task (possibly to generate an output variable). The specified input has to be considered as mandatory. Use hasConditionalInput to specify optional inputs of  the task.</rdfs:comment>
         <rdfs:label xml:lang="en">has input variable</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasLocation -->
@@ -217,7 +250,7 @@
         <rdfs:comment xml:lang="en">The (physical or abstract) location of an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">has location</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasOutputVariable -->
@@ -226,10 +259,10 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasOutputVar"/>
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Variable"/>
-        <rdfs:comment xml:lang="en">The relation between a task and the expected output variable generated by the task.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The relation between a task and the expected output variable generated by the task. The specified output has to be considered as mandatory. Use hasConditionalOutput to specify optional outputs of the task.</rdfs:comment>
         <rdfs:label xml:lang="en">has output variable</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasPurpose -->
@@ -240,7 +273,7 @@
         <rdfs:comment xml:lang="en">The purpose or goal of an event, an activity, or a plan (e.g. a script).</rdfs:comment>
         <rdfs:label xml:lang="en">has purpose</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasRoleInTime -->
@@ -252,7 +285,7 @@
         <rdfs:comment xml:lang="en">The relation between an action and a time-indexed situation.</rdfs:comment>
         <rdfs:label xml:lang="en">has role in time</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasSetting -->
@@ -264,7 +297,7 @@
         <rdfs:comment xml:lang="en">The relation between an action and the setting for the action.</rdfs:comment>
         <rdfs:label xml:lang="en">has setting</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasTimeInterval -->
@@ -275,7 +308,7 @@
         <rdfs:comment xml:lang="en">The relation between an entity and the time interval in which it occurs.</rdfs:comment>
         <rdfs:label xml:lang="en">has time interval</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/includesAction -->
@@ -287,7 +320,7 @@
         <rdfs:comment xml:lang="en">The relation between the execution of a script and the actions involved.</rdfs:comment>
         <rdfs:label xml:lang="en">includes action</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/involves -->
@@ -296,7 +329,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/isRoleInTimeOf -->
@@ -308,7 +341,7 @@
         <rdfs:comment xml:lang="en">The relation between a time-indexed situation and an agent.</rdfs:comment>
         <rdfs:label xml:lang="en">is role in time of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/isStageOf -->
@@ -320,7 +353,7 @@
         <rdfs:comment xml:lang="en">The relation between a stage and the script that planned it.</rdfs:comment>
         <rdfs:label xml:lang="en">is stage of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/isTaskOf -->
@@ -332,7 +365,7 @@
         <rdfs:comment xml:lang="en">The relation between a task and its role in the script.</rdfs:comment>
         <rdfs:label xml:lang="en">is task of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/occursWithin -->
@@ -343,7 +376,7 @@
         <rdfs:comment xml:lang="en">The hierarchical relation between (actions and) events.</rdfs:comment>
         <rdfs:label xml:lang="en">occurs within</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/precedes -->
@@ -353,7 +386,7 @@
         <rdfs:comment xml:lang="en">The relation between an entity and the entity that precedes it in a sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/satisfies -->
@@ -363,7 +396,7 @@
         <rdfs:comment>The relation between a script execution and the script it relies on.</rdfs:comment>
         <rdfs:label>satisfies</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/used -->
@@ -375,7 +408,7 @@
         <rdfs:comment xml:lang="en">The relation between an action and the entity used during the action (possibly to generate a new entity).</rdfs:comment>
         <rdfs:label xml:lang="en">used</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/withRole -->
@@ -387,10 +420,10 @@
         <rdfs:comment xml:lang="en">The relation between a time-indexed situation and the role held by an agent in the situation.</rdfs:comment>
         <rdfs:label xml:lang="en">with role</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -398,7 +431,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/hasIntervalDate -->
@@ -407,10 +440,10 @@
         <rdfs:comment>A property that encodes values from xsd:dateTime for a TimeInterval.</rdfs:comment>
         <rdfs:label>has interval date</rdfs:label>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -418,31 +451,25 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
-
-    <!-- http://org.semanticweb.owlapi/error#Error1 -->
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
-    
 
 
     <!-- http://purl.org/net/p-plan#MultiStep -->
 
     <owl:Class rdf:about="http://purl.org/net/p-plan#MultiStep"/>
-    
+
 
 
     <!-- http://purl.org/net/p-plan#Step -->
 
     <owl:Class rdf:about="http://purl.org/net/p-plan#Step"/>
-    
+
 
 
     <!-- http://purl.org/net/p-plan#Variable -->
 
     <owl:Class rdf:about="http://purl.org/net/p-plan#Variable"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action -->
@@ -450,13 +477,13 @@
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
@@ -465,7 +492,7 @@
         <rdfs:comment xml:lang="en">An event in which a script is executed.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal -->
@@ -474,13 +501,13 @@
         <rdfs:comment xml:lang="en">The purpose of an entity, such as a script.</rdfs:comment>
         <rdfs:label xml:lang="en">Goal</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
@@ -489,13 +516,13 @@
         <rdfs:comment xml:lang="en">The context situation in which a script is executed or an agent holds a role.</rdfs:comment>
         <rdfs:label xml:lang="en">Situation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval -->
@@ -504,13 +531,13 @@
         <rdfs:comment xml:lang="en">A representation of a time interval, characterised by a start and an end.</rdfs:comment>
         <rdfs:label xml:lang="en">Time interval</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#WorkflowExecution -->
@@ -518,37 +545,37 @@
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#WorkflowExecution">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/2002/07/owl#Class -->
 
     <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Activity -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Agent -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Plan -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Plan"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Role -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Role"/>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/Action -->
@@ -559,7 +586,7 @@
         <rdfs:comment xml:lang="en">An action is the execution of a task specified in a script.</rdfs:comment>
         <rdfs:label xml:lang="en">Action</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/Agent -->
@@ -570,7 +597,7 @@
         <rdfs:comment xml:lang="en">An entity involved in an action executing a task.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/Role -->
@@ -581,7 +608,7 @@
         <rdfs:comment xml:lang="en">The role of an agent or a task in a script.</rdfs:comment>
         <rdfs:label xml:lang="en">Role</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/RoleInTime -->
@@ -591,19 +618,18 @@
         <rdfs:comment xml:lang="en">A time-indexed situation in which an agent holds a role.</rdfs:comment>
         <rdfs:label xml:lang="en">Role in time</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/Script -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Script">
-        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
         <rdfs:comment xml:lang="en">The plan of tasks to be executed in sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">Script</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/ScriptExecution -->
@@ -613,7 +639,7 @@
         <rdfs:comment xml:lang="en">The execution of a number of sequential actions, as planned in a script.</rdfs:comment>
         <rdfs:label xml:lang="en">Script execution</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/Stage -->
@@ -624,7 +650,7 @@
         <rdfs:comment xml:lang="en">The grouping of tasks to be executed in sequence, as planned in a script.</rdfs:comment>
         <rdfs:label xml:lang="en">Stage</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/Task -->
@@ -635,7 +661,7 @@
         <rdfs:comment xml:lang="en">A task to be accomplished as specified in a script or a stage of the script.</rdfs:comment>
         <rdfs:label xml:lang="en">Task</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/scripting/Variable -->
@@ -645,14 +671,8 @@
         <rdfs:comment xml:lang="en">A variable entity used as input or generated as output of a task.</rdfs:comment>
         <rdfs:label xml:lang="en">Variable</rdfs:label>
     </owl:Class>
-    <rdf:Description>
-        <owl:unionOf>
-            <rdf:Description/>
-        </owl:unionOf>
-    </rdf:Description>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
