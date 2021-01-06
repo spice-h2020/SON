@@ -54,10 +54,21 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/affordance/hasAffordance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/hasAffordance">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/spice/SON/affordance/holds -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/holds">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
         <rdfs:comment>It relates an affordance relation with the description of a situation in which the affordance holds.</rdfs:comment>
     </owl:ObjectProperty>
     
