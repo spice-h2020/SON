@@ -19,7 +19,7 @@ Scripting
 - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
 - [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext``
 - [Scripting manifest](https://w3id.org/spice/SON/scripting) ``https://w3id.org/spice/SON/scripting``
-- [Affordance](https://w3id.org/spice/SON/affordance) ``https://w3id.org/spice/SON/affordance/``
+- [Affordance](https://w3id.org/spice/SON/affordance) ``https://w3id.org/spice/SON/affordance``
 
 Emotion
 - [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion``
