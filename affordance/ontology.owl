@@ -11,11 +11,13 @@
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/affordance/0.0.1"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/affordance/affordance.png"/>
+        <rdfs:comment xml:lang="en">A lightweight ontology formalising Gibson&apos;s notion of Affordance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Affordance</rdfs:label>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -23,16 +25,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -40,7 +42,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/spice/SON/affordance/affords -->
@@ -50,8 +52,9 @@
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
         <rdfs:comment>It associates an affordance relation with the task afforded. It defines when the task can be executed.</rdfs:comment>
+        <rdfs:label xml:lang="en">affords</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/spice/SON/affordance/hasAffordance -->
@@ -60,8 +63,22 @@
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskDefinedIn"/>
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
+        <rdfs:comment xml:lang="en">It associates a Task with its Affordance relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">has affordance</rdfs:label>
     </owl:ObjectProperty>
+    
 
+
+    <!-- https://w3id.org/spice/SON/affordance/hasEffect -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/hasEffect">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyPrecedes"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+        <rdfs:comment xml:lang="en">It associates a Task with the effect of its execution, i.e. a Description of a stereotyped situation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has effect</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
     <!-- https://w3id.org/spice/SON/affordance/holds -->
@@ -71,10 +88,10 @@
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
         <rdfs:comment>It relates an affordance relation with the description of a situation in which the affordance holds.</rdfs:comment>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -82,7 +99,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/spice/SON/affordance/strength -->
@@ -92,10 +109,10 @@
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -103,7 +120,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/spice/SON/affordance/Affordance -->
@@ -113,7 +130,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/affordance/affords"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -128,15 +145,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An Affordance relation that associates a stereotyped situation, i.e. a Description, with a Task that can be executed in that situation.</rdfs:comment>
+        <rdfs:label>Affordance</rdfs:label>
     </owl:Class>
-
-
-
-    <!-- https://w3id.org/spice/SON/scripting/Task -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Task"/>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
