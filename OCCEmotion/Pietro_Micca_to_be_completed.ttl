@@ -1,9 +1,9 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix occ: <https://github.com/StenDoipanni/SPICE_test/blob/main/OCC_Emotion.owl>
-#@prefix gam: <
-@prefix arco: <https://w3id.org/arco/ontology/core/>
+@prefix occ: <https://w3id.org/spice/SON/OCCEmotion/> .
+@prefix gam: <https://w3id.org/spice/GAM/> .
+@prefix arco: <https://w3id.org/arco/ontology/core/> .
 
 
 
@@ -13,7 +13,7 @@
 ### PEOPLE
 
 occ:AgentA a dul:Person ;
-    a occ:AppraisingAgent
+    a occ:AppraisingAgent ;
     occ:hasValue occ:Patriotism .
 occ:AgentB a dul:Person ;
     a occ:AppraisingAgent ;
