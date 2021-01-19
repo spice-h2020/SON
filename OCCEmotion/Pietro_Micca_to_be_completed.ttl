@@ -1,11 +1,8 @@
-
-
-
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix occ: <https://github.com/StenDoipanni/SPICE_test/blob/main/OCC_Emotion.owl>
-@prefix gam: <
+#@prefix gam: <
 @prefix arco: <https://w3id.org/arco/ontology/core/>
 
 
@@ -16,7 +13,7 @@
 ### PEOPLE
 
 occ:AgentA a dul:Person ;
-    a occ:AppraisingAgent 
+    a occ:AppraisingAgent
     occ:hasValue occ:Patriotism .
 occ:AgentB a dul:Person ;
     a occ:AppraisingAgent ;
@@ -24,7 +21,7 @@ occ:AgentB a dul:Person ;
 occ:PietroMicca a dul:Person ;
     a occ:AppraisingAgent ;
     occ:hasValue occ:Patriotism .
-    
+
 
 ### CULTURAL ENTITY
 
@@ -36,7 +33,7 @@ gam:PietroMiccaDepiction a arco:CulturalEntity .
 occ:PrideOfAgentA a occ:Pride ;
     occ:target occ:PietroMiccaAction .
 occ:AdmirationOfA a occ:Admiration;
-    occ:target occ:PietroMiccaAction . 
+    occ:target occ:PietroMiccaAction .
 occ:PityOfB a occ:Pity ;
     occ:target occ:PietroMiccaDeath .
 
@@ -61,13 +58,10 @@ occ:selfPreservation a occ:Value .
 occ:PietroMicca occ:hasGoal occ:SavingHomeland .
 occ:SavingHomeland a occ:Goal .
 
-    
+
 
 ### ACTION
 
 occ:PietroMiccaAction occ:performedBy occ:PietroMicca ;
     occ:praiseworthy occ:AgentA ;
     occ:blameworthy occ:AgentB .
-
-
-
