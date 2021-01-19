@@ -28,14 +28,6 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
-
-    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">
-        <owl:equivalentClass rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-    </rdf:Description>
-    
-
-
     <!-- https://w3id.org/spice/SON/ekmanEmotions/Amusement -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Amusement">
@@ -158,7 +150,9 @@
 
     <!-- https://w3id.org/spice/SON/emotion/Emotion -->
 
-    <rdf:Description rdf:about="https://w3id.org/spice/SON/emotion/Emotion"/>
+    <rdf:Description rdf:about="https://w3id.org/spice/SON/emotion/Emotion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
