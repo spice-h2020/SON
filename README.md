@@ -33,6 +33,10 @@ where ``version ID`` is the identifier of the version under development (current
 
 4. Version ID should follow [Semantic Versioning 2.0.0 Policy](https://semver.org/).
 
+## Ontology network backbone
+
+The SPICE Ontology network uses [DOLCE+DnS Ultralite](http://www.ontologydesignpatterns.org/ont/dul/DUL.owl) as foundational backbone.
+
 
 ## Knowledge area overview
 
