@@ -74,4 +74,4 @@ You can contribute to the SPICE Ontology Network either by defining a new scenar
 
 ## License
 
-The content of this repository is distributed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+The content of this repository is distributed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
