@@ -14,6 +14,9 @@ https://w3id.org/spice/SON/[Name of the folder]
 ```
 
 Please use camel case for folder names.
+
+The prefix of the ontology must be ``https://w3id.org/spice/SON/[Name of the folder]/`` (i.e. the IRI of the ontology followed by ``/``).
+
 The file containing the ontology must be serialized in RDF/XML format and named ``ontology.owl``.
 
 ### Versioning
