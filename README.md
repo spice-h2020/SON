@@ -41,7 +41,7 @@ where ``version ID`` is the identifier of the version under development (current
 The SPICE Ontology network uses [DOLCE+DnS Ultralite](http://www.ontologydesignpatterns.org/ont/dul/DUL.owl) as foundational backbone.
 
 
-## Knowledge area overview
+## Knowledge Areas Overview
 
 TODO: Create SON entry point
 
@@ -55,6 +55,8 @@ Emotion
 - [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion``
 - [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) ``https://w3id.org/spice/SON/emotionInCulturalContext``
 - [Ekman emotions](https://w3id.org/spice/SON/ekmanEmotions) ``https://w3id.org/spice/SON/ekmanEmotions``
+- [Plutchik emotion](https://w3id.org/spice/SON/PlutchikEmotion) ``https://w3id.org/spice/SON/PlutchikEmotion``
+- [OCC emotion](https://w3id.org/spice/SON/OCCEmotion) ``https://w3id.org/spice/SON/OCCEmotion``
 
 ## How to contribute
 
