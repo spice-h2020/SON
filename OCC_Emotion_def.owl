@@ -1,0 +1,1273 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OCC_Ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OCC_Ontology">
+    <Prefix name="occ" IRI="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OCC_Ontology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActionConsequenceEmotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActionConsequenceEmotionOther"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActionConsequenceEmotionSelf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Admiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AppraisingAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BlameworthyAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompoundEmotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DesirableSituation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disappointment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Distress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ECES_ProspectIrrelevant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ECES_ProspectRelevant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ECES_ProspectRelevantConfirmed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventConsequenceEmotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventConsequenceEmotionSelf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fear-Confirmed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gloating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gratification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gratitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HappyFor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Joy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PolarityOutcomeEmotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PraiseworthyAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pride"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Remorse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reproach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resentment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Satisfaction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Target"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UndesirableSituation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#appraises"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#blameworthy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#desirable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#feels"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#feltBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGoal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lovedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#loves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#notLovedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#notLoves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#praiseworthy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#target"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#undesirable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#accomplished"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#confirmed"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ActionConsequenceEmotion"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ActionConsequenceEmotionOther"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+                        <ObjectUnionOf>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#blameworthy"/>
+                                <Class IRI="#AppraisingAgent"/>
+                            </ObjectSomeValuesFrom>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#praiseworthy"/>
+                                <Class IRI="#AppraisingAgent"/>
+                            </ObjectSomeValuesFrom>
+                        </ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#performedBy"/>
+                            <Class IRI="#OtherAgent"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ActionConsequenceEmotionSelf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+                        <ObjectUnionOf>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#blameworthy"/>
+                                <Class IRI="#AppraisingAgent"/>
+                            </ObjectSomeValuesFrom>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#praiseworthy"/>
+                                <Class IRI="#AppraisingAgent"/>
+                            </ObjectSomeValuesFrom>
+                        </ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#performedBy"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Admiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#performedBy"/>
+                            <Class IRI="#OtherAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#praiseworthy"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Anger"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Distress"/>
+            <Class IRI="#Reproach"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BlameworthyAction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#blameworthy"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DesirableSituation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#desirable"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Disappointment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#desirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>disconfirmed</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Distress"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#undesirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>irrelevant</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ECES_ProspectIrrelevant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>irrelevant</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ECES_ProspectRelevant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectUnionOf>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                            <DataHasValue>
+                                <DataProperty IRI="#accomplished"/>
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                        <ObjectIntersectionOf>
+                            <DataHasValue>
+                                <DataProperty IRI="#accomplished"/>
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                            </DataHasValue>
+                            <DataHasValue>
+                                <DataProperty IRI="#confirmed"/>
+                                <Literal>confirmed</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>disconfirmed</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>unconfirmed</Literal>
+                        </DataHasValue>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ECES_ProspectRelevantConfirmed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectUnionOf>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                            <DataHasValue>
+                                <DataProperty IRI="#accomplished"/>
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                            </DataHasValue>
+                            <DataHasValue>
+                                <DataProperty IRI="#confirmed"/>
+                                <Literal>confirmed</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>disconfirmed</Literal>
+                        </DataHasValue>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EventConsequenceEmotion"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#undesirable"/>
+                        <Class IRI="#OtherAgent"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <Class IRI="#AppraisingAgent"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#appraises"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="#desirable"/>
+                                <Class IRI="#OtherAgent"/>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Fear"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#undesirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>unconfirmed</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Fear-Confirmed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#undesirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>confirmed</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gloating"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#undesirable"/>
+                            <ObjectIntersectionOf>
+                                <Class IRI="#OtherAgent"/>
+                                <ObjectSomeValuesFrom>
+                                    <ObjectProperty IRI="#notLovedBy"/>
+                                    <Class IRI="#AppraisingAgent"/>
+                                </ObjectSomeValuesFrom>
+                            </ObjectIntersectionOf>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gratification"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Joy"/>
+            <Class IRI="#Pride"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gratitude"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Admiration"/>
+            <Class IRI="#Joy"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HappyFor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#desirable"/>
+                            <ObjectIntersectionOf>
+                                <Class IRI="#OtherAgent"/>
+                                <ObjectSomeValuesFrom>
+                                    <ObjectProperty IRI="#lovedBy"/>
+                                    <Class IRI="#AppraisingAgent"/>
+                                </ObjectSomeValuesFrom>
+                            </ObjectIntersectionOf>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hope"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#desirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>unconfirmed</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Joy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#desirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>irrelevant</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Pity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#undesirable"/>
+                            <ObjectIntersectionOf>
+                                <Class IRI="#OtherAgent"/>
+                                <ObjectSomeValuesFrom>
+                                    <ObjectProperty IRI="#lovedBy"/>
+                                    <Class IRI="#AppraisingAgent"/>
+                                </ObjectSomeValuesFrom>
+                            </ObjectIntersectionOf>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PraiseworthyAction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#praiseworthy"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Pride"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#performedBy"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#praiseworthy"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relief"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#undesirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>disconfirmed</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Remorse"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Distress"/>
+            <Class IRI="#Shame"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Reproach"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#blameworthy"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#performedBy"/>
+                            <Class IRI="#OtherAgent"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Resentment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#desirable"/>
+                            <ObjectIntersectionOf>
+                                <Class IRI="#OtherAgent"/>
+                                <ObjectSomeValuesFrom>
+                                    <ObjectProperty IRI="#notLovedBy"/>
+                                    <Class IRI="#AppraisingAgent"/>
+                                </ObjectSomeValuesFrom>
+                            </ObjectIntersectionOf>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Satisfaction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#desirable"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <DataHasValue>
+                            <DataProperty IRI="#accomplished"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                        </DataHasValue>
+                        <DataHasValue>
+                            <DataProperty IRI="#confirmed"/>
+                            <Literal>confirmed</Literal>
+                        </DataHasValue>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Shame"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#feltBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#AppraisingAgent"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#appraises"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#blameworthy"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#performedBy"/>
+                            <Class IRI="#AppraisingAgent"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#UndesirableSituation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#undesirable"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActionConsequenceEmotion"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActionConsequenceEmotionOther"/>
+        <Class IRI="#ActionConsequenceEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActionConsequenceEmotionSelf"/>
+        <Class IRI="#ActionConsequenceEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Admiration"/>
+        <Class IRI="#ActionConsequenceEmotionOther"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Admiration"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anger"/>
+        <Class IRI="#CompoundEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anger"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AppraisingAgent"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlameworthyAction"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompoundEmotion"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesirableSituation"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disappointment"/>
+        <Class IRI="#ECES_ProspectRelevantConfirmed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disappointment"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distress"/>
+        <Class IRI="#ECES_ProspectIrrelevant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distress"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ECES_ProspectIrrelevant"/>
+        <Class IRI="#EventConsequenceEmotionSelf"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ECES_ProspectRelevant"/>
+        <Class IRI="#EventConsequenceEmotionSelf"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ECES_ProspectRelevantConfirmed"/>
+        <Class IRI="#ECES_ProspectRelevant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventConsequenceEmotion"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+        <Class IRI="#EventConsequenceEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventConsequenceEmotionSelf"/>
+        <Class IRI="#EventConsequenceEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fear"/>
+        <Class IRI="#ECES_ProspectRelevant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fear"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fear-Confirmed"/>
+        <Class IRI="#ECES_ProspectRelevantConfirmed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fear-Confirmed"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gloating"/>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gloating"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gratification"/>
+        <Class IRI="#CompoundEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gratification"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gratitude"/>
+        <Class IRI="#CompoundEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gratitude"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HappyFor"/>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HappyFor"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hope"/>
+        <Class IRI="#ECES_ProspectRelevant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hope"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joy"/>
+        <Class IRI="#ECES_ProspectIrrelevant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joy"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+        <Class IRI="#PolarityOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherAgent"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pity"/>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pity"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PolarityOutcomeEmotion"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+        <Class IRI="#PolarityOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PraiseworthyAction"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pride"/>
+        <Class IRI="#ActionConsequenceEmotionSelf"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pride"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relief"/>
+        <Class IRI="#ECES_ProspectRelevantConfirmed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relief"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remorse"/>
+        <Class IRI="#CompoundEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remorse"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reproach"/>
+        <Class IRI="#ActionConsequenceEmotionOther"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reproach"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resentment"/>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resentment"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Satisfaction"/>
+        <Class IRI="#ECES_ProspectRelevantConfirmed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Satisfaction"/>
+        <Class IRI="#PositiveOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shame"/>
+        <Class IRI="#ActionConsequenceEmotionSelf"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shame"/>
+        <Class IRI="#NegativeOutcomeEmotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UndesirableSituation"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#ActionConsequenceEmotionOther"/>
+        <Class IRI="#ActionConsequenceEmotionSelf"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AppraisingAgent"/>
+        <Class IRI="#OtherAgent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BlameworthyAction"/>
+        <Class IRI="#PraiseworthyAction"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DesirableSituation"/>
+        <Class IRI="#UndesirableSituation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EventConsequenceEmotionOther"/>
+        <Class IRI="#EventConsequenceEmotionSelf"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#feels"/>
+        <ObjectProperty IRI="#feltBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#lovedBy"/>
+        <ObjectProperty IRI="#loves"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#notLovedBy"/>
+        <ObjectProperty IRI="#notLoves"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appraises"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#blameworthy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#desirable"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGoal"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasValue"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#loves"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#notLovedBy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#notLoves"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#performedBy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#praiseworthy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#undesirable"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#appraises"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#blameworthy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#desirable"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGoal"/>
+        <Class IRI="#Goal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasValue"/>
+        <Class IRI="#Value"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#loves"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#notLovedBy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#performedBy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#praiseworthy"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#undesirable"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#lovedBy"/>
+        <ObjectProperty IRI="#notLovedBy"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#loves"/>
+        <ObjectProperty IRI="#notLoves"/>
+    </DisjointObjectProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#accomplished"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#confirmed"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#accomplished"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#confirmed"/>
+        <DataOneOf>
+            <Literal>confirmed</Literal>
+            <Literal>disconfirmed</Literal>
+            <Literal>irrelevant</Literal>
+            <Literal>unconfirmed</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#accomplished</IRI>
+        <Literal>Aspectual description of the Situation.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
