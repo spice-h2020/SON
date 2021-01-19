@@ -1,0 +1,1197 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/spice/SON/PlutchikEmotions-core#"
+     xml:base="https://w3id.org/spice/SON/PlutchikEmotions-core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/spice/SON/PlutchikEmotion">
+        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/0.0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
+        <dc:title>Ontological Model of Plutchik&apos;s Wheel of Emotions</dc:title>
+        <rdfs:comment>authors: Antonio Lieto</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#hasValue -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#hasValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/ExpressOppositeEmotion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/ExpressOppositeEmotion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/hasSibling -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/hasScore -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/hasScore">
+        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Acceptance -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Acceptance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Admiration -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Admiration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Aggressiveness -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Aggressiveness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Amazement -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Amazement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Anger -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Anger">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Annoyance -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Annoyance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Anticipation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Apprehension -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Apprehension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Awe -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Awe">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Boredom -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Boredom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Contempt -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Contempt">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Disapproval -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Disapproval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Disgust -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Disgust">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Distraction -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Distraction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Ecstacy -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Ecstacy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Fear -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Fear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Grief -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Grief">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Interest -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Interest">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Joy -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Joy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Loathing -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Loathing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Love -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Love">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Optimism -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Optimism">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Pensiveness -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Pensiveness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Pessimism -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Pessimism">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Pride -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Pride">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Rage -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Rage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Remorse -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Remorse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Sadness -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Sadness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Surprise"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Serenity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Serenity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Shame -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Shame">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Terror"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Terror"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Submission -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Submission">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/ComplexEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/isComposedOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Trust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Surprise -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Surprise">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Sadness"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Terror -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Terror">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Trust -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Trust">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/BasicEmotion"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasOpposite"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Disgust"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Fear"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasSibling"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Joy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/PlutchikEmotion/Vigilance -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/PlutchikEmotion/Vigilance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/Anticipation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/hasScore"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</owl:hasValue>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
