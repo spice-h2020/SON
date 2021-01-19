@@ -6,7 +6,9 @@ This repository contains the source code of the SPICE Ontology Network.
 ## Ontology Modules
 
 Each directory contains an ontology module.
+The name of the directory must correspond to the ID part of the  ontology IRI.
 The file containing the ontology must be serialized in RDF/XML format and named ``ontology.owl``.
+
 
 Scripting
 - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
