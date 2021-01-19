@@ -1,19 +1,12 @@
 # SPICE Ontology Network
 
-This repository contains the source code of the SPICE Ontology Network
+This repository contains the source code of the SPICE Ontology Network.
 
 
-## Contributors and Roles
+## Ontology Modules
 
-- Luigi Asprino (UNIBO) - Maintainer
-- Rossana Damiano (UNITO)
-- Marilena Daquino (UNIBO)
-- Stefano De Giorgis (UNIBO)
-- Aldo Gangemi (CNR-UNIBO)
-- Antonio Lieto (UNITO)
-- Bruno Sartini (UNIBO)
-
-## Modules
+Each directory contains an ontology module.
+The file containing the ontology must be serialized in RDF/XML format and named ``ontology.owl``.
 
 Scripting
 - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
@@ -25,6 +18,21 @@ Emotion
 - [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion``
 - [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) ``https://w3id.org/spice/SON/emotionInCulturalContext``
 - [Ekman emotions](https://w3id.org/spice/SON/ekmanEmotions) ``https://w3id.org/spice/SON/ekmanEmotions``
+
+## How to contribute
+
+You can contribute to the SPICE Ontology Network either by defining a new scenario (that can be submitted as [issues](https://github.com/spice-h2020/SON/issues/new/choose)) or  proposing an extension of the ontology.
+
+
+## Contributors and Roles
+
+- Luigi Asprino (UNIBO) - Maintainer
+- Rossana Damiano (UNITO)
+- Marilena Daquino (UNIBO)
+- Stefano De Giorgis (UNIBO)
+- Aldo Gangemi (CNR-UNIBO)
+- Antonio Lieto (UNITO)
+- Bruno Sartini (UNIBO)
 
 
 ## License
