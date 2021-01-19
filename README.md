@@ -14,6 +14,9 @@ https://w3id.org/spice/SON/[Name of the folder]
 ```
 
 Please use camel case for folder names.
+
+The prefix of the ontology must be ``https://w3id.org/spice/SON/[Name of the folder]/`` (i.e. the IRI of the ontology followed by ``/``).
+
 The file containing the ontology must be serialized in RDF/XML format and named ``ontology.owl``.
 
 ### Versioning
@@ -32,6 +35,10 @@ where ``version ID`` is the identifier of the version under development (current
 3. Each ontology module must import the ontologies with the same version ID.
 
 4. Version ID should follow [Semantic Versioning 2.0.0 Policy](https://semver.org/).
+
+## Ontology network backbone
+
+The SPICE Ontology network uses [DOLCE+DnS Ultralite](http://www.ontologydesignpatterns.org/ont/dul/DUL.owl) as foundational backbone.
 
 
 ## Knowledge area overview
@@ -67,4 +74,4 @@ You can contribute to the SPICE Ontology Network either by defining a new scenar
 
 ## License
 
-The content of this repository is distributed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+The content of this repository is distributed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
