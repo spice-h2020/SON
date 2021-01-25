@@ -1,0 +1,95 @@
+@prefix fcm: <https://w3id.org/spice/SON/fruitionContext/> .
+@prefix ccm: <https://w3id.org/spice/SON/curatorialContext#> .
+@prefix arco: <https://w3id.org/arco/ontology/core/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix hecht: <https://w3id.org/spice/HECHT/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+# PERSON
+
+hecht:Anna a dul:Person ;
+    dul:age dul:25 .
+
+
+# CURATORIAL CRITERIA
+
+ccm:ClimaxCriterion a ccm:CuratorialDesignCriterion .
+ccm:ThematicCriterion a ccm:CuratorialDesignCriterion .
+ccm:PropertyCriterion a ccm:CuratorialDesignCriterion .
+ccm:ReferenceCriterion a ccm:CuratorialDesignCriterion .
+ccm:ChronologicalCriterion a ccm:CuratorialDesignCriterion .
+ccm:SpacialMeaningfulCriterion a ccm:CuratorialDesignCriterion .
+ccm:PropertyCriterion a ccm:CuratorialDesignCriterion .
+
+
+
+# CURATORIAL CONTEXT
+
+hecht:HechtMuseum ccm:curatorialSetting hecht:HechtCuratorialSetting .
+
+hecht:HechtCuratorialSetting ccm:individuates hecht:HechtCuratorialArea ;
+    ccm:desingCriterion ccm:ClimaxCriterion .
+
+hecht:HechtMuseumEntrance a hecht:HechtCuratorialArea ;
+    ccm:desingCriterion ccm:ReferenceCriterion .
+
+hecht:HechtMuseumCorridor a hecht:HechtCuratorialArea ;
+    ccm:designCriterion ccm:ThematicCriterion .
+
+hecht:HechtFinalRoom a hecht:HechtCuratorialArea .
+
+
+hecht:HechtMuseum ccm:spatialDisposition ccm:LinearDisposition .
+
+hecht:HechtMuseumCollection ccm:spatialDisposition hecht:SequentialDisposition .
+
+
+# CULTURAL ENTITIES
+
+hecht:AirplanePicture a arco:culturalEntity ;
+    arco:depicts dul:Airplane ;
+    ccm:disposedIn hecht:HechtMuseumEntrance .
+
+dul:Airplane hecht:ownedBy hecht:MuseumFounderSon ;
+    hecht:usedIn dul:WWII .
+
+hecht:WomenDeities1 a arco:Statue .
+hecht:WomenDeities2 a arco:Statue .
+hecht:WomenDeities3 a arco:Statue .
+
+hecht:WomenDeities1 arco:represents hecht:WomenDeities ;
+    ccm:disposedIn hecht:HechtMuseumCorridor .
+hecht:WomenDeities2 arco:represents hecht:WomenDeities ;
+    ccm:disposedIn hecht:HechtMuseumCorridor .
+hecht:WomenDeities3 arco:represents hecht:WomenDeities ;
+    ccm:disposedIn hecht:HechtMuseumCorridor .
+
+hecht:WomenDeitiesSet ccm:designSetFor hecht:WomenDeities1 , hecht:WomenDeities2 , hecht:WomenDeities3 ;
+    ccm:designCriterion ccm:ThematicCriterion ;
+    ccm:hasTheme hecht:FemaleDeities .
+
+hecht:Warriors1 arco:represents hecht:Warriors ;
+    ccm:disposedIn hecht:HechtMuseumCorridor .
+hecht:Warriors2 arco:represents hecht:Warriors ;
+    ccm:disposedIn hecht:HechtMuseumCorridor .
+hecht:Warriors3 arco:represents hecht:Warriors ;
+    ccm:disposedIn hecht:HechtMuseumCorridor .
+
+hecht:Warriors1 a arco:Statue .
+hecht:Warriors2 a arco:Statue .
+hecht:Warriors3 a arco:Statue .
+
+hecht:WarriorsSet ccm:designSetFor hecht:Warriors1 , hecht:Warriors2 , hecht:Warriors3 ;
+    ccm:designCriterion ccm:ThematicCriterion ;
+    ccm:hasTheme hecht:Warriors .
+
+hecht:WomenDeitiesSet ccm:designCriterionSetFor hecht:WomenDeitiesDesign .
+
+hecht:Ship a arco:OldItem ;
+    ccm:disposedIn hecht:HechtFinalRoom .
+
+
+
+
