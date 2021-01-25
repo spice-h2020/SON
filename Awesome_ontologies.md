@@ -16,7 +16,7 @@ Here you can find a list of awesome ontologies that could be relevant for the kn
 
 ### Knowledge Area: Symbolism
 
-### Knowledge Area: Artwork Description
+### Knowledge Area: Artwork-related knowledge
 
 - [ArCo's Denotative Description](https://w3id.org/arco/ontology/denotative-description)
 - [ArCo's Context Description](https://w3id.org/arco/ontology/context-description)
