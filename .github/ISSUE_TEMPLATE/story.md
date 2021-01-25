@@ -26,7 +26,7 @@ In case that you want to fill this later, please write (TODO).
 
 **Ontology/Ontology Design Patterns Relevant for the scenario**
 
-Suggest a list of ontologies or ontology design patterns that can be used for specifying the scenario.
+Suggest a list of existing ontologies or ontology design patterns that can be used for specifying the scenario.
 
 **SPARQL Questions**
 
