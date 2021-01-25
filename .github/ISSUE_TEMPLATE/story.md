@@ -1,6 +1,6 @@
 ---
-name: Story
-about: Suggest a story for the SON
+name: Scenario
+about: Suggest a scenario for the SON
 title: ''
 labels: ''
 assignees: ''
@@ -9,21 +9,24 @@ assignees: ''
 
 **Depends on** 
 
-Indicate other stories this story depends on. (You can simply mention the issue e.g. #1)
+Indicate other scenario this story depends on. (You can simply mention the issue e.g. #1 or write that the scenario is indipendent from any the other scenarios).
 
 **Description**
 
-Provide a description of the story.
+Provide a description of the scenario.
 
 **Competency Questions**
 
-Provide one or more competency questions the ontology shall be able to answer.
+Provide one or more competency questions the ontology shall be able to answer. 
+In case that you want to fill this later, please write (TODO).
 
 **SPARQL Questions**
 
 Provide one or more SPARQL queries that express the compentency questions.
+In case that you want to fill this later, please write (TODO).
 
 **Toy Dataset**
 
 Provide the link to or upload a toy dataset that can be used for unit test.
+In case that you want to fill this later, please write (TODO).
 
