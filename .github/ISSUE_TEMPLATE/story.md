@@ -15,6 +15,10 @@ Indicate other scenario this story depends on. (You can simply mention the issue
 
 Provide a description of the scenario.
 
+**Source**
+
+Indicate the source document for this scenario (if any).
+
 **Competency Questions**
 
 Provide one or more competency questions the ontology shall be able to answer. 
@@ -29,4 +33,5 @@ In case that you want to fill this later, please write (TODO).
 
 Provide the link to or upload a toy dataset that can be used for unit test.
 In case that you want to fill this later, please write (TODO).
+
 
