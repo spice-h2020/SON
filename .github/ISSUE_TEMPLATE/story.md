@@ -24,6 +24,10 @@ Indicate the source document for this scenario (if any).
 Provide one or more competency questions the ontology shall be able to answer. 
 In case that you want to fill this later, please write (TODO).
 
+**Ontology/Ontology Design Patterns Relevant for the scenario**
+
+Suggest a list of ontologies or ontology design patterns that can be used for specifying the scenario.
+
 **SPARQL Questions**
 
 Provide one or more SPARQL queries that express the compentency questions.
