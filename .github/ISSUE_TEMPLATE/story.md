@@ -9,7 +9,7 @@ assignees: ''
 
 **Depends on** 
 
-Indicate other scenario this story depends on. (You can simply mention the issue e.g. #1 or write that the scenario is indipendent from any the other scenarios).
+Indicate other scenario this story depends on. (You can simply mention the issue e.g. #1 or write that the scenario is independent from any the other scenarios).
 
 **Description**
 
