@@ -30,10 +30,10 @@ ccm:PropertyCriterion a ccm:CuratorialDesignCriterion .
 hecht:HechtMuseum ccm:curatorialSetting hecht:HechtCuratorialSetting .
 
 hecht:HechtCuratorialSetting ccm:individuates hecht:HechtCuratorialArea ;
-    ccm:desingCriterion ccm:ClimaxCriterion .
+    ccm:designCriterion ccm:ClimaxCriterion .
 
 hecht:HechtMuseumEntrance a hecht:HechtCuratorialArea ;
-    ccm:desingCriterion ccm:ReferenceCriterion .
+    ccm:designCriterion ccm:ReferenceCriterion .
 
 hecht:HechtMuseumCorridor a hecht:HechtCuratorialArea ;
     ccm:designCriterion ccm:ThematicCriterion .
