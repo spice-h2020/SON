@@ -17,7 +17,7 @@ Provide a description of the scenario.
 
 **Source**
 
-Indicate the source document for this scenario (if any).
+Indicate the source document or the event where this scenario has been defined (if any).
 
 **Competency Questions**
 
@@ -33,7 +33,7 @@ Suggest a list of existing ontologies or ontology design patterns that can be us
 Provide one or more SPARQL queries that express the compentency questions.
 In case that you want to fill this later, please write (TODO).
 
-**Toy Dataset**
+**Toy Dataset/SPARQL Endpoint**
 
 Provide the link to or upload a toy dataset that can be used for unit test.
 In case that you want to fill this later, please write (TODO).
