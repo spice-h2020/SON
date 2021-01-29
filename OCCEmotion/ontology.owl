@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/spice/SON/OCCEmotion#"
-     xml:base="https://w3id.org/spice/SON/OCCEmotion"
+<rdf:RDF xmlns="https://w3id.org/spice/SON/OCCEmotion/"
+     xml:base="https://w3id.org/spice/SON/OCCEmotion/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:occ="https://w3id.org/spice/SON/OCCEmotion#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,6 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/OCCEmotion">
+        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/OCCEmotion/0.0.1"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
