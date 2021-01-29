@@ -38,12 +38,16 @@ where ``version ID`` is the identifier of the version under development (current
 
 ## Ontology network backbone
 
-The SPICE Ontology network uses [DOLCE+DnS Ultralite](http://www.ontologydesignpatterns.org/ont/dul/DUL.owl) as foundational backbone.
+The SPICE Ontology network uses [DOLCE+DnS Ultralite](http://www.ontologydesignpatterns.org/ont/dul/DUL.owl) and [D0](http://www.ontologydesignpatterns.org/ont/dul/d0.owl) as foundational backbone.
 
 
 ## Knowledge Areas Overview
 
 TODO: Create SON entry point
+
+### Brand new ontologies
+
+This is a list of the brand new ontologies developed for the SPICE project:
 
 Scripting
 - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
@@ -57,6 +61,16 @@ Emotion
 - [Ekman emotions](https://w3id.org/spice/SON/ekmanEmotions) ``https://w3id.org/spice/SON/ekmanEmotions``
 - [Plutchik emotion](https://w3id.org/spice/SON/PlutchikEmotion) ``https://w3id.org/spice/SON/PlutchikEmotion``
 - [OCC emotion](https://w3id.org/spice/SON/OCCEmotion) ``https://w3id.org/spice/SON/OCCEmotion``
+
+### Existing ontologies re-used 
+
+The SPICE ontology network doesn't want to reinvent the wheel. It relies and possibly extends state-of-the-art ontologies. Here we provide a list of ontologies reused or recommended for the SPICE project.
+
+Linguistic data
+
+- [semiotics](http://ontologydesignpatterns.org/cp/owl/semiotics.owl#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30))
+- [Earmark](http://www.essepuntato.it/2008/12/earmark#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30)) 
+- [POS](http://www.ontologydesignpatterns.org/ont/fred/pos.owl#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30))
 
 ## How to contribute
 
