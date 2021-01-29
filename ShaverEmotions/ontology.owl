@@ -10,7 +10,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:emotion="https://w3id.org/spice/SON/emotion/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/spice/SON/ShaverEmotions/">
+    <owl:Ontology rdf:about="https://w3id.org/spice/SON/ShaverEmotions">
+        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/0.0.1"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
         <rdfs:comment xml:lang="en">Author: Bruno Sartini</rdfs:comment>
     </owl:Ontology>
@@ -1946,6 +1947,261 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Attacking something other than cause</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_alone -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_alone">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Being alone</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Being in the dark</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Communicating the good feeling</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/crying -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Crying</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Death of a loved one</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Doing nice things for other people</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Exceptionally good communication</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Expressing positive feelings to other</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_excited -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_excited">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Feeling excited</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Hands or fists clenched</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/hugging_people -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hugging_people">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Hugging people</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Imagining attacking the cause of anger</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Jumping up and down</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/kissing -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/kissing">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Kissing</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Narrowing of attention</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Nonverbally communicating disapproval</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/spice/SON/ShaverEmotions/other_offers_something_wanted -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/other_offers_something_wanted">
@@ -1957,6 +2213,171 @@
             </owl:Restriction>
         </rdf:type>
         <emotion:label xml:lang="en">Other offers something wanted, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Person finds other attractive</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Physically attacking the cause of anger</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Picturing a disastrous conclusion</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Predisposition to anger</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Real or threatened pain</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Reality exceeding expectations</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Reality falling short of expectations</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Receiving a wonderful surprise</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Saying positive things</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Saying sad things</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Sharing the feeling</emotion:label>
     </owl:NamedIndividual>
     
 
@@ -1977,1266 +2398,9 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdf:type>
-    </owl:NamedIndividual>
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Person knows other loves, needs, him or her</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Person finds other attractive</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Exceptionally good communication</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Other inspires openness, trust, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Having shared time, experiences</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Being forgetful, distracted, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Wanting the best for other, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Wanting to see, spend time with other</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you' -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you'">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Saying 'I love you'</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Expressing positive feelings to other</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Wanting physical closeness or sex</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/kissing -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/kissing">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Kissing</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/touching,_petting -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/touching,_petting">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Touching, petting</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Hugging, holding, cuddling</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Eye contact, mutual gaze</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Feeling excited, high energy, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Feeling/acting self-confident, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Seeing only the positive side, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Feeling happy, joyful, exuberant, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Feeling warm, trusting, secure, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Feeling relaxed, calm</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/smiling -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/smiling">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
-            </owl:Restriction>
-        </rdf:type>
         <emotion:label xml:lang="en">Smiling</emotion:label>
     </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Task success, achievement</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Desirable outcome; getting what was</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanted -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanted">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">wanted</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Receiving esteem, respect, praise</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Getting something striven for, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Reality exceeding expectations</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Receiving a wonderful surprise</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Experiencing pleasurable stimuli, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Being accepted, belonging</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Receiving love, liking, affection</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Being courteous, friendly to others</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Doing nice things for other people</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Communicating the good feeling</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Sharing the feeling</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/hugging_people -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hugging_people">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Hugging people</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Positive outlook; seeing bright side</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">High thresh hold for worry, annoyance</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Giggling, laughing</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_excited -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_excited">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Feeling excited</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper' -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper'">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Physically energetic, active, 'hyper'</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Being bouncy, bubbly</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Jumping up and down</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Saying positive things</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Voice is enthusiastic, excited</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Being talkative, talking a lot</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Bright, glowing face</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Predisposition to anger</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Reversal or loss of power, status</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Violation of expectation</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Frustration/interruption of activity</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Real or threatened pain</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Judgment of illegitimacy, unfairness</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Obscenities, cursing</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Verbally attacking the cause of anger</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Loud voice, yelling, screaming</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Complaining, bitching, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Hands or fists clenched</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Aggressive, threatening gestures</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Attacking something other than cause</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Physically attacking the cause of anger</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Incoherent, out of control, emotional</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Imagining attacking the cause of anger</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Heavy walk, stomping</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Tightness or rigidity in body</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Nonverbally communicating disapproval</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Frowning, not smiling, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Gritting teeth, showing teeth, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Red, flushed face</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/crying -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Crying</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Nervous tension, anxiety, discomfort</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Brooding; withdrawing from contact</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Narrowing of attention</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Thinking 'I'm right,' etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Suppressing anger; trying not to show it</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Redefining the situation, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Undesirable outcome, negative surprise</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Death of a loved one</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Loss of relationship; separation</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Rejection, exclusion, disapproval</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Not getting what was wanted, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Reality falling short of expectations</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Discovering one is powerless, helpless</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Empathy with someone who is sad, hurt</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc. -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Sitting, lying around; inactive, etc.</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Tired, run-down, low in energy</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Slow, shuffling movements</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Slumped, drooping posture</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Withdrawing from social contact</emotion:label>
-    </owl:NamedIndividual>
+    
 
 
     <!-- https://w3id.org/spice/SON/ShaverEmotions/talking_little_or_not_at_all -->
@@ -3251,132 +2415,7 @@
         </rdf:type>
         <emotion:label xml:lang="en">Talking little or not at all</emotion:label>
     </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Low, quiet, slow, monotonous voice</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Saying sad things</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Frowning, not smiling</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Crying, tears, whimpering</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Irritable, touchy, grouchy</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Moping, brooding, being moody</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Negative outlook; thinking negatively</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Giving up; no longer trying to improve</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Blaming, criticizing oneself</emotion:label>
-    </owl:NamedIndividual>
+    
 
 
     <!-- https://w3id.org/spice/SON/ShaverEmotions/talking_to_someone_about_sadness -->
@@ -3391,76 +2430,7 @@
         </rdf:type>
         <emotion:label xml:lang="en">Talking to someone about sadness</emotion:label>
     </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Taking action, becoming active</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Suppressing feelings; acting happy</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Threat of social rejection</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Possibility of loss, failure</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Loss of control, competence</emotion:label>
-    </owl:NamedIndividual>
+    
 
 
     <!-- https://w3id.org/spice/SON/ShaverEmotions/threat_of_harm_or_death -->
@@ -3475,11 +2445,12 @@
         </rdf:type>
         <emotion:label xml:lang="en">Threat of harm or death</emotion:label>
     </owl:NamedIndividual>
+    
 
 
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation -->
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
         <rdf:type>
             <owl:Restriction>
@@ -3487,232 +2458,99 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdf:type>
-        <emotion:label xml:lang="en">Novel, unfamiliar situation</emotion:label>
+        <emotion:label xml:lang="en">Threat of social rejection</emotion:label>
     </owl:NamedIndividual>
+    
 
 
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_alone -->
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_alone">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdf:type>
-        <emotion:label xml:lang="en">Being alone</emotion:label>
+        <emotion:label xml:lang="en">Tightness or rigidity in body</emotion:label>
     </owl:NamedIndividual>
+    
 
 
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark -->
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdf:type>
-        <emotion:label xml:lang="en">Being in the dark</emotion:label>
+        <emotion:label xml:lang="en">Verbally attacking the cause of anger</emotion:label>
     </owl:NamedIndividual>
+    
 
 
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring -->
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdf:type>
-        <emotion:label xml:lang="en">Sweating, perspiring</emotion:label>
+        <emotion:label xml:lang="en">Violation of expectation</emotion:label>
     </owl:NamedIndividual>
+    
 
 
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy -->
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanted -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanted">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdf:type>
-        <emotion:label xml:lang="en">Feeling nervous, jittery, jumpy</emotion:label>
+        <emotion:label xml:lang="en">wanted</emotion:label>
     </owl:NamedIndividual>
+    
 
 
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling -->
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdf:type>
-        <emotion:label xml:lang="en">Shaking, quivering, trembling</emotion:label>
+        <emotion:label xml:lang="en">Wanting physical closeness or sex</emotion:label>
     </owl:NamedIndividual>
+    
 
 
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around -->
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdf:type>
-        <emotion:label xml:lang="en">Eyes darting, looking quickly around</emotion:label>
+        <emotion:label xml:lang="en">Withdrawing from social contact</emotion:label>
     </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Nervous, fearful talk</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Shaky, trembling voice</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Crying, whimpering</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Screaming, yelling</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Pleading, crying for help</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Fleeing, running, walking hurriedly</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Picturing a disastrous conclusion</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Losing ability to focus, disoriented</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Hiding from threat, trying not to move</emotion:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless">
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
-            </owl:Restriction>
-        </rdf:type>
-        <emotion:label xml:lang="en">Talking less, being speechless</emotion:label>
-    </owl:NamedIndividual>
+    
 
 
     <!-- https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear -->
@@ -3727,6 +2565,142 @@
         </rdf:type>
         <emotion:label xml:lang="en">Acting unafraid, hiding the fear</emotion:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Aggressive, threatening gestures</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Being accepted, belonging</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Being bouncy, bubbly</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Being courteous, friendly to others</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Being forgetful, distracted, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Being talkative, talking a lot</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Blaming, criticizing oneself</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Bright, glowing face</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Brooding; withdrawing from contact</emotion:label>
+    </owl:NamedIndividual>
+    
 
 
     <!-- https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm -->
@@ -3741,9 +2715,1146 @@
         </rdf:type>
         <emotion:label xml:lang="en">Comforting self, trying to keep calm</emotion:label>
     </owl:NamedIndividual>
+    
 
 
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc. -->
 
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Complaining, bitching, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Crying, whimpering</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Crying, tears, whimpering</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Desirable outcome; getting what was</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Discovering one is powerless, helpless</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Empathy with someone who is sad, hurt</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Experiencing pleasurable stimuli, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Eye contact, mutual gaze</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Eyes darting, looking quickly around</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Feeling/acting self-confident, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Feeling excited, high energy, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Feeling happy, joyful, exuberant, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Feeling nervous, jittery, jumpy</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Feeling relaxed, calm</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Feeling warm, trusting, secure, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Fleeing, running, walking hurriedly</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Frowning, not smiling</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Frowning, not smiling, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Frustration/interruption of activity</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Getting something striven for, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Giggling, laughing</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Giving up; no longer trying to improve</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Gritting teeth, showing teeth, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Having shared time, experiences</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Heavy walk, stomping</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Hiding from threat, trying not to move</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">High thresh hold for worry, annoyance</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Hugging, holding, cuddling</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Incoherent, out of control, emotional</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Irritable, touchy, grouchy</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Judgment of illegitimacy, unfairness</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Losing ability to focus, disoriented</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Loss of control, competence</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Loss of relationship; separation</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Loud voice, yelling, screaming</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Low, quiet, slow, monotonous voice</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Moping, brooding, being moody</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Negative outlook; thinking negatively</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Nervous, fearful talk</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Nervous tension, anxiety, discomfort</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Not getting what was wanted, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Novel, unfamiliar situation</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Obscenities, cursing</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Other inspires openness, trust, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Person knows other loves, needs, him or her</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_&apos;hyper&apos; -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_&apos;hyper&apos;">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Physically energetic, active, &apos;hyper&apos;</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Pleading, crying for help</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Positive outlook; seeing bright side</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Possibility of loss, failure</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Receiving esteem, respect, praise</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Receiving love, liking, affection</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Red, flushed face</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Redefining the situation, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Rejection, exclusion, disapproval</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Reversal or loss of power, status</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_&apos;i_love_you&apos; -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_&apos;i_love_you&apos;">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Saying &apos;I love you&apos;</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Screaming, yelling</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Seeing only the positive side, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Shaking, quivering, trembling</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Shaky, trembling voice</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Sitting, lying around; inactive, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Slow, shuffling movements</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Slumped, drooping posture</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Suppressing anger; trying not to show it</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Suppressing feelings; acting happy</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Sweating, perspiring</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Taking action, becoming active</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Talking less, being speechless</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Task success, achievement</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/thinking_&apos;i&apos;m_right,&apos;_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/thinking_&apos;i&apos;m_right,&apos;_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Thinking &apos;I&apos;m right,&apos; etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Tired, run-down, low in energy</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/touching,_petting -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/touching,_petting">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Touching, petting</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Undesirable outcome, negative surprise</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Voice is enthusiastic, excited</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc. -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Wanting the best for other, etc.</emotion:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
+            </owl:Restriction>
+        </rdf:type>
+        <emotion:label xml:lang="en">Wanting to see, spend time with other</emotion:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
