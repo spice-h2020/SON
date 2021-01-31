@@ -1,0 +1,239 @@
+@prefix bot: <https://w3id.org/bot#> .
+@prefix ex: <https://w3id.org/spice/SON/issues/31/> .
+@prefix exhibition: <https://w3id.org/spice/SON/exhibition/> .
+@prefix cis: <http://dati.beniculturali.it/cis/>  .
+@prefix arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix DUL: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix wd: <http://wikidata.org/entity/> .
+
+
+ex:HechtMuseum a cis:Museum ;
+	cis:hasSite ex:HechtMuseumBuilding .
+
+ex:HechtMuseumBuilding a  bot:Building ;
+  bot:containsZone ex:Entrance , ex:GalileeRebellion , ex:MainHall , ex:Corridor .
+
+ex:Entrance bot:containsZone ex:BustOfHechtZone .
+
+ex:BustOfHechtZone DUL:isLocationOf ex:BustOfHecht .
+
+ex:BustOfHecht a arco:HistoricOrArtisticProperty ;
+  cis:isSubjectOf ex:RHech1, ex:RHech2, ex:RHech3, ex:RHech4, ex:RoleOfMuseum, ex:QuestionOfWar .
+
+ex:BustOfHecht DUL:associatedWith <http://dbpedia.org/resource/Reuben_Hecht> .
+
+ex:RoleOfMuseum a  cis:CreativeWork ; # Interpreted as a document! Or is it a topic in case of a topic different pattern is needed
+    cis:url <RoleOfMuseum>  .  
+
+ex:QuestionOfWar a  cis:CreativeWork ; # Interpreted as a document! Or is it a topic in case of a topic different pattern is needed
+    cis:url <QuestionOfWar>  . 
+
+ex:RHech1 a cis:ImageObject ;
+    cis:url <RHech1> .  
+
+ex:RHech2 a cis:ImageObject ;
+    cis:url <RHech2>  .  
+
+ex:RHech3 a cis:ImageObject ;
+    cis:url <RHech3>  .  
+
+ex:RHech4 a cis:ImageObject ;
+    cis:url <RHech4>  . 
+
+# Type of exhibit art?
+
+
+### Ventrina XX
+
+ex:GalileeRebellion bot:containsZone ex:VentrinaXX .
+
+ex:VentrinaXX DUL:isLocationOf ex:Arrows, ex:Catapult .
+
+## Arrows
+
+ex:Arrows a arco:HistoricOrArtisticProperty ;
+  cis:isSubjectOf ex:Gamla, ex:Gamla1, ex:Gamla2, ex:Gamla3, ex:Gamla4, ex:Arrows1, ex:Arrows2, ex:Arrows3,  ex:ArrowsVideo .
+
+ex:Arrows DUL:associatedWith <http://dbpedia.org/resource/Gamla>, <http://www.wikidata.org/entity/Q1493165> . # In case that Gamla is the location where the arrows were found Time-indexed typed location pattern can be used
+
+ex:Gamla a cis:VideoObject  ;
+    cis:url <Gamla.mp4>  .  
+
+ex:ArrowsVideo a cis:VideoObject ;
+    cis:url <Arrows.mp4>  .  
+
+ex:Gamla1 a cis:ImageObject ;
+    cis:url <Gamla1> .  
+
+ex:Gamla2 a cis:ImageObject ;
+    cis:url <Gamla2> .  
+
+ex:Gamla3 a cis:ImageObject ;
+    cis:url <Gamla3>  .  
+
+ex:Gamla4 a cis:ImageObject ;
+    cis:url <Gamla4>  .  
+
+ex:Arrows1 a cis:ImageObject ;
+    cis:url <Arrows1>  .  
+
+ex:Arrows2 a cis:ImageObject ;
+    cis:url <Arrows2>  .  
+
+ex:Arrows3 a cis:ImageObject ;
+    cis:url <Arrows3>  . 
+
+## Type of exhibit artifact?
+
+## Catapult
+
+ex:Catapult a arco:HistoricOrArtisticProperty ;
+	cis:isSubjectOf ex:CatapultVideo, ex:Catapult1, ex:Catapult2, ex:Catapult3, ex:Catapult4 ;
+	DUL:associatedWith <http://dbpedia.org/resource/Catapult>, <http://wikidata.org/entity/Q184393> .
+
+ex:CatapultVideo a cis:VideoObject ;
+    cis:url <Catapult.mp4>  .  
+
+ex:Catapult1 a cis:ImageObject ;
+    cis:url <Catapult1>  .  
+
+ex:Catapult2 a cis:ImageObject ;
+    cis:url <Catapult2> .  
+
+ex:Catapult3 a cis:ImageObject ;
+    cis:url <Catapult3>  .  
+
+ex:Catapult4 a cis:ImageObject ;
+    cis:url <Catapult4>  .  
+
+## Type of exhibit reconstruction?
+## Content story of origin?
+
+### Portaits
+
+ex:GalileeRebellion bot:containsZone ex:Portaits .
+
+ex:Portaits DUL:isLocationOf ex:PortraitOfJosephFlavius, ex:PortraitOfBerniece .
+
+
+# ex:PortraitOfJosephFlavius
+
+ex:PortraitOfJosephFlavius a arco:HistoricOrArtisticProperty ;
+	cis:isSubjectOf ex:JosephFlaviusVideo, ex:JF2Picture ;
+	DUL:associatedWith dbr:Josephus, wd:Q134461 .
+
+ex:JosephFlaviusVideo a cis:VideoObject ;
+	cis:url <JosephFlavius.mp4> .
+
+ex:JF2Picture a cis:ImageObject ;
+	cis:url <JF2> .
+
+## type of exhibit Drawing with explanation	??
+
+
+# ex:PortraitOfBerniece
+
+ex:PortraitOfBerniece a arco:HistoricOrArtisticProperty ;
+	cis:isSubjectOf ex:Berniece1Picture ;
+	DUL:associatedWith <http://dbpedia.org/resource/Berenice_(daughter_of_Herod_Agrippa)> , wd:Q466696 .
+
+ex:Berniece1Picture a cis:ImageObject ;
+	cis:url <Berniece1> ;
+	cis:isAbout ex:PortraitOfBerniece .
+
+
+## Ventrina xx
+
+ex:GalileeRebellion bot:containsZone ex:VentrinaZZ .
+
+ex:VentrinaZZ DUL:isLocationOf ex:RomanWarGear, ex:HeadOfVespasian .
+
+# ex:RomanWarGear 
+
+ex:RomanWarGear a arco:HistoricOrArtisticProperty ;
+	cis:isSubjectOf ex:Legion1, ex:Legion2, ex:Legion3, ex:Legion4, ex:Legion5, ex:Legion6 ;
+	DUL:associatedWith dbr:Legionary, wd:Q17346959 .
+
+ex:Legion1 a cis:ImageObject ;
+	cis:url <Legion1> .
+
+ex:Legion2 a cis:ImageObject ;
+	cis:url <Legion2> .
+
+ex:Legion3 a cis:ImageObject ;
+	cis:url <Legion3> .
+
+ex:Legion4 a cis:ImageObject ;
+	cis:url <Legion4> .
+
+ex:Legion5 a cis:ImageObject ;
+	cis:url <Legion5> .
+
+## Type of exhibit artifact ??
+
+## ex:HeadOfVespasian
+
+ex:HeadOfVespasian a ex:HistoricOrArtisticProperty ;
+	cis:isSubjectOf ex:Vespasian1, ex:Vespasian2 ;
+	DUL:associatedWith dbr:Vespasian, wd:Q1419, <https://museums.gov.il/en/items/Pages/ItemCard.aspx?IdItem=ICMS_HCH_H-2044> .
+
+ex:Vespasian1 a cis:ImageObject ;
+	cis:url <Vespasian1> .
+
+ex:Vespasian2 a cis:ImageObject ;
+	cis:url <Vespasian2> .
+
+## Type of exhibit statue (bust)	
+
+
+## Main Hall
+
+ex:MainHall bot:containsZone ex:VentrinaYY .
+
+ex:VentrinaYY DUL:isLocationOf ex:BarKochvaRebellion .
+
+ex:BarKochvaRebellion a arco:HistoricOrArtisticProperty ;
+	cis:isSubjectOf ex:BarKochvaRebellionVideo ;
+	DUL:associatedWith dbr:Bar_Kokhba_revolt , wd:Q334502 .
+
+ex:BarKochvaRebellionVideo a cis:VideoObject ;
+	cis:url <https://www.facebook.com/hechtmus/videos/596750170938699> .
+
+## Type of exhibit artificat
+## Time period 132 CE
+
+ex:Corridor bot:containsZone ex:JerusalemPhotoZone .
+
+ex:JerusalemPhotoZone DUL:isLocationOf ex:JerusalemPhoto .
+
+ex:JerusalemPhoto a arco:PhotographicHeritage ;
+	cis:isSubjectOf ex:Jerusalem1, ex:Jerusalem2, ex:Jerusalmen3;
+	DUL:associatedWith dbr:Jerusalem, wd:Q1218 .
+
+ex:Jerusalem1 a cis:ImageObject ;
+	cis:url <Jerusalem1> .
+
+ex:Jerusalem2 a cis:ImageObject ;
+	cis:url <Jerusalem2> .
+
+ex:Jerusalem3 a cis:ImageObject ;
+	cis:url <Jerusalem3> .
+
+## Type of exhibit histocal photograph
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
