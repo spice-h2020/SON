@@ -7,6 +7,9 @@
 @prefix DUL: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix wd: <http://wikidata.org/entity/> .
+@prefix e: <https://w3id.org/spice/SON/emotionInCulturalContext> . 
+@prefix emo-p: <https://w3id.org/spice/SON/PlutchikEmotion> . 
+
 
 
 ex:HechtMuseum a cis:Museum ;
@@ -92,6 +95,10 @@ ex:Arrows3 a cis:ImageObject ;
 ex:Catapult a arco:HistoricOrArtisticProperty ;
 	cis:isSubjectOf ex:CatapultVideo, ex:Catapult1, ex:Catapult2, ex:Catapult3, ex:Catapult4 ;
 	DUL:associatedWith <http://dbpedia.org/resource/Catapult>, <http://wikidata.org/entity/Q184393> .
+
+ex:Catapult e:triggers emo-p:Aggressiveness .
+
+a  bot:Building 
 
 ex:CatapultVideo a cis:VideoObject ;
     cis:url <Catapult.mp4>  .  
