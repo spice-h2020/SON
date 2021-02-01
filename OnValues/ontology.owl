@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#"
+     xml:base="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schwartz="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#hasFamily -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#hasFamily"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#moreImportantThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#moreImportantThan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#opposingDimension -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#opposingDimension">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#opposingFocus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#opposingFocus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#opposingValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#opposingValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#opposingDimension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#takenAsValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#takenAsValue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#valueMotivation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#valueMotivation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Achievement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Achievement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfEnhancement"/>
+        <rdfs:comment>Personal success obtained by demonstrating competence according to social criteria or cultural norms.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfDirection"/>
+        <rdfs:comment>The freedom to determine one&apos;s own actions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Benevolence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Benevolence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfTrascendence"/>
+        <rdfs:comment>An interest and concern for the wellbeing of persons with whom one is in close contact.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Caring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Caring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Benevolence"/>
+        <rdfs:comment>Devotion to the wellbeing of group members.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Concern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Concern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Universalism"/>
+        <rdfs:comment>Commitment to equality, justice and protection for all.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conformity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conformity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation"/>
+        <rdfs:comment>Control of one&apos;s own impulses and behaviour, in line with social norms and expectations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PersonalFocus"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SocialFocus"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#valueMotivation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#OpennessToChange"/>
+        <rdfs:comment>Preserving stability and security in relations with one&apos;s surroundings, with the emphasis on subservient self-repression, the preservation of traditional practices and protecting stability.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Dependability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Dependability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Benevolence"/>
+        <rdfs:comment>Being a reliable and trustworthy member of the in-group.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Dominance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Dominance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Power"/>
+        <rdfs:comment>Power through exercising control over others.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Face -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Face">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfEnhancement"/>
+        <rdfs:comment>Security and power via the keeping up of one&apos;s own public image and avoidance of humiliation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#FirstOrderValues -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#FirstOrderValues"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Focus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Focus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#GrowthAndAnxietyFree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#GrowthAndAnxietyFree"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Hedonism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Hedonism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#OpennessToChange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfEnhancement"/>
+        <rdfs:comment>The search for pleasure and sensuous gratification or satisfaction for oneself.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Humility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Humility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfTrascendence"/>
+        <rdfs:comment>Acknowledgement of one&apos;s insignificance in the grand scheme of things.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Interpersonal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Interpersonal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conformity"/>
+        <rdfs:comment>Avoidance of upsetting or harming others.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#MotivationalDimension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#MotivationalDimension"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Nature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Nature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Universalism"/>
+        <rdfs:comment>Preservation of the natural environment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#OpennessToChange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#OpennessToChange">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PersonalFocus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#valueMotivation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#OpennessToChange"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Controlling one&apos;s own impulses and behaviour, according to social norms and expectations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority">
+        <rdfs:comment>&quot;Individuals differ substantially in the importance they attribute to the ten values. At the societal level, however, consensus regarding the hierarchical order of the values is surprisingly high. Across representative samples, using different instruments, the importance ranks for the ten values are quite similar.&quot;
+
+Basic Human Values: Theory, Measurement and Applications - Schwartz 2007</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Personal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Personal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PersonalFocus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#valueMotivation"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Security"/>
+        <rdfs:comment>Safety in one&apos;s own immediate environment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PersonalFocus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PersonalFocus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Focus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_1st -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_1st">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_2nd -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_2nd">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_3rd -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_3rd">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_4th -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_4th">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_5th -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_5th">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_6th -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_6th">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_7th -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_7th">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_8th -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Position_8th">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PanCulturalBaselineForValuesPriority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Power -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Power">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfEnhancement"/>
+        <rdfs:comment>The search for social status and prestige, as well as control or dominance over people and resources.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Resources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Resources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Power"/>
+        <rdfs:comment>Power through control of material and social resources.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Rules -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Rules">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conformity"/>
+        <rdfs:comment>Compliance with norms, laws and formal obligations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SecondOrderValues -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SecondOrderValues"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation"/>
+        <rdfs:comment>Personal wellbeing and that of in-persons and in-groups, as well as the stability of society and oneself.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfDirection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfDirection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#OpennessToChange"/>
+        <rdfs:comment>Independence of thought, action and opinion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfEnhancement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfEnhancement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#PersonalFocus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#valueMotivation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfEnhancement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfTrascendence"/>
+        <rdfs:comment>Promoting self-interest at the expense of others, emphasising the search for personal success and dominance over others.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfProtectionAndAnxietyAvoidance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfProtectionAndAnxietyAvoidance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfTrascendence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfTrascendence">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#focus"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SocialFocus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#valueMotivation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfTrascendence"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Promoting the wellbeing of society and nature above one&apos;s own interests, highlighting the acceptance of others as equals, as well as a concern for their wellbeing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SocialFocus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SocialFocus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Focus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Societal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Societal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Security"/>
+        <rdfs:comment>Security and stability in wider society.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Stimulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Stimulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#OpennessToChange"/>
+        <rdfs:comment>The search for excitement, novelty and change, needed to keep up a good functional level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#ThirdOrderValues -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#ThirdOrderValues"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Thought -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Thought">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfDirection"/>
+        <rdfs:comment>The freedom to cultivate one&apos;s own ideas and skills.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Tolerance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Tolerance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Universalism"/>
+        <rdfs:comment>Acceptance and understanding of those different from oneself.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Tradition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Tradition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Conservation"/>
+        <rdfs:comment>Respect for, commitment to and acceptation of the ideals and customs imposed by culture or religion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Universalism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Universalism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#SelfTrascendence"/>
+        <rdfs:comment>Understanding and acceptation of others and a concern for the wellbeing of society and the planet we inhabit.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sten-doipanni/ontologies/2021/0/OnValues_Schwartz#Value"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
