@@ -7,8 +7,8 @@
 @prefix DUL: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix wd: <http://wikidata.org/entity/> .
-@prefix e: <https://w3id.org/spice/SON/emotionInCulturalContext> . 
-@prefix emo-p: <https://w3id.org/spice/SON/PlutchikEmotion> . 
+@prefix e: <https://w3id.org/spice/SON/emotionInCulturalContext/> . 
+@prefix emo-p: <https://w3id.org/spice/SON/PlutchikEmotion/> . 
 
 
 
@@ -97,8 +97,6 @@ ex:Catapult a arco:HistoricOrArtisticProperty ;
 	DUL:associatedWith <http://dbpedia.org/resource/Catapult>, <http://wikidata.org/entity/Q184393> .
 
 ex:Catapult e:triggers emo-p:Aggressiveness .
-
-a  bot:Building 
 
 ex:CatapultVideo a cis:VideoObject ;
     cis:url <Catapult.mp4>  .  
