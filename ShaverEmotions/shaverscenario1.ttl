@@ -1,0 +1,46 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shavem: <https://w3id.org/spice/SON/ShaverEmotions/> .
+@prefix e: <https://w3id.org/spice/SON/emotion/> .
+@prefix eicc: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix ex: <https://example.org#> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+
+ex:userA a ex:User .
+
+ex:userB a ex:User .
+
+ex:painting1 a cis:Painting .
+
+ex:crying a shavem:EmotionEvent ;
+    a shavem:crying ;
+    e:triggers ex:sufferingofA ;
+    e:triggers ex:unhappinessofB ;
+    #this is inferred
+    e:triggers shavem:Sadness ;
+    e:label "crying"@en .
+
+
+ex:APaintingER a eicc:EmotionRelationInCulturalContext ;
+    e:stimulus ex:crying ;
+    e:emotion ex:sufferingofA ;
+    e:experiencer e:A .
+
+ex:BPaintingER a eicc:EmotionRelationInCulturalContext ;
+    e:stimulus ex:crying ;
+    e:emotion ex:unhappinessofB ;
+    e:experiencer ex:userB .
+
+
+ex:sufferingofA a shavem:Suffering ;
+    shavem:referstoprototypeEmotion shavem:Sadness .
+
+ex:unhappinessofB a shavem:Unhappiness ;
+    shavem:referstoprototypeEmotion shavem:Sadness .
+
+
+
+
+
+
+
