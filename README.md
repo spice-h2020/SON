@@ -72,6 +72,13 @@ Linguistic data
 - [Earmark](http://www.essepuntato.it/2008/12/earmark#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30)) 
 - [POS](http://www.ontologydesignpatterns.org/ont/fred/pos.owl#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30))
 
+Artwork-related data
+
+- [ArCo ontology network](https://w3id.org/arco/ontology/arco) (cf. [#31](https://github.com/spice-h2020/SON/issues/31))
+- [CulturalON](http://dati.beniculturali.it/cis/) (cf. [#31](https://github.com/spice-h2020/SON/issues/31))
+- [Getty vocabularies](http://vocab.getty.edu/) (cf. [#31](https://github.com/spice-h2020/SON/issues/31))
+- [Building Topology Ontology (BOT)](https://w3id.org/bot#) (for describing the structure of the museums or the exhibitions)
+
 ## How to contribute
 
 You can contribute to the SPICE Ontology Network either by defining a new scenario (that can be submitted as [issues](https://github.com/spice-h2020/SON/issues/new/choose)) or  proposing an extension of the ontology.
