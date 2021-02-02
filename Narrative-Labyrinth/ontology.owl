@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://w3id.org/spice/SON/Narrative-Labyrinth"
      versionIRI="https://w3id.org/spice/SON/Narrative-Labyrinth/0.0.1">
+    <Prefix name="" IRI="https://w3id.org/spice/SON/Narrative-Labyrinth"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -22,69 +23,6 @@
         <Literal>14-02-2014</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Action"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Agent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Archetypes"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#DescriptionTemplates"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Event"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#GeographicalPlace"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Hero"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#KillingStory"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#MithologicalEntity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#MithologicalStory"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEnvironment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Object"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Organization"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Person"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Process"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Role"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Travel"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="cidoc_crm_v5:E28.Conceptual_Object"/>
     </Declaration>
     <Declaration>
@@ -94,220 +32,67 @@
         <Class abbreviatedIRI="cidoc_crm_v5:E77.Persistent_Item"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#ActionDescribedBy"/>
+        <Class IRI="#Action"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Entrance"/>
+        <Class IRI="#Agent"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsActionObjectOf"/>
+        <Class IRI="#Archetypes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsArchetypeActionOf"/>
+        <Class IRI="#DescriptionTemplates"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsArchetypeObjectOf"/>
+        <Class IRI="#Dynamics"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDescribedBy"/>
+        <Class IRI="#Event"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDynamicOf"/>
+        <Class IRI="#GeographicalPlace"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsFillerOF"/>
+        <Class IRI="#Hero"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsHistoricalCollocationOf"/>
+        <Class IRI="#KillingStory"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsNarrativeCharacterOf"/>
+        <Class IRI="#MithologicalEntity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsNarrativeLocationOf"/>
+        <Class IRI="#MithologicalStory"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsNarrativeObjectOf"/>
+        <Class IRI="#NarrativeEntity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsObjectOf"/>
+        <Class IRI="#NarrativeEnvironment"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsOriginOf"/>
+        <Class IRI="#Object"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsRoleOf"/>
+        <Class IRI="#Organization"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#OccourIn"/>
+        <Class IRI="#Person"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#belongsTo"/>
+        <Class IRI="#Process"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describes"/>
+        <Class IRI="#Role"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describesAction"/>
+        <Class IRI="#Story"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describesStory"/>
+        <Class IRI="#TemporalCollocation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#displays"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#evokes"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasAction"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasActionObject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasArchetypeAction"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasArchetypeObject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCharacter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCollaborator"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDynamic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFiller"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFunctionalAgent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasGeographicalLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasHistoricalCollocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLayoutStructure"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLinkedAgent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeCharacter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeObject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasObjects"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasOriginIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedStory"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRepresentedLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRepresentedObject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRepresentedTymePeriod"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasResourceType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRole"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasStructure"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasSubject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasSymbolicReference"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasTimePeriod"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isActionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isDisplayedIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isEmbodiedIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isEmbodimentOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isEvocatedIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isFormatOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isFunctionalAgentOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isGeographicalLocationof"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isLayoutStructureOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isPartOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRealizationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRealizedthrough"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRecalledIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRelatedStoryOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isStructureof"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isSubjectOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isSymbolicReferenceOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isTimePeriodOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#recalls"/>
+        <Class IRI="#Travel"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cidoc_crm_v5:P100B.died_in"/>
@@ -1090,37 +875,220 @@
         <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#playsIn"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Frame"/>
+        <ObjectProperty IRI="#ActionDescribedBy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#archive"/>
+        <ObjectProperty IRI="#Entrance"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#endyearValue"/>
+        <ObjectProperty IRI="#IsActionObjectOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#framenetRoleTipe"/>
+        <ObjectProperty IRI="#IsArchetypeActionOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDescription"/>
+        <ObjectProperty IRI="#IsArchetypeObjectOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasEntrance"/>
+        <ObjectProperty IRI="#IsDescribedBy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasKeyword"/>
+        <ObjectProperty IRI="#IsDynamicOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasSolution"/>
+        <ObjectProperty IRI="#IsFillerOF"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#predicate"/>
+        <ObjectProperty IRI="#IsHistoricalCollocationOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#startingyearValue"/>
+        <ObjectProperty IRI="#IsNarrativeCharacterOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#yearValue"/>
+        <ObjectProperty IRI="#IsNarrativeLocationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsNarrativeObjectOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsObjectOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsOriginOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsRoleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OccourIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describesAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describesStory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#displays"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#evokes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActionObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArchetypeAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArchetypeObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCharacter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCollaborator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDynamic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFiller"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFunctionalAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGeographicalLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHistoricalCollocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLayoutStructure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLinkedAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNarrativeCharacter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNarrativeLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNarrativeObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasObjects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOriginIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelatedLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelatedStory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRepresentedLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRepresentedObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRepresentedTymePeriod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasResourceType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStructure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSubject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSymbolicReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTimePeriod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isActionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDisplayedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEmbodiedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEmbodimentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEvocatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFormatOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFunctionalAgentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGeographicalLocationof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLayoutStructureOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedthrough"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRecalledIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRelatedStoryOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isStructureof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSubjectOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSymbolicReferenceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTimePeriodOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recalls"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="cidoc_crm_v5:P3F.has_note"/>
@@ -1144,55 +1112,37 @@
         <DataProperty abbreviatedIRI="cidoc_crm_v5:P90F.has_value"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#definition"/>
+        <DataProperty IRI="#Frame"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasContributedTo"/>
+        <DataProperty IRI="#archive"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasContributor"/>
+        <DataProperty IRI="#endyearValue"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCreated"/>
+        <DataProperty IRI="#framenetRoleTipe"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCreator"/>
+        <DataProperty IRI="#hasDescription"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFormat"/>
+        <DataProperty IRI="#hasEntrance"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFragment"/>
+        <DataProperty IRI="#hasKeyword"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLanguage"/>
+        <DataProperty IRI="#hasSolution"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPublished"/>
+        <DataProperty IRI="#predicate"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPublisher"/>
+        <DataProperty IRI="#startingyearValue"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasTimeValue"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isCopyrightedBy"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isFragmentOf"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isGeographicalLocationOf"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isResourceTypeOf"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#title"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#value"/>
+        <DataProperty IRI="#yearValue"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -1981,154 +1931,169 @@
         <AnnotationProperty abbreviatedIRI="cidoc_crm_v5:P9F.consists_of"/>
     </Declaration>
     <Declaration>
-        <Datatype IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Area"/>
+        <AnnotationProperty IRI="#definition"/>
     </Declaration>
     <Declaration>
-        <Datatype IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasEntrance"/>
+        <AnnotationProperty IRI="#hasContributedTo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasContributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasCreated"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasCreator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasFormat"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasFragment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasPublished"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasPublisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasTimeValue"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#isCopyrightedBy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#isFragmentOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#isGeographicalLocationOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#isResourceTypeOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#value"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#Area"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#hasEntrance"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#MithologicalStory"/>
+        <Class IRI="#MithologicalStory"/>
         <ObjectIntersectionOf>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+            <Class IRI="#Story"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCharacter"/>
-                <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#MithologicalEntity"/>
+                <ObjectProperty IRI="#hasCharacter"/>
+                <Class IRI="#MithologicalEntity"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Action"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Process"/>
+        <Class abbreviatedIRI="cidoc_crm_v5:E28.Conceptual_Object"/>
+        <Class abbreviatedIRI="cidoc_crm_v5:E77.Persistent_Item"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Agent"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <Class IRI="#Action"/>
+        <Class IRI="#Process"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Archetypes"/>
+        <Class IRI="#Agent"/>
+        <Class IRI="#NarrativeEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Archetypes"/>
         <Class abbreviatedIRI="cidoc_crm_v5:E28.Conceptual_Object"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Event"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Process"/>
+        <Class IRI="#Event"/>
+        <Class IRI="#Process"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#GeographicalPlace"/>
+        <Class IRI="#GeographicalPlace"/>
         <Class abbreviatedIRI="cidoc_crm_v5:E53.Place"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Hero"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Archetypes"/>
+        <Class IRI="#Hero"/>
+        <Class IRI="#Archetypes"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#KillingStory"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+        <Class IRI="#KillingStory"/>
+        <Class IRI="#Story"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#MithologicalEntity"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Agent"/>
+        <Class IRI="#MithologicalEntity"/>
+        <Class IRI="#Agent"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#MithologicalStory"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+        <Class IRI="#MithologicalStory"/>
+        <Class IRI="#Story"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <Class IRI="#NarrativeEntity"/>
         <Class abbreviatedIRI="cidoc_crm_v5:E77.Persistent_Item"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEnvironment"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <Class IRI="#NarrativeEnvironment"/>
+        <Class IRI="#NarrativeEntity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Object"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <Class IRI="#Object"/>
+        <Class IRI="#NarrativeEntity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Organization"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Agent"/>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Agent"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Person"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Agent"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#Agent"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Process"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <Class IRI="#Process"/>
+        <Class IRI="#Dynamics"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Role"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#DescriptionTemplates"/>
+        <Class IRI="#Role"/>
+        <Class IRI="#DescriptionTemplates"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <Class IRI="#Story"/>
+        <Class IRI="#Dynamics"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Travel"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Archetypes"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cidoc_crm_v5:E28.Conceptual_Object"/>
-        <Class abbreviatedIRI="cidoc_crm_v5:E77.Persistent_Item"/>
+        <Class IRI="#Travel"/>
+        <Class IRI="#Archetypes"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Agent"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEnvironment"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Object"/>
+        <Class IRI="#Agent"/>
+        <Class IRI="#NarrativeEnvironment"/>
+        <Class IRI="#Object"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#GeographicalPlace"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <Class IRI="#GeographicalPlace"/>
+        <Class IRI="#NarrativeEntity"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Organization"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Person"/>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Person"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <Class IRI="#Story"/>
+        <Class IRI="#TemporalCollocation"/>
     </DisjointClasses>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasAction"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDynamic"/>
+        <ObjectProperty IRI="#hasAction"/>
+        <ObjectProperty IRI="#hasDynamic"/>
     </EquivalentObjectProperties>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDynamicOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isPartOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describes"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describesAction"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describesStory"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#evokes"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDynamic"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeCharacter"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeLocation"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeObject"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="cidoc_crm_v5:P100B.died_in"/>
         <ObjectProperty abbreviatedIRI="cidoc_crm_v5:P93B.was_taken_out_of_existence_by"/>
@@ -2641,310 +2606,225 @@
         <ObjectProperty abbreviatedIRI="cidoc_crm_v5:P99F.dissolved"/>
         <ObjectProperty abbreviatedIRI="cidoc_crm_v5:P93F.took_out_of_existence"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#IsDynamicOf"/>
+        <ObjectProperty IRI="#isPartOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describesAction"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describesStory"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#evokes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDynamic"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNarrativeCharacter"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNarrativeLocation"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNarrativeObject"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#ActionDescribedBy"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describesAction"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsActionObjectOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasActionObject"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsArchetypeActionOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasArchetypeAction"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsArchetypeObjectOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasArchetypeObject"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDescribedBy"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describes"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDynamicOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDynamic"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsFillerOF"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFiller"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsHistoricalCollocationOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasHistoricalCollocation"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsNarrativeCharacterOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeCharacter"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsNarrativeLocationOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeLocation"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsNarrativeObjectOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeObject"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsObjectOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasObjects"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsOriginOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasOriginIn"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsRoleOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRole"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#OccourIn"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCharacter"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#displays"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isDisplayedIn"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#evokes"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isEvocatedIn"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasAction"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isActionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFunctionalAgent"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isFunctionalAgentOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasGeographicalLocation"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isGeographicalLocationof"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLayoutStructure"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isLayoutStructureOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isPartOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedStory"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRelatedStoryOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasStructure"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isStructureof"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasSymbolicReference"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isSymbolicReferenceOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasTimePeriod"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isTimePeriodOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isEmbodiedIn"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isEmbodimentOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isFormatOf"/>
         <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasFormat"/>
+        <ObjectProperty IRI="#isFormatOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRealizationOf"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRealizedthrough"/>
+        <ObjectProperty IRI="#ActionDescribedBy"/>
+        <ObjectProperty IRI="#describesAction"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRecalledIn"/>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#recalls"/>
+        <ObjectProperty IRI="#IsActionObjectOf"/>
+        <ObjectProperty IRI="#hasActionObject"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsArchetypeActionOf"/>
+        <ObjectProperty IRI="#hasArchetypeAction"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsArchetypeObjectOf"/>
+        <ObjectProperty IRI="#hasArchetypeObject"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsDescribedBy"/>
+        <ObjectProperty IRI="#describes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsDynamicOf"/>
+        <ObjectProperty IRI="#hasDynamic"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsFillerOF"/>
+        <ObjectProperty IRI="#hasFiller"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsHistoricalCollocationOf"/>
+        <ObjectProperty IRI="#hasHistoricalCollocation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsNarrativeCharacterOf"/>
+        <ObjectProperty IRI="#hasNarrativeCharacter"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsNarrativeLocationOf"/>
+        <ObjectProperty IRI="#hasNarrativeLocation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsNarrativeObjectOf"/>
+        <ObjectProperty IRI="#hasNarrativeObject"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsObjectOf"/>
+        <ObjectProperty IRI="#hasObjects"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsOriginOf"/>
+        <ObjectProperty IRI="#hasOriginIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsRoleOf"/>
+        <ObjectProperty IRI="#hasRole"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#OccourIn"/>
+        <ObjectProperty IRI="#hasCharacter"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#displays"/>
+        <ObjectProperty IRI="#isDisplayedIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#evokes"/>
+        <ObjectProperty IRI="#isEvocatedIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAction"/>
+        <ObjectProperty IRI="#isActionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFunctionalAgent"/>
+        <ObjectProperty IRI="#isFunctionalAgentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasGeographicalLocation"/>
+        <ObjectProperty IRI="#isGeographicalLocationof"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasLayoutStructure"/>
+        <ObjectProperty IRI="#isLayoutStructureOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#isPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasRelatedStory"/>
+        <ObjectProperty IRI="#isRelatedStoryOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasStructure"/>
+        <ObjectProperty IRI="#isStructureof"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSymbolicReference"/>
+        <ObjectProperty IRI="#isSymbolicReferenceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTimePeriod"/>
+        <ObjectProperty IRI="#isTimePeriodOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isEmbodiedIn"/>
+        <ObjectProperty IRI="#isEmbodimentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isRealizationOf"/>
+        <ObjectProperty IRI="#isRealizedthrough"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isRecalledIn"/>
+        <ObjectProperty IRI="#recalls"/>
     </InverseObjectProperties>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLinkedAgent"/>
+        <ObjectProperty IRI="#hasLinkedAgent"/>
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedLocation"/>
+        <ObjectProperty IRI="#hasRelatedLocation"/>
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedStory"/>
+        <ObjectProperty IRI="#hasRelatedStory"/>
     </SymmetricObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDynamicOf"/>
+        <ObjectProperty IRI="#IsDynamicOf"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsHistoricalCollocationOf"/>
+        <ObjectProperty IRI="#IsHistoricalCollocationOf"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasAction"/>
+        <ObjectProperty IRI="#hasAction"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasActionObject"/>
+        <ObjectProperty IRI="#hasActionObject"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasArchetypeObject"/>
+        <ObjectProperty IRI="#hasArchetypeObject"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDynamic"/>
+        <ObjectProperty IRI="#hasDynamic"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasHistoricalCollocation"/>
+        <ObjectProperty IRI="#hasHistoricalCollocation"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLinkedAgent"/>
+        <ObjectProperty IRI="#hasLinkedAgent"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeCharacter"/>
+        <ObjectProperty IRI="#hasNarrativeCharacter"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeLocation"/>
+        <ObjectProperty IRI="#hasNarrativeLocation"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeObject"/>
+        <ObjectProperty IRI="#hasNarrativeObject"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasObjects"/>
+        <ObjectProperty IRI="#hasObjects"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasPart"/>
+        <ObjectProperty IRI="#hasPart"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isActionOf"/>
+        <ObjectProperty IRI="#isActionOf"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isEvocatedIn"/>
+        <ObjectProperty IRI="#isEvocatedIn"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isPartOf"/>
+        <ObjectProperty IRI="#isPartOf"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRecalledIn"/>
+        <ObjectProperty IRI="#isRecalledIn"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#recalls"/>
+        <ObjectProperty IRI="#recalls"/>
     </TransitiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDescribedBy"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDynamicOf"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsFillerOF"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsRoleOf"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Role"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#OccourIn"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#belongsTo"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasAction"/>
-        <ObjectUnionOf>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasActionObject"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Action"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCharacter"/>
-        <ObjectUnionOf>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCollaborator"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDynamic"/>
-        <ObjectUnionOf>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFiller"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Role"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasHistoricalCollocation"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLinkedAgent"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLocation"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeCharacter"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeLocation"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeObject"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasObjects"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedLocation"/>
-        <Class abbreviatedIRI="cidoc_crm_v5:E53.Place"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedStory"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isActionOf"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isDisplayedIn"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isFunctionalAgentOf"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isGeographicalLocationof"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#GeographicalPlace"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isSubjectOf"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isTimePeriodOf"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#recalls"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="cidoc_crm_v5:P121F.overlaps_with"/>
         <Class abbreviatedIRI="cidoc_crm_v5:E53.Place"/>
@@ -3025,143 +2905,264 @@
         <ObjectProperty abbreviatedIRI="cidoc_crm_v5:P93B.was_taken_out_of_existence_by"/>
         <Class abbreviatedIRI="cidoc_crm_v5:E77.Persistent_Item"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsDescribedBy"/>
+        <Class IRI="#Dynamics"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsDynamicOf"/>
+        <Class IRI="#Dynamics"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsFillerOF"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsRoleOf"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OccourIn"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#TemporalCollocation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAction"/>
+        <ObjectUnionOf>
+            <Class IRI="#Dynamics"/>
+            <Class IRI="#Story"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActionObject"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <ObjectUnionOf>
+            <Class IRI="#Dynamics"/>
+            <Class IRI="#Story"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCollaborator"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDynamic"/>
+        <ObjectUnionOf>
+            <Class IRI="#Dynamics"/>
+            <Class IRI="#Story"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFiller"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHistoricalCollocation"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLinkedAgent"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNarrativeCharacter"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNarrativeLocation"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNarrativeObject"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasObjects"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelatedLocation"/>
+        <Class abbreviatedIRI="cidoc_crm_v5:E53.Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelatedStory"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isActionOf"/>
+        <Class IRI="#Dynamics"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDisplayedIn"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFunctionalAgentOf"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGeographicalLocationof"/>
+        <Class IRI="#GeographicalPlace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSubjectOf"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTimePeriodOf"/>
+        <Class IRI="#TemporalCollocation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recalls"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Entrance"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasContributor"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasCreator"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasPublisher"/>
+        <Class IRI="#NarrativeEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Entrance"/>
         <DataMinCardinality cardinality="1">
-            <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasEntrance"/>
+            <DataProperty IRI="#hasEntrance"/>
             <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
         </DataMinCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsDynamicOf"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+        <ObjectProperty IRI="#IsDynamicOf"/>
+        <Class IRI="#Story"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#IsFillerOF"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Role"/>
+        <ObjectProperty IRI="#IsFillerOF"/>
+        <Class IRI="#Role"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#OccourIn"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <ObjectProperty IRI="#OccourIn"/>
+        <Class IRI="#Dynamics"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#belongsTo"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#TemporalCollocation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describes"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <ObjectProperty IRI="#describes"/>
+        <Class IRI="#Dynamics"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describesAction"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <ObjectProperty IRI="#describesAction"/>
+        <Class IRI="#Dynamics"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#describesStory"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+        <ObjectProperty IRI="#describesStory"/>
+        <Class IRI="#Story"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#displays"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#displays"/>
+        <Class IRI="#NarrativeEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasAction"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <ObjectProperty IRI="#hasAction"/>
+        <Class IRI="#Dynamics"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasArchetypeAction"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <ObjectProperty IRI="#hasArchetypeAction"/>
+        <Class IRI="#Dynamics"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCharacter"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <Class IRI="#NarrativeEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasCollaborator"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#hasCollaborator"/>
+        <Class IRI="#NarrativeEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDynamic"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
+        <ObjectProperty IRI="#hasDynamic"/>
+        <Class IRI="#Dynamics"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFiller"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#hasFiller"/>
+        <Class IRI="#NarrativeEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasFunctionalAgent"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#hasFunctionalAgent"/>
+        <Class IRI="#NarrativeEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasGeographicalLocation"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#GeographicalPlace"/>
+        <ObjectProperty IRI="#hasGeographicalLocation"/>
+        <Class IRI="#GeographicalPlace"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasHistoricalCollocation"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <ObjectProperty IRI="#hasHistoricalCollocation"/>
+        <Class IRI="#TemporalCollocation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasLinkedAgent"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#hasLinkedAgent"/>
+        <Class IRI="#NarrativeEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasNarrativeCharacter"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#hasNarrativeCharacter"/>
+        <Class IRI="#NarrativeEntity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasOriginIn"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#GeographicalPlace"/>
+        <ObjectProperty IRI="#hasOriginIn"/>
+        <Class IRI="#GeographicalPlace"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedLocation"/>
+        <ObjectProperty IRI="#hasRelatedLocation"/>
         <Class abbreviatedIRI="cidoc_crm_v5:E53.Place"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRelatedStory"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+        <ObjectProperty IRI="#hasRelatedStory"/>
+        <Class IRI="#Story"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRepresentedLocation"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#GeographicalPlace"/>
+        <ObjectProperty IRI="#hasRepresentedLocation"/>
+        <Class IRI="#GeographicalPlace"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRepresentedTymePeriod"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <ObjectProperty IRI="#hasRepresentedTymePeriod"/>
+        <Class IRI="#TemporalCollocation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasRole"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Role"/>
+        <ObjectProperty IRI="#hasRole"/>
+        <Class IRI="#Role"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasSubject"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#Story"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasTimePeriod"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <ObjectProperty IRI="#hasTimePeriod"/>
+        <Class IRI="#TemporalCollocation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isActionOf"/>
+        <ObjectProperty IRI="#isActionOf"/>
         <ObjectUnionOf>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics"/>
-            <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
+            <Class IRI="#Dynamics"/>
+            <Class IRI="#Story"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#isRecalledIn"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Story"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasContributor"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasCreator"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasPublisher"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity"/>
+        <ObjectProperty IRI="#isRecalledIn"/>
+        <Class IRI="#Story"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="cidoc_crm_v5:P79F.beginning_is_qualified_by"/>
@@ -3172,70 +3173,60 @@
         <DataProperty abbreviatedIRI="cidoc_crm_v5:P3F.has_note"/>
     </SubDataPropertyOf>
     <FunctionalDataProperty>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasEntrance"/>
+        <DataProperty IRI="#hasEntrance"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasSolution"/>
+        <DataProperty IRI="#hasSolution"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#endyearValue"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <DataProperty IRI="#endyearValue"/>
+        <Class IRI="#TemporalCollocation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#framenetRoleTipe"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#Role"/>
+        <DataProperty IRI="#framenetRoleTipe"/>
+        <Class IRI="#Role"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#startingyearValue"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <DataProperty IRI="#startingyearValue"/>
+        <Class IRI="#TemporalCollocation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#yearValue"/>
-        <Class IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#TemporalCollocation"/>
+        <DataProperty IRI="#yearValue"/>
+        <Class IRI="#TemporalCollocation"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#archive"/>
+        <DataProperty IRI="#archive"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#endyearValue"/>
+        <DataProperty IRI="#endyearValue"/>
         <DataUnionOf>
             <Datatype abbreviatedIRI="xsd:negativeInteger"/>
             <Datatype abbreviatedIRI="xsd:positiveInteger"/>
         </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasDescription"/>
+        <DataProperty IRI="#hasDescription"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasKeyword"/>
+        <DataProperty IRI="#hasKeyword"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#startingyearValue"/>
+        <DataProperty IRI="#startingyearValue"/>
         <DataUnionOf>
             <Datatype abbreviatedIRI="xsd:negativeInteger"/>
             <Datatype abbreviatedIRI="xsd:positiveInteger"/>
         </DataUnionOf>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#yearValue"/>
+        <DataProperty IRI="#yearValue"/>
         <DataUnionOf>
             <Datatype abbreviatedIRI="xsd:negativeInteger"/>
             <Datatype abbreviatedIRI="xsd:positiveInteger"/>
         </DataUnionOf>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://130.192.212.225/fuseki/Labyrinth-Narrative#Dynamics</IRI>
-        <Literal>The class containing collections of events, actions and processes that happen in the stories.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://130.192.212.225/fuseki/Labyrinth-Narrative#NarrativeEntity</IRI>
-        <Literal xml:lang="en">The class of the entitities that are displayed on an Artifact or that have a role in Archetipes or that perform certain action/processes in a story.</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cidoc_crm_v5:E53.Place</AbbreviatedIRI>
@@ -4222,6 +4213,16 @@ Twins, triplets etc. are brought into life by the same Birth event. This is not 
         <Literal xml:lang="en">This property describes the decomposition of an instance of E4 Period into discrete, subsidiary periods.
 
 The sub-periods into which the period is decomposed form a logical whole - although the entire picture may not be completely known - and the sub-periods are constitutive of the general period.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dynamics</IRI>
+        <Literal>The class containing collections of events, actions and processes that happen in the stories.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NarrativeEntity</IRI>
+        <Literal xml:lang="en">The class of the entitities that are displayed on an Artifact or that have a role in Archetipes or that perform certain action/processes in a story.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5307,7 +5308,7 @@ The sub-periods into which the period is decomposed form a logical whole - altho
         <AbbreviatedIRI>cidoc_crm_v5:E54.Dimension</AbbreviatedIRI>
     </AnnotationPropertyDomain>
     <DatatypeDefinition>
-        <Datatype IRI="http://130.192.212.225/fuseki/Labyrinth-Narrative#hasEntrance"/>
+        <Datatype IRI="#hasEntrance"/>
         <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
     </DatatypeDefinition>
 </Ontology>
@@ -5315,5 +5316,3 @@ The sub-periods into which the period is decomposed form a logical whole - altho
 
 
 <!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
-
-
