@@ -9,6 +9,7 @@
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix wd: <http://wikidata.org/entity/> .
 @prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
 
 @prefix e: <https://w3id.org/spice/SON/emotionInCulturalContext/> . 
 @prefix emo-p: <https://w3id.org/spice/SON/PlutchikEmotion/> . 
@@ -210,7 +211,12 @@ ex:BarKochvaRebellion a arco:HistoricOrArtisticProperty ;
 ex:BarKochvaRebellionVideo a cis:VideoObject ;
 	cis:url <https://www.facebook.com/hechtmus/videos/596750170938699> .
 
-## Time period 132 CE
+ex:BarKochvaRebellionDating a arco-cd:Dating ;
+	arco-cd:isDatingOf ex:BarKochvaRebellion ;
+	arco-cd:hasDatingEvent [
+		rdfs:label "Time period 132 CE" ;
+	] .
+
 
 ex:Corridor bot:containsZone ex:JerusalemPhotoZone .
 
