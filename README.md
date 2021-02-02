@@ -64,7 +64,11 @@ Emotion
 
 ### Existing ontologies re-used 
 
-The SPICE ontology network doesn't want to reinvent the wheel. It relies and possibly extends state-of-the-art ontologies. Here we provide a list of ontologies reused or recommended for the SPICE project.
+The SPICE ontology network doesn't want to reinvent the wheel.
+Lots of [awesome ontologies](Awesome_ontologies.md) are avaible at the state-of-the-art.
+SON relies and possibly extends these ontologies. 
+Here, we provide a list of ontologies reused or recommended for the SPICE project together with a link to the issue where the need of the ontology emerged.
+The issue discusses the requirement that motivates the use of the ontology and provides an example of use.
 
 Linguistic data
 
@@ -77,7 +81,7 @@ Artwork-related data
 - [ArCo ontology network](https://w3id.org/arco/ontology/arco) (cf. [#31](https://github.com/spice-h2020/SON/issues/31))
 - [CulturalON](http://dati.beniculturali.it/cis/) (cf. [#31](https://github.com/spice-h2020/SON/issues/31))
 - [Getty vocabularies](http://vocab.getty.edu/) (cf. [#31](https://github.com/spice-h2020/SON/issues/31))
-- [Building Topology Ontology (BOT)](https://w3id.org/bot#) (for describing the structure of the museums or the exhibitions)
+- [Building Topology Ontology (BOT)](https://w3id.org/bot#) (cf. [#31](https://github.com/spice-h2020/SON/issues/31)) (for describing the structure of the museums or the exhibitions)
 
 ## How to contribute
 
