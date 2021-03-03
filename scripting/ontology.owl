@@ -8,18 +8,25 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:data-view="http://www.w3.org/2003/g/data-view#"
+     xmlns:sw-vocab-status="http://www.w3.org/2003/06/sw-vocab-status/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/scripting">
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/scripting/0.0.1"/>
         <owl:imports rdf:resource="http://purl.org/net/p-plan#"/>
+        <owl:imports rdf:resource="http://purl.org/spar/pso/2014-02-01"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <dc:creator xml:lang="en">Luigi Asprino</dc:creator>
+        <dc:creator xml:lang="en">Marilena Daquino</dc:creator>
         <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/scripting/scripting.jpg"/>
-        <dc:title xml:lang="en">Scripting module</dc:title>
+        <dc:title xml:lang="en">Scripting Ontology</dc:title>
+        <terms:creator rdf:resource="http://www.wikidata.org/entity/Q56457363"/>
+        <terms:creator rdf:resource="http://www.wikidata.org/entity/Q97066487"/>
     </owl:Ontology>
     
 
@@ -38,6 +45,12 @@
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
     
 
 
@@ -92,6 +105,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/conditionallyFollows">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/scripting/conditionallyPrecedes"/>
+        <rdfs:label xml:lang="en">A property relating a Task that may follow a preceding task if some condition is satisfied. E.g. If the user inputs her/his email in a form, a welcome email is sent to him/her. The task &quot;Send the welcome email&quot; conditionally follows the task &quot;user inputs his/her email&quot;.</rdfs:label>
+        <rdfs:label xml:lang="en">conditionally follows</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -100,6 +115,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/conditionallyPrecedes">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:comment xml:lang="en">A property relating a Task that may preceed a following task. E.g. A welcome email is sent to a user that either input his/her email in a form or whose email was already in the system. The task &quot;user inputs his/her email&quot; conditionally preceeds the task &quot;Send the welcome email&quot; .</rdfs:comment>
+        <rdfs:label xml:lang="en">conditionally precedes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -133,14 +150,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/definesTask">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/scripting/Script"/>
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/scripting/Stage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
         <rdfs:comment xml:lang="en">The relation between a script or a stage and the task that is there defined.</rdfs:comment>
         <rdfs:label xml:lang="en">defines task</rdfs:label>
@@ -328,6 +337,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/involves">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+        <rdfs:comment xml:lang="en">A property relating a Task to any entity (object, device, person) that is relevant to the accomplishment of the task.</rdfs:comment>
+        <rdfs:label xml:lang="en">involves</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -489,7 +500,7 @@
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">
-        <rdfs:comment xml:lang="en">An event in which a script is executed.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An event in which a script is executed, e.g. a workshop, an exhibition.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
     
@@ -589,6 +600,16 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/ActivityPreparation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/ActivityPreparation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Stage"/>
+        <rdfs:comment xml:lang="en">The stage in which all activities to be performed in a script are prepared (e.g. selecting materials, designing questionnaires, making videos).</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity preparation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/Agent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Agent">
@@ -596,6 +617,267 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:comment xml:lang="en">An entity involved in an action executing a task.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/AnnotationOfUserGeneratedContents -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/AnnotationOfUserGeneratedContents">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Processing"/>
+        <rdfs:label xml:lang="en">Annotation of user-generated contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/AutomaticSelectionOfUserGeneratedContents -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/AutomaticSelectionOfUserGeneratedContents">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SelectionOfUserGeneratedContents"/>
+        <rdfs:label xml:lang="en">Automatic selection of user-generated contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Browsing -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Browsing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Interaction"/>
+        <rdfs:label xml:lang="en">Browsing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Collection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:comment xml:lang="en">In this task agents group materials in a collection, e.g. a collection of contents to be shown to visitors. Collecting does not imply selecting contents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/CuratorialContentPresentation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/CuratorialContentPresentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Presentation"/>
+        <rdfs:label xml:lang="en">Presentation of curatorial content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/DefinitionOfUserModel -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/DefinitionOfUserModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Processing"/>
+        <rdfs:label xml:lang="en">Definition of a User Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Design -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Design">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:comment xml:lang="en">In this task agents design contents, e.g. design a questionnaire for museum visitors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/DesignQuestionnaire -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/DesignQuestionnaire">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Design"/>
+        <rdfs:label xml:lang="en">Design a questionnaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/ExemplarContentPresentation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/ExemplarContentPresentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Presentation"/>
+        <rdfs:label xml:lang="en">Presentation of exemplar content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Filtering -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Filtering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Interaction"/>
+        <rdfs:label xml:lang="en">Filtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/FreeTextAnswering -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/FreeTextAnswering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/QuestionAnswering"/>
+        <rdfs:label xml:lang="en">Free-text answering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Interaction -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Interaction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:comment xml:lang="en">In this task different agents interact with each other to create/obtain contents, e.g. answering questions to create stories, suggest actions to get rewards.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Manipulation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Manipulation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Interaction"/>
+        <rdfs:label xml:lang="en">Manipulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/ManualSelectionOfUserGeneratedContents -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/ManualSelectionOfUserGeneratedContents">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SelectionOfUserGeneratedContents"/>
+        <rdfs:label xml:lang="en">Manual selection of user-generated contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/MultimediaContentPresentation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/MultimediaContentPresentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Presentation"/>
+        <rdfs:label xml:lang="en">Presentation of multimedia content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/MultipleChoiceAnswering -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/MultipleChoiceAnswering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/QuestionAnswering"/>
+        <rdfs:label xml:lang="en">Multiple choice answering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/PictureProduction -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/PictureProduction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/ProductionOfMultimediaContent"/>
+        <rdfs:label xml:lang="en">Picture production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/PostPublicationOnSocialMediaPlatform -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/PostPublicationOnSocialMediaPlatform">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/WebPublication"/>
+        <rdfs:label xml:lang="en">Post publication on a Social Media Platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/PreliminaryAnalysis -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/PreliminaryAnalysis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Stage"/>
+        <rdfs:comment xml:lang="en">The stage of the script in which partial results of activities are analysed, e.g. to develop a User Model for recommendation purposes, and whose results are likely to be used in the Running stage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Preliminary analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Presentation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Presentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:comment xml:lang="en">In this task agents present contents to an audience, e.g. publish a post on a social media platform, show an exhibit, present results of an activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Presentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Processing -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Processing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:comment xml:lang="en">A task in which an agent (human or software) processes contents to generate new contents, e.g. the annotation of user-generated contents with sentiment and emotions, the creation of a User Model.</rdfs:comment>
+        <rdfs:label xml:lang="en">Processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Production -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Production">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:comment xml:lang="en">In this task agents produce new contents, e.g. make a video, take a picture, fill in a questionnaire, write a story.</rdfs:comment>
+        <rdfs:label xml:lang="en">Production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/ProductionOfMultimediaContent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/ProductionOfMultimediaContent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Production"/>
+        <rdfs:label xml:lang="en">Production of multimedia content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/QuestionAnswering -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/QuestionAnswering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Interaction"/>
+        <rdfs:label xml:lang="en">Question Answering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/QuestionnaireFilling -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/QuestionnaireFilling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Production"/>
+        <rdfs:label xml:lang="en">Questionnaire filling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/ResultsAnalysis -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/ResultsAnalysis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Stage"/>
+        <rdfs:comment xml:lang="en">The stage in which results of the Running stage are analysed, e.g. review of users&apos; answers and stories.</rdfs:comment>
+        <rdfs:label xml:lang="en">Results analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/ResultsPresentation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/ResultsPresentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Stage"/>
+        <rdfs:comment xml:lang="en">The stage of a script where results of prior activities are presented to stakeholders.</rdfs:comment>
+        <rdfs:label xml:lang="en">Results presentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Rewarding -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Rewarding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Interaction"/>
+        <rdfs:label xml:lang="en">Rewarding</rdfs:label>
     </owl:Class>
     
 
@@ -621,6 +903,16 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/Running -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Running">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Stage"/>
+        <rdfs:comment xml:lang="en">The stage in which the main activities designed in the script are executed. E.g. in an engagement activity: users create stories, share opinions, answer questions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Running stage</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/Script -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Script">
@@ -642,6 +934,106 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/Searching -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Searching">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Interaction"/>
+        <rdfs:label xml:lang="en">Searching</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Selection -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Selection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Task"/>
+        <rdfs:comment xml:lang="en">In this task agents select any type of content among a collection of contents available. E.g. select artefacts from a museum collection for an exhibition, select only most interesting user-generated contents, select your own avatar (among other users&apos; avatars) in a web application.</rdfs:comment>
+        <rdfs:label xml:lang="en">Selection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfAnnotatedUserGeneratedContents -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfAnnotatedUserGeneratedContents">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SelectionOfUserGeneratedContents"/>
+        <rdfs:label xml:lang="en">Selection of annotated user-generated contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfArtefacts -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfArtefacts">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SelectionOfCuratorialContents"/>
+        <rdfs:label xml:lang="en">Selection of artefacts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfAvatar -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfAvatar">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SelectionOfIdentifier"/>
+        <rdfs:label xml:lang="en">Selection of an avatar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfCuratorialContents -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfCuratorialContents">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Selection"/>
+        <rdfs:label xml:lang="en">Selection of curatorial contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfIdentifier -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Selection"/>
+        <rdfs:label xml:lang="en">Selection of an identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfMultimediaContents -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfMultimediaContents">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Selection"/>
+        <rdfs:label xml:lang="en">Selection of multimedia contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfNickname -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfNickname">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SelectionOfIdentifier"/>
+        <rdfs:label xml:lang="en">Selection of a nickname</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SelectionOfUserGeneratedContents -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SelectionOfUserGeneratedContents">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Selection"/>
+        <rdfs:label xml:lang="en">Selection of user-generated contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SendingDigitalContent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SendingDigitalContent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Rewarding"/>
+        <rdfs:label xml:lang="en">Sending a digital content</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/Stage -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Stage">
@@ -649,6 +1041,33 @@
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"/>
         <rdfs:comment xml:lang="en">The grouping of tasks to be executed in sequence, as planned in a script.</rdfs:comment>
         <rdfs:label xml:lang="en">Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Suggesting -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Suggesting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Interaction"/>
+        <rdfs:label xml:lang="en">Suggesting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SuggestingAnAction -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SuggestingAnAction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Suggesting"/>
+        <rdfs:label xml:lang="en">Suggesting an action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/SuggestingToRegister -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SuggestingToRegister">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SuggestingAnAction"/>
+        <rdfs:label xml:lang="en">Suggesting to register</rdfs:label>
     </owl:Class>
     
 
@@ -664,6 +1083,15 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/UserGeneratedContentPresentation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/UserGeneratedContentPresentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Presentation"/>
+        <rdfs:label xml:lang="en">Presentation of user-generated content</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/Variable -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Variable">
@@ -671,6 +1099,256 @@
         <rdfs:comment xml:lang="en">A variable entity used as input or generated as output of a task.</rdfs:comment>
         <rdfs:label xml:lang="en">Variable</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/VideoProduction -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/VideoProduction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/ProductionOfMultimediaContent"/>
+        <rdfs:label xml:lang="en">Video production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/WebPublication -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/WebPublication">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/Presentation"/>
+        <rdfs:label xml:lang="en">Web publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/architect -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/architect">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">architect</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/art-dealer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/art-dealer">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">art dealer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/artist -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/artist">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">artist</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/commenting-and-receiving -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/commenting-and-receiving">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">commenting and receiving interpretations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/commenting-on-the-interpretations-of-others -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/commenting-on-the-interpretations-of-others">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">commenting on the interpretations of others</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/curator -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/curator">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">curator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/designer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/designer">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">designer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/developer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/developer">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">developer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/engagement -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/engagement">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">engagement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/interaction -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/interaction">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">interaction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/museum-director -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/museum-director">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">museum director</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/reflection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/reflection">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">reflection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/self-expression -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/self-expression">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">self-expression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/service -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/service">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">service</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/sharing-interpretations-to-family-and-or-friends -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/sharing-interpretations-to-family-and-or-friends">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">sharing interpretations to family and/or friends</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/sharing-opinions -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/sharing-opinions">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">sharing opinions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/sharing-opinions-within-a-group-or-a-community -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/sharing-opinions-within-a-group-or-a-community">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">sharing opinions within a group or a community</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/social-media-manager -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/social-media-manager">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">social media manager</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/social-media-user -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/social-media-user">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">social media user</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/software-agent -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/software-agent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">software agent</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/storytelling -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/storytelling">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">storytelling</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/tagging -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/tagging">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">tagging</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/view-interpretations-from-diverse-groups -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/view-interpretations-from-diverse-groups">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:label xml:lang="en">view interpretations from diverse groups</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/visitor -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/visitor">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">visitor</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:unionOf>
+            <rdf:Description/>
+        </owl:unionOf>
+    </rdf:Description>
     <rdf:Description>
         <owl:unionOf>
             <rdf:Description/>
