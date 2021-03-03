@@ -612,6 +612,15 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/AddEmoticon -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/AddEmoticon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/QuestionAnswering"/>
+        <rdfs:label xml:lang="en">Add an emoticon</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/Agent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Agent">
@@ -1070,6 +1079,15 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/SuggestingToRegister">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/SuggestingAnAction"/>
         <rdfs:label xml:lang="en">Suggesting to register</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/Tagging -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/scripting/Tagging">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/scripting/QuestionAnswering"/>
+        <rdfs:label xml:lang="en">Tagging</rdfs:label>
     </owl:Class>
     
 
