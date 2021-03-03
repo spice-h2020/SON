@@ -27,6 +27,8 @@
         <dc:title xml:lang="en">Scripting Ontology</dc:title>
         <terms:creator rdf:resource="http://www.wikidata.org/entity/Q56457363"/>
         <terms:creator rdf:resource="http://www.wikidata.org/entity/Q97066487"/>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <rdfs:comment xml:lang="en">The Scripting ontology is an ontology for describing the design and the execution of citizen curation activities, such as engagement activities with museum visitors, web applications for eliciting users&apos; interpretations (e.g. via storytelling, question answering), social media interactions.</rdfs:comment>
     </owl:Ontology>
     
 
