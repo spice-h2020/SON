@@ -105,7 +105,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/scripting/conditionallyFollows">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/scripting/conditionallyPrecedes"/>
-        <rdfs:label xml:lang="en">A property relating a Task that may follow a preceding task if some condition is satisfied. E.g. If the user inputs her/his email in a form, a welcome email is sent to him/her. The task &quot;Send the welcome email&quot; conditionally follows the task &quot;user inputs his/her email&quot;.</rdfs:label>
+        <rdfs:comment xml:lang="en">A property relating a Task that may follow a preceding task if some condition is satisfied. E.g. If the user inputs her/his email in a form, a welcome email is sent to him/her. The task &quot;Send the welcome email&quot; conditionally follows the task &quot;user inputs his/her email&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">conditionally follows</rdfs:label>
     </owl:ObjectProperty>
     
