@@ -1364,6 +1364,15 @@
         <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
         <rdfs:label xml:lang="en">visitor</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/web-user -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/web-user">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <prov:wasRevisionOf xml:lang="en">web user</prov:wasRevisionOf>
+    </owl:NamedIndividual>
     <rdf:Description>
         <owl:unionOf>
             <rdf:Description/>
