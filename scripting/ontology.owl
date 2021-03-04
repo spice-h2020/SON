@@ -1277,11 +1277,11 @@
     
 
 
-    <!-- https://w3id.org/spice/SON/scripting/sharing-interpretations-to-family-and-or-friends -->
+    <!-- https://w3id.org/spice/SON/scripting/sharing-interpretations-with-family-or-friends -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/sharing-interpretations-to-family-and-or-friends">
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/sharing-interpretations-with-family-or-friends">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
-        <rdfs:label xml:lang="en">sharing interpretations to family and/or friends</rdfs:label>
+        <rdfs:label xml:lang="en">sharing interpretations with family and/or friends</rdfs:label>
     </owl:NamedIndividual>
     
 
