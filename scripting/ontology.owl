@@ -1267,6 +1267,15 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/recommender -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/recommender">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label>recommender</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/reflection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/reflection">
