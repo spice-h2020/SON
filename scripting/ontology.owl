@@ -1225,6 +1225,21 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/emotion-sharer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/emotion-sharer">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label>emotion sharer</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/spice/SON/scripting/emotion-sharer"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label>emotion sharer</rdfs:label>
+    </owl:Axiom>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/engagement -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/engagement">
@@ -1333,12 +1348,36 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/scripting/story-teller -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/story-teller">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label xml:lang="en">story teller</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/spice/SON/scripting/storytelling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/storytelling">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
         <rdfs:label xml:lang="en">storytelling</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/scripting/tagger -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/tagger">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label>tagger</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/spice/SON/scripting/tagger"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
+        <rdfs:label>tagger</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -1373,7 +1412,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/scripting/web-user">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/scripting/Role"/>
-        <prov:wasRevisionOf xml:lang="en">web user</prov:wasRevisionOf>
+        <rdfs:label xml:lang="en">web user</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:unionOf>
