@@ -33,10 +33,10 @@ ex:BPaintingER a eicc:EmotionRelationInCulturalContext ;
 
 
 ex:sufferingofA a shavem:Suffering ;
-    shavem:referstoprototypeEmotion shavem:Sadness .
+    shavem:refersToPrototypeEmotion shavem:Sadness .
 
 ex:unhappinessofB a shavem:Unhappiness ;
-    shavem:referstoprototypeEmotion shavem:Sadness .
+    shavem:refersToPrototypeEmotion shavem:Sadness .
 
 
 
