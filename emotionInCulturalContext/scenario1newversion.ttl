@@ -15,10 +15,6 @@
 
 ex:A a dul:Person .
 
-
-ex:B a dul:Person .
-
-
 ex:C a dul:Person .
 
 
@@ -29,9 +25,7 @@ wd:Q19899820 a cis:CulturalEntity ;
     dul:hasQuality ex:PaintingSize ;
     e:triggers ex:AngerOfC .  
 
-
 ex:PaintingSize e:triggers ex:SurpriseOfA .
-
 
 wd:Q1106059 a cis:CulturalEntity ;
     e:triggers ex:ApathyOfA , ex:ConfusionOfA , ex:SadnessOfC . 
@@ -43,15 +37,11 @@ ex:SurpriseOfA a e:Emotion .
 #e:confidenceScore "3.5"^^float
 #e:intensity "9"^^integer
 
-
 ex:SadnessOfC a e:Emotion .
-
 
 ex:AngerOfC a e:Emotion .
 
-
 ex:ApathyOfA a e:Emotion .
-
 
 ex:ConfusionOfA a e:Emotion . 
 
@@ -65,20 +55,17 @@ e:APaintingER a cis:EmotionRelationInCulturalContext ;
     e:emotion ex:SurpriseOfA ;
     e:experiencer ex:A .  
 
-
 e:AManuscriptER a cis:EmotionRelationInCulturalContext ;
     prov:wasGeneratedBy ex:00003_emoji_answering ;
     e:experiencer ex:A ;
     e:emotion ex:ApathyOfA , ex:ConfusionOfA ;
     e:stimulus wd:Q1106059 .
 
-
 e:CPaintingER a cis:EmotionRelationInCulturalContext ;
     prov:wasGeneratedBy ex:00004_text_answering ;
     e:experiencer ex:C ;
     e:emotion ex:AngerOfC ;
     e:stimulus wd:Q19899820 . 
-
 
 e:CManuscriptER a cis:EmotionRelationInCulturalContext ;
     prov:wasGeneratedBy ex:00004_emoji_answering ;
