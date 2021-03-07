@@ -1,0 +1,56 @@
+
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix occ: <https://w3id.org/spice/SON/OCCEmotion/> .
+@prefix gam: <https://w3id.org/spice/GAM/> .
+@prefix arco: <https://w3id.org/arco/ontology/core/> .
+
+
+### PEOPLE
+
+occ:AgentA a dul:Person ;
+    a occ:AppraisingAgent .
+occ:AgentB a dul:Person ;
+    a occ:AppraisingAgent .
+occ:PietroMicca a dul:Person ;
+    a occ:AppraisingAgent .
+
+
+### CULTURAL ENTITY
+
+gam:PietroMiccaDepiction a arco:CulturalEntity ;
+    occ:hasAgent occ:PietroMicca .
+
+
+### EMOTIONS
+
+occ:PrideOfAgentA a occ:Pride ;
+    occ:target occ:PietroMiccaAction .
+occ:AdmirationOfA a occ:Admiration;
+    occ:target occ:PietroMiccaAction .
+occ:PityOfB a occ:Pity ;
+    occ:target occ:PietroMiccaDeath .
+
+
+#### EMOTION RELATION
+
+occ:AgentA occ:feels occ:PrideOfA ;
+    occ:feels occ:AdmirationOfA .
+occ:AgentB occ:feels occ:PityOfB .
+occ:PietroMicca occ:feels occ:PietroMiccaFear ;
+    occ:feels occ:PietroMiccaPride ;
+    occ:feels occ:PietroMiccaAnger .
+
+
+### VALUES
+
+occ:Patriotism a occ:Value .
+occ:selfPreservation a occ:Value .
+
+
+### ACTION
+
+occ:PietroMiccaAction occ:performedBy occ:PietroMicca ;
+    occ:praiseworthy occ:AgentA ;
+    occ:blameworthy occ:AgentB .
