@@ -1,0 +1,98 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix e: <https://w3id.org/spice/SON/emotion/> .
+@prefix eic: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+@prefix ex: <http://example.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix prov: <http://www.w3.org/TR/prov-o/> .
+@prefix script: <https://w3id.org/spice/SON/scripting/> .
+
+
+# PEOPLE
+
+
+ex:A a dul:Person .
+
+
+ex:B a dul:Person .
+
+
+ex:C a dul:Person .
+
+
+# CULTURAL ENTITIES or QUALITIES or PARTS OF THEM
+
+
+wd:Q19899820 a cis:CulturalEntity ;
+    dul:hasQuality ex:PaintingSize ;
+    e:triggers ex:AngerOfC .  
+
+
+ex:PaintingSize e:triggers ex:SurpriseOfA .
+
+
+wd:Q1106059 a cis:CulturalEntity ;
+    e:triggers ex:ApathyOfA , ex:ConfusionOfA , ex:SadnessOfC . 
+
+
+# EMOTIONS
+
+ex:SurpriseOfA a e:Emotion .
+#e:confidenceScore "3.5"^^float
+#e:intensity "9"^^integer
+
+
+ex:SadnessOfC a e:Emotion .
+
+
+ex:AngerOfC a e:Emotion .
+
+
+ex:ApathyOfA a e:Emotion .
+
+
+ex:ConfusionOfA a e:Emotion . 
+
+
+# EMOTON RELATIONS
+
+
+e:APaintingER a cis:EmotionRelationInCulturalContext ;
+    prov:wasGeneratedBy ex:00003_text_answering ;
+    e:stimulus ex:PaintingSize ;
+    e:emotion ex:SurpriseOfA ;
+    e:experiencer ex:A .  
+
+
+e:AManuscriptER a cis:EmotionRelationInCulturalContext ;
+    prov:wasGeneratedBy ex:00003_emoji_answering ;
+    e:experiencer ex:A ;
+    e:emotion ex:ApathyOfA , ex:ConfusionOfA ;
+    e:stimulus wd:Q1106059 .
+
+
+e:CPaintingER a cis:EmotionRelationInCulturalContext ;
+    prov:wasGeneratedBy ex:00004_text_answering ;
+    e:experiencer ex:C ;
+    e:emotion ex:AngerOfC ;
+    e:stimulus wd:Q19899820 . 
+
+
+e:CManuscriptER a cis:EmotionRelationInCulturalContext ;
+    prov:wasGeneratedBy ex:00004_emoji_answering ;
+    e:experiencer ex:C ;
+    e:emotion ex:SadnessOfC ;
+    e:stimulus ex:Manuscript .
+
+
+# SCRIPTING TASKS
+
+ex:00003_emoji_answering a script:Task . 
+
+ex:00003_text_answering a script:Task .
+
+ex:00004_text_answering a script:Task .
+
+ex:00004_emoji_answering a script:Task .
