@@ -1,0 +1,37 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix occ: <https://w3id.org/spice/SON/OCCEmotion/> .
+@prefix gam: <https://w3id.org/spice/GAM/> .
+@prefix arco: <https://w3id.org/arco/ontology/core/> .
+@prefix schwartz: <https://w3id.org/spice/SON/SchwartzValues/>
+
+
+### CULTURAL ENTITY
+
+gam:PietroMiccaDepiction a arco:CulturalEntity ;
+    occ:hasAgent occ:PietroMicca .
+
+
+### PEOPLE
+
+occ:AgentA a dul:Person ;
+      schw:hasValue schw:Patriotism .
+occ:AgentB a dul:Person ;
+      schw:hasValue schw:selfPreservation .
+nar:PietroMicca a dul:Person ;
+      schw:hasValue schw:Patriotism .
+
+### VALUES
+
+occ:Patriotism a occ:Value .
+occ:selfPreservation a occ:Value .
+schw:Patriotism a schw:Societal .              # "security and stability in wider society."
+schw:selfPreservation a schw:Action .          # "the freedom to determine one's own actions."
+
+
+### ACTIONS
+
+occ:PietroMiccaAction occ:performedBy occ:PietroMicca ;
+    occ:praiseworthy occ:AgentA ;
+    occ:blameworthy occ:AgentB .
