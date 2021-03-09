@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/spice/SON/Narrative-Labyrinth> .
+@prefix : <https://w3id.org/spice/SON/NO/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix SON: <https://w3id.org/spice/SON/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -13,17 +13,16 @@
 @prefix catalogue: <https://w3id.org/arco/ontology/catalogue/> .
 @prefix cidoc_crm_v5: <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.2_english_label.rdfs#> .
 @prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@base <https://w3id.org/spice/SON/Narrative-Labyrinth> .
+@base <https://w3id.org/spice/SON/NO/> .
 
-<https://w3id.org/spice/SON/Narrative-Labyrinth> rdf:type owl:Ontology ;
-                                                  owl:versionIRI <https://w3id.org/spice/SON/Narrative-Labyrinth/0.0.1> ;
-                                                  owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ,
-                                                              <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl> ,
-                                                              <https://w3id.org/arco/ontology/core> ,
-                                                              SON:SchwartzValues ,
-                                                              <https://w3id.org/spice/SON/scripting/0.0.1> ;
-                                                  dc:creator "Rossana Damiano and Antonio Lieto" ;
-                                                  dc:date "14-02-2014" .
+<https://w3id.org/spice/SON/NO/> rdf:type owl:Ontology ;
+                                  owl:versionIRI <https://w3id.org/spice/SON/Narrative-Labyrinth/0.0.1> ;
+                                  owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ,
+                                              <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl> ,
+                                              <https://w3id.org/arco/ontology/core> ,
+                                              SON:SchwartzValues ,
+                                              <https://w3id.org/spice/SON/scripting/0.0.1> ;
+                                  dc:creator "Antonio Lieto" .
 
 #################################################################
 #    Annotation properties
@@ -1438,64 +1437,64 @@ SON:NOhasEntrance rdf:type rdfs:Datatype ;
                                                         rdfs:subPropertyOf :OccourIn .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#ActionDescribedBy
+###  https://w3id.org/spice/SON/NO/ActionDescribedBy
 :ActionDescribedBy rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsArchetypeActionOf
+###  https://w3id.org/spice/SON/NO/IsArchetypeActionOf
 :IsArchetypeActionOf rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsArchetypeObjectOf
+###  https://w3id.org/spice/SON/NO/IsArchetypeObjectOf
 :IsArchetypeObjectOf rdf:type owl:ObjectProperty ;
                      owl:inverseOf :hasArchetypeObject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsDynamicOf
+###  https://w3id.org/spice/SON/NO/IsDynamicOf
 :IsDynamicOf rdf:type owl:ObjectProperty ,
                       owl:TransitiveProperty ;
              rdfs:domain :Dynamics ;
              rdfs:range :Story .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsFillerOF
+###  https://w3id.org/spice/SON/NO/IsFillerOF
 :IsFillerOF rdf:type owl:ObjectProperty ;
             owl:inverseOf :hasFiller ;
             rdfs:domain :NarrativeEntity ;
             rdfs:range SON:Role .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsNarrativeCharacterOf
+###  https://w3id.org/spice/SON/NO/IsNarrativeCharacterOf
 :IsNarrativeCharacterOf rdf:type owl:ObjectProperty ;
                         owl:inverseOf :hasNarrativeCharacter .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsNarrativeLocationOf
+###  https://w3id.org/spice/SON/NO/IsNarrativeLocationOf
 :IsNarrativeLocationOf rdf:type owl:ObjectProperty ;
                        owl:inverseOf :hasNarrativeLocation .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsNarrativeObjectOf
+###  https://w3id.org/spice/SON/NO/IsNarrativeObjectOf
 :IsNarrativeObjectOf rdf:type owl:ObjectProperty ;
                      owl:inverseOf :hasNarrativeObject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsObjectOf
+###  https://w3id.org/spice/SON/NO/IsObjectOf
 :IsObjectOf rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsProjectOf
+###  https://w3id.org/spice/SON/NO/IsProjectOf
 :IsProjectOf rdf:type owl:ObjectProperty ;
              owl:inverseOf :hasProject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#IsValueMotivationOf
+###  https://w3id.org/spice/SON/NO/IsValueMotivationOf
 :IsValueMotivationOf rdf:type owl:ObjectProperty ;
                      rdfs:domain <https://w3id.org/spice/SON/SchwartzValues#Value> ;
                      rdfs:range <https://w3id.org/spice/SON/SchwartzValues#Action> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#OccourIn
+###  https://w3id.org/spice/SON/NO/OccourIn
 :OccourIn rdf:type owl:ObjectProperty ;
           owl:inverseOf :hasCharacter ;
           rdfs:domain :NarrativeEntity ;
@@ -1506,19 +1505,19 @@ SON:NOhasEntrance rdf:type rdfs:Datatype ;
                      ] .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#describes
+###  https://w3id.org/spice/SON/NO/describes
 :describes rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:range :Dynamics .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#displays
+###  https://w3id.org/spice/SON/NO/displays
 :displays rdf:type owl:ObjectProperty ;
           owl:inverseOf :isDisplayedIn ;
           rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasAction
+###  https://w3id.org/spice/SON/NO/hasAction
 :hasAction rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasPart ;
            owl:inverseOf :isActionOf ;
@@ -1527,25 +1526,25 @@ SON:NOhasEntrance rdf:type rdfs:Datatype ;
            rdfs:range :Action .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasActionObject
+###  https://w3id.org/spice/SON/NO/hasActionObject
 :hasActionObject rdf:type owl:ObjectProperty ,
                           owl:TransitiveProperty ;
                  rdfs:domain :Action .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasArchetype
+###  https://w3id.org/spice/SON/NO/hasArchetype
 :hasArchetype rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasPart ;
               rdfs:domain :Story ;
               rdfs:range :Archetypes .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasArchetypeObject
+###  https://w3id.org/spice/SON/NO/hasArchetypeObject
 :hasArchetypeObject rdf:type owl:ObjectProperty ,
                              owl:TransitiveProperty .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasCharacter
+###  https://w3id.org/spice/SON/NO/hasCharacter
 :hasCharacter rdf:type owl:ObjectProperty ;
               rdfs:domain [ rdf:type owl:Class ;
                             owl:unionOf ( :Dynamics
@@ -1555,13 +1554,13 @@ SON:NOhasEntrance rdf:type rdfs:Datatype ;
               rdfs:range :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasFiller
+###  https://w3id.org/spice/SON/NO/hasFiller
 :hasFiller rdf:type owl:ObjectProperty ;
            rdfs:domain SON:Role ;
            rdfs:range :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasNarrativeCharacter
+###  https://w3id.org/spice/SON/NO/hasNarrativeCharacter
 :hasNarrativeCharacter rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :hasPart ;
                        rdf:type owl:TransitiveProperty ;
@@ -1569,12 +1568,12 @@ SON:NOhasEntrance rdf:type rdfs:Datatype ;
                        rdfs:range :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasNarrativeFocus
+###  https://w3id.org/spice/SON/NO/hasNarrativeFocus
 :hasNarrativeFocus rdf:type owl:ObjectProperty ;
                    rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Project> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasNarrativeLocation
+###  https://w3id.org/spice/SON/NO/hasNarrativeLocation
 :hasNarrativeLocation rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasPart ;
                       rdf:type owl:TransitiveProperty ;
@@ -1582,7 +1581,7 @@ SON:NOhasEntrance rdf:type rdfs:Datatype ;
                       rdfs:range :NarrativeEnvironment .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasNarrativeObject
+###  https://w3id.org/spice/SON/NO/hasNarrativeObject
 :hasNarrativeObject rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :hasPart ;
                     rdf:type owl:TransitiveProperty ;
@@ -1590,125 +1589,125 @@ SON:NOhasEntrance rdf:type rdfs:Datatype ;
                     rdfs:range :NarrativeObject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasPart
+###  https://w3id.org/spice/SON/NO/hasPart
 :hasPart rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <https://w3id.org/arco/ontology/core/hasComponent> ;
          rdf:type owl:TransitiveProperty .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasProject
+###  https://w3id.org/spice/SON/NO/hasProject
 :hasProject rdf:type owl:ObjectProperty ;
             rdfs:domain <https://w3id.org/spice/SON/scripting/Script> ;
             rdfs:range :NarrativeProject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasRepresentedAction
+###  https://w3id.org/spice/SON/NO/hasRepresentedAction
 :hasRepresentedAction rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :displays ;
                       rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
                       rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasRepresentedEntity
+###  https://w3id.org/spice/SON/NO/hasRepresentedEntity
 :hasRepresentedEntity rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :displays ;
                       rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
                       rdfs:range :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasRepresentedEpisode
+###  https://w3id.org/spice/SON/NO/hasRepresentedEpisode
 :hasRepresentedEpisode rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :displays ;
                        rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
                        rdfs:range :Episode .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasRepresentedLocation
+###  https://w3id.org/spice/SON/NO/hasRepresentedLocation
 :hasRepresentedLocation rdf:type owl:ObjectProperty ;
                         rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
                         rdfs:range :NarrativeEnvironment .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasRepresentedObject
+###  https://w3id.org/spice/SON/NO/hasRepresentedObject
 :hasRepresentedObject rdf:type owl:ObjectProperty ;
                       rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
                       rdfs:range :NarrativeObject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasRepresentedStory
+###  https://w3id.org/spice/SON/NO/hasRepresentedStory
 :hasRepresentedStory rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :displays ;
                      rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
                      rdfs:range :Story .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasRepresentedSubject
+###  https://w3id.org/spice/SON/NO/hasRepresentedSubject
 :hasRepresentedSubject rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :displays ;
                        rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> ;
                        rdfs:range :ThematicSubject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasSubject
+###  https://w3id.org/spice/SON/NO/hasSubject
 :hasSubject rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasPart ;
             rdfs:domain :Story ;
             rdfs:range :ThematicSubject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasSymbolicReference
+###  https://w3id.org/spice/SON/NO/hasSymbolicReference
 :hasSymbolicReference rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :displays ;
                       owl:inverseOf :isSymbolicReferenceOf ;
                       rdfs:domain <http://dati.beniculturali.it/cis/CulturalEntity> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasValue
+###  https://w3id.org/spice/SON/NO/hasValue
 :hasValue rdf:type owl:ObjectProperty ;
           rdfs:domain <https://w3id.org/italia/onto/l0/Agent> ;
           rdfs:range <https://w3id.org/spice/SON/SchwartzValues#Value> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#hasValueMotivation
+###  https://w3id.org/spice/SON/NO/hasValueMotivation
 :hasValueMotivation rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#isActionOf
+###  https://w3id.org/spice/SON/NO/isActionOf
 :isActionOf rdf:type owl:ObjectProperty ,
                      owl:TransitiveProperty ;
             rdfs:domain :Action ;
             rdfs:range :Dynamics .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#isDisplayedIn
+###  https://w3id.org/spice/SON/NO/isDisplayedIn
 :isDisplayedIn rdf:type owl:ObjectProperty ;
                rdfs:domain :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#isRecalledIn
+###  https://w3id.org/spice/SON/NO/isRecalledIn
 :isRecalledIn rdf:type owl:ObjectProperty ;
               owl:inverseOf :recalls ;
               rdf:type owl:TransitiveProperty ;
               rdfs:range :Story .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#isSubjectOf
+###  https://w3id.org/spice/SON/NO/isSubjectOf
 :isSubjectOf rdf:type owl:ObjectProperty ;
              rdfs:domain :Story .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#isSymbolicReferenceOf
+###  https://w3id.org/spice/SON/NO/isSymbolicReferenceOf
 :isSymbolicReferenceOf rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#performs
+###  https://w3id.org/spice/SON/NO/performs
 :performs rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentInvolvedIn> ;
           rdfs:domain :Agent ;
           rdfs:range :Action .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#recalls
+###  https://w3id.org/spice/SON/NO/recalls
 :recalls rdf:type owl:ObjectProperty ,
                   owl:TransitiveProperty ;
          rdfs:domain :Story .
@@ -1867,53 +1866,23 @@ The main classes of objects that fall outside the scope the E77 Persistent Item 
 <https://w3id.org/italia/onto/l0/Agent> rdf:type owl:Class .
 
 
-###  https://w3id.org/spice/SON/Action-basedNarrativeList
-SON:Action-basedNarrativeList rdf:type owl:Class ;
-                              rdfs:subClassOf SON:List .
-
-
-###  https://w3id.org/spice/SON/Archtetype-basedNarrativeList
-SON:Archtetype-basedNarrativeList rdf:type owl:Class ;
-                                  rdfs:subClassOf SON:List .
-
-
-###  https://w3id.org/spice/SON/Chronological-basedList
-SON:Chronological-basedList rdf:type owl:Class ;
-                            rdfs:subClassOf SON:List .
-
-
-###  https://w3id.org/spice/SON/Climax-basedList
-SON:Climax-basedList rdf:type owl:Class ;
-                     rdfs:subClassOf SON:List .
-
-
-###  https://w3id.org/spice/SON/List
-SON:List rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal> .
-
-
 ###  https://w3id.org/spice/SON/Role
 SON:Role rdf:type owl:Class ;
          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> ,
                          :DescriptionTemplates .
 
 
-###  https://w3id.org/spice/SON/Story-basedNarrativeList
-SON:Story-basedNarrativeList rdf:type owl:Class ;
-                             rdfs:subClassOf SON:List .
-
-
-###  https://w3id.org/spice/SON/Thematic-basedNarrativeList
-SON:Thematic-basedNarrativeList rdf:type owl:Class ;
-                                rdfs:subClassOf SON:List .
-
-
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Action
+###  https://w3id.org/spice/SON/NO/Action
 :Action rdf:type owl:Class ;
         rdfs:subClassOf :Dynamics .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Action-basedNarrativeProject
+###  https://w3id.org/spice/SON/NO/Action-basedNarrativeList
+:Action-basedNarrativeList rdf:type owl:Class ;
+                           rdfs:subClassOf :List .
+
+
+###  https://w3id.org/spice/SON/NO/Action-basedNarrativeProject
 :Action-basedNarrativeProject rdf:type owl:Class ;
                               rdfs:subClassOf :NarrativeProject ,
                                               [ rdf:type owl:Restriction ;
@@ -1922,12 +1891,12 @@ SON:Thematic-basedNarrativeList rdf:type owl:Class ;
                                               ] .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Agent
+###  https://w3id.org/spice/SON/NO/Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Archetype-basedNarrativeProject
+###  https://w3id.org/spice/SON/NO/Archetype-basedNarrativeProject
 :Archetype-basedNarrativeProject rdf:type owl:Class ;
                                  rdfs:subClassOf :NarrativeProject ,
                                                  [ rdf:type owl:Restriction ;
@@ -1936,32 +1905,47 @@ SON:Thematic-basedNarrativeList rdf:type owl:Class ;
                                                  ] .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Archetypes
+###  https://w3id.org/spice/SON/NO/Archetypes
 :Archetypes rdf:type owl:Class ;
             rdfs:subClassOf cidoc_crm_v5:E28.Conceptual_Object .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#ChronologicalNarrativeProject
+###  https://w3id.org/spice/SON/NO/Archtetype-basedNarrativeList
+:Archtetype-basedNarrativeList rdf:type owl:Class ;
+                               rdfs:subClassOf :List .
+
+
+###  https://w3id.org/spice/SON/NO/Chronological-basedList
+:Chronological-basedList rdf:type owl:Class ;
+                         rdfs:subClassOf :List .
+
+
+###  https://w3id.org/spice/SON/NO/ChronologicalNarrativeProject
 :ChronologicalNarrativeProject rdf:type owl:Class ;
                                rdfs:subClassOf :NarrativeProject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Climax-basedNarrativeProject
+###  https://w3id.org/spice/SON/NO/Climax-basedList
+:Climax-basedList rdf:type owl:Class ;
+                  rdfs:subClassOf :List .
+
+
+###  https://w3id.org/spice/SON/NO/Climax-basedNarrativeProject
 :Climax-basedNarrativeProject rdf:type owl:Class ;
                               rdfs:subClassOf :NarrativeProject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#DescriptionTemplates
+###  https://w3id.org/spice/SON/NO/DescriptionTemplates
 :DescriptionTemplates rdf:type owl:Class .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Dynamics
+###  https://w3id.org/spice/SON/NO/Dynamics
 :Dynamics rdf:type owl:Class ;
           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
           rdfs:comment "The class containing collections of episodes, actions and processes that happen in the stories." .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Episode
+###  https://w3id.org/spice/SON/NO/Episode
 :Episode rdf:type owl:Class ;
          rdfs:subClassOf :Dynamics ,
                          [ rdf:type owl:Restriction ;
@@ -1971,63 +1955,68 @@ SON:Thematic-basedNarrativeList rdf:type owl:Class ;
                          ] .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Fight
+###  https://w3id.org/spice/SON/NO/Fight
 :Fight rdf:type owl:Class ;
        rdfs:subClassOf :Archetypes .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#GeographicalPlace
+###  https://w3id.org/spice/SON/NO/GeographicalPlace
 :GeographicalPlace rdf:type owl:Class ;
                    rdfs:subClassOf cidoc_crm_v5:E53.Place ;
                    owl:disjointWith :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Hero
+###  https://w3id.org/spice/SON/NO/Hero
 :Hero rdf:type owl:Class ;
       rdfs:subClassOf :Archetypes ,
                       :ThirdPersonsNarrativeRoles .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#NarrativeEntity
+###  https://w3id.org/spice/SON/NO/List
+:List rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal> .
+
+
+###  https://w3id.org/spice/SON/NO/NarrativeEntity
 :NarrativeEntity rdf:type owl:Class ;
                  rdfs:subClassOf cidoc_crm_v5:E77.Persistent_Item ;
                  rdfs:comment "The class of the entitities that are displayed on an Artifact or that have a role in Archetipes or that perform certain action/processes in a story."@en .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#NarrativeEnvironment
+###  https://w3id.org/spice/SON/NO/NarrativeEnvironment
 :NarrativeEnvironment rdf:type owl:Class ;
                       rdfs:subClassOf cidoc_crm_v5:E53.Place ,
                                       :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#NarrativeObject
+###  https://w3id.org/spice/SON/NO/NarrativeObject
 :NarrativeObject rdf:type owl:Class ;
                  rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact> ,
                                  :NarrativeEntity .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#NarrativeProject
+###  https://w3id.org/spice/SON/NO/NarrativeProject
 :NarrativeProject rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Project> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Organization
+###  https://w3id.org/spice/SON/NO/Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf :Agent ;
               owl:disjointWith :Person .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Person
+###  https://w3id.org/spice/SON/NO/Person
 :Person rdf:type owl:Class ;
         rdfs:subClassOf :Agent .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#SelfNarrative-basedProject
+###  https://w3id.org/spice/SON/NO/SelfNarrative-basedProject
 :SelfNarrative-basedProject rdf:type owl:Class ;
                             rdfs:subClassOf :NarrativeProject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Story
+###  https://w3id.org/spice/SON/NO/Story
 :Story rdf:type owl:Class ;
        rdfs:subClassOf :Dynamics ,
                        [ rdf:type owl:Restriction ;
@@ -2037,12 +2026,22 @@ SON:Thematic-basedNarrativeList rdf:type owl:Class ;
                        ] .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Story-basedNarrativeProject
+###  https://w3id.org/spice/SON/NO/Story-basedNarrativeList
+:Story-basedNarrativeList rdf:type owl:Class ;
+                          rdfs:subClassOf :List .
+
+
+###  https://w3id.org/spice/SON/NO/Story-basedNarrativeProject
 :Story-basedNarrativeProject rdf:type owl:Class ;
                              rdfs:subClassOf :NarrativeProject .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Thematic-basedNarrativeProject
+###  https://w3id.org/spice/SON/NO/Thematic-basedNarrativeList
+:Thematic-basedNarrativeList rdf:type owl:Class ;
+                             rdfs:subClassOf :List .
+
+
+###  https://w3id.org/spice/SON/NO/Thematic-basedNarrativeProject
 :Thematic-basedNarrativeProject rdf:type owl:Class ;
                                 rdfs:subClassOf :NarrativeProject ,
                                                 [ rdf:type owl:Restriction ;
@@ -2051,37 +2050,37 @@ SON:Thematic-basedNarrativeList rdf:type owl:Class ;
                                                 ] .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#ThematicSubject
+###  https://w3id.org/spice/SON/NO/ThematicSubject
 :ThematicSubject rdf:type owl:Class ;
                  rdfs:subClassOf cidoc_crm_v5:E28.Conceptual_Object .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#ThirdPersonsNarrativeRoles
+###  https://w3id.org/spice/SON/NO/ThirdPersonsNarrativeRoles
 :ThirdPersonsNarrativeRoles rdf:type owl:Class ;
                             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Travel
+###  https://w3id.org/spice/SON/NO/Travel
 :Travel rdf:type owl:Class ;
         rdfs:subClassOf :Archetypes .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#TreasureHunter
+###  https://w3id.org/spice/SON/NO/TreasureHunter
 :TreasureHunter rdf:type owl:Class ;
                 rdfs:subClassOf :ThirdPersonsNarrativeRoles .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Victim
+###  https://w3id.org/spice/SON/NO/Victim
 :Victim rdf:type owl:Class ;
         rdfs:subClassOf :ThirdPersonsNarrativeRoles .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#Villain
+###  https://w3id.org/spice/SON/NO/Villain
 :Villain rdf:type owl:Class ;
          rdfs:subClassOf :ThirdPersonsNarrativeRoles .
 
 
-###  https://w3id.org/spice/SON/Narrative-Labyrinth#War
+###  https://w3id.org/spice/SON/NO/War
 :War rdf:type owl:Class ;
      rdfs:subClassOf :Archetypes .
 
@@ -2103,10 +2102,10 @@ SON:Thematic-basedNarrativeList rdf:type owl:Class ;
                                             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task> .
 
 
-[ rdfs:comment "Version 2.1 (Labyrinth + Hero)"
+[ rdfs:comment "Revised version of Labyrinth + Media Ontology. In this version the axioms related to the description of geometrical entities have been removed since they caused problems when the progam was opened (the classes were randomly distributed in the ontology)."
 ] .
 
-[ rdfs:comment "Revised version of Labyrinth + Media Ontology. In this version the axioms related to the description of geometrical entities have been removed since they caused problems when the progam was opened (the classes were randomly distributed in the ontology)."
+[ rdfs:comment "Version 2.1 (Labyrinth + Hero)"
  ] .
 
 [ rdfs:comment "Version 3.0"
