@@ -1,0 +1,24 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shavem: <https://w3id.org/spice/SON/PlutchikEmotions/> .
+@prefix e: <https://w3id.org/spice/SON/emotion/> .
+@prefix eicc: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix ex: <https://example.org#> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+
+ex:userA a ex:User .
+
+ex:painting1 a cis:Painting .
+
+ex:APaintingER a eicc:EmotionRelationInCulturalContext ;
+    e:stimulus ex:Love ;
+    e:emotion ex:Trust ;
+    e:experiencer e:A 
+
+ex:Joy a Plutchikem:BasicEmotion ;
+    a Pluthikavem: Joy ;
+    a Pluthikavem: Trust ;
+    a Pluthikavem: Love ; Inferred Complex Emotion (based on the Plutchik Model)
+
+
+
