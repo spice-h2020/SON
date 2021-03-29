@@ -12,22 +12,19 @@ ex:userB a ex:User .
 
 ex:painting1 a cis:Painting .
 
-ex:crying a shavem:EmotionEvent ;
+ex:cryinginpainting1 a shavem:EmotionEvent ;
     a shavem:crying ;
     e:triggers ex:sufferingofA ;
     e:triggers ex:unhappinessofB ;
-    #this is inferred
-    e:triggers shavem:Sadness ;
-    e:label "crying"@en .
 
 
 ex:APaintingER a eicc:EmotionRelationInCulturalContext ;
-    e:stimulus ex:crying ;
+    e:stimulus ex:painting1, ex:cryinginpainting1 ;
     e:emotion ex:sufferingofA ;
     e:experiencer e:A .
 
 ex:BPaintingER a eicc:EmotionRelationInCulturalContext ;
-    e:stimulus ex:crying ;
+    e:stimulus ex:painting1, ex:cryinginpainting1 ;
     e:emotion ex:unhappinessofB ;
     e:experiencer ex:userB .
 
