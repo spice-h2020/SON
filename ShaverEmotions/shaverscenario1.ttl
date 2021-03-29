@@ -21,7 +21,7 @@ ex:cryinginpainting1 a shavem:EmotionEvent ;
 ex:APaintingER a eicc:EmotionRelationInCulturalContext ;
     e:stimulus ex:painting1, ex:cryinginpainting1 ;
     e:emotion ex:sufferingofA ;
-    e:experiencer e:A .
+    e:experiencer ex:userA .
 
 ex:BPaintingER a eicc:EmotionRelationInCulturalContext ;
     e:stimulus ex:painting1, ex:cryinginpainting1 ;
