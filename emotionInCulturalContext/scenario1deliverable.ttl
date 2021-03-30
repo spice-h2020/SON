@@ -1,0 +1,97 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix e: <https://w3id.org/spice/SON/emotion/> .
+@prefix eic: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+@prefix ex: <http://example.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix prov: <http://www.w3.org/TR/prov-o/> .
+@prefix script: <https://w3id.org/spice/SON/scripting/> .
+@prefix fc: <https://w3id.org/spice/SON/fruitionContext> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# PEOPLE
+
+
+ex:A a dul:Person .
+
+ex:C a dul:Person .
+
+
+# CULTURAL ENTITIES or QUALITIES or PARTS OF THEM
+
+
+wd:Q19899820 a cis:CulturalEntity ;
+    dul:hasQuality ex:PaintingSize ;
+    e:triggers ex:AngerOfC .  
+
+ex:PaintingSize e:triggers ex:SurpriseOfA .
+
+wd:Q1106059 a cis:CulturalEntity ;
+    e:triggers ex:ApathyOfA , ex:ConfusionOfA , ex:SadnessOfC . 
+
+
+# EMOTIONS
+
+ex:SurpriseOfA a e:Emotion ;
+    e:confidenceScore "0.94"^^xsd:float .
+
+ex:SadnessOfC a e:Emotion .
+
+ex:AngerOfC a e:Emotion ;
+    e:confidenceScore "0.67"^^xsd:float .
+
+ex:ApathyOfA a e:Emotion .
+
+ex:ConfusionOfA a e:Emotion . 
+
+
+# EMOTON RELATIONS
+
+
+e:APaintingER a cis:EmotionRelationInCulturalContext ;
+    fc:hasFruitionContext ex:fruition1 ;
+    prov:wasGeneratedBy ex:text_answering_activity1 ;
+    e:stimulus ex:PaintingSize ;
+    e:emotion ex:SurpriseOfA ;
+    e:experiencer ex:A .  
+
+e:AManuscriptER a cis:EmotionRelationInCulturalContext ;
+    fc:hasFruitionContext ex:fruition1 ;
+    prov:wasGeneratedBy ex:emoju_answering_activity1 ;
+    e:experiencer ex:A ;
+    e:emotion ex:ApathyOfA , ex:ConfusionOfA ;
+    e:stimulus wd:Q1106059 .
+
+e:CPaintingER a cis:EmotionRelationInCulturalContext ;
+    fc:hasFruitionContext ex:fruition1 ;
+    prov:wasGeneratedBy ex:text_answering_activity2 ;
+    e:experiencer ex:C ;
+    e:emotion ex:AngerOfC ;
+    e:stimulus wd:Q19899820 . 
+
+e:CManuscriptER a cis:EmotionRelationInCulturalContext ;
+    fc:hasFruitionContext ex:fruition1 ;
+    prov:wasGeneratedBy ex:emoji_answering_activity2 ;
+    e:experiencer ex:C ;
+    e:emotion ex:SadnessOfC ;
+    e:stimulus ex:Manuscript .
+
+
+# Activities
+
+ex:text_answering_activity1 a prov:Activity . 
+
+ex:text_answering_activity2 a prov:Activity .
+
+ex:emoji_answering_activity2 a prov:Activity .
+
+ex:emoju_answering_activity1 a prov:Activity .
+
+
+#FruitionContext
+
+ex:fruition1 a fc:FruitionContext;
+    a fc:InPresenceFruitionContext .
