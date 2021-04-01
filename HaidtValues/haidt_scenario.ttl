@@ -1,0 +1,42 @@
+
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix occ: <https://w3id.org/spice/SON/OCCEmotion/> .
+@prefix gam: <https://w3id.org/spice/GAM/> .
+@prefix sch: <https://w3id.org/spice/SON/SchwartzValues/>
+@prefix nar: <https://w3id.org/spice/SON/Narrative-Labyrinth/>
+
+
+
+### PEOPLE
+occ:UserA a dul:Person ;
+    a occ:AppraisingAgent ;
+    haidt:hasValue haidt:LibertyOfItaly .
+occ:UserB a dul:Person ;
+    a occ:AppraisingAgent ;
+    haidt:hasValue haidt:CareOfPietroMicca .
+nar:PietroMicca a dul:Person ;
+    a occ:AppraisingAgent ;
+    haidt:hasValue haidt:LibertyOfItaly , haidt:CareOfPietroMicca .
+
+#### ACTIONS
+
+nar:PietroMiccaAction dul:hasComponent nar:LibertyOfItaly , nar:PiteroMiccaSacrifice ;
+    dul:performedBy nar:PietroMicca .
+
+
+### VALUES
+
+haidt:LibertyOfItaly a haidt:Liberty .
+haidt:PietroMiccaSacrifice a haidt:Harm .
+haidt:CareOfPietroMicca a haidt:Care .
+haidt:Care haidt:opposedTo haidt:Harm .
+
+
+#### INFERENCES
+
+haidt:PietroMiccaAction haidt:violates haidt:Care ;
+    occ:adhereTo haidt:Liberty ;
+    occ:praiseworthy occ:userA ;
+    occ:blameworthy occ:UserB .
