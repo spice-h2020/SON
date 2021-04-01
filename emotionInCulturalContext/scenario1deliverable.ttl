@@ -35,13 +35,11 @@ wd:Q1106059 a cis:CulturalEntity ;
 
 # EMOTIONS
 
-ex:SurpriseOfA a e:Emotion ;
-    e:confidenceScore "0.94"^^xsd:float .
+ex:SurpriseOfA a e:Emotion .
 
 ex:SadnessOfC a e:Emotion .
 
-ex:AngerOfC a e:Emotion ;
-    e:confidenceScore "0.67"^^xsd:float .
+ex:AngerOfC a e:Emotion .
 
 ex:ApathyOfA a e:Emotion .
 
@@ -56,6 +54,7 @@ e:APaintingER a cis:EmotionRelationInCulturalContext ;
     prov:wasGeneratedBy ex:text_answering_activity1 ;
     e:stimulus ex:PaintingSize ;
     e:emotion ex:SurpriseOfA ;
+    e:confidenceScore "0.94"^^xsd:float ;
     e:experiencer ex:A .  
 
 e:AManuscriptER a cis:EmotionRelationInCulturalContext ;
@@ -70,6 +69,7 @@ e:CPaintingER a cis:EmotionRelationInCulturalContext ;
     prov:wasGeneratedBy ex:text_answering_activity2 ;
     e:experiencer ex:C ;
     e:emotion ex:AngerOfC ;
+    e:confidenceScore "0.67"^^xsd:float ;
     e:stimulus wd:Q19899820 . 
 
 e:CManuscriptER a cis:EmotionRelationInCulturalContext ;
