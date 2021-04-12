@@ -594,6 +594,7 @@ Or could determine some internal conflict, depending on how much complex is the 
     <owl:Class rdf:about="https://w3id.org/spice/SON/OCCEmotion#Fear-Confirmed">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#ECES_ProspectRelevantConfirmed"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#NegativeOutcomeEmotion"/>
+        <rdfs:comment>The feeling that arises after knowing that some Event that was feared has happened.</rdfs:comment>
     </owl:Class>
     
 
@@ -603,6 +604,7 @@ Or could determine some internal conflict, depending on how much complex is the 
     <owl:Class rdf:about="https://w3id.org/spice/SON/OCCEmotion#Gloating">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#EventConsequenceEmotionOther"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#PositiveOutcomeEmotion"/>
+        <rdfs:comment>Being happy for some undesirable Event (e.g. a disgrace) happened to someone Other than Self.</rdfs:comment>
     </owl:Class>
     
 
@@ -646,6 +648,7 @@ Or could determine some internal conflict, depending on how much complex is the 
     <owl:Class rdf:about="https://w3id.org/spice/SON/OCCEmotion#HappyFor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#EventConsequenceEmotionOther"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#PositiveOutcomeEmotion"/>
+        <rdfs:comment>Being happy for some desirable Event happened to someone Other than Self.</rdfs:comment>
     </owl:Class>
     
 
@@ -690,6 +693,7 @@ Or could determine some internal conflict, depending on how much complex is the 
     <owl:Class rdf:about="https://w3id.org/spice/SON/OCCEmotion#Pity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#EventConsequenceEmotionOther"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#NegativeOutcomeEmotion"/>
+        <rdfs:comment>Being sad for some undesirable Event happened to someone Other than Self.</rdfs:comment>
     </owl:Class>
     
 
@@ -770,6 +774,7 @@ Or could determine some internal conflict, depending on how much complex is the 
     <owl:Class rdf:about="https://w3id.org/spice/SON/OCCEmotion#Relief">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#ECES_ProspectRelevantConfirmed"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#PositiveOutcomeEmotion"/>
+        <rdfs:comment>The feeling that arises after knowing that some undesirable Event that was feared has not happened.</rdfs:comment>
     </owl:Class>
     
 
@@ -826,6 +831,7 @@ Or could determine some internal conflict, depending on how much complex is the 
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#ActionConsequenceEmotionOther"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#NegativeOutcomeEmotion"/>
+        <rdfs:comment>The feeling felt by an Appraising Agent for whom some Action / Event, performed by some Other Agent, is blameworthy.</rdfs:comment>
     </owl:Class>
     
 
@@ -844,6 +850,7 @@ Or could determine some internal conflict, depending on how much complex is the 
     <owl:Class rdf:about="https://w3id.org/spice/SON/OCCEmotion#Satisfaction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#ECES_ProspectRelevantConfirmed"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/OCCEmotion#PositiveOutcomeEmotion"/>
+        <rdfs:comment>The feeling felt knowing that, after hoping for it, some desirable Event has happened.</rdfs:comment>
     </owl:Class>
     
 
