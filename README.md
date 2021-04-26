@@ -86,6 +86,10 @@ Artwork-related data
 - [Getty vocabularies](http://vocab.getty.edu/) (cf. [#31](https://github.com/spice-h2020/SON/issues/31))
 - [Building Topology Ontology (BOT)](https://w3id.org/bot#) (cf. [#31](https://github.com/spice-h2020/SON/issues/31)) (for describing the structure of the museums or the exhibitions)
 
+### Testing protocol
+
+SON Ontologies are continuosly tested. The testing protocol is described  [here](TESTING).
+
 ## How to contribute
 
 You can contribute to the SPICE Ontology Network either by defining a new scenario (that can be submitted as [issues](https://github.com/spice-h2020/SON/issues/new/choose)) or  proposing an extension of the ontology.
