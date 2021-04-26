@@ -88,7 +88,7 @@ Artwork-related data
 
 ### Testing protocol
 
-SON Ontologies are continuosly tested. The testing protocol is described  [here](TESTING).
+SON Ontologies are continuosly tested. The testing protocol is described  [here](TESTING.md).
 
 ## How to contribute
 
