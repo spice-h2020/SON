@@ -11,8 +11,10 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
 @prefix e: <https://w3id.org/spice/SON/emotion/> .
-@prefix eic: <https://w3id.org/spice/SON/emotionInCulturalContext/> . 
-@prefix emo-p: <https://w3id.org/spice/SON/PlutchikEmotion/> . 
+@prefix eic: <https://w3id.org/spice/SON/emotionInCulturalContext/> .
+@prefix emo-p: <https://w3id.org/spice/SON/PlutchikEmotion/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
 
 
 
@@ -32,22 +34,22 @@ ex:BustOfHecht a arco:HistoricOrArtisticProperty ;
 ex:BustOfHecht DUL:associatedWith <http://dbpedia.org/resource/Reuben_Hecht> .
 
 ex:RoleOfMuseum a  cis:CreativeWork ; # Interpreted as a document! Or is it a topic in case of a topic different pattern is needed
-    cis:url <RoleOfMuseum>  .  
+    cis:url <RoleOfMuseum>  .
 
 ex:QuestionOfWar a  cis:CreativeWork ; # Interpreted as a document! Or is it a topic in case of a topic different pattern is needed
-    cis:url <QuestionOfWar>  . 
+    cis:url <QuestionOfWar>  .
 
 ex:RHech1 a cis:ImageObject ;
-    cis:url <RHech1> .  
+    cis:url <RHech1> .
 
 ex:RHech2 a cis:ImageObject ;
-    cis:url <RHech2>  .  
+    cis:url <RHech2>  .
 
 ex:RHech3 a cis:ImageObject ;
-    cis:url <RHech3>  .  
+    cis:url <RHech3>  .
 
 ex:RHech4 a cis:ImageObject ;
-    cis:url <RHech4>  . 
+    cis:url <RHech4>  .
 
 # Type of exhibit art?
 
@@ -67,31 +69,31 @@ ex:Arrows a arco:HistoricOrArtisticProperty ;
 ex:Arrows DUL:associatedWith <http://dbpedia.org/resource/Gamla>, <http://www.wikidata.org/entity/Q1493165> . # In case that Gamla is the location where the arrows were found Time-indexed typed location pattern can be used
 
 ex:Gamla a cis:VideoObject  ;
-    cis:url <Gamla.mp4>  .  
+    cis:url <Gamla.mp4>  .
 
 ex:ArrowsVideo a cis:VideoObject ;
-    cis:url <Arrows.mp4>  .  
+    cis:url <Arrows.mp4>  .
 
 ex:Gamla1 a cis:ImageObject ;
-    cis:url <Gamla1> .  
+    cis:url <Gamla1> .
 
 ex:Gamla2 a cis:ImageObject ;
-    cis:url <Gamla2> .  
+    cis:url <Gamla2> .
 
 ex:Gamla3 a cis:ImageObject ;
-    cis:url <Gamla3>  .  
+    cis:url <Gamla3>  .
 
 ex:Gamla4 a cis:ImageObject ;
-    cis:url <Gamla4>  .  
+    cis:url <Gamla4>  .
 
 ex:Arrows1 a cis:ImageObject ;
-    cis:url <Arrows1>  .  
+    cis:url <Arrows1>  .
 
 ex:Arrows2 a cis:ImageObject ;
-    cis:url <Arrows2>  .  
+    cis:url <Arrows2>  .
 
 ex:Arrows3 a cis:ImageObject ;
-    cis:url <Arrows3>  . 
+    cis:url <Arrows3>  .
 
 
 ## Catapult
@@ -113,19 +115,19 @@ ex:visitor1 a DUL:Person .
 ex:aggressivenessCatapultVisitor1 a emo-p:Aggressiveness .
 
 ex:CatapultVideo a cis:VideoObject ;
-    cis:url <Catapult.mp4>  .  
+    cis:url <Catapult.mp4>  .
 
 ex:Catapult1 a cis:ImageObject ;
-    cis:url <Catapult1>  .  
+    cis:url <Catapult1>  .
 
 ex:Catapult2 a cis:ImageObject ;
-    cis:url <Catapult2> .  
+    cis:url <Catapult2> .
 
 ex:Catapult3 a cis:ImageObject ;
-    cis:url <Catapult3>  .  
+    cis:url <Catapult3>  .
 
 ex:Catapult4 a cis:ImageObject ;
-    cis:url <Catapult4>  .  
+    cis:url <Catapult4>  .
 
 ## Content story of origin?
 
@@ -169,7 +171,7 @@ ex:GalileeRebellion bot:containsZone ex:VentrinaZZ .
 
 ex:VentrinaZZ DUL:isLocationOf ex:RomanWarGear, ex:HeadOfVespasian .
 
-# ex:RomanWarGear 
+# ex:RomanWarGear
 
 ex:RomanWarGear a arco:HistoricOrArtisticProperty ;
 	arco-dd:hasCulturalPropertyType aat:300117127 ;
@@ -244,18 +246,3 @@ ex:Jerusalem2 a cis:ImageObject ;
 
 ex:Jerusalem3 a cis:ImageObject ;
 	cis:url <Jerusalem3> .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

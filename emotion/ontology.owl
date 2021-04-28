@@ -62,6 +62,22 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/emotion#emotion-e -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/emotion#emotion-e">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/spice/SON/emotion/emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spice/SON/emotion#emotion-i -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/emotion#emotion-i">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/spice/SON/emotion/emotion"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/spice/SON/emotion/emotion -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/emotion/emotion">
@@ -90,6 +106,7 @@
     <!-- https://w3id.org/spice/SON/emotion/triggers -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/emotion/triggers">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -232,6 +249,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/stimulus"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
