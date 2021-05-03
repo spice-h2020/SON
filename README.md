@@ -30,7 +30,7 @@ The SPICE ontology network is versioned, therefore the ontology modules must com
 ```
 https://w3id.org/spice/SON/[Name of the folder]/[version ID]
 ```
-where ``version ID`` is the identifier of the version under development (currently the ``0.0.1``).
+where ``version ID`` is the identifier of the version under development (currently, the stable version is the ``0.0.1``, the version under development is the ``0.0.2``).
 
 3. Each ontology module *must import* the ontologies with the same version ID.
 
