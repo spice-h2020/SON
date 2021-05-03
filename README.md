@@ -46,12 +46,20 @@ The SPICE Ontology network uses [DOLCE+DnS Ultralite](http://www.ontologydesignp
 
 ## Knowledge Areas Overview
 
-- [FULL](https://w3id.org/spice/SON/FULL) ``https://w3id.org/spice/SON/FULL``
+A Knowledge Area is a collection of ontologies of the ontology network that share a common theme. Even if knowledge areas are not logical elements of the ontologies, they provide us a mean for classifying requirements and developed ontologies, drawing a thematic overview of the ontology network useful to analyse at a higher level the interactions between the ontologies.
+
+The following Figure shows the Knowledge Areas of the SPICE Ontology Network (identified so far) and how they are interconnected. The knowledge areas were selected by analysing the user stories collected during the first year and related to the work carried out in all the work packages.
+
+![Knowledge Areas](KnowledgeAreas.png)
+
+
 
 ### Brand new ontologies
 
 This is a list of the brand new ontologies developed for the SPICE project:
 
+
+- [FULL](https://w3id.org/spice/SON/FULL) ``https://w3id.org/spice/SON/FULL``
 - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
 - [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext``
 - [Scripting manifest](https://w3id.org/spice/SON/scripting) ``https://w3id.org/spice/SON/scripting``
@@ -67,18 +75,18 @@ This is a list of the brand new ontologies developed for the SPICE project:
 - [Schwartz Values](https://w3id.org/spice/SON/SchwartzValues) ``https://w3id.org/spice/SON/SchwartzValues``
 - [Shaver Emotions](https://w3id.org/spice/SON/ShaverEmotions) ``https://w3id.org/spice/SON/ShaverEmotions``
 
-### Existing ontologies re-used 
+### Existing ontologies re-used
 
 The SPICE ontology network doesn't want to reinvent the wheel.
 Lots of [awesome ontologies](Awesome_ontologies.md) are avaible at the state-of-the-art.
-SON relies and possibly extends these ontologies. 
+SON relies and possibly extends these ontologies.
 Here, we provide a list of ontologies reused or recommended for the SPICE project together with a link to the issue where the need of the ontology emerged.
 The issue discusses the requirement that motivates the use of the ontology and provides an example of use.
 
 Linguistic data
 
 - [semiotics](http://ontologydesignpatterns.org/cp/owl/semiotics.owl#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30))
-- [Earmark](http://www.essepuntato.it/2008/12/earmark#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30)) 
+- [Earmark](http://www.essepuntato.it/2008/12/earmark#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30))
 - [POS](http://www.ontologydesignpatterns.org/ont/fred/pos.owl#) (cf. [#30](https://github.com/spice-h2020/SON/issues/30))
 
 Artwork-related data
