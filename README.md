@@ -46,24 +46,26 @@ The SPICE Ontology network uses [DOLCE+DnS Ultralite](http://www.ontologydesignp
 
 ## Knowledge Areas Overview
 
-TODO: Create SON entry point
+- [FULL](https://w3id.org/spice/SON/FULL) ``https://w3id.org/spice/SON/FULL``
 
 ### Brand new ontologies
 
 This is a list of the brand new ontologies developed for the SPICE project:
 
-Scripting
 - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
 - [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext``
 - [Scripting manifest](https://w3id.org/spice/SON/scripting) ``https://w3id.org/spice/SON/scripting``
 - [Affordance](https://w3id.org/spice/SON/affordance) ``https://w3id.org/spice/SON/affordance``
-
-Emotion
 - [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion``
 - [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) ``https://w3id.org/spice/SON/emotionInCulturalContext``
 - [Ekman emotions](https://w3id.org/spice/SON/ekmanEmotions) ``https://w3id.org/spice/SON/ekmanEmotions``
 - [Plutchik emotion](https://w3id.org/spice/SON/PlutchikEmotion) ``https://w3id.org/spice/SON/PlutchikEmotion``
 - [OCC emotion](https://w3id.org/spice/SON/OCCEmotion) ``https://w3id.org/spice/SON/OCCEmotion``
+- [Exhibition](https://w3id.org/spice/SON/exhibition) ``https://w3id.org/spice/SON/exhibition``
+- [Haidt Values](https://w3id.org/spice/SON/HaidtValues) ``https://w3id.org/spice/SON/HaidtValues``
+- [Narrative](https://w3id.org/spice/SON/NO) ``https://w3id.org/spice/SON/NO``
+- [Schwartz Values](https://w3id.org/spice/SON/SchwartzValues) ``https://w3id.org/spice/SON/SchwartzValues``
+- [Shaver Emotions](https://w3id.org/spice/SON/ShaverEmotions) ``https://w3id.org/spice/SON/ShaverEmotions``
 
 ### Existing ontologies re-used 
 
