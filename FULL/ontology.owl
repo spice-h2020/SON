@@ -33,12 +33,12 @@
     <owl:imports rdf:resource="https://w3id.org/spice/SON/PlutchikEmotion/0.0.2"/>
     <owl:imports rdf:resource="https://w3id.org/spice/SON/emotionInCulturalContext/0.0.2"/>
     <owl:imports rdf:resource="https://w3id.org/spice/SON/exhibition/0.0.2"/>
-    <owl:imports rdf:resource="https://w3id.org/spice/SON/SchwartzValues/0.0.1"/>
-    <owl:imports rdf:resource="https://w3id.org/spice/SON/NO/0.0.1"/>
+    <owl:imports rdf:resource="https://w3id.org/spice/SON/SchwartzValues/0.0.2"/>
+    <owl:imports rdf:resource="https://w3id.org/spice/SON/NO/0.0.2"/>
     <owl:imports rdf:resource="https://w3id.org/spice/SON/scripting/0.0.2"/>
     <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/FULL/0.0.2"/>
-    <owl:imports rdf:resource="https://w3id.org/spice/SON/OCCEmotion/0.0.1"/>
+    <owl:imports rdf:resource="https://w3id.org/spice/SON/OCCEmotion/0.0.2"/>
     <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
-    <owl:imports rdf:resource="https://w3id.org/spice/SON/HaidtValues/0.0.1"/>
+    <owl:imports rdf:resource="https://w3id.org/spice/SON/HaidtValues/0.0.2"/>
   </owl:Ontology>
 </rdf:RDF>

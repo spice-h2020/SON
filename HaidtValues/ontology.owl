@@ -6,6 +6,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <owl:Ontology rdf:about="https://w3id.org/spice/SON/HaidtValues">
+<owl:versionIRI rdf:resource="https://w3id.org/spice/SON/HaidtValues/0.0.2"/>
     <haidt:bibRef>Ontological version of the Moral Foundation Theory by Peter Ditto, Jesse Graham, Jonathan Haidt, Ravi Iyer, Spassea Koleva, Matt Motyl, Gary Sherman, Sean P. Wojcik.</haidt:bibRef>
     <rdfs:comment>Designed by Stefano De Giorgis and Rossana Damiano.</rdfs:comment>
   </owl:Ontology>

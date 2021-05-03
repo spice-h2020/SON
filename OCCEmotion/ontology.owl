@@ -8,7 +8,8 @@
     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <owl:Ontology rdf:about="https://w3id.org/spice/SON/OCCEmotion">
-    <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
+		<owl:versionIRI rdf:resource="https://w3id.org/spice/SON/OCCEmotion/0.0.2"/>
+    <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
     <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl"/>
     <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
   </owl:Ontology>
