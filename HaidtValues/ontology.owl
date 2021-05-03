@@ -1,482 +1,321 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/spice/SON/HaidtValues#"
-     xml:base="https://w3id.org/spice/SON/HaidtValues"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:haidt="https://w3id.org/spice/SON/HaidtValues#"
-     xmlns:schwartz="https://github.com/spice-h2020/SON/blob/main/SchwartzValues/ontology.owl">
-    <owl:Ontology rdf:about="https://w3id.org/spice/SON/HaidtValues">
-        <rdfs:comment>Designed by Stefano De Giorgis and Rossana Damiano.</rdfs:comment>
-        <bibRef>Ontological version of the Moral Foundation Theory by Peter Ditto, Jesse Graham, Jonathan Haidt, Ravi Iyer, Spassea Koleva, Matt Motyl, Gary Sherman, Sean P. Wojcik.</bibRef>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#bibRef -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#bibRef"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#abideTo -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#abideTo"/>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#actsFollowing -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#actsFollowing"/>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#follows -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#follows">
-        <owl:propertyDisjointWith rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#hasComponent -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#opposedTo -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#performs -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#performs"/>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#prescripts -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#prescripts"/>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#satisfiedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#satisfiedBy">
-        <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#satisfies"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#satisfies -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#satisfies"/>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#violates -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#violates"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action -->
-
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent -->
-
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
-
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm -->
-
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm"/>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Authority -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Authority">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Subversion"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Authority_vs_Subversion -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Authority_vs_Subversion">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Authority"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Subversion"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Betrayal -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Betrayal">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Loyalty"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Care -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Care">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Harm"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Care_vs_Harm -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Care_vs_Harm">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Care"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Harm"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Cheating -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Cheating">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Fairness"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Degradation -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Degradation">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Sanctity"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#DyadicOpposition -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-        <rdfs:comment>The dyadic opposition between a Prescription and its Violation.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Fairness -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Fairness">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Cheating"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Fairness_vs_Cheating -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Fairness_vs_Cheating">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Cheating"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Fairness"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Harm -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Harm">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Care"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Liberty -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Liberty">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Oppression"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Liberty_vs_Oppression -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Liberty_vs_Oppression">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Liberty"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Oppression"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Loyalty -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Loyalty">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Betrayal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Loyalty_vs_Betrayal -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Loyalty_vs_Betrayal">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Betrayal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Loyalty"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Oppression -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Oppression">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Liberty"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Sanctity -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Sanctity">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Degradation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Sanctity_vs_Degradation -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Sanctity_vs_Degradation">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Degradation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Sanctity"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Subversion -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Subversion">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Authority"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Value -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Value">
-        <rdfs:comment>Positive values shaping some behaviour.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/HaidtValues#Violation -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Violation">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
-                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:comment>The Violation of some Value. They could also be seen as &quot;negative Values&quot;</rdfs:comment>
-    </owl:Class>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:schwartz="https://github.com/spice-h2020/SON/blob/main/SchwartzValues/ontology.owl"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:haidt="https://w3id.org/spice/SON/HaidtValues#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://w3id.org/spice/SON/HaidtValues">
+    <haidt:bibRef>Ontological version of the Moral Foundation Theory by Peter Ditto, Jesse Graham, Jonathan Haidt, Ravi Iyer, Spassea Koleva, Matt Motyl, Gary Sherman, Sean P. Wojcik.</haidt:bibRef>
+    <rdfs:comment>Designed by Stefano De Giorgis and Rossana Damiano.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition">
+    <rdfs:comment>The dyadic opposition between a Prescription and its Violation.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Value"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Oppression">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Liberty"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#violates"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Liberty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Value"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Oppression"/>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Sanctity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Value"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Degradation"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Loyalty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Value"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Betrayal"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Care_vs_Harm">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Harm"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Care"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Harm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Care"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Care">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Value"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Harm"/>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Liberty_vs_Oppression">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Oppression"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Liberty"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Betrayal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Loyalty"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Violation">
+    <rdfs:comment>The Violation of some Value. They could also be seen as "negative Values"</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Value">
+    <rdfs:comment>Positive values shaping some behaviour.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Loyalty_vs_Betrayal">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Loyalty"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Betrayal"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Cheating">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Fairness"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Fairness_vs_Cheating">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Fairness"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Cheating"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Subversion">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Authority"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Authority_vs_Subversion">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Subversion"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Authority"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Fairness">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Cheating"/>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Sanctity_vs_Degradation">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#DyadicOpposition"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Sanctity"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Degradation"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#hasComponent"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Degradation">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Violation"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Sanctity"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/HaidtValues#Authority">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/HaidtValues#Value"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/HaidtValues#Subversion"/>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#abideTo"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#actsFollowing"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#satisfiedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#satisfies"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#performs"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#follows">
+    <owl:propertyDisjointWith rdf:resource="https://w3id.org/spice/SON/HaidtValues#violates"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#prescripts"/>
+  <owl:SymmetricProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#opposedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:AnnotationProperty rdf:about="https://w3id.org/spice/SON/HaidtValues#bibRef"/>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

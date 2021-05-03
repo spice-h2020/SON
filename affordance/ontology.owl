@@ -1,156 +1,77 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/spice/SON/affordance/"
-     xml:base="https://w3id.org/spice/SON/affordance/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/spice/SON/affordance">
-        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/affordance/0.0.1"/>
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
-        <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/affordance/affordance.png"/>
-        <rdfs:comment xml:lang="en">A lightweight ontology formalising Gibson&apos;s notion of Affordance.</rdfs:comment>
-        <rdfs:label xml:lang="en">Affordance</rdfs:label>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/spice/SON/affordance/affords -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/affords">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
-        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
-        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
-        <rdfs:comment>It associates an affordance relation with the task afforded. It defines when the task can be executed.</rdfs:comment>
-        <rdfs:label xml:lang="en">affords</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/affordance/hasAffordance -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/hasAffordance">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskDefinedIn"/>
-        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
-        <rdfs:range rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
-        <rdfs:comment xml:lang="en">It associates a Task with its Affordance relations.</rdfs:comment>
-        <rdfs:label xml:lang="en">has affordance</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/affordance/hasEffect -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/hasEffect">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyPrecedes"/>
-        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
-        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
-        <rdfs:comment xml:lang="en">It associates a Task with the effect of its execution, i.e. a Description of a stereotyped situation.</rdfs:comment>
-        <rdfs:label xml:lang="en">has effect</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/affordance/holds -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/holds">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription"/>
-        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
-        <rdfs:comment>It relates an affordance relation with the description of a situation in which the affordance holds.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/spice/SON/affordance/strength -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/spice/SON/affordance/strength">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
-        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/spice/SON/affordance/Affordance -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/affordance/Affordance">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/affordance/affords"/>
-                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/affordance/holds"/>
-                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/affordance/strength"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An Affordance relation that associates a stereotyped situation, i.e. a Description, with a Task that can be executed in that situation.</rdfs:comment>
-        <rdfs:label>Affordance</rdfs:label>
-    </owl:Class>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="https://w3id.org/spice/SON/affordance/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://w3id.org/spice/SON/affordance">
+    <owl:priorVersion rdf:resource="https://w3id.org/spice/SON/affordance/0.0.1"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/affordance/0.0.2"/>
+    <rdfs:comment xml:lang="en">A lightweight ontology formalising Gibson's notion of Affordance.</rdfs:comment>
+    <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/affordance/affordance.png"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    <rdfs:label xml:lang="en">Affordance</rdfs:label>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/affordance/Affordance">
+    <rdfs:label>Affordance</rdfs:label>
+    <rdfs:comment xml:lang="en">An Affordance relation that associates a stereotyped situation, i.e. a Description, with a Task that can be executed in that situation.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://w3id.org/spice/SON/affordance/strength"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/holds"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/affords"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/hasAffordance">
+    <rdfs:label xml:lang="en">has affordance</rdfs:label>
+    <rdfs:comment xml:lang="en">It associates a Task with its Affordance relations.</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskDefinedIn"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/holds">
+    <rdfs:comment>It relates an affordance relation with the description of a situation in which the affordance holds.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/affords">
+    <rdfs:label xml:lang="en">affords</rdfs:label>
+    <rdfs:comment>It associates an affordance relation with the task afforded. It defines when the task can be executed.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/affordance/hasEffect">
+    <rdfs:label xml:lang="en">has effect</rdfs:label>
+    <rdfs:comment xml:lang="en">It associates a Task with the effect of its execution, i.e. a Description of a stereotyped situation.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#directlyPrecedes"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/spice/SON/affordance/strength">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:domain rdf:resource="https://w3id.org/spice/SON/affordance/Affordance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

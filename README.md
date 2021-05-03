@@ -56,13 +56,12 @@ The following Figure shows the Knowledge Areas of the SPICE Ontology Network (id
 
 ### Brand new ontologies
 
-This is a list of the brand new ontologies developed for the SPICE project:
+This is a list of the brand new ontologies developed for the SPICE project.
 
-
-- [FULL](https://w3id.org/spice/SON/FULL) ``https://w3id.org/spice/SON/FULL``
-- [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext``
-- [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext``
-- [Scripting manifest](https://w3id.org/spice/SON/scripting) ``https://w3id.org/spice/SON/scripting``
+- [FULL](https://w3id.org/spice/SON/FULL) ``https://w3id.org/spice/SON/FULL`` is the catch-all that imports all the ontologies within the network.
+- [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext`` provides a vocabulary for describing the curatorial context of any activity. It belongs to the Curatorial KA.
+- [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext`` aims at representing the modality and the context of someone’s interaction with a cultural entity
+- [Scripting](https://w3id.org/spice/SON/scripting) ``https://w3id.org/spice/SON/scripting`` allows us to describe aspects related to the design and execution of citizen curation activities, including engagement activities with museum visitors, web applications for eliciting users' interpretations (e.g., via storytelling, question answering), and social media interactions. 
 - [Affordance](https://w3id.org/spice/SON/affordance) ``https://w3id.org/spice/SON/affordance``
 - [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion``
 - [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) ``https://w3id.org/spice/SON/emotionInCulturalContext``
@@ -103,17 +102,6 @@ SON Ontologies are continuosly tested. The testing protocol is described  [here]
 ## How to contribute
 
 You can contribute to the SPICE Ontology Network either by defining a new scenario (that can be submitted as [issues](https://github.com/spice-h2020/SON/issues/new/choose)) or  proposing an extension of the ontology.
-
-
-## Contributors and Roles
-
-- Luigi Asprino (UNIBO) - Maintainer
-- Rossana Damiano (UNITO)
-- Marilena Daquino (UNIBO)
-- Stefano De Giorgis (UNIBO)
-- Aldo Gangemi (CNR-UNIBO)
-- Antonio Lieto (UNITO)
-- Bruno Sartini (UNIBO)
 
 
 ## License

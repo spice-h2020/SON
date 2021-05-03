@@ -1,150 +1,99 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/spice/SON/emotionInCulturalContext/"
-     xml:base="https://w3id.org/spice/SON/emotionInCulturalContext/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:vir="http://w3id.org/vir#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
-     xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:opla="http://ontologydesignpatterns.org/opla/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
-     xmlns:skos2="http://www.w3.org/2008/05/skos#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:frbroo="http://iflastandards.info/ns/fr/frbr/frbroo/"
-     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:cidoc-crm="http://www.cidoc-crm.org/cidoc-crm/"
-     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/spice/SON/emotionInCulturalContext">
-        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/emotionInCulturalContext/0.0.1"/>
-        <owl:imports rdf:resource="http://purl.org/spar/frbr/2018-03-29"/>
-				<dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/emotionInCulturalContext/EmotionInCulturalContext.png" />
-        <owl:imports rdf:resource="http://w3id.org/vir#"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/Cultural-ON/v3.2/Cultural-ON-AP_IT.rdf"/>
-        <owl:imports rdf:resource="https://w3id.org/spice/SON/fruitionContext/0.0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
-    </owl:Ontology>
-
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-    <!-- https://w3id.org/spice/fruitionContext/hasFruitionContext -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/fruitionContext/hasFruitionContext"/>
-
-
-
-    <!-- https://w3id.org/spice/SON/emotion/triggers -->
-
-    <rdf:Description rdf:about="https://w3id.org/spice/SON/emotion/triggers">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/stimulus"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
-                            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
-                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
-                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Manifestation"/>
-                            <rdf:Description rdf:about="http://w3id.org/vir#IC9_Representation"/>
-                            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
-                                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-    <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
-
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
-
-
-
-    <!-- https://w3id.org/spice/fruitionContext/FruitionContext -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/fruitionContext/FruitionContext"/>
-
-
-
-    <!-- https://w3id.org/spice/SON/emotionInCulturalContext/EmotionRelationInCulturalContext -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/emotionInCulturalContext/EmotionRelationInCulturalContext">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/EmotionRelation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/fruitionContext/hasFruitionContext"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/fruitionContext/FruitionContext"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/curatorialContext/hasCuratorialContext"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/curatorialContext/CuratorialContext"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/stimulus"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
-                            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
-                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
-                            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Manifestation"/>
-                            <rdf:Description rdf:about="http://w3id.org/vir#IC9_Representation"/>
-                            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
-                                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+    xmlns:cidoc-crm="http://www.cidoc-crm.org/cidoc-crm/"
+    xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:frbroo="http://iflastandards.info/ns/fr/frbr/frbroo/"
+    xmlns:l0="https://w3id.org/italia/onto/l0/"
+    xmlns:vir="http://w3id.org/vir#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+    xmlns="https://w3id.org/spice/SON/emotionInCulturalContext/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:skos2="http://www.w3.org/2008/05/skos#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:opla="http://ontologydesignpatterns.org/opla/"
+    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://w3id.org/spice/SON/emotionInCulturalContext">
+    <owl:imports rdf:resource="https://w3id.org/spice/SON/fruitionContext/0.0.2"/>
+    <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/emotionInCulturalContext/0.0.2"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/Cultural-ON/v3.2/Cultural-ON-AP_IT.rdf"/>
+    <owl:imports rdf:resource="http://w3id.org/vir#"/>
+    <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/emotionInCulturalContext/EmotionInCulturalContext.png"/>
+    <owl:imports rdf:resource="http://purl.org/spar/frbr/2018-03-29"/>
+    <owl:priorVersion rdf:resource="https://w3id.org/spice/SON/emotionInCulturalContext/0.0.1"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://w3id.org/spice/fruitionContext/FruitionContext"/>
+  <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/emotionInCulturalContext/EmotionRelationInCulturalContext">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
+              <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
+              <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
+              <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Manifestation"/>
+              <rdf:Description rdf:about="http://w3id.org/vir#IC9_Representation"/>
+              <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/stimulus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/curatorialContext/CuratorialContext"/>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/curatorialContext/hasCuratorialContext"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/fruitionContext/FruitionContext"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/fruitionContext/hasFruitionContext"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/EmotionRelation"/>
+  </owl:Class>
+  <rdf:Description rdf:about="https://w3id.org/spice/SON/emotion/triggers">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
+              <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CulturalEvent"/>
+              <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
+              <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Manifestation"/>
+              <rdf:Description rdf:about="http://w3id.org/vir#IC9_Representation"/>
+              <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/stimulus"/>
+      </owl:Restriction>
+    </rdfs:domain>
+  </rdf:Description>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->

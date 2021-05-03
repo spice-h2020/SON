@@ -1,764 +1,649 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/spice/SON/SchwartzValues/"
-     xml:base="https://w3id.org/spice/SON/SchwartzValues/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:SchwartzValues="https://w3id.org/spice/SON/SchwartzValues#">
-    <owl:Ontology rdf:about="https://w3id.org/spice/SON/SchwartzValues">
-        <rdfs:comment>Designed by Rossana Damiano and Stefano De Giorgis.</rdfs:comment>
-    </owl:Ontology>
-    
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:SchwartzValues="https://w3id.org/spice/SON/SchwartzValues#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://w3id.org/spice/SON/SchwartzValues/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://w3id.org/spice/SON/SchwartzValues">
+    <rdfs:comment>Designed by Rossana Damiano and Stefano De Giorgis.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence">
+    <SchwartzValues:bibRef>"Promoting the wellbeing of society and nature above one's own interests, highlighting the acceptance of others as equals, as well as a concern for their wellbeing."
 
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Rules">
+    <SchwartzValues:bibRef>"Compliance with norms, laws and formal obligations."
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conformity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Stimulation">
+    <rdfs:comment>"The search for excitement, novelty and change, needed to keep up a good functional level."
 
-    
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Action">
+    <SchwartzValues:bibRef>"The freedom to determine one's own actions."
 
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Thought"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfDirection"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Dependability">
+    <SchwartzValues:bibRef>"Being a reliable and trustworthy member of the in-group."
 
-    <!-- https://w3id.org/spice/SON/SchwartzValues#bibRef -->
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Benevolence"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Face">
+    <SchwartzValues:bibRef>"Security and power via the keeping up of one's own public image and avoidance of humiliation."
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#bibRef"/>
-    
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Tradition"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Security"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Power"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Humility"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Hedonism"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Thought">
+    <SchwartzValues:bibRef>"The freedom to cultivate one's own ideas and skills."
 
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfDirection"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree">
+    <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:comment>The attitude to which can be ascribed some values motivations: Growth and Anxiety Free is a pro-active attitude.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Personal">
+    <SchwartzValues:bibRef>"Safety in one's own immediate environment."
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Societal"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Security"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:complementOf>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:complementOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Tolerance">
+    <SchwartzValues:bibRef>"Acceptance and understanding of those different from oneself."
 
-    
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Nature">
+    <SchwartzValues:bibRef>"Preservation of the natural environment."
 
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Tolerance"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement">
+    <rdfs:comment>"Promoting self-interest at the expense of others, emphasising the search for personal success and dominance over others."
 
-    <!-- https://w3id.org/spice/SON/SchwartzValues#attitude -->
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+                </owl:onProperty>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
+                </owl:someValuesFrom>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance">
+    <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:comment>The attitude to which can be ascribed some values motivations: Self Protection and Anxiety Avoidance is a reactive attitude.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus">
+    <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:comment>Focus on personal issues and self.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Focus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Caring">
+    <SchwartzValues:bibRef>"Devotion to the wellbeing of group members."
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude">
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment>This property is used to declare the attitude corresponding to some values, namely SelfProtectionAndAnxietyAvoidance (re-active attitude) vs GrothAndAnxietyFree (pro-active attitude).</rdfs:comment>
-    </owl:ObjectProperty>
-    
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Dependability"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Benevolence"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Concern">
+    <SchwartzValues:bibRef>"Commitment to equality, justice and protection for all."
 
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Tolerance"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Nature"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Universalism">
+    <SchwartzValues:bibRef>"Understanding and acceptation of others and a concern for the wellbeing of society and the planet we inhabit."
 
-    <!-- https://w3id.org/spice/SON/SchwartzValues#focus -->
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#PanCulturalBaselineForValuesPriority">
+    <SchwartzValues:bibRef>"Individuals differ substantially in the importance they attribute to the ten values. At the societal level, however, consensus regarding the hierarchical order of the values is surprisingly high."
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus">
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment>This property is used to declare the focus corresponding to some values, namely SocialFocus vs PersonalFocus.</rdfs:comment>
-    </owl:ObjectProperty>
-    
+Basic Human Values: Theory, Measurement, and Applications - S.H. Shwartz (2006)</SchwartzValues:bibRef>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Dominance">
+    <SchwartzValues:bibRef>"Power through exercising control over others."
 
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Resources"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Power"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Focus">
+    <rdfs:comment>The focus on which some values focus over others.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Interpersonal">
+    <SchwartzValues:bibRef>"Avoidance of upsetting or harming others."
 
-    <!-- https://w3id.org/spice/SON/SchwartzValues#opposingFocus -->
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Rules"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conformity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conformity">
+    <SchwartzValues:bibRef>"Control of one's own impulses and behaviour, in line with social norms and expectations."
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingFocus">
-        <rdfs:comment># ISSUE
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Tradition"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Security"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Humility"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Face"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Achievement">
+    <rdfs:comment>"Personal success obtained by demonstrating competence according to social criteria or cultural norms."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Power"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Hedonism"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Face"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange">
+    <SchwartzValues:bibRef>"Controlling one's own impulses and behaviour, according to social norms and expectations."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Power">
+    <SchwartzValues:bibRef>"The search for social status and prestige, as well as control or dominance over people and resources."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Value">
+    <rdfs:comment>#ISSUE
+
+Placeholder for DOLCE "Value" once decided where to put Values and Emotions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Security">
+    <SchwartzValues:bibRef>"Personal wellbeing and that of in-persons and in-groups, as well as the stability of society and oneself."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation">
+    <SchwartzValues:bibRef>"Preserving stability and security in relations with one's surroundings, with the emphasis on subservient self-repression, the preservation of traditional practices and protecting stability."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+                </owl:onProperty>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
+                </owl:someValuesFrom>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Humility">
+    <SchwartzValues:bibRef>"Acknowledgement of one's insignificance in the grand scheme of things."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Tradition"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Security"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+                </owl:onProperty>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:complementOf>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:complementOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Hedonism">
+    <SchwartzValues:bibRef>"The search for pleasure and sensuous gratification or satisfaction for oneself."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Stimulation"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfDirection"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Power"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Societal">
+    <SchwartzValues:bibRef>"Security and stability in wider society."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Security"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:complementOf>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:complementOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Tradition">
+    <SchwartzValues:bibRef>"Respect for, commitment to and acceptation of the ideals and customs imposed by culture or religion."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus">
+    <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:comment>Focus on social issues and others, or self as a member of a social community.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Focus"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Benevolence">
+    <rdfs:comment>"An interest and concern for the wellbeing of persons with whom one is in close contact."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Humility"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Resources">
+    <SchwartzValues:bibRef>"Power through control of material and social resources."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Power"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfDirection">
+    <SchwartzValues:bibRef>"Independence of thought, action and opinion."
+
+Giménez, August Corrons, and Lluís Garay Tamajón. "Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values." Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
+    <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Stimulation"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation">
+    <rdfs:comment>This property links all the values to their Value Motivation, namely Conservation or SelfEnhancement or OpennessToChange or SelfTrascendence.
+It is also used in the axiomatization to define the intensionality of each of the mentioned classes using this property to declare them as having as motivation themselves.</rdfs:comment>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingPersonalFocus">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingFocus"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#focus">
+    <rdfs:comment>This property is used to declare the focus corresponding to some values, namely SocialFocus vs PersonalFocus.</rdfs:comment>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingFocus">
+    <rdfs:comment># ISSUE
 
 This property is used to declare the opposingFocus of some value e.g. if a value has focus SocialFocus will have opposingFocus PersonalFocus and viceversa.
 Problem: some ValueMotivation like Conservation have both SocialFocus and PersonalFocus.
 How to axiomatize it? SWRL rule?</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#opposingPersonalFocus -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingPersonalFocus">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#opposingFocus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#opposingSocialFocus -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingSocialFocus">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#opposingFocus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation">
-        <rdfs:comment>Following the polarity opposition Conservation vs OpennesToChange and SelfTrascendence vs SelfEnhancement this property is used to declare e.g. that one value having as valueMotivation Conservation has as opposingValueMotivation OpennesToChange.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#panCulturallyMoreImportantThan -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#panCulturallyMoreImportantThan">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment># ISSUE
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingSocialFocus">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#opposingFocus"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#attitude">
+    <rdfs:comment>This property is used to declare the attitude corresponding to some values, namely SelfProtectionAndAnxietyAvoidance (re-active attitude) vs GrothAndAnxietyFree (pro-active attitude).</rdfs:comment>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
+          <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation">
+    <rdfs:comment>Following the polarity opposition Conservation vs OpennesToChange and SelfTrascendence vs SelfEnhancement this property is used to declare e.g. that one value having as valueMotivation Conservation has as opposingValueMotivation OpennesToChange.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#panCulturallyMoreImportantThan">
+    <rdfs:comment># ISSUE
 
 To be used eventually for the Pan Cultural Baseline For Values Priority.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#valueMotivation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#valueMotivation">
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
-                    <rdf:Description rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment>This property links all the values to their Value Motivation, namely Conservation or SelfEnhancement or OpennessToChange or SelfTrascendence.
-It is also used in the axiomatization to define the intensionality of each of the mentioned classes using this property to declare them as having as motivation themselves.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Achievement -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Achievement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Face"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Hedonism"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Power"/>
-        <rdfs:comment>&quot;Personal success obtained by demonstrating competence according to social criteria or cultural norms.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Action -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Action">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfDirection"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Thought"/>
-        <SchwartzValues:bibRef>&quot;The freedom to determine one&apos;s own actions.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Benevolence -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Benevolence">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Humility"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
-        <rdfs:comment>&quot;An interest and concern for the wellbeing of persons with whom one is in close contact.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Caring -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Caring">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Benevolence"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Dependability"/>
-        <SchwartzValues:bibRef>&quot;Devotion to the wellbeing of group members.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Concern -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Concern">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Nature"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Tolerance"/>
-        <SchwartzValues:bibRef>&quot;Commitment to equality, justice and protection for all.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Conformity -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conformity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Face"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Humility"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Security"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Tradition"/>
-        <SchwartzValues:bibRef>&quot;Control of one&apos;s own impulses and behaviour, in line with social norms and expectations.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Conservation -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Conservation">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
-        <SchwartzValues:bibRef>&quot;Preserving stability and security in relations with one&apos;s surroundings, with the emphasis on subservient self-repression, the preservation of traditional practices and protecting stability.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Dependability -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Dependability">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Benevolence"/>
-        <SchwartzValues:bibRef>&quot;Being a reliable and trustworthy member of the in-group.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Dominance -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Dominance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Power"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Resources"/>
-        <SchwartzValues:bibRef>&quot;Power through exercising control over others.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Face -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Face">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Hedonism"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Humility"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Power"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Security"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Tradition"/>
-        <SchwartzValues:bibRef>&quot;Security and power via the keeping up of one&apos;s own public image and avoidance of humiliation.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Focus -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Focus">
-        <rdfs:comment>The focus on which some values focus over others.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree">
-        <rdfs:comment>The attitude to which can be ascribed some values motivations: Growth and Anxiety Free is a pro-active attitude.</rdfs:comment>
-        <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Hedonism -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Hedonism">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Power"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfDirection"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Stimulation"/>
-        <SchwartzValues:bibRef>&quot;The search for pleasure and sensuous gratification or satisfaction for oneself.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Humility -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Humility">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Security"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Tradition"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
-        <SchwartzValues:bibRef>&quot;Acknowledgement of one&apos;s insignificance in the grand scheme of things.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Interpersonal -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Interpersonal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conformity"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Rules"/>
-        <SchwartzValues:bibRef>&quot;Avoidance of upsetting or harming others.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Nature -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Nature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Tolerance"/>
-        <SchwartzValues:bibRef>&quot;Preservation of the natural environment.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#OpennessToChange -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <SchwartzValues:bibRef>&quot;Controlling one&apos;s own impulses and behaviour, according to social norms and expectations.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#PanCulturalBaselineForValuesPriority -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#PanCulturalBaselineForValuesPriority">
-        <SchwartzValues:bibRef>&quot;Individuals differ substantially in the importance they attribute to the ten values. At the societal level, however, consensus regarding the hierarchical order of the values is surprisingly high.&quot;
-
-Basic Human Values: Theory, Measurement, and Applications - S.H. Shwartz (2006)</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Personal -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Personal">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Security"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Societal"/>
-        <SchwartzValues:bibRef>&quot;Safety in one&apos;s own immediate environment.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#PersonalFocus -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Focus"/>
-        <rdfs:comment>Focus on personal issues and self.</rdfs:comment>
-        <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Power -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Power">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
-        <SchwartzValues:bibRef>&quot;The search for social status and prestige, as well as control or dominance over people and resources.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Resources -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Resources">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Power"/>
-        <SchwartzValues:bibRef>&quot;Power through control of material and social resources.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Rules -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Rules">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conformity"/>
-        <SchwartzValues:bibRef>&quot;Compliance with norms, laws and formal obligations.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Security -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Security">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-        <SchwartzValues:bibRef>&quot;Personal wellbeing and that of in-persons and in-groups, as well as the stability of society and oneself.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#SelfDirection -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfDirection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Stimulation"/>
-        <SchwartzValues:bibRef>&quot;Independence of thought, action and opinion.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#PersonalFocus"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
-        <rdfs:comment>&quot;Promoting self-interest at the expense of others, emphasising the search for personal success and dominance over others.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance">
-        <rdfs:comment>The attitude to which can be ascribed some values motivations: Self Protection and Anxiety Avoidance is a reactive attitude.</rdfs:comment>
-        <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#opposingValueMotivation"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfEnhancement"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <SchwartzValues:bibRef>&quot;Promoting the wellbeing of society and nature above one&apos;s own interests, highlighting the acceptance of others as equals, as well as a concern for their wellbeing.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#SocialFocus -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#SocialFocus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Focus"/>
-        <rdfs:comment>Focus on social issues and others, or self as a member of a social community.</rdfs:comment>
-        <SchwartzValues:bibRef>Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Societal -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Societal">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#GrowthAndAnxietyFree"/>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#attitude"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfProtectionAndAnxietyAvoidance"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#focus"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SocialFocus"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/spice/SON/SchwartzValues#valueMotivation"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Security"/>
-        <SchwartzValues:bibRef>&quot;Security and stability in wider society.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Stimulation -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Stimulation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#OpennessToChange"/>
-        <rdfs:comment>&quot;The search for excitement, novelty and change, needed to keep up a good functional level.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Thought -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Thought">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfDirection"/>
-        <SchwartzValues:bibRef>&quot;The freedom to cultivate one&apos;s own ideas and skills.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Tolerance -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Tolerance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Universalism"/>
-        <SchwartzValues:bibRef>&quot;Acceptance and understanding of those different from oneself.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Tradition -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Tradition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#Conservation"/>
-        <SchwartzValues:bibRef>&quot;Respect for, commitment to and acceptation of the ideals and customs imposed by culture or religion.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Universalism -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Universalism">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence"/>
-        <SchwartzValues:bibRef>&quot;Understanding and acceptation of others and a concern for the wellbeing of society and the planet we inhabit.&quot;
-
-Giménez, August Corrons, and Lluís Garay Tamajón. &quot;Analysis of the third-order structuring of Shalom Schwartz’s theory of basic human values.&quot; Heliyon 5.6 (2019): e01797.</SchwartzValues:bibRef>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/SchwartzValues#Value -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/SchwartzValues#Value">
-        <rdfs:comment>#ISSUE
-
-Placeholder for DOLCE &quot;Value&quot; once decided where to put Values and Emotions.</rdfs:comment>
-    </owl:Class>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:AnnotationProperty rdf:about="https://w3id.org/spice/SON/SchwartzValues#bibRef"/>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
