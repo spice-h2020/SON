@@ -1,0 +1,13 @@
+@prefix emotion: <https://w3id.org/spice/SON/emotion/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+
+ex:emotionRelation a emotion:EmotionRelation ;
+   emotion:stimulus ex:MonaLisa ;
+   emotion:emotion ex:Love ;
+   emotion:experiencer ex:Anna ;
+   <http://www.w3.org/ns/prov#wasGeneratedBy> ex:activity .
+
+
+ex:activity rdfs:label '''Text annotation by tool x at time t on the utterance "I adore the Mona Lisa"'''.
