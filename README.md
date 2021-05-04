@@ -86,7 +86,7 @@ This is a list of the brand new ontologies developed for the SPICE project.
   - [OCC emotion](https://w3id.org/spice/SON/OCCEmotion) ``https://w3id.org/spice/SON/OCCEmotion`` formalises the [theory on Emotions proposed by Ortony, Clore and Collins](https://books.google.com/books?hl=it&lr=&id=dA3JEEAp6TsC&oi=fnd&pg=PP13&dq=ortony+clore+collins&ots=HXLvSq9Tma&sig=BaFT7kk6TMODde2UYC0BCOGCduQ)
   - [Shaver Emotions](https://w3id.org/spice/SON/ShaverEmotions) ``https://w3id.org/spice/SON/ShaverEmotions`` formalises the Shaver's theory on [emotions](https://psycnet.apa.org/buy/1987-28161-001).
 
-**Artwork Description Knowledge Area**
+- **Artwork Description Knowledge Area**
   - [Exhibition](https://w3id.org/spice/SON/exhibition) ``https://w3id.org/spice/SON/exhibition`` defines a vocabulary for specifying information related fo cultural exhibitions.
 
 
