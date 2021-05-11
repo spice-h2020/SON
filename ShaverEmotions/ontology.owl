@@ -14,6 +14,9 @@
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/ShaverEmotions">
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/0.0.2"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
+        <dc:description xml:lang="en">This ontology has been developed for the SPICE Project (https://spice-h2020.github.io/) and it is based on Shaver&apos;s Emotion Theory.
+
+A visualization of the ontology structure is available here: https://github.com/spice-h2020/SON/blob/main/ShaverEmotions/shavernew.png</dc:description>
         <rdfs:comment xml:lang="en">Author: Bruno Sartini</rdfs:comment>
         <owl:priorVersion rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/0.0.1"/>
     </owl:Ontology>
