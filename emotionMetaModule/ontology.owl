@@ -1,0 +1,3569 @@
+@prefix : <http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#> .
+@prefix ek: <https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#> .
+@prefix pl: <https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#> .
+@prefix aoe: <http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix occ: <https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix goem: <https://w3id.org/spice/SON/GoEmotions#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mfoem: <http://purl.obolibrary.org/obo/MFOEM.owl#> .
+@prefix fscore: <https://w3id.org/framester/data/framestercore/> .
+@prefix shavem: <https://w3id.org/spice/SON/ShaverEmotions/> .
+@prefix shaver: <https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#> .
+@prefix fschema: <https://w3id.org/framester/schema/> .
+@base <http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl> .
+
+<http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl> rdf:type owl:Ontology ;
+                                                                      rdfs:comment """Atlas of Emotions is a meta-module for a complete and foundationally sound emotion model harmonizing OCC, Plutchik, Ekman, MFOEM, Shaver and GoEmotions modules.
+It reuses as backbone DUL+D&S foundational ontology.
+
+Designed by Stefano De Giorgis and Antonio Lieto.""" ;
+                                                                      owl:versionInfo """0.8 introduced main mfoem classes (still lacking at least the specific emotions, mfoem:EmotionalActionTendency, mfoem:EmotionDisposition (with OCC alignments?), mfoem:SubjectiveEmotionFeeling, mfoem:PositiveEmotion and mfoem:NegativeEmotion).
+0.7 introduced classes documentation.
+0.6 - introduced shaver:EmotionWord.
+0.5 - corrected axioms on :EmotionPerspective, moved :EmotionConcept out of dul:Description and corrected skos:broader -> skos:narrower.
+0.4 - introduced EmotionPerspective constituents and their restrictions.
+0.3 - introduced Framester existing frames related to emotions and Shaver's EmotionEvent subclasses.
+0.2 - introduced shaver:EmotionEvent as subclass of EmotionSituation.
+0.1 - introduced skos relations (closeMatch, narrower, broader) among occ, plutchik, ekman, goemotions and shaver modules.""" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines
+dul:defines rdf:type owl:ObjectProperty ;
+            owl:inverseOf dul:isDefinedIn .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent
+dul:hasConstituent rdf:type owl:ObjectProperty ;
+                   owl:inverseOf dul:isConstituentOf .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf
+dul:isConstituentOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDefinedIn
+dul:isDefinedIn rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfiedBy
+dul:satisfiedBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf dul:satisfies .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies
+dul:satisfies rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty ;
+             owl:inverseOf skos:narrower .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#AppraisalProcess
+mfoem:AppraisalProcess rdf:type owl:Class ;
+                       rdfs:subClassOf aoe:EmoAppraisalSituation .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#CanonicalEmotionalFacialExpression
+mfoem:CanonicalEmotionalFacialExpression rdf:type owl:Class ;
+                                         rdfs:subClassOf mfoem:FacialExpressionBehaviour .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#CanonicalEmotionalVoiceUtterances
+mfoem:CanonicalEmotionalVoiceUtterances rdf:type owl:Class ;
+                                        rdfs:subClassOf mfoem:EmotionalSpeakingBehaviour .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#EmotionProcess
+mfoem:EmotionProcess rdf:type owl:Class ;
+                     rdfs:subClassOf aoe:EmotionEvent .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#EmotionalBehaviouralProcess
+mfoem:EmotionalBehaviouralProcess rdf:type owl:Class ;
+                                  rdfs:subClassOf aoe:EmoBehaviouralOccurrence .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#EmotionalBodilyMovementBehaviour
+mfoem:EmotionalBodilyMovementBehaviour rdf:type owl:Class ;
+                                       rdfs:subClassOf mfoem:EmotionalBehaviouralProcess .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#EmotionalSpeakingBehaviour
+mfoem:EmotionalSpeakingBehaviour rdf:type owl:Class ;
+                                 rdfs:subClassOf mfoem:EmotionalBehaviouralProcess .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#FacialExpressionBehaviour
+mfoem:FacialExpressionBehaviour rdf:type owl:Class ;
+                                rdfs:subClassOf mfoem:EmotionalBehaviouralProcess .
+
+
+###  http://purl.obolibrary.org/obo/MFOEM.owl#PhysiologicalResponseToEmotionProcess
+mfoem:PhysiologicalResponseToEmotionProcess rdf:type owl:Class ;
+                                            rdfs:subClassOf aoe:EmoNeurophysiologicalOccurrence .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description
+dul:Description rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+dul:Situation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Acceptance
+aoe:Acceptance rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Admiration
+aoe:Admiration rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Aggressiveness
+aoe:Aggressiveness rdf:type owl:Class ;
+                   rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Amazement
+aoe:Amazement rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Amusement
+aoe:Amusement rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Anger
+aoe:Anger rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Annoyance
+aoe:Annoyance rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Anticipation
+aoe:Anticipation rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Anxiety
+aoe:Anxiety rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Apprehension
+aoe:Apprehension rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Awe
+aoe:Awe rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Boredom
+aoe:Boredom rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Caring
+aoe:Caring rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Confirmed
+aoe:Confirmed rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Confusion
+aoe:Confusion rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Contempt
+aoe:Contempt rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Contentment
+aoe:Contentment rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Curiosity
+aoe:Curiosity rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Cynism
+aoe:Cynism rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Delight
+aoe:Delight rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Desire
+aoe:Desire rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Despair
+aoe:Despair rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Disappointment
+aoe:Disappointment rdf:type owl:Class ;
+                   rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Disapproval
+aoe:Disapproval rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Disgust
+aoe:Disgust rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Distraction
+aoe:Distraction rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Distress
+aoe:Distress rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Ecstacy
+aoe:Ecstacy rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Embarassment
+aoe:Embarassment rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoAppraisalSituation
+aoe:EmoAppraisalSituation rdf:type owl:Class ;
+                          rdfs:subClassOf aoe:EmotionSituation ;
+                          rdfs:comment "Any appraisal situation in which an appraising agent aprraises some entity and the consequence of the appraisal act is an emotion." .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoBehaviouralDescription
+aoe:EmoBehaviouralDescription rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty dul:satisfiedBy ;
+                                                    owl:someValuesFrom aoe:EmoBehaviouralOccurrence
+                                                  ] ;
+                              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoBehaviouralOccurrence
+aoe:EmoBehaviouralOccurrence rdf:type owl:Class ;
+                             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                   owl:onProperty dul:satisfies ;
+                                                   owl:someValuesFrom aoe:EmoBehaviouralDescription
+                                                 ] ;
+                             rdfs:subClassOf aoe:EmotionSituation ;
+                             rdfs:comment "With behavioural occurrence it is here meant any bodily exterior or interior manifestation (e.g. both \"screaming for horror\" and \"twisted guts\".)" .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoCognitiveDescription
+aoe:EmoCognitiveDescription rdf:type owl:Class ;
+                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                  owl:onProperty dul:satisfiedBy ;
+                                                  owl:someValuesFrom aoe:EmoCognitiveOccurrence
+                                                ] ;
+                            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoCognitiveOccurrence
+aoe:EmoCognitiveOccurrence rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty dul:satisfies ;
+                                                 owl:someValuesFrom aoe:EmoCognitiveDescription
+                                               ] ;
+                           rdfs:subClassOf aoe:EmotionSituation .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoLexicalDescription
+aoe:EmoLexicalDescription rdf:type owl:Class ;
+                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                owl:onProperty dul:satisfiedBy ;
+                                                owl:someValuesFrom aoe:EmoLexicalOccurrence
+                                              ] ;
+                          rdfs:subClassOf aoe:EmoSocietalDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoLexicalOccurrence
+aoe:EmoLexicalOccurrence rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                               owl:onProperty dul:satisfies ;
+                                               owl:someValuesFrom aoe:EmoLexicalDescription
+                                             ] ;
+                         rdfs:subClassOf aoe:EmoSocietalOccurrence ;
+                         rdfs:comment "Any lexical occurrence, e.g. tha labels used to express some emotion." .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoNeurophysiologicalDescription
+aoe:EmoNeurophysiologicalDescription rdf:type owl:Class ;
+                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                           owl:onProperty dul:satisfiedBy ;
+                                                           owl:someValuesFrom aoe:EmoNeurophysiologicalOccurrence
+                                                         ] ;
+                                     rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoNeurophysiologicalOccurrence
+aoe:EmoNeurophysiologicalOccurrence rdf:type owl:Class ;
+                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                          owl:onProperty dul:satisfies ;
+                                                          owl:someValuesFrom aoe:EmoNeurophysiologicalDescription
+                                                        ] ;
+                                    rdfs:subClassOf aoe:EmotionSituation ;
+                                    rdfs:comment "The neural activations stemming from an emotion occurrence." .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoSocietalDescription
+aoe:EmoSocietalDescription rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty dul:satisfiedBy ;
+                                                 owl:someValuesFrom aoe:EmoSocietalOccurrence
+                                               ] ;
+                           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmoSocietalOccurrence
+aoe:EmoSocietalOccurrence rdf:type owl:Class ;
+                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                owl:onProperty dul:satisfies ;
+                                                owl:someValuesFrom aoe:EmoSocietalDescription
+                                              ] ;
+                          rdfs:subClassOf aoe:EmotionSituation ;
+                          rdfs:comment "The societal manifestation aspects, involving \"social emotions\" like pride, shame etc." .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmotionConcept
+aoe:EmotionConcept rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty dul:isDefinedIn ;
+                                     owl:someValuesFrom aoe:EmotionDescription
+                                   ] ;
+                   rdfs:comment """An all-encompassing class for the emotion concept, taking as instances all the emotions, considered in their intensionality, listed in Plutchik, Ekman, Shaver, GoEmotions, OCC and MFOEM theories. 
+For each emotion in the above mentioned theories it was generated a corresponding class with the same label in the AoE module, declared broader than the one in the single theory, via skos vocabulary. Emotions with the exact same label or labels referring to different aspects of the same emotion (e.g. OCC's \"pride in achievement\", introducing also a prospect and a temporal domension, and Pluthik \"pride\") are related via a skos:closeMatch property.""" .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmotionDescription
+aoe:EmotionDescription rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                             owl:onProperty dul:satisfiedBy ;
+                                             owl:someValuesFrom aoe:EmotionSituation
+                                           ] ;
+                       rdfs:subClassOf fschema:ConceptualFrame ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty dul:defines ;
+                                         owl:someValuesFrom aoe:EmotionConcept
+                                       ] ;
+                       rdfs:comment "Any Emotion Description about any emotion aspect or constituent." .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmotionEvent
+aoe:EmotionEvent rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionSituation .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmotionPerspective
+aoe:EmotionPerspective rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty dul:hasConstituent ;
+                                                             owl:someValuesFrom aoe:EmoBehaviouralDescription
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty dul:hasConstituent ;
+                                                             owl:someValuesFrom aoe:EmoCognitiveDescription
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty dul:hasConstituent ;
+                                                             owl:someValuesFrom aoe:EmoLexicalDescription
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty dul:hasConstituent ;
+                                                             owl:someValuesFrom aoe:EmoNeurophysiologicalDescription
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty dul:hasConstituent ;
+                                                             owl:someValuesFrom aoe:EmoSocietalDescription
+                                                           ]
+                                                         )
+                                           ] ;
+                       rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#EmotionSituation
+aoe:EmotionSituation rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty dul:satisfies ;
+                                           owl:someValuesFrom aoe:EmotionDescription
+                                         ] ;
+                     rdfs:subClassOf fschema:FrameOccurrence ;
+                     rdfs:comment "Every situation satisfying some emotion description, it could be an occurrence of a single aspect (behavioural, lexical occurrences etc.) or an appraisal, mirroring, an event etc." .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Envy
+aoe:Envy rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Excitement
+aoe:Excitement rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Fear
+aoe:Fear rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Gloating
+aoe:Gloating rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Gratification
+aoe:Gratification rdf:type owl:Class ;
+                  rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Gratitude
+aoe:Gratitude rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Grief
+aoe:Grief rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Guilt
+aoe:Guilt rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#HappynessFor
+aoe:HappynessFor rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Hope
+aoe:Hope rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Interest
+aoe:Interest rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Joy
+aoe:Joy rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Loathing
+aoe:Loathing rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Love
+aoe:Love rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Nervousness
+aoe:Nervousness rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Optimism
+aoe:Optimism rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pensiveness
+aoe:Pensiveness rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pessimism
+aoe:Pessimism rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pity
+aoe:Pity rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pride
+aoe:Pride rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#PrideInAchievement
+aoe:PrideInAchievement rdf:type owl:Class ;
+                       rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Rageremorse
+aoe:Rageremorse rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Realization
+aoe:Realization rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Relief
+aoe:Relief rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Remorse
+aoe:Remorse rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Reproach
+aoe:Reproach rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Resentment
+aoe:Resentment rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Sadness
+aoe:Sadness rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Satisfaction
+aoe:Satisfaction rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#SensoryPleasure
+aoe:SensoryPleasure rdf:type owl:Class ;
+                    rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Sentimentality
+aoe:Sentimentality rdf:type owl:Class ;
+                   rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Serenity
+aoe:Serenity rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Shame
+aoe:Shame rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Submission
+aoe:Submission rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Surprise
+aoe:Surprise rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Terror
+aoe:Terror rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Trust
+aoe:Trust rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Unbelief
+aoe:Unbelief rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Vigilance
+aoe:Vigilance rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#approval
+aoe:approval rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Admiration
+occ:Admiration rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Anger
+occ:Anger rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Confirmed
+occ:Confirmed rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Disappointment
+occ:Disappointment rdf:type owl:Class ;
+                   rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Distress
+occ:Distress rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Fear
+occ:Fear rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Gloating
+occ:Gloating rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Gratification
+occ:Gratification rdf:type owl:Class ;
+                  rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Gratitude
+occ:Gratitude rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#HappynessFor
+occ:HappynessFor rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Hope
+occ:Hope rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Joy
+occ:Joy rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Pity
+occ:Pity rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Pride
+occ:Pride rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Relief
+occ:Relief rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Remorse
+occ:Remorse rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Reproach
+occ:Reproach rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Resentment
+occ:Resentment rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Satisfaction
+occ:Satisfaction rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Shame
+occ:Shame rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Acceptance
+pl:Acceptance rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Admiration
+pl:Admiration rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Aggressiveness
+pl:Aggressiveness rdf:type owl:Class ;
+                  rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Amazement
+pl:Amazement rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Anger
+pl:Anger rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Annoyance
+pl:Annoyance rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Anticipation
+pl:Anticipation rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Anxiety
+pl:Anxiety rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Apprehension
+pl:Apprehension rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Awe
+pl:Awe rdf:type owl:Class ;
+       rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Boredom
+pl:Boredom rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Contempt
+pl:Contempt rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Curiosity
+pl:Curiosity rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Cynism
+pl:Cynism rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Delight
+pl:Delight rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Despair
+pl:Despair rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Disapproval
+pl:Disapproval rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Disgust
+pl:Disgust rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Distraction
+pl:Distraction rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Ecstacy
+pl:Ecstacy rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Envy
+pl:Envy rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Fear
+pl:Fear rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Grief
+pl:Grief rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Guilt
+pl:Guilt rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Hope
+pl:Hope rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Interest
+pl:Interest rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Joy
+pl:Joy rdf:type owl:Class ;
+       rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Loathing
+pl:Loathing rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Love
+pl:Love rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Optimism
+pl:Optimism rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Pensiveness
+pl:Pensiveness rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Pessimism
+pl:Pessimism rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Pride
+pl:Pride rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Rageremorse
+pl:Rageremorse rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Sadness
+pl:Sadness rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Sentimentality
+pl:Sentimentality rdf:type owl:Class ;
+                  rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Serenity
+pl:Serenity rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Shame
+pl:Shame rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Submission
+pl:Submission rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Surprise
+pl:Surprise rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Terror
+pl:Terror rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Trust
+pl:Trust rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Unbelief
+pl:Unbelief rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Vigilance
+pl:Vigilance rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Adoration
+shaver:Adoration rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Affection
+shaver:Affection rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Aggravation
+shaver:Aggravation rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Agitation
+shaver:Agitation rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Agony
+shaver:Agony rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Alarm
+shaver:Alarm rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Alienation
+shaver:Alienation rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Amazement
+shaver:Amazement rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Amusement
+shaver:Amusement rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Anger
+shaver:Anger rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Anguish
+shaver:Anguish rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Annoyance
+shaver:Annoyance rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Anxiety
+shaver:Anxiety rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Apprehension
+shaver:Apprehension rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Arousal
+shaver:Arousal rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Astonishment
+shaver:Astonishment rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Attraction
+shaver:Attraction rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Bitterness
+shaver:Bitterness rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Bliss
+shaver:Bliss rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Caring
+shaver:Caring rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Cheerfulness
+shaver:Cheerfulness rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Compassion
+shaver:Compassion rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Contempt
+shaver:Contempt rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Contentment
+shaver:Contentment rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Defeat
+shaver:Defeat rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Dejection
+shaver:Dejection rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Delight
+shaver:Delight rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Depression
+shaver:Depression rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Desire
+shaver:Desire rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Despair
+shaver:Despair rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Disappointment
+shaver:Disappointment rdf:type owl:Class ;
+                      rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Disgust
+shaver:Disgust rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Dislike
+shaver:Dislike rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Dismay
+shaver:Dismay rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Displeasure
+shaver:Displeasure rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Distress
+shaver:Distress rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Dread
+shaver:Dread rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Eagerness
+shaver:Eagerness rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Ecstasy
+shaver:Ecstasy rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Elation
+shaver:Elation rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Embarrassment
+shaver:Embarrassment rdf:type owl:Class ;
+                     rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#EmotionEvent
+shaver:EmotionEvent rdf:type owl:Class ;
+                    rdfs:subClassOf aoe:EmotionEvent .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#EmotionWord
+shaver:EmotionWord rdf:type owl:Class ;
+                   rdfs:subClassOf aoe:EmoLexicalOccurrence .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Enjoyment
+shaver:Enjoyment rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Enthrallment
+shaver:Enthrallment rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Enthusiasm
+shaver:Enthusiasm rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Envy
+shaver:Envy rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Euphoria
+shaver:Euphoria rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Exasperation
+shaver:Exasperation rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Excitement
+shaver:Excitement rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Exhilaration
+shaver:Exhilaration rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Fear
+shaver:Fear rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Ferocity
+shaver:Ferocity rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Fondness
+shaver:Fondness rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Fright
+shaver:Fright rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Frustration
+shaver:Frustration rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Fury
+shaver:Fury rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Gaiety
+shaver:Gaiety rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Gladness
+shaver:Gladness rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Glee
+shaver:Glee rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Gloom
+shaver:Gloom rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Glumness
+shaver:Glumness rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Grief
+shaver:Grief rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Grouchiness
+shaver:Grouchiness rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Grumpiness
+shaver:Grumpiness rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Guilt
+shaver:Guilt rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Happiness
+shaver:Happiness rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Hate
+shaver:Hate rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Homesickness
+shaver:Homesickness rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Hope
+shaver:Hope rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Hopelessness
+shaver:Hopelessness rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Horror
+shaver:Horror rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Hostility
+shaver:Hostility rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Humiliation
+shaver:Humiliation rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Hurt
+shaver:Hurt rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Hysteria
+shaver:Hysteria rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Infatuation
+shaver:Infatuation rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Insecurity
+shaver:Insecurity rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Insult
+shaver:Insult rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Irritation
+shaver:Irritation rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Isolation
+shaver:Isolation rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Jealousy
+shaver:Jealousy rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Jolliness
+shaver:Jolliness rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Joviality
+shaver:Joviality rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Joy
+shaver:Joy rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Jubilation
+shaver:Jubilation rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Liking
+shaver:Liking rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Loathing
+shaver:Loathing rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Loneliness
+shaver:Loneliness rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Longing
+shaver:Longing rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Love
+shaver:Love rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Lust
+shaver:Lust rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Melancholy
+shaver:Melancholy rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Misery
+shaver:Misery rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Mortification
+shaver:Mortification rdf:type owl:Class ;
+                     rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Neglect
+shaver:Neglect rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Nervousness
+shaver:Nervousness rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Optimism
+shaver:Optimism rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Outrage
+shaver:Outrage rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Panic
+shaver:Panic rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Passion
+shaver:Passion rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Pity
+shaver:Pity rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Pleasure
+shaver:Pleasure rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Pride
+shaver:Pride rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Rage
+shaver:Rage rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Rapture
+shaver:Rapture rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Regret
+shaver:Regret rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Rejection
+shaver:Rejection rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Relief
+shaver:Relief rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Remorse
+shaver:Remorse rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Resentment
+shaver:Resentment rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Revulsion
+shaver:Revulsion rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Sadness
+shaver:Sadness rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Satisfaction
+shaver:Satisfaction rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Scorn
+shaver:Scorn rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Sentimentality
+shaver:Sentimentality rdf:type owl:Class ;
+                      rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Shame
+shaver:Shame rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Shock
+shaver:Shock rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Sorrow
+shaver:Sorrow rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Spite
+shaver:Spite rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Suffering
+shaver:Suffering rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Surprise
+shaver:Surprise rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Sympathy
+shaver:Sympathy rdf:type owl:Class ;
+                rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Tenderness
+shaver:Tenderness rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Tenseness
+shaver:Tenseness rdf:type owl:Class ;
+                 rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Terror
+shaver:Terror rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Thrill
+shaver:Thrill rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Torment
+shaver:Torment rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Triumph
+shaver:Triumph rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Uneasiness
+shaver:Uneasiness rdf:type owl:Class ;
+                  rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Unhappiness
+shaver:Unhappiness rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Vengefulness
+shaver:Vengefulness rdf:type owl:Class ;
+                    rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Woe
+shaver:Woe rdf:type owl:Class ;
+           rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Worry
+shaver:Worry rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Wrath
+shaver:Wrath rdf:type owl:Class ;
+             rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Zeal
+shaver:Zeal rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Zest
+shaver:Zest rdf:type owl:Class ;
+            rdfs:subClassOf shaver:EmotionWord .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Amusement
+ek:Amusement rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Anger
+ek:Anger rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Contempt
+ek:Contempt rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Contentment
+ek:Contentment rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Disgust
+ek:Disgust rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Embarassment
+ek:Embarassment rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Excitement
+ek:Excitement rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Fear
+ek:Fear rdf:type owl:Class ;
+        rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Guilt
+ek:Guilt rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#PrideInAchievement
+ek:PrideInAchievement rdf:type owl:Class ;
+                      rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Relief
+ek:Relief rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Sadness
+ek:Sadness rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Satisfaction
+ek:Satisfaction rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#SensoryPleasure
+ek:SensoryPleasure rdf:type owl:Class ;
+                   rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Shame
+ek:Shame rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/framester/data/framestercore/CauseEmotion
+fscore:CauseEmotion rdf:type owl:Class ;
+                    rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/data/framestercore/EmotionActive
+fscore:EmotionActive rdf:type owl:Class ;
+                     rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/data/framestercore/EmotionDirected
+fscore:EmotionDirected rdf:type owl:Class ;
+                       rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/data/framestercore/EmotionHeat
+fscore:EmotionHeat rdf:type owl:Class ;
+                   rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/data/framestercore/EmotionsByStimulus
+fscore:EmotionsByStimulus rdf:type owl:Class ;
+                          rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/data/framestercore/EmotionsOfMentalActivity
+fscore:EmotionsOfMentalActivity rdf:type owl:Class ;
+                                rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/data/framestercore/EmotionsSuccessOrFailure
+fscore:EmotionsSuccessOrFailure rdf:type owl:Class ;
+                                rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/schema/ConceptualFrame
+fschema:ConceptualFrame rdf:type owl:Class ;
+                        rdfs:subClassOf dul:Description .
+
+
+###  https://w3id.org/framester/schema/FrameOccurrence
+fschema:FrameOccurrence rdf:type owl:Class ;
+                        rdfs:subClassOf dul:Situation .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Admiration
+goem:Admiration rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Amusement
+goem:Amusement rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Anger
+goem:Anger rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Annoyance
+goem:Annoyance rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Approval
+goem:Approval rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Caring
+goem:Caring rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Confusion
+goem:Confusion rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Curiosity
+goem:Curiosity rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Desire
+goem:Desire rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Disappointment
+goem:Disappointment rdf:type owl:Class ;
+                    rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Disapproval
+goem:Disapproval rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Disgust
+goem:Disgust rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Embarrassment
+goem:Embarrassment rdf:type owl:Class ;
+                   rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Excitement
+goem:Excitement rdf:type owl:Class ;
+                rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Fear
+goem:Fear rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Gratitude
+goem:Gratitude rdf:type owl:Class ;
+               rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Grief
+goem:Grief rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Joy
+goem:Joy rdf:type owl:Class ;
+         rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Love
+goem:Love rdf:type owl:Class ;
+          rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Nervousness
+goem:Nervousness rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Optimism
+goem:Optimism rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Pride
+goem:Pride rdf:type owl:Class ;
+           rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Realization
+goem:Realization rdf:type owl:Class ;
+                 rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Relief
+goem:Relief rdf:type owl:Class ;
+            rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Remorse
+goem:Remorse rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Sadness
+goem:Sadness rdf:type owl:Class ;
+             rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Surprise
+goem:Surprise rdf:type owl:Class ;
+              rdfs:subClassOf aoe:EmotionDescription .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause
+shavem:attacking_something_other_than_cause rdf:type owl:Class ;
+                                            rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_alone
+shavem:being_alone rdf:type owl:Class ;
+                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark
+shavem:being_in_the_dark rdf:type owl:Class ;
+                         rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling
+shavem:communicating_the_good_feeling rdf:type owl:Class ;
+                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/crying
+shavem:crying rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one
+shavem:death_of_a_loved_one rdf:type owl:Class ;
+                            rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people
+shavem:doing_nice_things_for_other_people rdf:type owl:Class ;
+                                          rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication
+shavem:exceptionally_good_communication rdf:type owl:Class ;
+                                        rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other
+shavem:expressing_positive_feelings_to_other rdf:type owl:Class ;
+                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_excited
+shavem:feeling_excited rdf:type owl:Class ;
+                       rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched
+shavem:hands_or_fists_clenched rdf:type owl:Class ;
+                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hugging_people
+shavem:hugging_people rdf:type owl:Class ;
+                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger
+shavem:imagining_attacking_the_cause_of_anger rdf:type owl:Class ;
+                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down
+shavem:jumping_up_and_down rdf:type owl:Class ;
+                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/kissing
+shavem:kissing rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention
+shavem:narrowing_of_attention rdf:type owl:Class ;
+                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval
+shavem:nonverbally_communicating_disapproval rdf:type owl:Class ;
+                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/other_offers_something_wanted
+shavem:other_offers_something_wanted rdf:type owl:Class ;
+                                     rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive
+shavem:person_finds_other_attractive rdf:type owl:Class ;
+                                     rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger
+shavem:physically_attacking_the_cause_of_anger rdf:type owl:Class ;
+                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion
+shavem:picturing_a_disastrous_conclusion rdf:type owl:Class ;
+                                         rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger
+shavem:predisposition_to_anger rdf:type owl:Class ;
+                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain
+shavem:real_or_threatened_pain rdf:type owl:Class ;
+                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations
+shavem:reality_exceeding_expectations rdf:type owl:Class ;
+                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations
+shavem:reality_falling_short_of_expectations rdf:type owl:Class ;
+                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise
+shavem:receiving_a_wonderful_surprise rdf:type owl:Class ;
+                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things
+shavem:saying_positive_things rdf:type owl:Class ;
+                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things
+shavem:saying_sad_things rdf:type owl:Class ;
+                         rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling
+shavem:sharing_the_feeling rdf:type owl:Class ;
+                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/smiling
+shavem:smiling rdf:type owl:Class ;
+               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/talking_little_or_not_at_all
+shavem:talking_little_or_not_at_all rdf:type owl:Class ;
+                                    rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/talking_to_someone_about_sadness
+shavem:talking_to_someone_about_sadness rdf:type owl:Class ;
+                                        rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/threat_of_harm_or_death
+shavem:threat_of_harm_or_death rdf:type owl:Class ;
+                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection
+shavem:threat_of_social_rejection rdf:type owl:Class ;
+                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body
+shavem:tightness_or_rigidity_in_body rdf:type owl:Class ;
+                                     rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger
+shavem:verbally_attacking_the_cause_of_anger rdf:type owl:Class ;
+                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation
+shavem:violation_of_expectation rdf:type owl:Class ;
+                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanted
+shavem:wanted rdf:type owl:Class ;
+              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex
+shavem:wanting_physical_closeness_or_sex rdf:type owl:Class ;
+                                         rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact
+shavem:withdrawing_from_social_contact rdf:type owl:Class ;
+                                       rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear
+<https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures
+<https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging
+<https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly
+<https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others
+<https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot
+<https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself
+<https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face
+<https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact
+<https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm
+<https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering
+<https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering> rdf:type owl:Class ;
+                                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering
+<https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was
+<https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless
+<https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt
+<https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze
+<https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around
+<https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly
+<https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling
+<https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity
+<https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing
+<https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing> rdf:type owl:Class ;
+                                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve
+<https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences
+<https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping
+<https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move
+<https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance
+<https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling
+<https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional
+<https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy
+<https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness
+<https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented
+<https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence
+<https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation
+<https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming
+<https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice
+<https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody
+<https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively
+<https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk
+<https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort
+<https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation
+<https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing
+<https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her
+<https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper'
+<https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper'> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help
+<https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side
+<https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure
+<https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise
+<https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection
+<https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face
+<https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face> rdf:type owl:Class ;
+                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval
+<https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status
+<https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you'
+<https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you'> rdf:type owl:Class ;
+                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling
+<https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling> rdf:type owl:Class ;
+                                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling
+<https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice
+<https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements
+<https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture
+<https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it
+<https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy
+<https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring
+<https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active
+<https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless
+<https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement
+<https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc.> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy
+<https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/touching,_petting
+<https://w3id.org/spice/SON/ShaverEmotions/touching,_petting> rdf:type owl:Class ;
+                                                              rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise
+<https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited
+<https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf shaver:EmotionEvent .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other
+<https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf shaver:EmotionEvent .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Acceptance
+aoe:Acceptance rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:narrower pl:Acceptance .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Admiration
+aoe:Admiration rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:narrower occ:Admiration ,
+                             pl:Admiration ,
+                             goem:Admiration .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Aggressiveness
+aoe:Aggressiveness rdf:type owl:NamedIndividual ,
+                            aoe:EmotionConcept ;
+                   skos:narrower pl:Aggressiveness .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Amazement
+aoe:Amazement rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower pl:Amazement .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Amusement
+aoe:Amusement rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower ek:Amusement ,
+                            goem:Amusement .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Anger
+aoe:Anger rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:narrower occ:Anger ,
+                        pl:Anger ,
+                        shaver:Anger ,
+                        ek:Anger ,
+                        goem:Anger .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Annoyance
+aoe:Annoyance rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower pl:Annoyance ,
+                            goem:Annoyance .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Anticipation
+aoe:Anticipation rdf:type owl:NamedIndividual ,
+                          aoe:EmotionConcept ;
+                 skos:narrower pl:Anticipation .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Anxiety
+aoe:Anxiety rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower pl:Anxiety .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Apprehension
+aoe:Apprehension rdf:type owl:NamedIndividual ,
+                          aoe:EmotionConcept ;
+                 skos:narrower pl:Apprehension .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Approval
+aoe:Approval rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower goem:Approval .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Awe
+aoe:Awe rdf:type owl:NamedIndividual ,
+                 aoe:EmotionConcept ;
+        skos:narrower pl:Awe .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Boredom
+aoe:Boredom rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower pl:Boredom .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Caring
+aoe:Caring rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:narrower goem:Caring .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Confirmed
+aoe:Confirmed rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower occ:Confirmed .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Confusion
+aoe:Confusion rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower goem:Confusion .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Contempt
+aoe:Contempt rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower pl:Contempt ,
+                           ek:Contempt .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Contentment
+aoe:Contentment rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:narrower ek:Contentment .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Curiosity
+aoe:Curiosity rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower pl:Curiosity ,
+                            goem:Curiosity .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Cynism
+aoe:Cynism rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:narrower pl:Cynism .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Delight
+aoe:Delight rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower pl:Delight .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Desire
+aoe:Desire rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:narrower goem:Desire .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Despair
+aoe:Despair rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower pl:Despair .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Disappointment
+aoe:Disappointment rdf:type owl:NamedIndividual ,
+                            aoe:EmotionConcept ;
+                   skos:narrower occ:Disappointment ,
+                                 goem:Disappointment .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Disapproval
+aoe:Disapproval rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:narrower pl:Disapproval ,
+                              goem:Disapproval .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Disgust
+aoe:Disgust rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower pl:Disgust ,
+                          ek:Disgust ,
+                          goem:Disgust .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Distraction
+aoe:Distraction rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:narrower pl:Distraction .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Distress
+aoe:Distress rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower occ:Distress .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Ecstacy
+aoe:Ecstacy rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower pl:Ecstacy .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Embarassment
+aoe:Embarassment rdf:type owl:NamedIndividual ,
+                          aoe:EmotionConcept ;
+                 skos:narrower ek:Embarassment .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Embarrassment
+aoe:Embarrassment rdf:type owl:NamedIndividual ,
+                           aoe:EmotionConcept ;
+                  skos:narrower goem:Embarrassment .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Envy
+aoe:Envy rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:narrower pl:Envy .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Excitement
+aoe:Excitement rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:narrower ek:Excitement ,
+                             goem:Excitement .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Fear
+aoe:Fear rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:narrower occ:Fear ,
+                       pl:Fear ,
+                       shaver:Fear ,
+                       ek:Fear ,
+                       goem:Fear .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Gloating
+aoe:Gloating rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower occ:Gloating .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Gratification
+aoe:Gratification rdf:type owl:NamedIndividual ,
+                           aoe:EmotionConcept ;
+                  skos:narrower occ:Gratification .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Gratitude
+aoe:Gratitude rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower occ:Gratitude ,
+                            goem:Gratitude .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Grief
+aoe:Grief rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:narrower pl:Grief ,
+                        goem:Grief .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Guilt
+aoe:Guilt rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:narrower pl:Guilt ,
+                        ek:Guilt .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#HappynessFor
+aoe:HappynessFor rdf:type owl:NamedIndividual ,
+                          aoe:EmotionConcept ;
+                 skos:narrower occ:HappynessFor .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Hope
+aoe:Hope rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:narrower occ:Hope ,
+                       pl:Hope .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Interest
+aoe:Interest rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower pl:Interest .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Joy
+aoe:Joy rdf:type owl:NamedIndividual ,
+                 aoe:EmotionConcept ;
+        skos:narrower occ:Joy ,
+                      pl:Joy ,
+                      shaver:Joy ,
+                      goem:Joy .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Loathing
+aoe:Loathing rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower pl:Loathing .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Love
+aoe:Love rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:narrower pl:Love ,
+                       shaver:Love ,
+                       goem:Love .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Nervousness
+aoe:Nervousness rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:narrower goem:Nervousness .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Optimism
+aoe:Optimism rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower pl:Optimism ,
+                           goem:Optimism .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pensiveness
+aoe:Pensiveness rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:narrower pl:Pensiveness .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pessimism
+aoe:Pessimism rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower pl:Pessimism .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pity
+aoe:Pity rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:narrower occ:Pity .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Pride
+aoe:Pride rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:narrower occ:Pride ,
+                        pl:Pride ,
+                        goem:Pride .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#PrideInAchievement
+aoe:PrideInAchievement rdf:type owl:NamedIndividual ,
+                                aoe:EmotionConcept ;
+                       skos:narrower ek:PrideInAchievement .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Rageremorse
+aoe:Rageremorse rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:narrower pl:Rageremorse .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Realization
+aoe:Realization rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:narrower goem:Realization .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Relief
+aoe:Relief rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:narrower occ:Relief ,
+                         ek:Relief ,
+                         goem:Relief .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Remorse
+aoe:Remorse rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower occ:Remorse ,
+                          goem:Remorse .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Reproach
+aoe:Reproach rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower occ:Reproach .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Resentment
+aoe:Resentment rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:narrower occ:Resentment .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Sadness
+aoe:Sadness rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:narrower pl:Sadness ,
+                          shaver:Sadness ,
+                          ek:Sadness ,
+                          goem:Sadness .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Satisfaction
+aoe:Satisfaction rdf:type owl:NamedIndividual ,
+                          aoe:EmotionConcept ;
+                 skos:narrower occ:Satisfaction ,
+                               ek:Satisfaction .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#SensoryPleasure
+aoe:SensoryPleasure rdf:type owl:NamedIndividual ,
+                             aoe:EmotionConcept ;
+                    skos:narrower ek:SensoryPleasure .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Sentimentality
+aoe:Sentimentality rdf:type owl:NamedIndividual ,
+                            aoe:EmotionConcept ;
+                   skos:narrower pl:Sentimentality .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Serenity
+aoe:Serenity rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower pl:Serenity .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Shame
+aoe:Shame rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:narrower occ:Shame ,
+                        pl:Shame ,
+                        ek:Shame .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Submission
+aoe:Submission rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:narrower pl:Submission .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Surprise
+aoe:Surprise rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower pl:Surprise ,
+                           shaver:Surprise ,
+                           goem:Surprise .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Terror
+aoe:Terror rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:narrower pl:Terror .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Trust
+aoe:Trust rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:narrower pl:Trust .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Unbelief
+aoe:Unbelief rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:narrower pl:Unbelief .
+
+
+###  http://www.semanticweb.org/sten-doipanni/ontologies/2021/4/aoe.owl#Vigilance
+aoe:Vigilance rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:narrower pl:Vigilance .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Admiration
+occ:Admiration rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:closeMatch pl:Admiration .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Anger
+occ:Anger rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:closeMatch pl:Anger .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Confirmed
+occ:Confirmed rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Disappointment
+occ:Disappointment rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Distress
+occ:Distress rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Fear
+occ:Fear rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:closeMatch pl:Fear .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Gloating
+occ:Gloating rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Gratification
+occ:Gratification rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Gratitude
+occ:Gratitude rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#HappynessFor
+occ:HappynessFor rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Hope
+occ:Hope rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:closeMatch pl:Hope .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Joy
+occ:Joy rdf:type owl:NamedIndividual ,
+                 aoe:EmotionConcept ;
+        skos:closeMatch pl:Joy .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Pity
+occ:Pity rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Pride
+occ:Pride rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:closeMatch pl:Pride .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Relief
+occ:Relief rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Remorse
+occ:Remorse rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:closeMatch pl:Remorse .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Reproach
+occ:Reproach rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Resentment
+occ:Resentment rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Satisfaction
+occ:Satisfaction rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/ontology.owl#Shame
+occ:Shame rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:closeMatch pl:Shame .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Acceptance
+pl:Acceptance rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Admiration
+pl:Admiration rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Aggressiveness
+pl:Aggressiveness rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Amazement
+pl:Amazement rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Anger
+pl:Anger rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Annoyance
+pl:Annoyance rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Anticipation
+pl:Anticipation rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Anxiety
+pl:Anxiety rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Apprehension
+pl:Apprehension rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Awe
+pl:Awe rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Boredom
+pl:Boredom rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Contempt
+pl:Contempt rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Curiosity
+pl:Curiosity rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Cynism
+pl:Cynism rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Delight
+pl:Delight rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Despair
+pl:Despair rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Disapproval
+pl:Disapproval rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Disgust
+pl:Disgust rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Distraction
+pl:Distraction rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Ecstacy
+pl:Ecstacy rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Envy
+pl:Envy rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Fear
+pl:Fear rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Grief
+pl:Grief rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Guilt
+pl:Guilt rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Hope
+pl:Hope rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Interest
+pl:Interest rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Joy
+pl:Joy rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Loathing
+pl:Loathing rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Love
+pl:Love rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Optimism
+pl:Optimism rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Pensiveness
+pl:Pensiveness rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Pessimism
+pl:Pessimism rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Pride
+pl:Pride rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Rageremorse
+pl:Rageremorse rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Remorse
+pl:Remorse rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Sadness
+pl:Sadness rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Sentimentality
+pl:Sentimentality rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Serenity
+pl:Serenity rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Shame
+pl:Shame rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Submission
+pl:Submission rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Surprise
+pl:Surprise rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Terror
+pl:Terror rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Trust
+pl:Trust rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Unbelief
+pl:Unbelief rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/PlutchikEmotion/ontology.owl#Vigilance
+pl:Vigilance rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Anger
+shaver:Anger rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:closeMatch occ:Anger ,
+                             pl:Anger .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Fear
+shaver:Fear rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:closeMatch occ:Fear ,
+                            pl:Fear .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Joy
+shaver:Joy rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:closeMatch occ:Joy ,
+                           pl:Joy .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Love
+shaver:Love rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:closeMatch pl:Love .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Sadness
+shaver:Sadness rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:closeMatch pl:Sadness .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ShaverEmotions/ontology.owl#Surprise
+shaver:Surprise rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:closeMatch pl:Surprise .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Amusement
+ek:Amusement rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Anger
+ek:Anger rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:closeMatch occ:Anger ,
+                         pl:Anger ,
+                         shaver:Anger .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Contempt
+ek:Contempt rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:closeMatch pl:Contempt .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Contentment
+ek:Contentment rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Disgust
+ek:Disgust rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:closeMatch pl:Disgust .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Embarassment
+ek:Embarassment rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Excitement
+ek:Excitement rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Fear
+ek:Fear rdf:type owl:NamedIndividual ,
+                 aoe:EmotionConcept ;
+        skos:closeMatch occ:Fear ,
+                        pl:Fear ,
+                        shaver:Fear .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Guilt
+ek:Guilt rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:closeMatch pl:Guilt .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#PrideInAchievement
+ek:PrideInAchievement rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Relief
+ek:Relief rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:closeMatch occ:Relief .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Sadness
+ek:Sadness rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:closeMatch pl:Sadness ,
+                           shaver:Sadness .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Satisfaction
+ek:Satisfaction rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:closeMatch occ:Satisfaction .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#SensoryPleasure
+ek:SensoryPleasure rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl#Shame
+ek:Shame rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:closeMatch occ:Shame ,
+                         pl:Shame .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Admiration
+goem:Admiration rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:closeMatch occ:Admiration ,
+                                pl:Admiration .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Amusement
+goem:Amusement rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:closeMatch ek:Amusement .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Anger
+goem:Anger rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:closeMatch occ:Anger ,
+                           pl:Anger ,
+                           shaver:Anger ,
+                           ek:Anger .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Annoyance
+goem:Annoyance rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:closeMatch pl:Annoyance .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Approval
+goem:Approval rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Caring
+goem:Caring rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Confusion
+goem:Confusion rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Curiosity
+goem:Curiosity rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:closeMatch pl:Curiosity .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Desire
+goem:Desire rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Disappointment
+goem:Disappointment rdf:type owl:NamedIndividual ,
+                             aoe:EmotionConcept ;
+                    skos:closeMatch occ:Disappointment .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Disapproval
+goem:Disapproval rdf:type owl:NamedIndividual ,
+                          aoe:EmotionConcept ;
+                 skos:closeMatch pl:Disapproval .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Disgust
+goem:Disgust rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:closeMatch pl:Disgust ,
+                             ek:Disgust .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Embarrassment
+goem:Embarrassment rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Excitement
+goem:Excitement rdf:type owl:NamedIndividual ,
+                         aoe:EmotionConcept ;
+                skos:closeMatch ek:Excitement .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Fear
+goem:Fear rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:closeMatch occ:Fear ,
+                          pl:Fear ,
+                          shaver:Fear ,
+                          ek:Fear .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Gratitude
+goem:Gratitude rdf:type owl:NamedIndividual ,
+                        aoe:EmotionConcept ;
+               skos:closeMatch occ:Gratitude .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Grief
+goem:Grief rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:closeMatch pl:Grief .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Joy
+goem:Joy rdf:type owl:NamedIndividual ,
+                  aoe:EmotionConcept ;
+         skos:closeMatch occ:Joy ,
+                         pl:Joy ,
+                         shaver:Joy .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Love
+goem:Love rdf:type owl:NamedIndividual ,
+                   aoe:EmotionConcept ;
+          skos:closeMatch pl:Love ,
+                          shaver:Love .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Nervousness
+goem:Nervousness rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Optimism
+goem:Optimism rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:closeMatch pl:Optimism .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Pride
+goem:Pride rdf:type owl:NamedIndividual ,
+                    aoe:EmotionConcept ;
+           skos:closeMatch occ:Pride ,
+                           pl:Pride .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Realization
+goem:Realization rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Relief
+goem:Relief rdf:type owl:NamedIndividual ,
+                     aoe:EmotionConcept ;
+            skos:closeMatch occ:Relief ,
+                            ek:Relief .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Remorse
+goem:Remorse rdf:type owl:NamedIndividual ,
+                      aoe:EmotionConcept ;
+             skos:closeMatch occ:Remorse ,
+                             pl:Remorse .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Sadness
+goem:Sadness rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/GoEmotions#Surprise
+goem:Surprise rdf:type owl:NamedIndividual ,
+                       aoe:EmotionConcept ;
+              skos:closeMatch pl:Surprise ,
+                              shaver:Surprise .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
