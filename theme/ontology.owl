@@ -9,8 +9,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/theme">
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/theme/0.0.2"/>
+        <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/theme/Diagram.png"/>
         <dc:title xml:lang="en">Theme Ontology</dc:title>
         <rdfs:comment xml:lang="en">The Theme Ontology allows you to specify the theme of something. The theme can be potentially weighted.</rdfs:comment>
+        <owl:versionInfo>0.0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -26,9 +28,113 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/theme/hasTheme -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/theme/hasTheme">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/spice/SON/theme/hasWeightedTheme"/>
+            <rdf:Description rdf:about="https://w3id.org/spice/SON/theme/hasTheme"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">It associates an entity with its theme.</rdfs:comment>
+        <rdfs:label xml:lang="en">has theme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spice/SON/theme/hasWeightedTheme -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/theme/hasWeightedTheme">
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/theme/WeightedTheme"/>
+        <rdfs:comment xml:lang="en">It links an entity with its weighted theme.</rdfs:comment>
+        <rdfs:label xml:lang="en">has weighted theme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/theme/score -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/spice/SON/theme/score">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">The score associated with a theme.</rdfs:comment>
+        <rdfs:label xml:lang="en">score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/theme/WeightedTheme -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/theme/WeightedTheme">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/theme/hasTheme"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/theme/hasTheme"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/theme/score"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A ternary relation connecting an entity, with its theme and a score.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weighted Theme</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
