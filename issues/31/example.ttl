@@ -176,7 +176,7 @@ ex:VentrinaZZ DUL:isLocationOf ex:RomanWarGear, ex:HeadOfVespasian .
 ex:RomanWarGear a arco:HistoricOrArtisticProperty ;
 	arco-dd:hasCulturalPropertyType aat:300117127 ;
 	cis:isSubjectOf ex:Legion1, ex:Legion2, ex:Legion3, ex:Legion4, ex:Legion5, ex:Legion6 ;
-	DUL:associatedWith dbr:Legionary, wd:Q17346959 .
+	DUL:associatedWith dbr:Roman_military_personal_equipment, wd:Q17346959 .
 
 ex:Legion1 a cis:ImageObject ;
 	cis:url <Legion1> .

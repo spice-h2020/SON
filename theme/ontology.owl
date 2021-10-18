@@ -6,9 +6,12 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/theme">
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/theme/0.0.2"/>
+        <owl:imports rdf:resource="http://www.w3.org/2008/05/skos"/>
         <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/theme/Diagram.png"/>
         <dc:title xml:lang="en">Theme Ontology</dc:title>
         <rdfs:comment xml:lang="en">The Theme Ontology allows you to specify the theme of something. The theme can be potentially weighted.</rdfs:comment>
@@ -54,6 +57,7 @@
     <!-- https://w3id.org/spice/SON/theme/hasTheme -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/theme/hasTheme">
+        <rdfs:range rdf:resource="http://www.w3.org/2008/05/skos#Concept"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/spice/SON/theme/hasWeightedTheme"/>
             <rdf:Description rdf:about="https://w3id.org/spice/SON/theme/hasTheme"/>
