@@ -1,0 +1,592 @@
+@prefix : <http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sch: <https://w3id.org/spice/SON/SchwartzValues#> .
+@prefix wvs: <http://www.ontologydesignpatterns.org/ont/values/wvs.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix valres: <http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl#> .
+@prefix fschema: <https://w3id.org/framester/schema/> .
+@base <http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl> .
+
+<http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl> rdf:type owl:Ontology ;
+                                                                       owl:imports <http://www.ontologydesignpatterns.org/ont/values/wvs.owl> ,
+                                                                                   <https://w3id.org/spice/SON/SchwartzValues/0.0.2> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/spice/SON/SchwartzValues#valueFoundation
+sch:valueFoundation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl#against
+valres:against rdf:type owl:ObjectProperty ;
+               rdfs:comment """Some user is against (namely, has valueCommitmentTo some conflicting value to) some value.
+
+This property is used by the Value Reasoner to make inferences from the presence of some domain specific value (WVSVariable) in a string of text (generally a comment to some artwork). The inference direction is towards the user, and it is based on the idea that if a comment associated to some artwork is against some domain specific value, then the user has is against that value.""" .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl#hasValueContent
+valres:hasValueContent rdf:type owl:ObjectProperty ;
+                       rdfs:range wvs:WVSVariable ;
+                       rdfs:comment """Some Entity has Value Content some value.
+
+This property is used by the Value Reasoner to make inferences from the presence of some domain specific value (WVSVariable) in a string of text (generally a comment to some artwork). The inference direction is towards the artwork, and it is based on the idea that if a comment associated to some artwork hasValueContent some domain specific value, then the artwork itself should carry those values (at least in some user opinion / interpretation ).""" .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl#reprehensibleFor
+valres:reprehensibleFor rdf:type owl:ObjectProperty ;
+                        rdfs:domain wvs:WVSVariable ;
+                        rdfs:comment "This property is used to align some domain specific value, in particular instances of the class WVSVariable (which are also Value Situations) to some Basic Human Values from Schwartz model, in particular the semantics of this property is that some domain specific value is in conflict with some Basic Human Value, and is therefore reprehensible according to the Schwartz value considered." .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl#valueCommitmentTo
+valres:valueCommitmentTo rdf:type owl:ObjectProperty ;
+                         rdfs:comment """Some user has valueCommitmentTo some value.
+
+This property is used by the Value Reasoner to make inferences from the presence of some domain specific value (WVSVariable) in a string of text (generally a comment to some artwork). The inference direction is towards the user, and it is based on the idea that if a comment associated to some artwork hasValueContent some domain specific value, and this domain specific value is subsumedUnder some Basic Human Value, then the user has valueCommitmentTo that value.""" .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2021/9/value_reasoner.owl#valueContrastWith
+valres:valueContrastWith rdf:type owl:ObjectProperty ;
+                         rdfs:comment """Some user1 has a value commitment to some value which is in conflict with some other value, which in turn is the object of the value commitment of some user2.
+
+Note that generally user1 and user2 are two different individuals, but it is also possible that they are the same individual, generating a critical case in which there could be assumed the individual has an internal conscious or not conscious conflict.""" .
+
+
+###  https://w3id.org/framester/schema/subsumedUnder
+fschema:subsumedUnder rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/framester/schema/subsumes
+fschema:subsumes rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Because_of_science_and_technology__there_will_be_more_opportunities_for_the_next_generation
+wvs:Because_of_science_and_technology__there_will_be_more_opportunities_for_the_next_generation fschema:subsumedUnder sch:OpennessToChange ,
+                                                                                                                      sch:SelfTrascendence .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Believe_in__God
+wvs:Believe_in__God valres:reprehensibleFor sch:OpennessToChange ;
+                    fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Believe_in__heaven
+wvs:Believe_in__heaven valres:reprehensibleFor sch:OpennessToChange ;
+                       fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Believe_in__hell
+wvs:Believe_in__hell valres:reprehensibleFor sch:OpennessToChange ;
+                     fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Believe_in__life_after_death
+wvs:Believe_in__life_after_death valres:reprehensibleFor sch:OpennessToChange ;
+                                 fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Collect_information_about_anyone_living_in_this_country_without_their_knowledge
+wvs:Collect_information_about_anyone_living_in_this_country_without_their_knowledge fschema:subsumedUnder sch:Security .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Degree_of_agreement__Nowadays_one_often_has_trouble_deciding_which_moral_rules_are_the_right_ones_to_follow
+wvs:Degree_of_agreement__Nowadays_one_often_has_trouble_deciding_which_moral_rules_are_the_right_ones_to_follow fschema:subsumedUnder sch:Thought .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__Civil_rights_protect_people_s_liberty_against_oppression
+wvs:Democracy__Civil_rights_protect_people_s_liberty_against_oppression fschema:subsumedUnder sch:OpennessToChange ,
+                                                                                              sch:SelfTrascendence .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__People_choose_their_leaders_in_free_elections
+wvs:Democracy__People_choose_their_leaders_in_free_elections fschema:subsumedUnder sch:Conformity ,
+                                                                                   sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__People_obey_their_rulers
+wvs:Democracy__People_obey_their_rulers fschema:subsumedUnder sch:Conformity .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__People_receive_state_aid_for_unemployment
+wvs:Democracy__People_receive_state_aid_for_unemployment valres:reprehensibleFor sch:Achievement ;
+                                                         fschema:subsumedUnder sch:Benevolence ,
+                                                                               sch:Caring .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__Religious_authorities_interpret_the_laws
+wvs:Democracy__Religious_authorities_interpret_the_laws valres:reprehensibleFor sch:SelfDirection ;
+                                                        fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__The_army_takes_over_when_government_is_incompetent
+wvs:Democracy__The_army_takes_over_when_government_is_incompetent valres:reprehensibleFor sch:SelfDirection ,
+                                                                                          sch:Tolerance ;
+                                                                  fschema:subsumedUnder sch:Dominance .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__The_state_makes_people_s_incomes_equal
+wvs:Democracy__The_state_makes_people_s_incomes_equal valres:reprehensibleFor sch:Achievement ;
+                                                      fschema:subsumedUnder sch:Security .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Democracy__Women_have_the_same_rights_as_men
+wvs:Democracy__Women_have_the_same_rights_as_men valres:reprehensibleFor sch:Tradition ;
+                                                 fschema:subsumedUnder sch:Concern ,
+                                                                       sch:SelfDirection ,
+                                                                       sch:Tolerance .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Feel_close_to_the_world
+wvs:Feel_close_to_the_world fschema:subsumedUnder sch:Universalism .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Feel_close_to_your_continent
+wvs:Feel_close_to_your_continent fschema:subsumedUnder sch:Dependability ,
+                                                       sch:Face ,
+                                                       sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Feel_close_to_your_country
+wvs:Feel_close_to_your_country fschema:subsumedUnder sch:Dependability ,
+                                                     sch:Face ,
+                                                     sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Feel_close_to_your_district_region
+wvs:Feel_close_to_your_district_region fschema:subsumedUnder sch:Dependability ,
+                                                             sch:Face ,
+                                                             sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Feel_close_to_your_village_town_or_city
+wvs:Feel_close_to_your_village_town_or_city fschema:subsumedUnder sch:Dependability ,
+                                                                  sch:Face ,
+                                                                  sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Government_has_the_right__Keep_people_under_video_surveillance_in_public_areas
+wvs:Government_has_the_right__Keep_people_under_video_surveillance_in_public_areas fschema:subsumedUnder sch:Security .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Having_a_system_governed_by_religious_law_in_which_there_are_no_political_parties_or_elections
+wvs:Having_a_system_governed_by_religious_law_in_which_there_are_no_political_parties_or_elections valres:reprehensibleFor sch:OpennessToChange ;
+                                                                                                   fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_much_the_political_system_allows_people_to_have_a_say
+wvs:How_much_the_political_system_allows_people_to_have_a_say fschema:subsumedUnder sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_discusses_political_matters_with_friends
+wvs:How_often_discusses_political_matters_with_friends fschema:subsumedUnder sch:Concern .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_do_you_attend_religious_services
+wvs:How_often_do_you_attend_religious_services valres:reprehensibleFor sch:OpennessToChange ;
+                                               fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Election_officials_are_fair
+wvs:How_often_in_country_s_elections__Election_officials_are_fair fschema:subsumedUnder sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Journalists_provide_fair_coverage_of_elections
+wvs:How_often_in_country_s_elections__Journalists_provide_fair_coverage_of_elections fschema:subsumedUnder sch:Thought .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Opposition_candidates_are_prevented_from_running
+wvs:How_often_in_country_s_elections__Opposition_candidates_are_prevented_from_running valres:reprehensibleFor sch:Concern ,
+                                                                                                               sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Rich_people_buy_elections
+wvs:How_often_in_country_s_elections__Rich_people_buy_elections valres:reprehensibleFor sch:Conformity ;
+                                                                fschema:subsumedUnder sch:Dominance .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__TV_news_favors_the_governing_party
+wvs:How_often_in_country_s_elections__TV_news_favors_the_governing_party valres:reprehensibleFor sch:Conformity ,
+                                                                                                 sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Voters_are_bribed
+wvs:How_often_in_country_s_elections__Voters_are_bribed valres:reprehensibleFor sch:Conformity ,
+                                                                                sch:Rules ,
+                                                                                sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Voters_are_offered_a_genuine_choice_in_the_elections
+wvs:How_often_in_country_s_elections__Voters_are_offered_a_genuine_choice_in_the_elections fschema:subsumedUnder sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Voters_are_threatened_with_violence_at_the_polls
+wvs:How_often_in_country_s_elections__Voters_are_threatened_with_violence_at_the_polls valres:reprehensibleFor sch:SelfDirection ,
+                                                                                                               sch:Tolerance .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Votes_are_counted_fairly
+wvs:How_often_in_country_s_elections__Votes_are_counted_fairly fschema:subsumedUnder sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_in_country_s_elections__Women_have_equal_opportunities_to_run_the_office
+wvs:How_often_in_country_s_elections__Women_have_equal_opportunities_to_run_the_office fschema:subsumedUnder sch:Concern ,
+                                                                                                             sch:Interpersonal .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#How_often_to_you_pray
+wvs:How_often_to_you_pray valres:reprehensibleFor sch:OpennessToChange ;
+                          fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Importance_of_God
+wvs:Importance_of_God valres:reprehensibleFor sch:OpennessToChange ;
+                      fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Importance_of_democracy
+wvs:Importance_of_democracy fschema:subsumedUnder sch:OpennessToChange ,
+                                                  sch:SelfTrascendence .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Interest_in_politics
+wvs:Interest_in_politics fschema:subsumedUnder sch:SelfDirection ,
+                                               sch:Stimulation ,
+                                               sch:Universalism .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Abortion
+wvs:Justifiable__Abortion fschema:subsumedUnder sch:Action .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Avoiding_a_fare_on_public_transport
+wvs:Justifiable__Avoiding_a_fare_on_public_transport fschema:subsumedUnder sch:Action .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Cheating_on_taxes_if_you_have_a_chance
+wvs:Justifiable__Cheating_on_taxes_if_you_have_a_chance fschema:subsumedUnder sch:Action .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Claiming_government_benefits_to_which_you_are_not_entitled
+wvs:Justifiable__Claiming_government_benefits_to_which_you_are_not_entitled fschema:subsumedUnder sch:Resources .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Death_penalty
+wvs:Justifiable__Death_penalty fschema:subsumedUnder sch:Security .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Divorce
+wvs:Justifiable__Divorce fschema:subsumedUnder sch:Action .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Euthanasia
+wvs:Justifiable__Euthanasia fschema:subsumedUnder sch:Action .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__For_a_man_to_beat_his_wife
+wvs:Justifiable__For_a_man_to_beat_his_wife fschema:subsumedUnder sch:Dominance .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Having_casual_sex
+wvs:Justifiable__Having_casual_sex valres:reprehensibleFor sch:Face ,
+                                                           sch:Tradition ;
+                                   fschema:subsumedUnder sch:Action .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Homosexuality
+wvs:Justifiable__Homosexuality valres:reprehensibleFor sch:Tradition ;
+                               fschema:subsumedUnder sch:Action ,
+                                                     sch:Hedonism .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Parents_beating_children
+wvs:Justifiable__Parents_beating_children valres:reprehensibleFor sch:Benevolence ;
+                                          fschema:subsumedUnder sch:Rules .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Political_violence
+wvs:Justifiable__Political_violence valres:reprehensibleFor sch:Tolerance ;
+                                    fschema:subsumedUnder sch:Societal .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Prostitution
+wvs:Justifiable__Prostitution valres:reprehensibleFor sch:Face ,
+                                                      sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Sex_before_marriage
+wvs:Justifiable__Sex_before_marriage valres:reprehensibleFor sch:Face ,
+                                                             sch:Tradition ;
+                                     fschema:subsumedUnder sch:Action ,
+                                                           sch:Hedonism .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Someone_accepting_a_bribe_in_the_course_of_their_duties
+wvs:Justifiable__Someone_accepting_a_bribe_in_the_course_of_their_duties valres:reprehensibleFor sch:Rules ;
+                                                                         fschema:subsumedUnder sch:Resources .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Stealing_property
+wvs:Justifiable__Stealing_property valres:reprehensibleFor sch:Personal ,
+                                                           sch:Rules ,
+                                                           sch:Societal ;
+                                   fschema:subsumedUnder sch:Resources .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Suicide
+wvs:Justifiable__Suicide valres:reprehensibleFor sch:Tradition ;
+                         fschema:subsumedUnder sch:Action .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Terrorism_as_a_political__ideological_or_religious_mean
+wvs:Justifiable__Terrorism_as_a_political__ideological_or_religious_mean valres:reprehensibleFor sch:Societal ;
+                                                                         fschema:subsumedUnder sch:Dominance .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Justifiable__Violence_against_other_people
+wvs:Justifiable__Violence_against_other_people valres:reprehensibleFor sch:Caring ,
+                                                                       sch:Interpersonal ,
+                                                                       sch:Rules ,
+                                                                       sch:Tolerance ;
+                                               fschema:subsumedUnder sch:Dominance .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#National_pride
+wvs:National_pride valres:reprehensibleFor sch:Universalism ;
+                   fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#One_of_the_bad_effects_of_science_is_that_it_breaks_down_people_s_ideas_of_right_and_wrong
+wvs:One_of_the_bad_effects_of_science_is_that_it_breaks_down_people_s_ideas_of_right_and_wrong valres:reprehensibleFor sch:SelfDirection ,
+                                                                                                                       sch:Stimulation ;
+                                                                                               fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_action__Signing_a_petition
+wvs:Political_action__Signing_a_petition fschema:subsumedUnder sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_action__attending_lawful-peaceful_demonstrations
+wvs:Political_action__attending_lawful-peaceful_demonstrations fschema:subsumedUnder sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_action__joining_in_boycotts
+wvs:Political_action__joining_in_boycotts valres:reprehensibleFor sch:Conformity .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_action__joining_unofficial_strikes
+wvs:Political_action__joining_unofficial_strikes valres:reprehensibleFor sch:Conformity .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_system__Having_a_democratic_political_system
+wvs:Political_system__Having_a_democratic_political_system fschema:subsumedUnder sch:OpennessToChange ,
+                                                                                 sch:SelfTrascendence .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_system__Having_a_strong_leader_who_does_not_have_to_bother_with_parliament_and_elections
+wvs:Political_system__Having_a_strong_leader_who_does_not_have_to_bother_with_parliament_and_elections valres:reprehensibleFor sch:OpennessToChange ,
+                                                                                                                               sch:SelfTrascendence ;
+                                                                                                       fschema:subsumedUnder sch:Security .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_system__Having_experts__not_government__make_decisions_according_to_what_they_think_is_best_for_the_country
+wvs:Political_system__Having_experts__not_government__make_decisions_according_to_what_they_think_is_best_for_the_country valres:reprehensibleFor sch:Benevolence ,
+                                                                                                                                                  sch:SelfDirection ,
+                                                                                                                                                  sch:Universalism ;
+                                                                                                                          fschema:subsumedUnder sch:Stimulation .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Political_system__Having_the_army_rule
+wvs:Political_system__Having_the_army_rule valres:reprehensibleFor sch:SelfDirection ;
+                                           fschema:subsumedUnder sch:Conservation .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Respect_for_individual_human_rights_nowadays
+wvs:Respect_for_individual_human_rights_nowadays fschema:subsumedUnder sch:Conformity ,
+                                                                       sch:OpennessToChange ,
+                                                                       sch:Security ,
+                                                                       sch:SelfTrascendence .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Science_and_technology_are_making_our_lives_healthier__easier__and_more_comfortable
+wvs:Science_and_technology_are_making_our_lives_healthier__easier__and_more_comfortable fschema:subsumedUnder sch:OpennessToChange ,
+                                                                                                              sch:SelfTrascendence .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Social_activism__Donating_to_a_group_or_campaign
+wvs:Social_activism__Donating_to_a_group_or_campaign fschema:subsumedUnder sch:Caring .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#The_only_acceptable_religion_is_my_religion
+wvs:The_only_acceptable_religion_is_my_religion valres:reprehensibleFor sch:OpennessToChange ,
+                                                                        sch:SelfTrascendence ;
+                                                fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Vote_in_elections__National_level_Vote_in_elections__National_level
+wvs:Vote_in_elections__National_level_Vote_in_elections__National_level fschema:subsumedUnder sch:Rules ,
+                                                                                              sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Vote_in_elections__local_level_Vote_in_elections__Local_level
+wvs:Vote_in_elections__local_level_Vote_in_elections__Local_level fschema:subsumedUnder sch:Dependability ,
+                                                                                        sch:Rules ,
+                                                                                        sch:SelfDirection .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#We_depend_too_much_on_science_and_not_enough_on_faith
+wvs:We_depend_too_much_on_science_and_not_enough_on_faith valres:reprehensibleFor sch:OpennessToChange ,
+                                                                                  sch:SelfTrascendence ;
+                                                          fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#Whenever_science_and_religion_conflict__religion_is_always_right
+wvs:Whenever_science_and_religion_conflict__religion_is_always_right valres:reprehensibleFor sch:OpennessToChange ,
+                                                                                             sch:SelfTrascendence ;
+                                                                     fschema:subsumedUnder sch:Tradition .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/wvs.owl#following__Monitor_all_emails_and_any_other_information_exchanged_on_the_Internet
+wvs:following__Monitor_all_emails_and_any_other_information_exchanged_on_the_Internet valres:reprehensibleFor sch:SelfDirection ;
+                                                                                      fschema:subsumedUnder sch:Security .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Achievement
+sch:Achievement rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Action
+sch:Action rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Benevolence
+sch:Benevolence rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Caring
+sch:Caring rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Concern
+sch:Concern rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Conformity
+sch:Conformity rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Conservation
+sch:Conservation rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Dependability
+sch:Dependability rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Dominance
+sch:Dominance rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Face
+sch:Face rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Hedonism
+sch:Hedonism rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Interpersonal
+sch:Interpersonal rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#OpennessToChange
+sch:OpennessToChange rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Personal
+sch:Personal rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Resources
+sch:Resources rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Rules
+sch:Rules rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Security
+sch:Security rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#SelfDirection
+sch:SelfDirection rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#SelfTrascendence
+sch:SelfTrascendence rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Societal
+sch:Societal rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Stimulation
+sch:Stimulation rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Thought
+sch:Thought rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Tolerance
+sch:Tolerance rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Tradition
+sch:Tradition rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/SchwartzValues#Universalism
+sch:Universalism rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+wvs:Political_actions_online__Encouraging_other_people_to_take_any_form_of_political_action sch:valueFoundation wvs:SelfDirection .
+
+
+wvs:Political_actions_online__Organizing_political_activities__events__protests sch:valueFoundation wvs:SelfDirection .
+
+
+wvs:Political_actions_online__Searching_information_about_politics_and_political_events sch:valueFoundation wvs:SelfDirection .
+
+
+wvs:Political_actions_online__Signing_an_electronic_petition sch:valueFoundation wvs:SelfDirection .
+
+
+wvs:Social_activism__Contacting_a_government_official sch:valueFoundation wvs:SelfDirection .
+
+
+wvs:Social_activism__Encouraging_others_to_take_action_about_political_issues sch:valueFoundation wvs:SelfDirection .
+
+
+wvs:Social_activism__Encouraging_others_to_vote sch:valueFoundation sch:Conformity ,
+                                                                    wvs:SelfDirection .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
