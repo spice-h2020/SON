@@ -1,0 +1,488 @@
+@prefix : <http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix vc: <http://www.ontologydesignpatterns.org/ont/values/valuecore.owl#> .
+@prefix cmm: <http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcvf: <http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#> .
+@prefix frame: <https://w3id.org/framester/framenet/abox/frame/> .
+@prefix haidt: <https://w3id.org/spice/SON/HaidtValues#> .
+@prefix fschema: <https://w3id.org/framester/schema/> .
+@prefix wn30instances: <https://w3id.org/framester/wn/wn30/instances/> .
+@base <http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl> .
+
+<http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl> rdf:type owl:Ontology ;
+                                                                                    rdfs:comment """A minimal vocabulary to talk about values as defined in different theories, accompanied by an alignment to foundational and linguistic ontologies.
+
+It is intended as a core ontology of values, which allows to align different existing theories (Schwartz, Haidt, World Value Survey, etc.
+
+A first extraction of value-related frames from Framester has been done, leading to 7 conceptual frames and 6 synset frames that cover all senses of 'value', from proper normative/goal senses to commercial and informational senses.
+
+A much deeper extraction needs to be done, not only by using the labels from the value collection from the specific modules, but also attempting a transitive closure across Framester and its modules, in order to discover possible inconsistencies, problematic inferences, typical roles, associations to sentiment polarity and emotions, visual categories, etc.""" ;
+                                                                                    owl:versionInfo """0.3 - 07.01.2022
+added vc:triggers object property, to be used in the Value Reasoner and to connect framester entities in the new Value frames (to be introduced in Framester).
+Added :Fairness individual from Curry module and :Fairness_vs_Cheating dyad from Haidt module as individuals of :Value class.
+
+0.2, 03-16-2021
+added perspectival relations, fixed the semantics of values and perspectives on the value scenario.
+
+0.1, 03-14-2021
+bootstrapped by Aldo Gangemi and Stefano De Giorgis.""" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfiedBy
+dul:satisfiedBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf dul:satisfies .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies
+dul:satisfies rdf:type owl:ObjectProperty ;
+              rdfs:domain dul:Situation ;
+              rdfs:range dul:Description .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#usesConcept
+dul:usesConcept rdf:type owl:ObjectProperty ;
+                rdfs:domain dul:Description .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#triggers
+vcvf:triggers rdf:type owl:ObjectProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range vcvf:Value .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/framester/schema/hasPerspective
+fschema:hasPerspective rdf:type owl:ObjectProperty ;
+                       owl:inverseOf fschema:perspectiveOn .
+
+
+###  https://w3id.org/framester/schema/perspectiveOn
+fschema:perspectiveOn rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/framester/schema/subsumedUnder
+fschema:subsumedUnder rdf:type owl:ObjectProperty ;
+                      owl:inverseOf fschema:subsumes ;
+                      rdf:type owl:TransitiveProperty .
+
+
+###  https://w3id.org/framester/schema/subsumes
+fschema:subsumes rdf:type owl:ObjectProperty ,
+                          owl:TransitiveProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/resource/Value_(ethics)
+<http://dbpedia.org/resource/Value_(ethics)> rdf:type owl:Class ;
+                                             owl:equivalentClass vcvf:Value ;
+                                             rdfs:subClassOf fschema:ConceptualFrame .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description
+dul:Description rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+dul:Situation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#SocialScenario
+vcvf:SocialScenario rdf:type owl:Class ;
+                    rdfs:subClassOf dul:Situation ;
+                    rdfs:comment "Any physically-, socially- or cognitively relevant pattern of events that is associated with a value commitment." .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#Value
+vcvf:Value rdf:type owl:Class ;
+           owl:equivalentClass wn30instances:synset-value-noun-6 ;
+           rdfs:subClassOf fschema:ConceptualFrame ;
+           rdfs:comment "Schwartz: The relative importance of multiple values guides action. Any attitude or behaviour typically has implications for more than one value. … The tradeoff among relevant, competing values guides attitudes and behaviors… Values influence action when they are relevant in the context (hence likely to be activated) and important to the actor." ,
+                        "Schwartz: Values are beliefs linked inextricably to affect. When values are activated, they become infused with feeling." ,
+                        "Schwartz: Values are ordered by importance relative to one another. People’s values form an ordered system of priorities that characterize them as individuals." ,
+                        "Schwartz: Values refer to desirable goals that motivate action." ,
+                        "Schwartz: Values serve as standards or criteria. Values guide the selection or evaluation of actions, policies, people, and events. People decide what is good or bad, justified or illegitimate, worth doing or avoiding, based on possible consequences for their cherished values. But the impact of values in everyday decisions is rarely conscious. Values enter awareness when the actions or judgments one is considering have conflicting implications for different values one cherishes." ,
+                        "Schwartz: Values transcend specific actions and situations. … This feature distinguishes values from norms and attitudes that usually refer to specific actions, objects, or situations." ;
+           rdfs:label "value" .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueAppraisal
+vcvf:ValueAppraisal rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty dul:satisfies ;
+                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                               owl:oneOf ( vcvf:ValueAppraisal
+                                                                         )
+                                                             ]
+                                        ] ;
+                    rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueCommitment
+vcvf:ValueCommitment rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty dul:satisfies ;
+                                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                owl:oneOf ( vcvf:ValueCommitment
+                                                                          )
+                                                              ]
+                                         ] ;
+                     rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueRecognition
+vcvf:ValueRecognition rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty dul:satisfies ;
+                                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                 owl:oneOf ( vcvf:ValueRecognition
+                                                                           )
+                                                               ]
+                                          ] ;
+                      rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueScenario
+vcvf:ValueScenario rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty dul:satisfies ;
+                                         owl:someValuesFrom vcvf:Value
+                                       ] ;
+                   rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueSituation
+vcvf:ValueSituation rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty dul:satisfies ;
+                                          owl:someValuesFrom vcvf:Value
+                                        ] ;
+                    rdfs:subClassOf fschema:FrameOccurrence ;
+                    rdfs:comment "Any situation satisfying a Value description, e.g. a social fact, deliberation, legal decision, opinion, story, etc. that is informed by, or depends on, values such as Tolerance, Concern, Power, Security, etc." ;
+                    rdfs:label "value situation" .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Awareness
+frame:Awareness rdf:type owl:Class ;
+                rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Differentiation
+frame:Differentiation rdf:type owl:Class ;
+                      rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Expertise
+frame:Expertise rdf:type owl:Class ;
+                rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Judgment
+frame:Judgment rdf:type owl:Class ;
+               rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Quantity
+frame:Quantity rdf:type owl:Class ;
+               rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Regard
+frame:Regard rdf:type owl:Class ;
+             rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Usefulness
+frame:Usefulness rdf:type owl:Class ;
+                 rdfs:subClassOf fschema:FrameOccurrence .
+
+
+###  https://w3id.org/framester/schema/ConceptualFrame
+fschema:ConceptualFrame rdf:type owl:Class ;
+                        rdfs:subClassOf dul:Description .
+
+
+###  https://w3id.org/framester/schema/FrameOccurrence
+fschema:FrameOccurrence rdf:type owl:Class ;
+                        rdfs:subClassOf dul:Situation .
+
+
+###  https://w3id.org/framester/schema/SynsetFrame
+fschema:SynsetFrame rdf:type owl:Class ;
+                    rdfs:subClassOf dul:Description .
+
+
+###  https://w3id.org/framester/wn/wn30/instances/synset-value-noun-6
+wn30instances:synset-value-noun-6 rdf:type owl:Class ;
+                                  rdfs:subClassOf fschema:SynsetFrame ,
+                                                  [ rdf:type owl:Class ;
+                                                    owl:unionOf ( frame:Awareness
+                                                                  frame:Judgment
+                                                                  frame:Regard
+                                                                )
+                                                  ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/Value_(ethics)
+<http://dbpedia.org/resource/Value_(ethics)> rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Betrayal
+cmm:Betrayal rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Cheating
+cmm:Cheating rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Cowardice
+cmm:Cowardice rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Deference
+cmm:Deference rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Disrespect
+cmm:Disrespect rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Fairness
+cmm:Fairness rdf:type owl:NamedIndividual ,
+                      fschema:ConceptualFrame .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#FamilyValue
+cmm:FamilyValue rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#GroupLoyalty
+cmm:GroupLoyalty rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Heroism
+cmm:Heroism rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Neglect
+cmm:Neglect rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#PropertyRight
+cmm:PropertyRight rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Reciprocity
+cmm:Reciprocity rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Theft
+cmm:Theft rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#Unfairness
+cmm:Unfairness rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueAppraisal
+vcvf:ValueAppraisal rdf:type owl:NamedIndividual ,
+                             fschema:ConceptualFrame ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty fschema:perspectiveOn ;
+                               owl:someValuesFrom vcvf:Value
+                             ] .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueCommitment
+vcvf:ValueCommitment rdf:type owl:NamedIndividual ,
+                              fschema:ConceptualFrame ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty fschema:perspectiveOn ;
+                                owl:someValuesFrom vcvf:Value
+                              ] .
+
+
+###  http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#ValueRecognition
+vcvf:ValueRecognition rdf:type owl:NamedIndividual ,
+                               fschema:ConceptualFrame ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty fschema:perspectiveOn ;
+                                 owl:someValuesFrom vcvf:Value
+                               ] .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Awareness
+frame:Awareness rdf:type owl:NamedIndividual ,
+                         fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Differentiation
+frame:Differentiation rdf:type owl:NamedIndividual ,
+                               fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Expertise
+frame:Expertise rdf:type owl:NamedIndividual ,
+                         fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Judgment
+frame:Judgment rdf:type owl:NamedIndividual ,
+                        fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Quantity
+frame:Quantity rdf:type owl:NamedIndividual ,
+                        fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Regard
+frame:Regard rdf:type owl:NamedIndividual ,
+                      fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/framenet/abox/frame/Usefulness
+frame:Usefulness rdf:type owl:NamedIndividual ,
+                          fschema:ConceptualFrame .
+
+
+###  https://w3id.org/framester/wn/wn30/instances/synset-prize-verb-1
+wn30instances:synset-prize-verb-1 rdf:type owl:NamedIndividual ,
+                                           fschema:SynsetFrame ;
+                                  fschema:subsumedUnder frame:Judgment ;
+                                  rdfs:comment "hold dear; \"I prize these old photographs\"" .
+
+
+###  https://w3id.org/framester/wn/wn30/instances/synset-respect-verb-1
+wn30instances:synset-respect-verb-1 rdf:type owl:NamedIndividual ,
+                                             fschema:SynsetFrame ;
+                                    fschema:subsumedUnder frame:Judgment ;
+                                    rdfs:comment "regard highly; think much of; \"I respect his judgement\"; \"We prize his creativity\"" .
+
+
+###  https://w3id.org/framester/wn/wn30/instances/synset-value-noun-1
+wn30instances:synset-value-noun-1 rdf:type owl:NamedIndividual ,
+                                           fschema:SynsetFrame ;
+                                  fschema:subsumedUnder frame:Usefulness ;
+                                  rdfs:comment "a numerical quantity measured or assigned or computed; \"the value assigned was 16 milliseconds\"" .
+
+
+###  https://w3id.org/framester/wn/wn30/instances/synset-value-noun-2
+wn30instances:synset-value-noun-2 rdf:type owl:NamedIndividual ,
+                                           fschema:SynsetFrame ;
+                                  fschema:subsumedUnder frame:Differentiation ;
+                                  rdfs:comment "the quality (positive or negative) that renders something desirable or valuable; \"the Shakespearean Shylock is of dubious value in the modern world\"" .
+
+
+###  https://w3id.org/framester/wn/wn30/instances/synset-value-noun-6
+wn30instances:synset-value-noun-6 rdf:type owl:NamedIndividual ,
+                                           fschema:SynsetFrame ;
+                                  fschema:subsumedUnder frame:Awareness ,
+                                                        frame:Judgment ,
+                                                        frame:Regard .
+
+
+###  https://w3id.org/framester/wn/wn30/instances/synset-value-verb-1
+wn30instances:synset-value-verb-1 rdf:type owl:NamedIndividual ,
+                                           fschema:SynsetFrame ;
+                                  fschema:subsumedUnder frame:Expertise ,
+                                                        frame:Quantity ;
+                                  rdfs:comment "fix or determine the value of; assign a value to; \"value the jewelry and art work in the estate\"" .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Authority
+haidt:Authority rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Betrayal
+haidt:Betrayal rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Care
+haidt:Care rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Cheating
+haidt:Cheating rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Degradation
+haidt:Degradation rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Fairness
+haidt:Fairness rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Fairness_vs_Cheating
+haidt:Fairness_vs_Cheating rdf:type owl:NamedIndividual ,
+                                    fschema:ConceptualFrame .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Harm
+haidt:Harm rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Liberty
+haidt:Liberty rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Loyalty
+haidt:Loyalty rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Oppression
+haidt:Oppression rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Sanctity
+haidt:Sanctity rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/spice/SON/HaidtValues#Subversion
+haidt:Subversion rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+vcvf:ValueAppraisal dc:date "2021-03-09T15:42:37Z"^^xsd:dateTime ;
+                    rdfs:label "value appraisal" ;
+                    rdfs:comment "A situation, in which an agent provides an appraisal of something, attributing a value in context." .
+
+
+vcvf:ValueCommitment rdfs:label "value commitment" ;
+                     rdfs:comment "The commitment that an individual, group, society, culture, or even a piece of information, has to a certain value, given a circumstantial context (factoid, framoid, time, place, motivation, closed set of alternatives, trigger, medium, channel, etc.)." .
+
+
+wn30instances:synset-value-noun-6 rdfs:comment "an ideal accepted by some individual or group; \"he has old-fashioned values\"" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
