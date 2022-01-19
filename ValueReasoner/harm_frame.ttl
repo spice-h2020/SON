@@ -1,7 +1,7 @@
 
 
 
-@prefix vcvf: <http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl#> .
+@prefix vcvf: <http://www.ontologydesignpatterns.org/ont/values/valuecore_with_value_frames.owl#> .
 @prefix cmm: <http://www.ontologydesignpatterns.org/ont/values/CurryMoralMolecules.owl#> .
 @prefix haidt: <https://w3id.org/spice/SON/HaidtValues#> .
 @prefix : <http://www.ontologydesignpatterns.org/ont/values/HarmFrame.owl#> .
@@ -26,7 +26,7 @@
 
 
 <http://www.ontologydesignpatterns.org/ont/values/HarmFrame.owl> rdf:type owl:Ontology ;
-	owl:imports <http://www.semanticweb.org/sdg/ontologies/2022/0/valuecore_with_value_frames.owl> .
+	owl:imports <http://www.ontologydesignpatterns.org/ont/values/valuecore_with_value_frames.owl> .
 
 
 # This is the frame graph for the "Harm" value violation as conceptualized in Haidt Moral Foundation Theory.
