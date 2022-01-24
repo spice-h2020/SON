@@ -1,64 +1,71 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="https://w3id.org/spice/SON/CommunityOntology"
      xml:base="https://w3id.org/spice/SON/CommunityOntology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://w3id.org/spice/SON/CommunityOntology"
-     versionIRI="https://w3id.org/spice/SON/CommunityOntology/0.0.2">
-    <Prefix name="" IRI="https://w3id.org/spice/SON/CommunityOntology"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="spice" IRI="http://www.semanticweb.org/guille/ontologies/2021/10/community"/>
-    <Import>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</Import>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal xml:lang="en">Community Model in Spice. V0.0.2.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>Manuel Striani and Antonio Lieto</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="/Community"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/ExplicitCommunity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/ImplicitComminity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/PersistentCommunity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/VirtualCommunity"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="/Community"/>
-        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collective"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ExplicitCommunity"/>
-        <Class IRI="/Community"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ImplicitComminity"/>
-        <Class IRI="/Community"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/PersistentCommunity"/>
-        <Class IRI="/Community"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/VirtualCommunity"/>
-        <Class IRI="/Community"/>
-    </SubClassOf>
-</Ontology>
+     xmlns:spice="http://www.semanticweb.org/guille/ontologies/2021/10/community">
+    <owl:Ontology rdf:about="https://w3id.org/spice/SON/CommunityOntology">
+        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/CommunityOntology/0.0.2"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:comment xml:lang="en">Community Model in Spice. V0.0.2.</rdfs:comment>
+        <rdfs:comment>Manuel Striani and Antonio Lieto</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Community -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Community">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collective"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ImplicitComminity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ImplicitComminity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PersistentCommunity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersistentCommunity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/VirtualCommunity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/VirtualCommunity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
+    </owl:Class>
+</rdf:RDF>
 
 
 
