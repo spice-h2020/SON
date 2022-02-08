@@ -208,6 +208,20 @@
     
 
 
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
     <!-- https://w3id.org/spice/SON/upX/Background -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Background">
@@ -240,29 +254,6 @@
     
 
 
-    <!-- https://w3id.org/spice/SON/upX/Elderly -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Elderly">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/upX/age"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</xsd:minInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/spice/SON/upX/Experience -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Experience">
@@ -285,14 +276,6 @@
     
 
 
-    <!-- https://w3id.org/spice/SON/upX/Explorer -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Explorer">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/spice/SON/upX/Gender -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Gender">
@@ -305,22 +288,6 @@
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/upX/LearningStyle">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/upX/PersonalTrait"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/upX/Liberal -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Liberal">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/upX/Nationalist -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Nationalist">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
     
 
@@ -411,14 +378,6 @@
     
 
 
-    <!-- https://w3id.org/spice/SON/upX/Religious -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Religious">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/spice/SON/upX/Role -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Role">
@@ -427,66 +386,10 @@
     
 
 
-    <!-- https://w3id.org/spice/SON/upX/SecondaryStudent -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/SecondaryStudent">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/UNIS/up#hasEducationalLevel"/>
-                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/upX/SecondaryEducation"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/upX/Student"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/upX/Secular -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Secular">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/spice/SON/upX/Skill -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Skill">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/upX/Student -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Student">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/spice/SON/upX/Teenager -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/upX/Teenager">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/upX/age"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:maxInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
     
 
