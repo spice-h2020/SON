@@ -13,13 +13,11 @@
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/CommunityOntology">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/upX/0.0.2"/>
-        <rdfs:comment xml:lang="en">Community Model in Spice. V0.0.2.</rdfs:comment>
-        <rdfs:comment>Manuel Striani and Antonio Lieto</rdfs:comment>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -27,26 +25,54 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.oclc.org/NET/UNIS/up#hasEducationalLevel -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/up#hasEducationalLevel"/>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/attends -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/CommunityOntology/attends">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/CommunityOntology/School"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/hasGrade -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/CommunityOntology/hasGrade">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/hasPoliticalOrientation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/CommunityOntology/hasPoliticalOrientation">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PoliticalOrientation"/>
+    </owl:ObjectProperty>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/livesIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/CommunityOntology/livesIn">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isLocationOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Person"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -54,7 +80,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/ArabChristian -->
@@ -62,7 +88,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ArabChristian">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/ArabMuslim -->
@@ -70,7 +96,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ArabMuslim">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/AsylumSeeker -->
@@ -78,7 +104,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/AsylumSeeker">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Bedouin -->
@@ -86,7 +112,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Bedouin">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/BlackAndMixedRaceActivist -->
@@ -94,7 +120,21 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/BlackAndMixedRaceActivist">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/CEPAAluche -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/CEPAAluche">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/MNCNStudent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/hasGrade"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/adults"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Center -->
@@ -102,7 +142,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Center">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Christian -->
@@ -110,7 +150,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Christian">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Circassian -->
@@ -118,7 +158,118 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Circassian">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/CitySchoolStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/CitySchoolStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/attends"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/CommunityOntology/InsideCity"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/MNCNStudent"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent5thCourse -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent5thCourse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/hasGrade"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/5th_Grade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent6thCourse -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent6thCourse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/hasGrade"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/6th_Grade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/MNCNStudent"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent-6thCourseGroup1 -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent-6thCourseGroup1">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/hasGrade"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/6th_Grade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent-6thCourseGroup2 -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent-6thCourseGroup2">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/hasGrade"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/6th_Grade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioSanFranciscoDeAsisStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioSanFranciscoDeAsisStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/MNCNStudent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/attends"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ColegioSanFranciscoDeAsis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/hasGrade"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/2nd_ESO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Community -->
@@ -126,7 +277,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Community">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collective"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Druze -->
@@ -134,7 +285,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Druze">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Elderly -->
@@ -157,7 +308,49 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInHelsinki -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInHelsinki">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Elderly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/livesIn"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Helsinki"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKuopio -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKuopio">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Elderly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/livesIn"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Kuopio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKustaankartano -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKustaankartano">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Elderly"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/livesIn"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Kustaankartano"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity -->
@@ -165,7 +358,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Explorer -->
@@ -173,7 +366,15 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Explorer">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Family -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Family">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent"/>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Female -->
@@ -181,7 +382,15 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Female">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Grade -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Grade">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Haredi -->
@@ -189,15 +398,15 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Haredi">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByReligious"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/HarediIndependentStudent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/HarediIndependentStudent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/HechtStudent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/HealthcareWorker -->
@@ -205,7 +414,15 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/HealthcareWorker">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/HechtStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/HechtStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/ImplicitComminity -->
@@ -213,7 +430,15 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ImplicitComminity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/InsideCity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/InsideCity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace"/>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Jew -->
@@ -221,7 +446,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Jew">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Left -->
@@ -229,15 +454,29 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Left">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Liberal -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Liberal">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/hasPoliticalOrientation"/>
+                <owl:hasValue rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PoliticalOrientation:Liberal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/MNCNStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/MNCNStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Male -->
@@ -245,7 +484,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Male">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Migrant -->
@@ -253,7 +492,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Migrant">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Nationalist -->
@@ -261,7 +500,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Nationalist">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Nonbinary -->
@@ -269,7 +508,34 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Nonbinary">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/OutsideCity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/OutsideCity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/OutsideSchoolStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/OutsideSchoolStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/attends"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/CommunityOntology/OutsideCity"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/PersistentCommunity -->
@@ -277,7 +543,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersistentCommunity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup -->
@@ -285,7 +551,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics -->
@@ -293,7 +559,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/PersonByReligious -->
@@ -301,7 +567,59 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersonByReligious">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PoliticalOrientation -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PoliticalOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PrivateSchool -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PrivateSchool">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/School"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PrivateSchoolStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PrivateSchoolStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/attends"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PrivateSchool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PublicSchool -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PublicSchool">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/School"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PublicSchoolStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/PublicSchoolStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/attends"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PublicSchool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Religious -->
@@ -309,15 +627,15 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Religious">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByReligious"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/ReligiousSecularJewishStudent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/ReligiousSecularJewishStudent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/HechtStudent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Right -->
@@ -325,7 +643,37 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Right">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/RuralDwellerFamily -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/RuralDwellerFamily">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Family"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/spice/SON/CommunityOntology/livesIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/spice/SON/CommunityOntology/RuralPlace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/RuralPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/RuralPlace">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/School -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/School">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization"/>
+    </owl:Class>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/SecondaryStudent -->
@@ -339,7 +687,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/SecondaryStudentLivingInDublin -->
@@ -353,7 +701,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/SecondaryStudent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Secular -->
@@ -361,39 +709,39 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Secular">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByReligious"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/StateArabStudent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateArabStudent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/HechtStudent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/StateHarediStudent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateHarediStudent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/HechtStudent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/StateJewishStudent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateJewishStudent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/HechtStudent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/StateReligiousStudent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateReligiousStudent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Student"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/HechtStudent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Student -->
@@ -401,7 +749,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Student">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Teenager -->
@@ -427,7 +775,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Traditional -->
@@ -435,7 +783,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/Traditional">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByReligious"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/UniversityStaff -->
@@ -443,7 +791,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/UniversityStaff">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/UnknownEthinicity -->
@@ -451,7 +799,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/UnknownEthinicity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/UnknownPoliticalOrientation -->
@@ -459,7 +807,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/UnknownPoliticalOrientation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/VeryLeft -->
@@ -467,7 +815,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/VeryLeft">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/VeryReligious -->
@@ -475,7 +823,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/VeryReligious">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByReligious"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/VeryRight -->
@@ -483,7 +831,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/VeryRight">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/VirtualCommunity -->
@@ -491,7 +839,7 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/VirtualCommunity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Community"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/YoungPersonWithLongTermIlness -->
@@ -499,10 +847,10 @@
     <owl:Class rdf:about="https://w3id.org/spice/SON/CommunityOntology/YoungPersonWithLongTermIlness">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -510,7 +858,87 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ArabChristian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ArabChristian">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ArabMuslim -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ArabMuslim">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Bedouin -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Bedouin">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/BlackAndMixedRaceActivist -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/BlackAndMixedRaceActivist">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Center -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Center">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Christian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Christian">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Circassian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Circassian">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/CitySchoolStudent -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/CitySchoolStudent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ColegioSanFranciscoDeAsis -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioSanFranciscoDeAsis">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/School"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Druze -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Druze">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Dublin -->
@@ -518,7 +946,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Dublin">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Elderly -->
@@ -526,7 +954,31 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Elderly">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInHelsinki -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInHelsinki">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKuopio -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKuopio">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKustaankartano -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ElderlyLivingInKustaankartano">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Explorer -->
@@ -534,7 +986,15 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Explorer">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Female -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Female">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/GradeLevel10-Israel -->
@@ -542,7 +1002,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/GradeLevel10-Israel">
         <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/up#EducationLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/GradeLevel11-Israel -->
@@ -550,7 +1010,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/GradeLevel11-Israel">
         <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/up#EducationLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/GradeLevel12-Israel -->
@@ -558,7 +1018,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/GradeLevel12-Israel">
         <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/up#EducationLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/GradeLevel7-Israel -->
@@ -566,7 +1026,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/GradeLevel7-Israel">
         <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/up#EducationLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/GradeLevel8-Israel -->
@@ -574,7 +1034,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/GradeLevel8-Israel">
         <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/up#EducationLevel"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/GradeLevel9-Israel -->
@@ -582,7 +1042,63 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/GradeLevel9-Israel">
         <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/up#EducationLevel"/>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Haredi -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Haredi">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/HealthcareWorker -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/HealthcareWorker">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Helsinki -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Helsinki">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Jew -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Jew">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Kuopio -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Kuopio">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Kustaankartano -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Kustaankartano">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Left -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Left">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Liberal -->
@@ -590,7 +1106,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Liberal">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Luigi -->
@@ -598,7 +1114,23 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Luigi">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/SecondaryStudent"/>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Male -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Male">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Migrant -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Migrant">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Nationalist -->
@@ -606,7 +1138,80 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Nationalist">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Nonbinary -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Nonbinary">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/OutsideSchoolStudent -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/OutsideSchoolStudent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersonByEthnicGroup">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersonByPolitics">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PersonByReligious -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/PersonByReligious">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PrivateSchoolStudent -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/PrivateSchoolStudent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/MNCNStudent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioSanFranciscoDeAsisStudent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/PublicSchoolStudent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/CEPAAluche">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Religious -->
@@ -614,7 +1219,15 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Religious">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Right -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Right">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/SecondaryStudent -->
@@ -622,7 +1235,84 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/SecondaryStudent">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
+		<!-- https://w3id.org/spice/SON/CommunityOntology/SecondaryStudent -->
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent-6thCourseGroup1">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioNuestraSenoraDeValStudent-6thCourseGroup2">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent6thCourse">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ColegioArcangelStudent5thCourse">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/HechtStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateReligiousStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateJewishStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateHarediStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/StateArabStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/ReligiousSecularJewishStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/HarediIndependentStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/SecondaryStudentLivingInDublin">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/SecondaryStudent">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Teenager">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+		<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/UniversityStaff">
+				<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+		</owl:NamedIndividual>
+
+
+				<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/YoungPersonWithLongTermIlness">
+						<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+				</owl:NamedIndividual>
+
+
+				<owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/RuralDwellerFamily">
+						<rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+				</owl:NamedIndividual>
+
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Secular -->
@@ -630,7 +1320,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Secular">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Student -->
@@ -638,7 +1328,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Student">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/spice/SON/CommunityOntology/Teenager -->
@@ -646,9 +1336,90 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Teenager">
         <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
     </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/Traditional -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/Traditional">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/UnknownEthinicity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/UnknownEthinicity">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/UnknownPoliticalOrientation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/UnknownPoliticalOrientation">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/VeryReligious -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/VeryReligious">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/VeryRight -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/VeryRight">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/ExplicitCommunity"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/adults -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/adults">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Grade"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/2nd_ESO -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/2nd_ESO">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Grade"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/5th_Grade -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/5th_Grade">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Grade"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/6th_Grade -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/6th_Grade">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/Grade"/>
+    </owl:NamedIndividual>
+
+
+
+
+
+    <!-- https://w3id.org/spice/SON/CommunityOntology/PoliticalOrientation:Liberal -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/CommunityOntology/PoliticalOrientation:Liberal">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/CommunityOntology/PoliticalOrientation"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
