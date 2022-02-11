@@ -12,13 +12,13 @@
 @base <https://w3id.org/spice/SON/ShaverEmotions> .
 
 <https://w3id.org/spice/SON/ShaverEmotions> rdf:type owl:Ontology ;
-                                             owl:versionIRI <https://w3id.org/spice/SON/ShaverEmotions/0.0.3> ;
+                                             owl:versionIRI <https://w3id.org/spice/SON/ShaverEmotions/0.0.2> ;
                                              owl:imports <https://w3id.org/spice/SON/emotion/0.0.2> ;
                                              dc:description """This ontology has been developed for the SPICE Project (https://spice-h2020.github.io/) and it is based on Shaver's Emotion Theory.
 
 A visualization of the ontology structure is available here: https://github.com/spice-h2020/SON/blob/main/ShaverEmotions/shavernew.png"""@en ;
                                              rdfs:comment "Author: Bruno Sartini"@en ;
-                                             owl:priorVersion <https://w3id.org/spice/SON/ShaverEmotions/0.0.2> .
+                                             owl:priorVersion <https://w3id.org/spice/SON/ShaverEmotions/0.0.1> .
 
 #################################################################
 #    Object Properties
@@ -46,8 +46,7 @@ shavem:Adoration rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Love
-                                 ] ;
-                 rdfs:label "Adoration"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Affection
@@ -56,8 +55,7 @@ shavem:Affection rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Love
-                                 ] ;
-                 rdfs:label "Affection"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Aggravation
@@ -66,8 +64,7 @@ shavem:Aggravation rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Anger
-                                   ] ;
-                   rdfs:label "Aggravation"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Agitation
@@ -76,8 +73,7 @@ shavem:Agitation rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Anger
-                                 ] ;
-                 rdfs:label "Agitation"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Agony
@@ -86,8 +82,7 @@ shavem:Agony rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Sadness
-                             ] ;
-             rdfs:label "Agony"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Alarm
@@ -96,8 +91,7 @@ shavem:Alarm rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Fear
-                             ] ;
-             rdfs:label "Alarm"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Alienation
@@ -106,8 +100,7 @@ shavem:Alienation rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Sadness
-                                  ] ;
-                  rdfs:label "Alienation"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Amazement
@@ -116,8 +109,7 @@ shavem:Amazement rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Surprise
-                                 ] ;
-                 rdfs:label "Amazement"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Amusement
@@ -126,8 +118,7 @@ shavem:Amusement rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Joy
-                                 ] ;
-                 rdfs:label "Amusement"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Anger
@@ -142,8 +133,7 @@ shavem:Anguish rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Sadness
-                               ] ;
-               rdfs:label "Anguish"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Annoyance
@@ -152,8 +142,7 @@ shavem:Annoyance rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Anger
-                                 ] ;
-                 rdfs:label "Annoyance"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Anxiety
@@ -162,8 +151,7 @@ shavem:Anxiety rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Fear
-                               ] ;
-               rdfs:label "Anxiety"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Apprehension
@@ -172,8 +160,7 @@ shavem:Apprehension rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Fear
-                                    ] ;
-                    rdfs:label "Apprehension"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Arousal
@@ -182,8 +169,7 @@ shavem:Arousal rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Love
-                               ] ;
-               rdfs:label "Arousal"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Astonishment
@@ -192,8 +178,7 @@ shavem:Astonishment rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Surprise
-                                    ] ;
-                    rdfs:label "Astonishment"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Attraction
@@ -202,8 +187,7 @@ shavem:Attraction rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Love
-                                  ] ;
-                  rdfs:label "Attraction"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Bitterness
@@ -212,8 +196,7 @@ shavem:Bitterness rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Anger
-                                  ] ;
-                  rdfs:label "Bitterness"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Bliss
@@ -222,8 +205,7 @@ shavem:Bliss rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Joy
-                             ] ;
-             rdfs:label "Bliss"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Caring
@@ -232,8 +214,7 @@ shavem:Caring rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Love
-                              ] ;
-              rdfs:label "Caring"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Cheerfulness
@@ -242,8 +223,7 @@ shavem:Cheerfulness rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Joy
-                                    ] ;
-                    rdfs:label "Cheerfulness"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Compassion
@@ -252,8 +232,7 @@ shavem:Compassion rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Love
-                                  ] ;
-                  rdfs:label "Compassion"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Contempt
@@ -262,8 +241,7 @@ shavem:Contempt rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Anger
-                                ] ;
-                rdfs:label "Contempt"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Contentment
@@ -272,8 +250,7 @@ shavem:Contentment rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Joy
-                                   ] ;
-                   rdfs:label "Contentment"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Defeat
@@ -282,8 +259,7 @@ shavem:Defeat rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Sadness
-                              ] ;
-              rdfs:label "Defeat"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Dejection
@@ -292,8 +268,7 @@ shavem:Dejection rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Sadness
-                                 ] ;
-                 rdfs:label "Dejection"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Delight
@@ -302,8 +277,7 @@ shavem:Delight rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Joy
-                               ] ;
-               rdfs:label "Delight"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Depression
@@ -312,8 +286,7 @@ shavem:Depression rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Sadness
-                                  ] ;
-                  rdfs:label "Depression"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Desire
@@ -322,8 +295,7 @@ shavem:Desire rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Love
-                              ] ;
-              rdfs:label "Desire"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Despair
@@ -332,8 +304,7 @@ shavem:Despair rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Sadness
-                               ] ;
-               rdfs:label "Despair"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Disappointment
@@ -342,8 +313,7 @@ shavem:Disappointment rdf:type owl:Class ;
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty shavem:refersToPrototypeEmotion ;
                                         owl:allValuesFrom shavem:Sadness
-                                      ] ;
-                      rdfs:label "Disappointment"@en .
+                                      ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Disgust
@@ -352,8 +322,7 @@ shavem:Disgust rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Anger
-                               ] ;
-               rdfs:label "Disgust"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Dislike
@@ -362,8 +331,7 @@ shavem:Dislike rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Anger
-                               ] ;
-               rdfs:label "Dislike"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Dismay
@@ -372,8 +340,7 @@ shavem:Dismay rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Sadness
-                              ] ;
-              rdfs:label "Dismay"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Displeasure
@@ -382,8 +349,7 @@ shavem:Displeasure rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Sadness
-                                   ] ;
-                   rdfs:label "Displeasure"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Distress
@@ -392,8 +358,7 @@ shavem:Distress rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Fear
-                                ] ;
-                rdfs:label "Distress"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Dread
@@ -402,8 +367,7 @@ shavem:Dread rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Fear
-                             ] ;
-             rdfs:label "Dread"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Eagerness
@@ -412,8 +376,7 @@ shavem:Eagerness rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Joy
-                                 ] ;
-                 rdfs:label "Eagerness"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Ecstasy
@@ -422,8 +385,7 @@ shavem:Ecstasy rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Joy
-                               ] ;
-               rdfs:label "Ecstasy"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Elation
@@ -432,8 +394,7 @@ shavem:Elation rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Joy
-                               ] ;
-               rdfs:label "Elation"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Embarrassment
@@ -442,8 +403,7 @@ shavem:Embarrassment rdf:type owl:Class ;
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty shavem:refersToPrototypeEmotion ;
                                        owl:allValuesFrom shavem:Sadness
-                                     ] ;
-                     rdfs:label "Embarrassment"@en .
+                                     ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent
@@ -464,8 +424,7 @@ shavem:Enjoyment rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Joy
-                                 ] ;
-                 rdfs:label "Enjoyment"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Enthrallment
@@ -474,8 +433,7 @@ shavem:Enthrallment rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Joy
-                                    ] ;
-                    rdfs:label "Enthrallment"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Enthusiasm
@@ -484,8 +442,7 @@ shavem:Enthusiasm rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Joy
-                                  ] ;
-                  rdfs:label "Enthusiasm"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Envy
@@ -494,8 +451,7 @@ shavem:Envy rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Anger
-                            ] ;
-            rdfs:label "Envy"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Euphoria
@@ -504,8 +460,7 @@ shavem:Euphoria rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Joy
-                                ] ;
-                rdfs:label "Euphoria"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Exasperation
@@ -514,8 +469,7 @@ shavem:Exasperation rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Anger
-                                    ] ;
-                    rdfs:label "Exasperation"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Excitement
@@ -524,8 +478,7 @@ shavem:Excitement rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Joy
-                                  ] ;
-                  rdfs:label "Excitement"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Exhilaration
@@ -534,8 +487,7 @@ shavem:Exhilaration rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Joy
-                                    ] ;
-                    rdfs:label "Exhilaration"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Fear
@@ -550,8 +502,7 @@ shavem:Ferocity rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Anger
-                                ] ;
-                rdfs:label "Ferocity"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Fondness
@@ -560,8 +511,7 @@ shavem:Fondness rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Love
-                                ] ;
-                rdfs:label "Fondness"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Fright
@@ -570,8 +520,7 @@ shavem:Fright rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Fear
-                              ] ;
-              rdfs:label "Fright"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Frustration
@@ -580,8 +529,7 @@ shavem:Frustration rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Anger
-                                   ] ;
-                   rdfs:label "Frustration"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Fury
@@ -590,8 +538,7 @@ shavem:Fury rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Anger
-                            ] ;
-            rdfs:label "Fury"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Gaiety
@@ -600,8 +547,7 @@ shavem:Gaiety rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Joy
-                              ] ;
-              rdfs:label "Gaiety"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Gladness
@@ -610,8 +556,7 @@ shavem:Gladness rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Joy
-                                ] ;
-                rdfs:label "Gladness"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Glee
@@ -620,8 +565,7 @@ shavem:Glee rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Joy
-                            ] ;
-            rdfs:label "Glee"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Gloom
@@ -630,8 +574,7 @@ shavem:Gloom rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Sadness
-                             ] ;
-             rdfs:label "Gloom"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Glumness
@@ -640,8 +583,7 @@ shavem:Glumness rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Sadness
-                                ] ;
-                rdfs:label "Glumness"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Grief
@@ -650,8 +592,7 @@ shavem:Grief rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Sadness
-                             ] ;
-             rdfs:label "Grief"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Grouchiness
@@ -660,8 +601,7 @@ shavem:Grouchiness rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Anger
-                                   ] ;
-                   rdfs:label "Grouchiness"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Grumpiness
@@ -670,8 +610,7 @@ shavem:Grumpiness rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Anger
-                                  ] ;
-                  rdfs:label "Grumpiness"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Guilt
@@ -680,8 +619,7 @@ shavem:Guilt rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Sadness
-                             ] ;
-             rdfs:label "Guilt"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Happiness
@@ -690,8 +628,7 @@ shavem:Happiness rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Joy
-                                 ] ;
-                 rdfs:label "Happiness"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Hate
@@ -700,8 +637,7 @@ shavem:Hate rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Anger
-                            ] ;
-            rdfs:label "Hate"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Homesickness
@@ -710,8 +646,7 @@ shavem:Homesickness rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Sadness
-                                    ] ;
-                    rdfs:label "Homesickness"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Hope
@@ -720,8 +655,7 @@ shavem:Hope rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Joy
-                            ] ;
-            rdfs:label "Hope"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Hopelessness
@@ -730,8 +664,7 @@ shavem:Hopelessness rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Sadness
-                                    ] ;
-                    rdfs:label "Hopelessness"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Horror
@@ -740,8 +673,7 @@ shavem:Horror rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Fear
-                              ] ;
-              rdfs:label "Horror"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Hostility
@@ -750,8 +682,7 @@ shavem:Hostility rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Anger
-                                 ] ;
-                 rdfs:label "Hostility"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Humiliation
@@ -760,8 +691,7 @@ shavem:Humiliation rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Sadness
-                                   ] ;
-                   rdfs:label "Humiliation"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Hurt
@@ -770,8 +700,7 @@ shavem:Hurt rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Sadness
-                            ] ;
-            rdfs:label "Hurt"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Hysteria
@@ -780,8 +709,7 @@ shavem:Hysteria rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Fear
-                                ] ;
-                rdfs:label "Hysteria"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Infatuation
@@ -790,8 +718,7 @@ shavem:Infatuation rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Love
-                                   ] ;
-                   rdfs:label "Infatuation"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Insecurity
@@ -800,8 +727,7 @@ shavem:Insecurity rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Sadness
-                                  ] ;
-                  rdfs:label "Insecurity"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Insult
@@ -810,8 +736,7 @@ shavem:Insult rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Sadness
-                              ] ;
-              rdfs:label "Insult"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Irritation
@@ -820,8 +745,7 @@ shavem:Irritation rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Anger
-                                  ] ;
-                  rdfs:label "Irritation"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Isolation
@@ -830,8 +754,7 @@ shavem:Isolation rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Sadness
-                                 ] ;
-                 rdfs:label "Isolation"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Jealousy
@@ -840,8 +763,7 @@ shavem:Jealousy rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Anger
-                                ] ;
-                rdfs:label "Jealousy"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Jolliness
@@ -850,8 +772,7 @@ shavem:Jolliness rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Joy
-                                 ] ;
-                 rdfs:label "Jolliness"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Joviality
@@ -860,8 +781,7 @@ shavem:Joviality rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Joy
-                                 ] ;
-                 rdfs:label "Joviality"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Joy
@@ -876,8 +796,7 @@ shavem:Jubilation rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Joy
-                                  ] ;
-                  rdfs:label "Jubilation"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Liking
@@ -886,8 +805,7 @@ shavem:Liking rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Love
-                              ] ;
-              rdfs:label "Liking"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Loathing
@@ -896,8 +814,7 @@ shavem:Loathing rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Anger
-                                ] ;
-                rdfs:label "Loathing"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Loneliness
@@ -906,8 +823,7 @@ shavem:Loneliness rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Sadness
-                                  ] ;
-                  rdfs:label "Loneliness"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Longing
@@ -916,8 +832,7 @@ shavem:Longing rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Love
-                               ] ;
-               rdfs:label "Longing"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Love
@@ -932,8 +847,7 @@ shavem:Lust rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Love
-                            ] ;
-            rdfs:label "Lust"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Melancholy
@@ -942,8 +856,7 @@ shavem:Melancholy rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Sadness
-                                  ] ;
-                  rdfs:label "Melancholy"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Misery
@@ -952,8 +865,7 @@ shavem:Misery rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Sadness
-                              ] ;
-              rdfs:label "Misery"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Mortification
@@ -962,8 +874,7 @@ shavem:Mortification rdf:type owl:Class ;
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty shavem:refersToPrototypeEmotion ;
                                        owl:allValuesFrom shavem:Fear
-                                     ] ;
-                     rdfs:label "Mortification"@en .
+                                     ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Neglect
@@ -972,8 +883,7 @@ shavem:Neglect rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Sadness
-                               ] ;
-               rdfs:label "Neglect"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Nervousness
@@ -982,8 +892,7 @@ shavem:Nervousness rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Fear
-                                   ] ;
-                   rdfs:label "Nervousness"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Optimism
@@ -992,8 +901,7 @@ shavem:Optimism rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Joy
-                                ] ;
-                rdfs:label "Optimism"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Outrage
@@ -1002,8 +910,7 @@ shavem:Outrage rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Anger
-                               ] ;
-               rdfs:label "Outrage"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Panic
@@ -1012,8 +919,7 @@ shavem:Panic rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Fear
-                             ] ;
-             rdfs:label "Panic"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Passion
@@ -1022,8 +928,7 @@ shavem:Passion rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Love
-                               ] ;
-               rdfs:label "Passion"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Pity
@@ -1032,8 +937,7 @@ shavem:Pity rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Sadness
-                            ] ;
-            rdfs:label "Pity"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Pleasure
@@ -1042,8 +946,7 @@ shavem:Pleasure rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Joy
-                                ] ;
-                rdfs:label "Pleasure"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Pride
@@ -1052,8 +955,7 @@ shavem:Pride rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Joy
-                             ] ;
-             rdfs:label "Pride"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion
@@ -1069,8 +971,7 @@ shavem:Rage rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Anger
-                            ] ;
-            rdfs:label "Rage"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Rapture
@@ -1079,8 +980,7 @@ shavem:Rapture rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Joy
-                               ] ;
-               rdfs:label "Rapture"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Regret
@@ -1089,8 +989,7 @@ shavem:Regret rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Sadness
-                              ] ;
-              rdfs:label "Regret"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Rejection
@@ -1099,8 +998,7 @@ shavem:Rejection rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Sadness
-                                 ] ;
-                 rdfs:label "Rejection"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Relief
@@ -1109,8 +1007,7 @@ shavem:Relief rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Joy
-                              ] ;
-              rdfs:label "Relief"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Remorse
@@ -1119,8 +1016,7 @@ shavem:Remorse rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Sadness
-                               ] ;
-               rdfs:label "Remorse"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Resentment
@@ -1129,8 +1025,7 @@ shavem:Resentment rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Anger
-                                  ] ;
-                  rdfs:label "Resentment"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Revulsion
@@ -1139,8 +1034,7 @@ shavem:Revulsion rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Anger
-                                 ] ;
-                 rdfs:label "Revulsion"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Sadness
@@ -1155,8 +1049,7 @@ shavem:Satisfaction rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Joy
-                                    ] ;
-                    rdfs:label "Satisfaction"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Scorn
@@ -1165,8 +1058,7 @@ shavem:Scorn rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Anger
-                             ] ;
-             rdfs:label "Scorn"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Sentimentality
@@ -1175,8 +1067,7 @@ shavem:Sentimentality rdf:type owl:Class ;
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty shavem:refersToPrototypeEmotion ;
                                         owl:allValuesFrom shavem:Love
-                                      ] ;
-                      rdfs:label "Sentimentality"@en .
+                                      ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Shame
@@ -1185,8 +1076,7 @@ shavem:Shame rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Sadness
-                             ] ;
-             rdfs:label "Shame"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Shock
@@ -1195,8 +1085,7 @@ shavem:Shock rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Fear
-                             ] ;
-             rdfs:label "Shock"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Sorrow
@@ -1205,8 +1094,7 @@ shavem:Sorrow rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Sadness
-                              ] ;
-              rdfs:label "Sorrow"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Spite
@@ -1215,8 +1103,7 @@ shavem:Spite rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Anger
-                             ] ;
-             rdfs:label "Spite"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Suffering
@@ -1225,8 +1112,7 @@ shavem:Suffering rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Sadness
-                                 ] ;
-                 rdfs:label "Suffering"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Surprise
@@ -1241,8 +1127,7 @@ shavem:Sympathy rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty shavem:refersToPrototypeEmotion ;
                                   owl:allValuesFrom shavem:Sadness
-                                ] ;
-                rdfs:label "Sympathy"@en .
+                                ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Tenderness
@@ -1251,8 +1136,7 @@ shavem:Tenderness rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Love
-                                  ] ;
-                  rdfs:label "Tenderness"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Tenseness
@@ -1261,8 +1145,7 @@ shavem:Tenseness rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty shavem:refersToPrototypeEmotion ;
                                    owl:allValuesFrom shavem:Fear
-                                 ] ;
-                 rdfs:label "Tenseness"@en .
+                                 ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Terror
@@ -1271,8 +1154,7 @@ shavem:Terror rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Fear
-                              ] ;
-              rdfs:label "Terror"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Thrill
@@ -1281,8 +1163,7 @@ shavem:Thrill rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty shavem:refersToPrototypeEmotion ;
                                 owl:allValuesFrom shavem:Joy
-                              ] ;
-              rdfs:label "Thrill"@en .
+                              ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Torment
@@ -1291,8 +1172,7 @@ shavem:Torment rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Anger
-                               ] ;
-               rdfs:label "Torment"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Triumph
@@ -1301,8 +1181,7 @@ shavem:Triumph rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty shavem:refersToPrototypeEmotion ;
                                  owl:allValuesFrom shavem:Joy
-                               ] ;
-               rdfs:label "Triumph"@en .
+                               ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Uneasiness
@@ -1311,8 +1190,7 @@ shavem:Uneasiness rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty shavem:refersToPrototypeEmotion ;
                                     owl:allValuesFrom shavem:Fear
-                                  ] ;
-                  rdfs:label "Uneasiness"@en .
+                                  ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Unhappiness
@@ -1321,8 +1199,7 @@ shavem:Unhappiness rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty shavem:refersToPrototypeEmotion ;
                                      owl:allValuesFrom shavem:Sadness
-                                   ] ;
-                   rdfs:label "Unhappiness"@en .
+                                   ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Vengefulness
@@ -1331,8 +1208,7 @@ shavem:Vengefulness rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty shavem:refersToPrototypeEmotion ;
                                       owl:allValuesFrom shavem:Anger
-                                    ] ;
-                    rdfs:label "Vengefulness"@en .
+                                    ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Woe
@@ -1341,8 +1217,7 @@ shavem:Woe rdf:type owl:Class ;
                            [ rdf:type owl:Restriction ;
                              owl:onProperty shavem:refersToPrototypeEmotion ;
                              owl:allValuesFrom shavem:Sadness
-                           ] ;
-           rdfs:label "Woe"@en .
+                           ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Worry
@@ -1351,8 +1226,7 @@ shavem:Worry rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Fear
-                             ] ;
-             rdfs:label "Worry"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Wrath
@@ -1361,8 +1235,7 @@ shavem:Wrath rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty shavem:refersToPrototypeEmotion ;
                                owl:allValuesFrom shavem:Anger
-                             ] ;
-             rdfs:label "Wrath"@en .
+                             ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Zeal
@@ -1371,8 +1244,7 @@ shavem:Zeal rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Joy
-                            ] ;
-            rdfs:label "Zeal"@en .
+                            ] .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Zest
@@ -1381,8 +1253,7 @@ shavem:Zest rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty shavem:refersToPrototypeEmotion ;
                               owl:allValuesFrom shavem:Joy
-                            ] ;
-            rdfs:label "Zest"@en .
+                            ] .
 
 
 #################################################################
