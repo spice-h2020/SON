@@ -13,13 +13,13 @@
 @base <https://w3id.org/spice/SON/ShaverEmotions> .
 
 <https://w3id.org/spice/SON/ShaverEmotions> rdf:type owl:Ontology ;
-                                             owl:versionIRI <https://w3id.org/spice/SON/ShaverEmotions/0.0.4> ;
+                                             owl:versionIRI <https://w3id.org/spice/SON/ShaverEmotions/0.0.5> ;
                                              owl:imports <https://w3id.org/spice/SON/emotion/0.0.2> ;
                                              dc:description """This ontology has been developed for the SPICE Project (https://spice-h2020.github.io/) and it is based on Shaver's Emotion Theory.
 
 A visualization of the ontology structure is available here: https://github.com/spice-h2020/SON/blob/main/ShaverEmotions/shavernew.png"""@en ;
                                              rdfs:comment "Author: Bruno Sartini"@en ;
-                                             owl:priorVersion <https://w3id.org/spice/SON/ShaverEmotions/0.0.3> .
+                                             owl:priorVersion <https://w3id.org/spice/SON/ShaverEmotions/0.0.4> .
 
 #################################################################
 #    Annotation properties
@@ -36,13 +36,18 @@ ex:bibRef rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/spice/SON/ShaverEmotions/isPrototypeEmotionOf
 shavem:isPrototypeEmotionOf rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf owl:topObjectProperty ;
-                            owl:inverseOf shavem:refersToPrototypeEmotion .
+                            owl:inverseOf shavem:refersToPrototypeEmotion ;
+                            rdfs:comment "Inverse of Refers to prototype emotion"@en ;
+                            rdfs:label "Is prototype emotion of"@en .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/refersToPrototypeEmotion
 shavem:refersToPrototypeEmotion rdf:type owl:ObjectProperty ;
                                 rdfs:domain shavem:EmotionWord ;
-                                rdfs:range shavem:PrototypeEmotion .
+                                rdfs:range shavem:PrototypeEmotion ;
+                                ex:bibRef "Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."@en ;
+                                rdfs:comment "This property was introduced to link an emotion word to the Emotion Prototype that was chosen to identify a cluster in Shaver studies."@en ;
+                                rdfs:label "refers to prototype emotion"@en .
 
 
 #################################################################
@@ -463,14 +468,22 @@ shavem:Embarrassment rdf:type owl:Class ;
                      rdfs:label "Embarrassment"@en .
 
 
-###  https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent
-shavem:EmotionEvent rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> .
+###  https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature
+shavem:EmotionFeature rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+                      ex:bibRef """\"The coders' judgments were used to produce a feature summary of
+each narrative account. A feature was scored as present in a given account
+if at least two of three coders agreed that it was present. On the
+basis of these codings, we determined the prototypical features of the
+basic emotion categories.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+                      rdfs:comment "An emotion feature is the event that triggers an emotion or the physical/psychological effect that the emotion triggers on the experiencer. It was extracted by the narration of an emotional episode of the participants of Shaver Study. (In an Earlier version it was called Emotion Event)"@en ;
+                      rdfs:label "Emotion Feature"@en .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/EmotionWord
 shavem:EmotionWord rdf:type owl:Class ;
-                   rdfs:subClassOf emotion:Emotion ;
+                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject> ,
+                                   emotion:Emotion ;
                    ex:bibRef "Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."@en ;
                    rdfs:comment "Emotion words are the emotions that emerged from Shaver's study across various emotion theories"@en ;
                    rdfs:label "Emotion Word"@en .
@@ -1104,7 +1117,8 @@ shavem:Pride rdf:type owl:Class ;
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion
 shavem:PrototypeEmotion rdf:type owl:Class ;
-                        rdfs:subClassOf emotion:Emotion ;
+                        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject> ,
+                                        emotion:Emotion ;
                         ex:bibRef """\"If contemporary
 cognitive psychology is correct in claiming that repeated experiences
 with similar events lead to the construction of generic
@@ -1453,7 +1467,7 @@ shavem:Zest rdf:type owl:Class ;
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause
 shavem:attacking_something_other_than_cause rdf:type owl:NamedIndividual ,
-                                                     shavem:EmotionEvent ,
+                                                     shavem:EmotionFeature ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty emotion:triggers ;
                                                        owl:someValuesFrom shavem:Anger
@@ -1463,7 +1477,7 @@ shavem:attacking_something_other_than_cause rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/being_alone
 shavem:being_alone rdf:type owl:NamedIndividual ,
-                            shavem:EmotionEvent ,
+                            shavem:EmotionFeature ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty emotion:triggers ;
                               owl:someValuesFrom shavem:Fear
@@ -1473,7 +1487,7 @@ shavem:being_alone rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark
 shavem:being_in_the_dark rdf:type owl:NamedIndividual ,
-                                  shavem:EmotionEvent ,
+                                  shavem:EmotionFeature ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty emotion:triggers ;
                                     owl:someValuesFrom shavem:Fear
@@ -1483,7 +1497,7 @@ shavem:being_in_the_dark rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling
 shavem:communicating_the_good_feeling rdf:type owl:NamedIndividual ,
-                                               shavem:EmotionEvent ,
+                                               shavem:EmotionFeature ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty emotion:triggers ;
                                                  owl:someValuesFrom shavem:Joy
@@ -1493,7 +1507,7 @@ shavem:communicating_the_good_feeling rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/crying
 shavem:crying rdf:type owl:NamedIndividual ,
-                       shavem:EmotionEvent ,
+                       shavem:EmotionFeature ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty emotion:triggers ;
                          owl:someValuesFrom shavem:Anger
@@ -1503,7 +1517,7 @@ shavem:crying rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one
 shavem:death_of_a_loved_one rdf:type owl:NamedIndividual ,
-                                     shavem:EmotionEvent ,
+                                     shavem:EmotionFeature ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty emotion:triggers ;
                                        owl:someValuesFrom shavem:Sadness
@@ -1513,7 +1527,7 @@ shavem:death_of_a_loved_one rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people
 shavem:doing_nice_things_for_other_people rdf:type owl:NamedIndividual ,
-                                                   shavem:EmotionEvent ,
+                                                   shavem:EmotionFeature ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty emotion:triggers ;
                                                      owl:someValuesFrom shavem:Joy
@@ -1523,7 +1537,7 @@ shavem:doing_nice_things_for_other_people rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication
 shavem:exceptionally_good_communication rdf:type owl:NamedIndividual ,
-                                                 shavem:EmotionEvent ,
+                                                 shavem:EmotionFeature ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty emotion:triggers ;
                                                    owl:someValuesFrom shavem:Love
@@ -1533,7 +1547,7 @@ shavem:exceptionally_good_communication rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other
 shavem:expressing_positive_feelings_to_other rdf:type owl:NamedIndividual ,
-                                                      shavem:EmotionEvent ,
+                                                      shavem:EmotionFeature ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty emotion:triggers ;
                                                         owl:someValuesFrom shavem:Love
@@ -1543,7 +1557,7 @@ shavem:expressing_positive_feelings_to_other rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/feeling_excited
 shavem:feeling_excited rdf:type owl:NamedIndividual ,
-                                shavem:EmotionEvent ,
+                                shavem:EmotionFeature ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty emotion:triggers ;
                                   owl:someValuesFrom shavem:Joy
@@ -1553,7 +1567,7 @@ shavem:feeling_excited rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched
 shavem:hands_or_fists_clenched rdf:type owl:NamedIndividual ,
-                                        shavem:EmotionEvent ,
+                                        shavem:EmotionFeature ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty emotion:triggers ;
                                           owl:someValuesFrom shavem:Anger
@@ -1563,7 +1577,7 @@ shavem:hands_or_fists_clenched rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/hugging_people
 shavem:hugging_people rdf:type owl:NamedIndividual ,
-                               shavem:EmotionEvent ,
+                               shavem:EmotionFeature ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty emotion:triggers ;
                                  owl:someValuesFrom shavem:Joy
@@ -1573,7 +1587,7 @@ shavem:hugging_people rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger
 shavem:imagining_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
-                                                       shavem:EmotionEvent ,
+                                                       shavem:EmotionFeature ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty emotion:triggers ;
                                                          owl:someValuesFrom shavem:Anger
@@ -1583,7 +1597,7 @@ shavem:imagining_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down
 shavem:jumping_up_and_down rdf:type owl:NamedIndividual ,
-                                    shavem:EmotionEvent ,
+                                    shavem:EmotionFeature ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty emotion:triggers ;
                                       owl:someValuesFrom shavem:Joy
@@ -1593,7 +1607,7 @@ shavem:jumping_up_and_down rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/kissing
 shavem:kissing rdf:type owl:NamedIndividual ,
-                        shavem:EmotionEvent ,
+                        shavem:EmotionFeature ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty emotion:triggers ;
                           owl:someValuesFrom shavem:Love
@@ -1603,7 +1617,7 @@ shavem:kissing rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention
 shavem:narrowing_of_attention rdf:type owl:NamedIndividual ,
-                                       shavem:EmotionEvent ,
+                                       shavem:EmotionFeature ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty emotion:triggers ;
                                          owl:someValuesFrom shavem:Anger
@@ -1613,7 +1627,7 @@ shavem:narrowing_of_attention rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval
 shavem:nonverbally_communicating_disapproval rdf:type owl:NamedIndividual ,
-                                                      shavem:EmotionEvent ,
+                                                      shavem:EmotionFeature ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty emotion:triggers ;
                                                         owl:someValuesFrom shavem:Anger
@@ -1623,7 +1637,7 @@ shavem:nonverbally_communicating_disapproval rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/other_offers_something_wanted
 shavem:other_offers_something_wanted rdf:type owl:NamedIndividual ,
-                                              shavem:EmotionEvent ,
+                                              shavem:EmotionFeature ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty emotion:triggers ;
                                                 owl:someValuesFrom shavem:Love
@@ -1633,7 +1647,7 @@ shavem:other_offers_something_wanted rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive
 shavem:person_finds_other_attractive rdf:type owl:NamedIndividual ,
-                                              shavem:EmotionEvent ,
+                                              shavem:EmotionFeature ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty emotion:triggers ;
                                                 owl:someValuesFrom shavem:Love
@@ -1643,7 +1657,7 @@ shavem:person_finds_other_attractive rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger
 shavem:physically_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
-                                                        shavem:EmotionEvent ,
+                                                        shavem:EmotionFeature ,
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty emotion:triggers ;
                                                           owl:someValuesFrom shavem:Anger
@@ -1653,7 +1667,7 @@ shavem:physically_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion
 shavem:picturing_a_disastrous_conclusion rdf:type owl:NamedIndividual ,
-                                                  shavem:EmotionEvent ,
+                                                  shavem:EmotionFeature ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty emotion:triggers ;
                                                     owl:someValuesFrom shavem:Fear
@@ -1663,7 +1677,7 @@ shavem:picturing_a_disastrous_conclusion rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger
 shavem:predisposition_to_anger rdf:type owl:NamedIndividual ,
-                                        shavem:EmotionEvent ,
+                                        shavem:EmotionFeature ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty emotion:triggers ;
                                           owl:someValuesFrom shavem:Anger
@@ -1673,7 +1687,7 @@ shavem:predisposition_to_anger rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain
 shavem:real_or_threatened_pain rdf:type owl:NamedIndividual ,
-                                        shavem:EmotionEvent ,
+                                        shavem:EmotionFeature ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty emotion:triggers ;
                                           owl:someValuesFrom shavem:Anger
@@ -1683,7 +1697,7 @@ shavem:real_or_threatened_pain rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations
 shavem:reality_exceeding_expectations rdf:type owl:NamedIndividual ,
-                                               shavem:EmotionEvent ,
+                                               shavem:EmotionFeature ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty emotion:triggers ;
                                                  owl:someValuesFrom shavem:Joy
@@ -1693,7 +1707,7 @@ shavem:reality_exceeding_expectations rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations
 shavem:reality_falling_short_of_expectations rdf:type owl:NamedIndividual ,
-                                                      shavem:EmotionEvent ,
+                                                      shavem:EmotionFeature ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty emotion:triggers ;
                                                         owl:someValuesFrom shavem:Sadness
@@ -1703,7 +1717,7 @@ shavem:reality_falling_short_of_expectations rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise
 shavem:receiving_a_wonderful_surprise rdf:type owl:NamedIndividual ,
-                                               shavem:EmotionEvent ,
+                                               shavem:EmotionFeature ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty emotion:triggers ;
                                                  owl:someValuesFrom shavem:Joy
@@ -1713,7 +1727,7 @@ shavem:receiving_a_wonderful_surprise rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things
 shavem:saying_positive_things rdf:type owl:NamedIndividual ,
-                                       shavem:EmotionEvent ,
+                                       shavem:EmotionFeature ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty emotion:triggers ;
                                          owl:someValuesFrom shavem:Joy
@@ -1723,7 +1737,7 @@ shavem:saying_positive_things rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things
 shavem:saying_sad_things rdf:type owl:NamedIndividual ,
-                                  shavem:EmotionEvent ,
+                                  shavem:EmotionFeature ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty emotion:triggers ;
                                     owl:someValuesFrom shavem:Sadness
@@ -1733,7 +1747,7 @@ shavem:saying_sad_things rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling
 shavem:sharing_the_feeling rdf:type owl:NamedIndividual ,
-                                    shavem:EmotionEvent ,
+                                    shavem:EmotionFeature ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty emotion:triggers ;
                                       owl:someValuesFrom shavem:Joy
@@ -1743,7 +1757,7 @@ shavem:sharing_the_feeling rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/smiling
 shavem:smiling rdf:type owl:NamedIndividual ,
-                        shavem:EmotionEvent ,
+                        shavem:EmotionFeature ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty emotion:triggers ;
                           owl:someValuesFrom shavem:Joy
@@ -1757,7 +1771,7 @@ shavem:smiling rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/talking_little_or_not_at_all
 shavem:talking_little_or_not_at_all rdf:type owl:NamedIndividual ,
-                                             shavem:EmotionEvent ,
+                                             shavem:EmotionFeature ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty emotion:triggers ;
                                                owl:someValuesFrom shavem:Sadness
@@ -1767,7 +1781,7 @@ shavem:talking_little_or_not_at_all rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/talking_to_someone_about_sadness
 shavem:talking_to_someone_about_sadness rdf:type owl:NamedIndividual ,
-                                                 shavem:EmotionEvent ,
+                                                 shavem:EmotionFeature ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty emotion:triggers ;
                                                    owl:someValuesFrom shavem:Sadness
@@ -1777,7 +1791,7 @@ shavem:talking_to_someone_about_sadness rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/threat_of_harm_or_death
 shavem:threat_of_harm_or_death rdf:type owl:NamedIndividual ,
-                                        shavem:EmotionEvent ,
+                                        shavem:EmotionFeature ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty emotion:triggers ;
                                           owl:someValuesFrom shavem:Fear
@@ -1787,7 +1801,7 @@ shavem:threat_of_harm_or_death rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection
 shavem:threat_of_social_rejection rdf:type owl:NamedIndividual ,
-                                           shavem:EmotionEvent ,
+                                           shavem:EmotionFeature ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty emotion:triggers ;
                                              owl:someValuesFrom shavem:Fear
@@ -1797,7 +1811,7 @@ shavem:threat_of_social_rejection rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body
 shavem:tightness_or_rigidity_in_body rdf:type owl:NamedIndividual ,
-                                              shavem:EmotionEvent ,
+                                              shavem:EmotionFeature ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty emotion:triggers ;
                                                 owl:someValuesFrom shavem:Anger
@@ -1807,7 +1821,7 @@ shavem:tightness_or_rigidity_in_body rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger
 shavem:verbally_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
-                                                      shavem:EmotionEvent ,
+                                                      shavem:EmotionFeature ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty emotion:triggers ;
                                                         owl:someValuesFrom shavem:Anger
@@ -1817,7 +1831,7 @@ shavem:verbally_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation
 shavem:violation_of_expectation rdf:type owl:NamedIndividual ,
-                                         shavem:EmotionEvent ,
+                                         shavem:EmotionFeature ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty emotion:triggers ;
                                            owl:someValuesFrom shavem:Anger
@@ -1827,7 +1841,7 @@ shavem:violation_of_expectation rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/wanted
 shavem:wanted rdf:type owl:NamedIndividual ,
-                       shavem:EmotionEvent ,
+                       shavem:EmotionFeature ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty emotion:triggers ;
                          owl:someValuesFrom shavem:Joy
@@ -1837,7 +1851,7 @@ shavem:wanted rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex
 shavem:wanting_physical_closeness_or_sex rdf:type owl:NamedIndividual ,
-                                                  shavem:EmotionEvent ,
+                                                  shavem:EmotionFeature ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty emotion:triggers ;
                                                     owl:someValuesFrom shavem:Love
@@ -1847,7 +1861,7 @@ shavem:wanting_physical_closeness_or_sex rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact
 shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
-                                                shavem:EmotionEvent ,
+                                                shavem:EmotionFeature ,
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty emotion:triggers ;
                                                   owl:someValuesFrom shavem:Sadness
@@ -1857,7 +1871,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear
 <https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear> rdf:type owl:NamedIndividual ,
-                                                                                      shavem:EmotionEvent ,
+                                                                                      shavem:EmotionFeature ,
                                                                                       [ rdf:type owl:Restriction ;
                                                                                         owl:onProperty emotion:triggers ;
                                                                                         owl:someValuesFrom shavem:Fear
@@ -1867,7 +1881,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures
 <https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures> rdf:type owl:NamedIndividual ,
-                                                                                      shavem:EmotionEvent ,
+                                                                                      shavem:EmotionFeature ,
                                                                                       [ rdf:type owl:Restriction ;
                                                                                         owl:onProperty emotion:triggers ;
                                                                                         owl:someValuesFrom shavem:Anger
@@ -1877,7 +1891,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging
 <https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging> rdf:type owl:NamedIndividual ,
-                                                                               shavem:EmotionEvent ,
+                                                                               shavem:EmotionFeature ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty emotion:triggers ;
                                                                                  owl:someValuesFrom shavem:Joy
@@ -1887,7 +1901,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly
 <https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly> rdf:type owl:NamedIndividual ,
-                                                                          shavem:EmotionEvent ,
+                                                                          shavem:EmotionFeature ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty emotion:triggers ;
                                                                             owl:someValuesFrom shavem:Joy
@@ -1897,7 +1911,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others
 <https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others> rdf:type owl:NamedIndividual ,
-                                                                                         shavem:EmotionEvent ,
+                                                                                         shavem:EmotionFeature ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty emotion:triggers ;
                                                                                            owl:someValuesFrom shavem:Joy
@@ -1907,7 +1921,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                       shavem:EmotionEvent ,
+                                                                                       shavem:EmotionFeature ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty emotion:triggers ;
                                                                                          owl:someValuesFrom shavem:Love
@@ -1917,7 +1931,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot
 <https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot> rdf:type owl:NamedIndividual ,
-                                                                                    shavem:EmotionEvent ,
+                                                                                    shavem:EmotionFeature ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty emotion:triggers ;
                                                                                       owl:someValuesFrom shavem:Joy
@@ -1927,7 +1941,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself
 <https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself> rdf:type owl:NamedIndividual ,
-                                                                                  shavem:EmotionEvent ,
+                                                                                  shavem:EmotionFeature ,
                                                                                   [ rdf:type owl:Restriction ;
                                                                                     owl:onProperty emotion:triggers ;
                                                                                     owl:someValuesFrom shavem:Sadness
@@ -1937,7 +1951,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face
 <https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face> rdf:type owl:NamedIndividual ,
-                                                                          shavem:EmotionEvent ,
+                                                                          shavem:EmotionFeature ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty emotion:triggers ;
                                                                             owl:someValuesFrom shavem:Joy
@@ -1947,7 +1961,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact
 <https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact> rdf:type owl:NamedIndividual ,
-                                                                                        shavem:EmotionEvent ,
+                                                                                        shavem:EmotionFeature ,
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty emotion:triggers ;
                                                                                           owl:someValuesFrom shavem:Anger
@@ -1957,7 +1971,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm
 <https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Fear
@@ -1967,7 +1981,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                 shavem:EmotionEvent ,
+                                                                                 shavem:EmotionFeature ,
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty emotion:triggers ;
                                                                                    owl:someValuesFrom shavem:Anger
@@ -1977,7 +1991,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering
 <https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering> rdf:type owl:NamedIndividual ,
-                                                                        shavem:EmotionEvent ,
+                                                                        shavem:EmotionFeature ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty emotion:triggers ;
                                                                           owl:someValuesFrom shavem:Fear
@@ -1987,7 +2001,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering
 <https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering> rdf:type owl:NamedIndividual ,
-                                                                               shavem:EmotionEvent ,
+                                                                               shavem:EmotionFeature ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty emotion:triggers ;
                                                                                  owl:someValuesFrom shavem:Sadness
@@ -1997,7 +2011,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was
 <https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was> rdf:type owl:NamedIndividual ,
-                                                                                         shavem:EmotionEvent ,
+                                                                                         shavem:EmotionFeature ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty emotion:triggers ;
                                                                                            owl:someValuesFrom shavem:Joy
@@ -2007,7 +2021,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless
 <https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless> rdf:type owl:NamedIndividual ,
-                                                                                            shavem:EmotionEvent ,
+                                                                                            shavem:EmotionFeature ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty emotion:triggers ;
                                                                                               owl:someValuesFrom shavem:Sadness
@@ -2017,7 +2031,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt
 <https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt> rdf:type owl:NamedIndividual ,
-                                                                                           shavem:EmotionEvent ,
+                                                                                           shavem:EmotionFeature ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty emotion:triggers ;
                                                                                              owl:someValuesFrom shavem:Sadness
@@ -2027,7 +2041,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                            shavem:EmotionEvent ,
+                                                                                            shavem:EmotionFeature ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty emotion:triggers ;
                                                                                               owl:someValuesFrom shavem:Joy
@@ -2037,7 +2051,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze
 <https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze> rdf:type owl:NamedIndividual ,
-                                                                              shavem:EmotionEvent ,
+                                                                              shavem:EmotionFeature ,
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty emotion:triggers ;
                                                                                 owl:someValuesFrom shavem:Love
@@ -2047,7 +2061,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around
 <https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Fear
@@ -2057,7 +2071,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                         shavem:EmotionEvent ,
+                                                                                         shavem:EmotionFeature ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty emotion:triggers ;
                                                                                            owl:someValuesFrom shavem:Love
@@ -2067,7 +2081,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                        shavem:EmotionEvent ,
+                                                                                        shavem:EmotionFeature ,
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty emotion:triggers ;
                                                                                           owl:someValuesFrom shavem:Love
@@ -2077,7 +2091,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                            shavem:EmotionEvent ,
+                                                                                            shavem:EmotionFeature ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty emotion:triggers ;
                                                                                               owl:someValuesFrom shavem:Love
@@ -2087,7 +2101,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy
 <https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy> rdf:type owl:NamedIndividual ,
-                                                                                     shavem:EmotionEvent ,
+                                                                                     shavem:EmotionFeature ,
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty emotion:triggers ;
                                                                                        owl:someValuesFrom shavem:Fear
@@ -2097,7 +2111,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm
 <https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm> rdf:type owl:NamedIndividual ,
-                                                                           shavem:EmotionEvent ,
+                                                                           shavem:EmotionFeature ,
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty emotion:triggers ;
                                                                              owl:someValuesFrom shavem:Love
@@ -2107,7 +2121,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Love
@@ -2117,7 +2131,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly
 <https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly> rdf:type owl:NamedIndividual ,
-                                                                                         shavem:EmotionEvent ,
+                                                                                         shavem:EmotionFeature ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty emotion:triggers ;
                                                                                            owl:someValuesFrom shavem:Fear
@@ -2127,7 +2141,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling
 <https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling> rdf:type owl:NamedIndividual ,
-                                                                           shavem:EmotionEvent ,
+                                                                           shavem:EmotionFeature ,
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty emotion:triggers ;
                                                                              owl:someValuesFrom shavem:Sadness
@@ -2137,7 +2151,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                 shavem:EmotionEvent ,
+                                                                                 shavem:EmotionFeature ,
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty emotion:triggers ;
                                                                                    owl:someValuesFrom shavem:Anger
@@ -2147,7 +2161,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity
 <https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Anger
@@ -2157,7 +2171,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                         shavem:EmotionEvent ,
+                                                                                         shavem:EmotionFeature ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty emotion:triggers ;
                                                                                            owl:someValuesFrom shavem:Joy
@@ -2167,7 +2181,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing
 <https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing> rdf:type owl:NamedIndividual ,
-                                                                        shavem:EmotionEvent ,
+                                                                        shavem:EmotionFeature ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty emotion:triggers ;
                                                                           owl:someValuesFrom shavem:Joy
@@ -2177,7 +2191,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve
 <https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve> rdf:type owl:NamedIndividual ,
-                                                                                            shavem:EmotionEvent ,
+                                                                                            shavem:EmotionFeature ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty emotion:triggers ;
                                                                                               owl:someValuesFrom shavem:Sadness
@@ -2187,7 +2201,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                         shavem:EmotionEvent ,
+                                                                                         shavem:EmotionFeature ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty emotion:triggers ;
                                                                                            owl:someValuesFrom shavem:Anger
@@ -2197,7 +2211,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences
 <https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences> rdf:type owl:NamedIndividual ,
-                                                                                     shavem:EmotionEvent ,
+                                                                                     shavem:EmotionFeature ,
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty emotion:triggers ;
                                                                                        owl:someValuesFrom shavem:Love
@@ -2207,7 +2221,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping
 <https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping> rdf:type owl:NamedIndividual ,
-                                                                          shavem:EmotionEvent ,
+                                                                          shavem:EmotionFeature ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty emotion:triggers ;
                                                                             owl:someValuesFrom shavem:Anger
@@ -2217,7 +2231,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move
 <https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move> rdf:type owl:NamedIndividual ,
-                                                                                            shavem:EmotionEvent ,
+                                                                                            shavem:EmotionFeature ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty emotion:triggers ;
                                                                                               owl:someValuesFrom shavem:Fear
@@ -2227,7 +2241,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance
 <https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance> rdf:type owl:NamedIndividual ,
-                                                                                           shavem:EmotionEvent ,
+                                                                                           shavem:EmotionFeature ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty emotion:triggers ;
                                                                                              owl:someValuesFrom shavem:Joy
@@ -2237,7 +2251,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling
 <https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling> rdf:type owl:NamedIndividual ,
-                                                                                shavem:EmotionEvent ,
+                                                                                shavem:EmotionFeature ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty emotion:triggers ;
                                                                                   owl:someValuesFrom shavem:Love
@@ -2247,7 +2261,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional
 <https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional> rdf:type owl:NamedIndividual ,
-                                                                                           shavem:EmotionEvent ,
+                                                                                           shavem:EmotionFeature ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty emotion:triggers ;
                                                                                              owl:someValuesFrom shavem:Anger
@@ -2257,7 +2271,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy
 <https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy> rdf:type owl:NamedIndividual ,
-                                                                                shavem:EmotionEvent ,
+                                                                                shavem:EmotionFeature ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty emotion:triggers ;
                                                                                   owl:someValuesFrom shavem:Sadness
@@ -2267,7 +2281,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness
 <https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Anger
@@ -2277,7 +2291,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented
 <https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Fear
@@ -2287,7 +2301,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence
 <https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence> rdf:type owl:NamedIndividual ,
-                                                                                 shavem:EmotionEvent ,
+                                                                                 shavem:EmotionFeature ,
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty emotion:triggers ;
                                                                                    owl:someValuesFrom shavem:Fear
@@ -2297,7 +2311,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation
 <https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation> rdf:type owl:NamedIndividual ,
-                                                                                      shavem:EmotionEvent ,
+                                                                                      shavem:EmotionFeature ,
                                                                                       [ rdf:type owl:Restriction ;
                                                                                         owl:onProperty emotion:triggers ;
                                                                                         owl:someValuesFrom shavem:Sadness
@@ -2307,7 +2321,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming
 <https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming> rdf:type owl:NamedIndividual ,
-                                                                                    shavem:EmotionEvent ,
+                                                                                    shavem:EmotionFeature ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty emotion:triggers ;
                                                                                       owl:someValuesFrom shavem:Anger
@@ -2317,7 +2331,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice
 <https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice> rdf:type owl:NamedIndividual ,
-                                                                                        shavem:EmotionEvent ,
+                                                                                        shavem:EmotionFeature ,
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty emotion:triggers ;
                                                                                           owl:someValuesFrom shavem:Sadness
@@ -2327,7 +2341,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody
 <https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody> rdf:type owl:NamedIndividual ,
-                                                                                   shavem:EmotionEvent ,
+                                                                                   shavem:EmotionFeature ,
                                                                                    [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty emotion:triggers ;
                                                                                      owl:someValuesFrom shavem:Sadness
@@ -2337,7 +2351,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively
 <https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively> rdf:type owl:NamedIndividual ,
-                                                                                           shavem:EmotionEvent ,
+                                                                                           shavem:EmotionFeature ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty emotion:triggers ;
                                                                                              owl:someValuesFrom shavem:Sadness
@@ -2347,7 +2361,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk
 <https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk> rdf:type owl:NamedIndividual ,
-                                                                           shavem:EmotionEvent ,
+                                                                           shavem:EmotionFeature ,
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty emotion:triggers ;
                                                                              owl:someValuesFrom shavem:Fear
@@ -2357,7 +2371,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort
 <https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Anger
@@ -2367,7 +2381,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                       shavem:EmotionEvent ,
+                                                                                       shavem:EmotionFeature ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty emotion:triggers ;
                                                                                          owl:someValuesFrom shavem:Sadness
@@ -2377,7 +2391,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation
 <https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation> rdf:type owl:NamedIndividual ,
-                                                                                 shavem:EmotionEvent ,
+                                                                                 shavem:EmotionFeature ,
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty emotion:triggers ;
                                                                                    owl:someValuesFrom shavem:Fear
@@ -2387,7 +2401,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing
 <https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing> rdf:type owl:NamedIndividual ,
-                                                                          shavem:EmotionEvent ,
+                                                                          shavem:EmotionFeature ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty emotion:triggers ;
                                                                             owl:someValuesFrom shavem:Anger
@@ -2397,7 +2411,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Love
@@ -2407,7 +2421,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her
 <https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her> rdf:type owl:NamedIndividual ,
-                                                                                                 shavem:EmotionEvent ,
+                                                                                                 shavem:EmotionFeature ,
                                                                                                  [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty emotion:triggers ;
                                                                                                    owl:someValuesFrom shavem:Love
@@ -2417,7 +2431,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper'
 <https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper'> rdf:type owl:NamedIndividual ,
-                                                                                           shavem:EmotionEvent ,
+                                                                                           shavem:EmotionFeature ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty emotion:triggers ;
                                                                                              owl:someValuesFrom shavem:Joy
@@ -2427,7 +2441,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help
 <https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help> rdf:type owl:NamedIndividual ,
-                                                                               shavem:EmotionEvent ,
+                                                                               shavem:EmotionFeature ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty emotion:triggers ;
                                                                                  owl:someValuesFrom shavem:Fear
@@ -2437,7 +2451,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side
 <https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side> rdf:type owl:NamedIndividual ,
-                                                                                          shavem:EmotionEvent ,
+                                                                                          shavem:EmotionFeature ,
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty emotion:triggers ;
                                                                                             owl:someValuesFrom shavem:Joy
@@ -2447,7 +2461,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure
 <https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure> rdf:type owl:NamedIndividual ,
-                                                                                  shavem:EmotionEvent ,
+                                                                                  shavem:EmotionFeature ,
                                                                                   [ rdf:type owl:Restriction ;
                                                                                     owl:onProperty emotion:triggers ;
                                                                                     owl:someValuesFrom shavem:Fear
@@ -2457,7 +2471,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise
 <https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise> rdf:type owl:NamedIndividual ,
-                                                                                       shavem:EmotionEvent ,
+                                                                                       shavem:EmotionFeature ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty emotion:triggers ;
                                                                                          owl:someValuesFrom shavem:Joy
@@ -2467,7 +2481,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection
 <https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection> rdf:type owl:NamedIndividual ,
-                                                                                       shavem:EmotionEvent ,
+                                                                                       shavem:EmotionFeature ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty emotion:triggers ;
                                                                                          owl:someValuesFrom shavem:Joy
@@ -2477,7 +2491,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face
 <https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face> rdf:type owl:NamedIndividual ,
-                                                                       shavem:EmotionEvent ,
+                                                                       shavem:EmotionFeature ,
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty emotion:triggers ;
                                                                          owl:someValuesFrom shavem:Anger
@@ -2487,7 +2501,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                    shavem:EmotionEvent ,
+                                                                                    shavem:EmotionFeature ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty emotion:triggers ;
                                                                                       owl:someValuesFrom shavem:Anger
@@ -2497,7 +2511,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval
 <https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval> rdf:type owl:NamedIndividual ,
-                                                                                       shavem:EmotionEvent ,
+                                                                                       shavem:EmotionFeature ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty emotion:triggers ;
                                                                                          owl:someValuesFrom shavem:Sadness
@@ -2507,7 +2521,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status
 <https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status> rdf:type owl:NamedIndividual ,
-                                                                                       shavem:EmotionEvent ,
+                                                                                       shavem:EmotionFeature ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty emotion:triggers ;
                                                                                          owl:someValuesFrom shavem:Anger
@@ -2517,7 +2531,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you'
 <https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you'> rdf:type owl:NamedIndividual ,
-                                                                         shavem:EmotionEvent ,
+                                                                         shavem:EmotionFeature ,
                                                                          [ rdf:type owl:Restriction ;
                                                                            owl:onProperty emotion:triggers ;
                                                                            owl:someValuesFrom shavem:Love
@@ -2527,7 +2541,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling
 <https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling> rdf:type owl:NamedIndividual ,
-                                                                        shavem:EmotionEvent ,
+                                                                        shavem:EmotionFeature ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty emotion:triggers ;
                                                                           owl:someValuesFrom shavem:Fear
@@ -2537,7 +2551,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                         shavem:EmotionEvent ,
+                                                                                         shavem:EmotionFeature ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty emotion:triggers ;
                                                                                            owl:someValuesFrom shavem:Love
@@ -2547,7 +2561,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling
 <https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling> rdf:type owl:NamedIndividual ,
-                                                                                   shavem:EmotionEvent ,
+                                                                                   shavem:EmotionFeature ,
                                                                                    [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty emotion:triggers ;
                                                                                      owl:someValuesFrom shavem:Fear
@@ -2557,7 +2571,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice
 <https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice> rdf:type owl:NamedIndividual ,
-                                                                            shavem:EmotionEvent ,
+                                                                            shavem:EmotionFeature ,
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty emotion:triggers ;
                                                                               owl:someValuesFrom shavem:Fear
@@ -2567,7 +2581,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                           shavem:EmotionEvent ,
+                                                                                           shavem:EmotionFeature ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty emotion:triggers ;
                                                                                              owl:someValuesFrom shavem:Sadness
@@ -2577,7 +2591,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements
 <https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements> rdf:type owl:NamedIndividual ,
-                                                                               shavem:EmotionEvent ,
+                                                                               shavem:EmotionFeature ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty emotion:triggers ;
                                                                                  owl:someValuesFrom shavem:Sadness
@@ -2587,7 +2601,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture
 <https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture> rdf:type owl:NamedIndividual ,
-                                                                               shavem:EmotionEvent ,
+                                                                               shavem:EmotionFeature ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty emotion:triggers ;
                                                                                  owl:someValuesFrom shavem:Sadness
@@ -2597,7 +2611,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it
 <https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it> rdf:type owl:NamedIndividual ,
-                                                                                              shavem:EmotionEvent ,
+                                                                                              shavem:EmotionFeature ,
                                                                                               [ rdf:type owl:Restriction ;
                                                                                                 owl:onProperty emotion:triggers ;
                                                                                                 owl:someValuesFrom shavem:Anger
@@ -2607,7 +2621,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy
 <https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy> rdf:type owl:NamedIndividual ,
-                                                                                        shavem:EmotionEvent ,
+                                                                                        shavem:EmotionFeature ,
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty emotion:triggers ;
                                                                                           owl:someValuesFrom shavem:Sadness
@@ -2617,7 +2631,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring
 <https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring> rdf:type owl:NamedIndividual ,
-                                                                          shavem:EmotionEvent ,
+                                                                          shavem:EmotionFeature ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty emotion:triggers ;
                                                                             owl:someValuesFrom shavem:Fear
@@ -2627,7 +2641,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active
 <https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active> rdf:type owl:NamedIndividual ,
-                                                                                    shavem:EmotionEvent ,
+                                                                                    shavem:EmotionFeature ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty emotion:triggers ;
                                                                                       owl:someValuesFrom shavem:Sadness
@@ -2637,7 +2651,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless
 <https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless> rdf:type owl:NamedIndividual ,
-                                                                                    shavem:EmotionEvent ,
+                                                                                    shavem:EmotionFeature ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty emotion:triggers ;
                                                                                       owl:someValuesFrom shavem:Fear
@@ -2647,7 +2661,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement
 <https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement> rdf:type owl:NamedIndividual ,
-                                                                               shavem:EmotionEvent ,
+                                                                               shavem:EmotionFeature ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty emotion:triggers ;
                                                                                  owl:someValuesFrom shavem:Joy
@@ -2657,7 +2671,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc.> rdf:type owl:NamedIndividual ,
-                                                                                shavem:EmotionEvent ,
+                                                                                shavem:EmotionFeature ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty emotion:triggers ;
                                                                                   owl:someValuesFrom shavem:Anger
@@ -2667,7 +2681,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy
 <https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy> rdf:type owl:NamedIndividual ,
-                                                                                    shavem:EmotionEvent ,
+                                                                                    shavem:EmotionFeature ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty emotion:triggers ;
                                                                                       owl:someValuesFrom shavem:Sadness
@@ -2677,7 +2691,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/touching,_petting
 <https://w3id.org/spice/SON/ShaverEmotions/touching,_petting> rdf:type owl:NamedIndividual ,
-                                                                       shavem:EmotionEvent ,
+                                                                       shavem:EmotionFeature ,
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty emotion:triggers ;
                                                                          owl:someValuesFrom shavem:Love
@@ -2687,7 +2701,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise
 <https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise> rdf:type owl:NamedIndividual ,
-                                                                                            shavem:EmotionEvent ,
+                                                                                            shavem:EmotionFeature ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty emotion:triggers ;
                                                                                               owl:someValuesFrom shavem:Sadness
@@ -2697,7 +2711,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited
 <https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited> rdf:type owl:NamedIndividual ,
-                                                                                    shavem:EmotionEvent ,
+                                                                                    shavem:EmotionFeature ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty emotion:triggers ;
                                                                                       owl:someValuesFrom shavem:Joy
@@ -2707,7 +2721,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.
 <https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.> rdf:type owl:NamedIndividual ,
-                                                                                      shavem:EmotionEvent ,
+                                                                                      shavem:EmotionFeature ,
                                                                                       [ rdf:type owl:Restriction ;
                                                                                         owl:onProperty emotion:triggers ;
                                                                                         owl:someValuesFrom shavem:Love
@@ -2717,7 +2731,7 @@ shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other
 <https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other> rdf:type owl:NamedIndividual ,
-                                                                                           shavem:EmotionEvent ,
+                                                                                           shavem:EmotionFeature ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty emotion:triggers ;
                                                                                              owl:someValuesFrom shavem:Love
