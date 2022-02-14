@@ -1,5 +1,6 @@
 @prefix : <https://w3id.org/spice/SON/ShaverEmotions#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -12,13 +13,21 @@
 @base <https://w3id.org/spice/SON/ShaverEmotions> .
 
 <https://w3id.org/spice/SON/ShaverEmotions> rdf:type owl:Ontology ;
-                                             owl:versionIRI <https://w3id.org/spice/SON/ShaverEmotions/0.0.3> ;
+                                             owl:versionIRI <https://w3id.org/spice/SON/ShaverEmotions/0.0.4> ;
                                              owl:imports <https://w3id.org/spice/SON/emotion/0.0.2> ;
                                              dc:description """This ontology has been developed for the SPICE Project (https://spice-h2020.github.io/) and it is based on Shaver's Emotion Theory.
 
 A visualization of the ontology structure is available here: https://github.com/spice-h2020/SON/blob/main/ShaverEmotions/shavernew.png"""@en ;
                                              rdfs:comment "Author: Bruno Sartini"@en ;
-                                             owl:priorVersion <https://w3id.org/spice/SON/ShaverEmotions/0.0.2> .
+                                             owl:priorVersion <https://w3id.org/spice/SON/ShaverEmotions/0.0.3> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#bibRef
+ex:bibRef rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
@@ -133,6 +142,14 @@ shavem:Amusement rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/Anger
 shavem:Anger rdf:type owl:Class ;
              rdfs:subClassOf shavem:PrototypeEmotion ;
+             ex:bibRef """\"Something (usually
+another person, in these accounts) interferes with the person's
+execution of plans or attainment of goals (by reducing the person's
+power, violating expectations, frustrating or interrupting
+goal-directed activities). Alternatively, the person perceives another
+as harming him or her in some way (inflicting physical or
+psychological pain).\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+             rdfs:comment "Anger is a reaction to an event that complicates, negates, or interferes with the experiences intentions, plans, often making them hard or impossible to carry out. The experiencer stands against this event in a fightful stance."@en ;
              rdfs:label "Anger"@en .
 
 
@@ -454,6 +471,7 @@ shavem:EmotionEvent rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/EmotionWord
 shavem:EmotionWord rdf:type owl:Class ;
                    rdfs:subClassOf emotion:Emotion ;
+                   ex:bibRef "Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."@en ;
                    rdfs:comment "Emotion words are the emotions that emerged from Shaver's study across various emotion theories"@en ;
                    rdfs:label "Emotion Word"@en .
 
@@ -541,6 +559,15 @@ shavem:Exhilaration rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/Fear
 shavem:Fear rdf:type owl:Class ;
             rdfs:subClassOf shavem:PrototypeEmotion ;
+            rdfs:comment """\"[...]fear accounts begin with an interpretation
+of events as potentially dangerous or threatening to
+the self—most commonly, an anticipation of physical harm,
+loss, rejection, or failure. The fear antecedents also include a set
+of situational factors (unfamiliar situation, being in the dark,
+being alone) that probably increase the person's perceived vulnerability
+to such threats and impede his or her chances of coping
+effectively.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ,
+                         "Fear is a reaction towards events that are perceived by the epxeriencer as potentially dangerous, and might cause either physical or psychological harm. This reaction is an anticipation of the potential danger of this event or the event(s) that might follow."@en ;
             rdfs:label "Fear"@en .
 
 
@@ -867,7 +894,16 @@ shavem:Joviality rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/Joy
 shavem:Joy rdf:type owl:Class ;
            rdfs:subClassOf shavem:PrototypeEmotion ;
-           rdfs:label "Fear"@en .
+           ex:bibRef """\"Whereas sadness accounts begin with undesirable
+outcomes (getting what is not wanted, suffering social rejection,
+losing a valued relationship), joy accounts begin with positive
+outcomes—getting something desired or desirable. In contrast
+to the losses and failures that trigger sadness, the desirable outcome
+that initiates happiness is frequently a gain or success in
+the achievement domain (task success, achievement) or in the
+social domain (receiving esteem or affection).\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+           rdfs:comment "Joy is a reaction towards an event that positively influences the experiencer life such as the achievement of something."@en ;
+           rdfs:label "Joy"@en .
 
 
 ###  https://w3id.org/spice/SON/ShaverEmotions/Jubilation
@@ -923,6 +959,16 @@ shavem:Longing rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/Love
 shavem:Love rdf:type owl:Class ;
             rdfs:subClassOf shavem:PrototypeEmotion ;
+            ex:bibRef """\"[...]in the case of love, they promote a similar
+sense of well-being that is personalized (i.e., that is attributed
+to the presence or existence of the love object). Love is marked
+by several additional antecedents. According to our subjects,
+love can occur because one has shared time or special experiences
+with the other person, because one finds the other physically
+or psychologically attractive, because one enjoys exceptionally
+good communication with the other person, or because
+one feels open and trusting in the person's presence.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+            rdfs:comment "Love is a reaction to an event that positively affects the life of the experiencer, that is triggered by someone or something towards which they feel something romantic or simply special. In contrast with joy in which the trigger of the event can be anything."@en ;
             rdfs:label "Love"@en .
 
 
@@ -1059,7 +1105,13 @@ shavem:Pride rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion
 shavem:PrototypeEmotion rdf:type owl:Class ;
                         rdfs:subClassOf emotion:Emotion ;
-                        rdfs:comment "Prototype emotions are the Emotions that emerged in Shaver experiments as the centroid entities of the clusters."@en ;
+                        ex:bibRef """\"If contemporary
+cognitive psychology is correct in claiming that repeated experiences
+with similar events lead to the construction of generic
+mental representations, then ordinary, untrained subjects
+should construct emotion prototypes and implicitly use them
+when witnessing and recounting emotion episodes.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+                        rdfs:comment "Prototype emotions are the Emotions that emerged in Shaver as the protypical reactions to events that trigger an emotion."@en ;
                         rdfs:label "Prototype Emotion"@en .
 
 
@@ -1146,6 +1198,14 @@ shavem:Revulsion rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/Sadness
 shavem:Sadness rdf:type owl:Class ;
                rdfs:subClassOf shavem:PrototypeEmotion ;
+               ex:bibRef """\"The sad
+person has experienced an undesirable outcome; often he or she
+has experienced one of the events that the fearful person
+dreads—death of a loved one, loss of a relationship, or social
+rejection. Like fear, sadness involves \"discovering that one is
+powerless, helpless, or impotent\" to change the unhappy circumstances
+(cf. Seligman, 1975).\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+               rdfs:comment "Sadness is a reaction to an unpleasant event that leads to a downward spiral of negativity, sense of giving up and hopelessness."@en ;
                rdfs:label "Sadness"@en .
 
 
@@ -1232,6 +1292,8 @@ shavem:Suffering rdf:type owl:Class ;
 ###  https://w3id.org/spice/SON/ShaverEmotions/Surprise
 shavem:Surprise rdf:type owl:Class ;
                 rdfs:subClassOf shavem:PrototypeEmotion ;
+                rdfs:comment "Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."@en ,
+                             "Surprise is only included in a first list of Emotion Prototypes, but it is not given a definition by Shaver."@en ;
                 rdfs:label "Surprise"@en .
 
 
