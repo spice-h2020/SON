@@ -1,0 +1,716 @@
+@prefix : <https://w3id.org/spice/SON/OCCEmotion_4Atlas#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix occ: <https://w3id.org/spice/SON/OCCEmotion#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@base <https://w3id.org/spice/SON/OCCEmotion_4Atlas> .
+
+<https://w3id.org/spice/SON/OCCEmotion_4Atlas> rdf:type owl:Ontology ;
+                                                owl:versionIRI <https://w3id.org/spice/SON/OCCEmotion_4Atlas/0.0.1> ;
+                                                owl:imports <https://w3id.org/spice/SON/OCCEmotion/0.0.2> ;
+                                                dc:creator "Stefano De Giorgis and Rossana Damiano" ;
+                                                dc:description <https://raw.githubusercontent.com/spice-h2020/SON/main/OCCEmotion/OCC_conceptual_map.png> ;
+                                                rdfs:comment "This module is the ontological version of the Ortony Clore and Collins emotion theory." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#appraises
+:appraises rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+           rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#blameworthy
+:blameworthy rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+             rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+             owl:propertyDisjointWith :praiseworthy ;
+             rdfs:comment "Some Entity is blameworthy for some AppraisingAgent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#desirable
+:desirable rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+           rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+           rdfs:comment "Some Situation is desirable for some Agent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#feels
+:feels rdf:type owl:ObjectProperty ;
+       owl:inverseOf :feltBy ;
+       rdfs:comment "Some Agent feels some Emotion." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#feltBy
+:feltBy rdf:type owl:ObjectProperty ;
+        rdfs:comment "Some Emotion is feltBy some Agent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#hasAgent
+:hasAgent rdf:type owl:ObjectProperty ;
+          rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+          rdfs:comment "Some Action or Event or Process hasAgent some Agent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#hasGoal
+:hasGoal rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+         rdfs:comment "Some Agent hasGoal some Goal." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#hasValue
+:hasValue rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+          rdfs:range :Value ;
+          rdfs:comment "Some Agent hasValue some Value." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#lovedBy
+:lovedBy rdf:type owl:ObjectProperty ;
+         owl:inverseOf :loves ;
+         owl:propertyDisjointWith :notLovedBy ;
+         rdfs:comment "Some Agent is lovedBy some OtherAgent, this could explain the e.g. feeling of Joy of Agent1 for some desirable Event happend to some Agent2." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#loves
+:loves rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+       rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+       owl:propertyDisjointWith :notLoves ;
+       rdfs:comment """Some Agent loves some OtherAgent, this could imply a transitivity of the Emotion feeling.
+e.g. Agent2 feels EmotionX ^ Agent1 loves Agent2 → Agent1 feels EmotionX .
+Or could determine some internal conflict, depending on how much complex is the scenario.""" .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#notLovedBy
+:notLovedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :notLoves ;
+            rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+            rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+            rdfs:comment "Some Agent is notLovedBy some OtherAgent, this could explain the e.g. feeling of Joy of Agent1 for some undesirable Event happend to some Agent2." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#notLoves
+:notLoves rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#outcomePolarity
+:outcomePolarity rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Emotion ;
+                 rdfs:range :PolarityOutcome .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#performedBy
+:performedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process> ;
+             rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+             rdfs:comment "Some Process is performedBy some Agent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#praiseworthy
+:praiseworthy rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+              rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+              rdfs:comment "Some Entity is praiseworthy for some AppraisingAgent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#target
+:target rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#undesirable
+:undesirable rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+             rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+             rdfs:comment "Some Situation is undesirable for some Agent." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#accomplished
+:accomplished rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+              rdfs:range xsd:boolean ;
+              rdfs:comment "Aspectual description of the Situation." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#confirmed
+:confirmed rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:oneOf [ rdf:type rdf:List ;
+                                    rdf:first "confirmed" ;
+                                    rdf:rest [ rdf:type rdf:List ;
+                                               rdf:first "disconfirmed" ;
+                                               rdf:rest [ rdf:type rdf:List ;
+                                                          rdf:first "irrelevant" ;
+                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                     rdf:first "unconfirmed" ;
+                                                                     rdf:rest rdf:nil
+                                                                   ]
+                                                        ]
+                                             ]
+                                  ]
+                      ] .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObjectAttribute
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObjectAttribute> rdf:type owl:Class .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#ActionConsequenceEmotion
+:ActionConsequenceEmotion rdf:type owl:Class ;
+                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                owl:onProperty :feltBy ;
+                                                owl:someValuesFrom [ owl:intersectionOf ( :AppraisingAgent
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :appraises ;
+                                                                                            owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ]
+                                              ] ;
+                          rdfs:subClassOf :Emotion ;
+                          rdfs:comment "Emotions classified as being the consequence of some Action." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#ActionConsequenceEmotionOther
+:ActionConsequenceEmotionOther rdf:type owl:Class ;
+                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :feltBy ;
+                                                     owl:someValuesFrom [ owl:intersectionOf ( :AppraisingAgent
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty :appraises ;
+                                                                                                 owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                                                                           [ rdf:type owl:Class ;
+                                                                                                                                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                                             owl:onProperty :blameworthy ;
+                                                                                                                                                             owl:someValuesFrom :AppraisingAgent
+                                                                                                                                                           ]
+                                                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                                                             owl:onProperty :praiseworthy ;
+                                                                                                                                                             owl:someValuesFrom :AppraisingAgent
+                                                                                                                                                           ]
+                                                                                                                                                         )
+                                                                                                                                           ]
+                                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                                             owl:onProperty :performedBy ;
+                                                                                                                                             owl:someValuesFrom :OtherAgent
+                                                                                                                                           ]
+                                                                                                                                         ) ;
+                                                                                                                      rdf:type owl:Class
+                                                                                                                    ]
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                   ] ;
+                               rdfs:subClassOf :ActionConsequenceEmotion ;
+                               owl:disjointWith :ActionConsequenceEmotionSelf ;
+                               rdfs:comment "Emotions classified as being the consequence of some Action performed by Other than Self." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#ActionConsequenceEmotionSelf
+:ActionConsequenceEmotionSelf rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :feltBy ;
+                                                    owl:someValuesFrom [ owl:intersectionOf ( :AppraisingAgent
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty :appraises ;
+                                                                                                owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                                                                          [ rdf:type owl:Class ;
+                                                                                                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                                            owl:onProperty :blameworthy ;
+                                                                                                                                                            owl:someValuesFrom :AppraisingAgent
+                                                                                                                                                          ]
+                                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                                            owl:onProperty :praiseworthy ;
+                                                                                                                                                            owl:someValuesFrom :AppraisingAgent
+                                                                                                                                                          ]
+                                                                                                                                                        )
+                                                                                                                                          ]
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty :performedBy ;
+                                                                                                                                            owl:someValuesFrom :AppraisingAgent
+                                                                                                                                          ]
+                                                                                                                                        ) ;
+                                                                                                                     rdf:type owl:Class
+                                                                                                                   ]
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ]
+                                                  ] ;
+                              rdfs:subClassOf :ActionConsequenceEmotion ;
+                              rdfs:comment "Emotions classified as being the consequence of some Action performed by Self." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Admiration
+:Admiration rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :feltBy ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( :AppraisingAgent
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty :appraises ;
+                                                                              owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty :performedBy ;
+                                                                                                                          owl:someValuesFrom :OtherAgent
+                                                                                                                        ]
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty :praiseworthy ;
+                                                                                                                          owl:someValuesFrom :AppraisingAgent
+                                                                                                                        ]
+                                                                                                                      ) ;
+                                                                                                   rdf:type owl:Class
+                                                                                                 ]
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ;
+            rdfs:subClassOf :ActionConsequenceEmotionOther ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :outcomePolarity ;
+                              owl:someValuesFrom :PositiveOutcome
+                            ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Anger
+:Anger rdf:type owl:Class ;
+       owl:equivalentClass [ owl:intersectionOf ( :Distress
+                                                  :Reproach
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+       rdfs:subClassOf :CompoundEmotion ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :outcomePolarity ;
+                         owl:someValuesFrom :NegativeOutcome
+                       ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#AppraisingAgent
+:AppraisingAgent rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                 owl:disjointWith :OtherAgent .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#BlameworthyAction
+:BlameworthyAction rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :blameworthy ;
+                                         owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>
+                                       ] ;
+                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process> ;
+                   owl:disjointWith :PraiseworthyAction .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#CompoundEmotion
+:CompoundEmotion rdf:type owl:Class ;
+                 rdfs:subClassOf :Emotion ;
+                 rdfs:comment "Emotions being the combinations of two other Emotions." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#DesirableSituation
+:DesirableSituation rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :desirable ;
+                                          owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>
+                                        ] ;
+                    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                    owl:disjointWith :UndesirableSituation .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Disappointment
+:Disappointment rdf:type owl:Class ;
+                rdfs:subClassOf :ECES_ProspectRelevantConfirmed ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :outcomePolarity ;
+                                  owl:someValuesFrom :NegativeOutcome
+                                ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Distress
+:Distress rdf:type owl:Class ;
+          rdfs:subClassOf :ECES_ProspectIrrelevant ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :outcomePolarity ;
+                            owl:someValuesFrom :NegativeOutcome
+                          ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#ECES_ProspectIrrelevant
+:ECES_ProspectIrrelevant rdf:type owl:Class ;
+                         rdfs:subClassOf :EventConsequenceEmotionSelf ;
+                         rdfs:comment "Emotions classified as being the consequence of some Event happened to Self in a Scenario in which the Emotion is not determined by the State s in which the AppraisingAgent is at Time t waiting for some Event. e.g. the AppraisingAgent is not waiting for a result of some Action." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#ECES_ProspectRelevant
+:ECES_ProspectRelevant rdf:type owl:Class ;
+                       rdfs:subClassOf :EventConsequenceEmotionSelf ;
+                       rdfs:comment "Emotions classified as being the consequence of some Event happened to Self in a Scenario in which the Emotion is determined by the State s in which the AppraisingAgent is at Time t waiting for some Event. e.g. the AppraisingAgent is waiting for a result of some Action." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#ECES_ProspectRelevantConfirmed
+:ECES_ProspectRelevantConfirmed rdf:type owl:Class ;
+                                rdfs:subClassOf :ECES_ProspectRelevant ;
+                                rdfs:comment "Emotions classified as being the consequence of some Event happened to Self in a Scenario in which the Emotion is determined by the State s1 in which the AppraisingAgent is at Time t1 and had been confirmed the previous Emotion felt at Time t. e.g. some AppraisingAgent felt Hope for some desirableEvent at Time t and now he/she feels Satisfaction for the happening of the desirableEvent at Time t1." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Emotion
+:Emotion rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#EventConsequenceEmotion
+:EventConsequenceEmotion rdf:type owl:Class ;
+                         rdfs:subClassOf :Emotion ;
+                         rdfs:comment "Emotions classified as being the consequence of some Event." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#EventConsequenceEmotionOther
+:EventConsequenceEmotionOther rdf:type owl:Class ;
+                              rdfs:subClassOf :EventConsequenceEmotion ;
+                              owl:disjointWith :EventConsequenceEmotionSelf ;
+                              rdfs:comment "Emotions classified as being the consequence of some Event happened to Other than Self." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#EventConsequenceEmotionSelf
+:EventConsequenceEmotionSelf rdf:type owl:Class ;
+                             rdfs:subClassOf :EventConsequenceEmotion ;
+                             rdfs:comment "Emotions classified as being the consequence of some Event happened to Self." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Fear
+:Fear rdf:type owl:Class ;
+      rdfs:subClassOf :ECES_ProspectRelevant ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :outcomePolarity ;
+                        owl:someValuesFrom :NegativeOutcome
+                      ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Fear-Confirmed
+:Fear-Confirmed rdf:type owl:Class ;
+                rdfs:subClassOf :ECES_ProspectRelevantConfirmed ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :outcomePolarity ;
+                                  owl:someValuesFrom :NegativeOutcome
+                                ] ;
+                rdfs:comment "The feeling that arises after knowing that some Event that was feared has happened." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Gloating
+:Gloating rdf:type owl:Class ;
+          rdfs:subClassOf :EventConsequenceEmotionOther ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :outcomePolarity ;
+                            owl:someValuesFrom :PositiveOutcome
+                          ] ;
+          rdfs:comment "Being happy for some undesirable Event (e.g. a disgrace) happened to someone Other than Self." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Gratification
+:Gratification rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :Joy
+                                                          :Pride
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :CompoundEmotion ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :outcomePolarity ;
+                                 owl:someValuesFrom :PositiveOutcome
+                               ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Gratitude
+:Gratitude rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Admiration
+                                                      :Joy
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :CompoundEmotion ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :outcomePolarity ;
+                             owl:someValuesFrom :PositiveOutcome
+                           ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#HappyFor
+:HappyFor rdf:type owl:Class ;
+          rdfs:subClassOf :EventConsequenceEmotionOther ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :outcomePolarity ;
+                            owl:someValuesFrom :PositiveOutcome
+                          ] ;
+          rdfs:comment "Being happy for some desirable Event happened to someone Other than Self." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Hope
+:Hope rdf:type owl:Class ;
+      rdfs:subClassOf :ECES_ProspectRelevant ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :outcomePolarity ;
+                        owl:someValuesFrom :PositiveOutcome
+                      ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Joy
+:Joy rdf:type owl:Class ;
+     rdfs:subClassOf :ECES_ProspectIrrelevant ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :outcomePolarity ;
+                       owl:someValuesFrom :PositiveOutcome
+                     ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#NegativeOutcome
+:NegativeOutcome rdf:type owl:Class ;
+                 rdfs:subClassOf :PolarityOutcome ;
+                 rdfs:comment "Emotions classified as Negative in respect to the consequence of some Action/Event for the AppraisingAgent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#OtherAgent
+:OtherAgent rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Pity
+:Pity rdf:type owl:Class ;
+      rdfs:subClassOf :EventConsequenceEmotionOther ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :outcomePolarity ;
+                        owl:someValuesFrom :NegativeOutcome
+                      ] ;
+      rdfs:comment "Being sad for some undesirable Event happened to someone Other than Self." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#PolarityOutcome
+:PolarityOutcome rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                 rdfs:comment "Emotions classified based on their polarity in respect to the Action or Event for the AppraisingAgent: Positive vs Negative." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#PositiveOutcome
+:PositiveOutcome rdf:type owl:Class ;
+                 rdfs:subClassOf :PolarityOutcome ;
+                 rdfs:comment "Emotions classified as Positive in respect to the consequence of some Action/Event for the AppraisingAgent." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#PraiseworthyAction
+:PraiseworthyAction rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :praiseworthy ;
+                                          owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>
+                                        ] ;
+                    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process> .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Pride
+:Pride rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :feltBy ;
+                             owl:someValuesFrom [ owl:intersectionOf ( :AppraisingAgent
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :appraises ;
+                                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty :performedBy ;
+                                                                                                                     owl:someValuesFrom :AppraisingAgent
+                                                                                                                   ]
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty :praiseworthy ;
+                                                                                                                     owl:someValuesFrom :AppraisingAgent
+                                                                                                                   ]
+                                                                                                                 ) ;
+                                                                                              rdf:type owl:Class
+                                                                                            ]
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ]
+                           ] ;
+       rdfs:subClassOf :ActionConsequenceEmotionSelf ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :outcomePolarity ;
+                         owl:someValuesFrom :PositiveOutcome
+                       ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Relief
+:Relief rdf:type owl:Class ;
+        rdfs:subClassOf :ECES_ProspectRelevantConfirmed ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :outcomePolarity ;
+                          owl:someValuesFrom :PositiveOutcome
+                        ] ;
+        rdfs:comment "The feeling that arises after knowing that some undesirable Event that was feared has not happened." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Remorse
+:Remorse rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Distress
+                                                    :Shame
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :CompoundEmotion ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :outcomePolarity ;
+                           owl:someValuesFrom :NegativeOutcome
+                         ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Reproach
+:Reproach rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :feltBy ;
+                                owl:someValuesFrom [ owl:intersectionOf ( :AppraisingAgent
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :appraises ;
+                                                                            owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty :blameworthy ;
+                                                                                                                        owl:someValuesFrom :AppraisingAgent
+                                                                                                                      ]
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty :performedBy ;
+                                                                                                                        owl:someValuesFrom :OtherAgent
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ]
+                              ] ;
+          rdfs:subClassOf :ActionConsequenceEmotionOther ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :outcomePolarity ;
+                            owl:someValuesFrom :NegativeOutcome
+                          ] ;
+          rdfs:comment "The feeling felt by an Appraising Agent for whom some Action / Event, performed by some Other Agent, is blameworthy." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Resentment
+:Resentment rdf:type owl:Class ;
+            rdfs:subClassOf :EventConsequenceEmotionOther ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :outcomePolarity ;
+                              owl:someValuesFrom :NegativeOutcome
+                            ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Satisfaction
+:Satisfaction rdf:type owl:Class ;
+              rdfs:subClassOf :ECES_ProspectRelevantConfirmed ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :outcomePolarity ;
+                                owl:someValuesFrom :PositiveOutcome
+                              ] ;
+              rdfs:comment "The feeling felt knowing that, after hoping for it, some desirable Event has happened." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Shame
+:Shame rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :feltBy ;
+                             owl:someValuesFrom [ owl:intersectionOf ( :AppraisingAgent
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :appraises ;
+                                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty :blameworthy ;
+                                                                                                                     owl:someValuesFrom :AppraisingAgent
+                                                                                                                   ]
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty :performedBy ;
+                                                                                                                     owl:someValuesFrom :AppraisingAgent
+                                                                                                                   ]
+                                                                                                                 ) ;
+                                                                                              rdf:type owl:Class
+                                                                                            ]
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ]
+                           ] ;
+       rdfs:subClassOf :ActionConsequenceEmotionSelf ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :outcomePolarity ;
+                         owl:someValuesFrom :NegativeOutcome
+                       ] .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Target
+:Target rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+        rdfs:comment "The Target of some Emotion, this is a very generic and broad concept, it can be an Action, an Event, a Situation etc." .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#UndesirableSituation
+:UndesirableSituation rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :undesirable ;
+                                            owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>
+                                          ] ;
+                      rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+
+
+###  https://w3id.org/spice/SON/OCCEmotion_4Atlas#Value
+:Value rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObjectAttribute> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
