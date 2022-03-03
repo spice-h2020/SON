@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/spice/SON/ShaverEmotions#"
+     xml:base="https://w3id.org/spice/SON/ShaverEmotions"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shavem="https://w3id.org/spice/SON/ShaverEmotions/"
+     xmlns:emotion="https://w3id.org/spice/SON/emotion/"
+     xmlns:GoEmotions="https://w3id.org/spice/SON/GoEmotions/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/spice/SON/GoEmotions">
+        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/GoEmotions/0.0.2"/>
+        <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
+        <dc:description xml:lang="en">This ontology has been developed for the SPICE Project (https://spice-h2020.github.io/) and it is based on the GoEmotion Dataset by Google.</dc:description>
+        <rdfs:comment xml:lang="en">Author: Antonio Lieto</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/refersToEmotion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/GoEmotions/refersToEmotion">
+        <rdfs:domain rdf:resource="https://w3id.org/spice/SON/GoEmotions/EmotionWord"/>
+        <rdfs:range rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/Emotion -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/GoEmotions/Emotion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <rdfs:comment xml:lang="en">Prototype emotions are the Emotions that emerged in Shaver experiments as the centroid entities of the clusters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Prototype Emotion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/EmotionWord -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/GoEmotions/EmotionWord">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <rdfs:comment xml:lang="en">Emotion words are the emotions that emerged from Reddit as associated to the Emotional categories.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emotion Word</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/Fear -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/GoEmotions/Fear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/Joy -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/GoEmotions/Joy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/Love -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/GoEmotions/Love">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/Sadness -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/GoEmotions/Sadness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/GoEmotions/Surprise -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/GoEmotions/Surprise">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Admiration -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Admiration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Amusement -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Amusement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Annoyance -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Annoyance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Approval -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Approval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Caring -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Caring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Confusion -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Confusion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Curiosity -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Curiosity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Desire -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Desire">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Disappointment -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Disappointment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Disapproval -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Disapproval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Disgust -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Disgust">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Embarassement -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Embarassement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Excitement -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Excitement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Gratitude -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Gratitude">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Grief -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Grief">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Joy -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Joy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Nervousness -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Nervousness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Optimism -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Optimism">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Pride -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Pride">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Realization -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Realization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Relief -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Relief">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Remorse -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Remorse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/GoEmotions/Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/emotion/Emotion -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/emotion/Emotion"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#Admiration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions#Admiration">
+        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions#Admiration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ShaverEmotions#great -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions#great">
+        <GoEmotions:refersToEmotion rdf:resource="https://w3id.org/spice/SON/ShaverEmotions#Admiration"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
