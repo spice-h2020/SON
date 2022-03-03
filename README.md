@@ -85,7 +85,7 @@ This is a list of the brand new ontologies developed for the SPICE project.
   - [Plutchik emotion](https://w3id.org/spice/SON/PlutchikEmotion) [(DEV version)](https://w3id.org/spice/SON/PlutchikEmotion/0.0.2) ``https://w3id.org/spice/SON/PlutchikEmotion`` formalises the [Pluchick's theory on Emotions](https://www.sciencedirect.com/science/article/pii/B9780125587013500077)
   - [OCC emotion](https://w3id.org/spice/SON/OCCEmotion) [(DEV version)](https://w3id.org/spice/SON/OCCEmotion/0.0.2) ``https://w3id.org/spice/SON/OCCEmotion`` formalises the [theory on Emotions proposed by Ortony, Clore and Collins](https://books.google.com/books?hl=it&lr=&id=dA3JEEAp6TsC&oi=fnd&pg=PP13&dq=ortony+clore+collins&ots=HXLvSq9Tma&sig=BaFT7kk6TMODde2UYC0BCOGCduQ)
   - [Shaver Emotions](https://w3id.org/spice/SON/ShaverEmotions) [(DEV version)](https://w3id.org/spice/SON/ShaverEmotions/0.0.2) ``https://w3id.org/spice/SON/ShaverEmotions`` formalises the Shaver's theory on [emotions](https://psycnet.apa.org/buy/1987-28161-001).
-  - [GoEmotions](https://github.com/spice-h2020/SON/tree/main/GoEmotions) [(DEV version)](https://github.com/spice-h2020/SON/tree/main/GoEmotions)formalizes the Google dataset "Go Emotions" (https://arxiv.org/abs/2005.00547)
+  - [GoEmotions](https://w3id.org/spice/SON/GoEmotions/0.0.2) [(DEV version)](https://w3id.org/spice/SON/GoEmotions/0.0.2) formalizes the Google dataset "Go Emotions" (https://arxiv.org/abs/2005.00547)
 
 - **Artwork Description Knowledge Area**
   - [Exhibition](https://w3id.org/spice/SON/exhibition) [(DEV version)](https://w3id.org/spice/SON/exhibition/0.0.2) ``https://w3id.org/spice/SON/exhibition`` defines a vocabulary for specifying information related fo cultural exhibitions.
