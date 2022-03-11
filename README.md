@@ -72,7 +72,9 @@ This is a list of the brand new ontologies developed for the SPICE project.
 
 - **User and Community Knowledge Area**
   - [Schwartz Values](https://w3id.org/spice/SON/SchwartzValues) [(DEV version)](https://w3id.org/spice/SON/SchwartzValues/0.0.2) ``https://w3id.org/spice/SON/SchwartzValues`` is a formalization of the [Theory of Human Values](https://www.sciencedirect.com/science/article/pii/S2405844018372773)
-  - [Haidt Values](https://w3id.org/spice/SON/HaidtValues) [(DEV version)](https://w3id.org/spice/SON/HaidtValues/0.0.2) ``https://w3id.org/spice/SON/HaidtValues`` is a formalization of the  [Theory of Moral Foundation](https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0015141) proposed in the model by Haidt et al. 
+  - [Haidt Values](https://w3id.org/spice/SON/HaidtValues) [(DEV version)](https://w3id.org/spice/SON/HaidtValues/0.0.2) ``https://w3id.org/spice/SON/HaidtValues`` is a formalization of the  [Theory of Moral Foundation](https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0015141) proposed in the model by Haidt et al.
+  - [User Profile eXtended](https://w3id.org/spice/SON/upX/0.0.2) [(DEV version)](https://w3id.org/spice/SON/upX/0.0.2) An extension of the [user profile ontology](http://purl.oclc.org/NET/UNIS/up#)
+  - [Community Ontology](https://w3id.org/spice/SON/CommunityOntology/0.0.2) [(DEV Version)](https://w3id.org/spice/SON/CommunityOntology/0.0.2) provides a formal vocabulary for describing communities
 
 - **Interaction Knowledge Area**
   - [Fruition context](https://w3id.org/spice/SON/fruitionContext) [(DEV version)](https://w3id.org/spice/SON/fruitionContext/0.0.2) ``https://w3id.org/spice/SON/fruitionContext`` aims at representing the modality and the context of someone’s interaction with a cultural entity
