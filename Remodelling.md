@@ -53,13 +53,22 @@ CONSTRUCT {
   ?interactionThinkAboutIRI a scripting:InteractionWithCulturalProperty .
   ?interactionOfUserThinkAboutIRI scripting:executesTask ?interactionThinkAboutIRI .
   ?interactionOfUserThinkAboutIRI scripting:generated ?think_about_reification .
+  ?interactionOfUserThinkAboutIRI scripting:byAgent ?userIRI .
   ?think_about_reification rdfs:label ?think_about .
   
   ?interactionMakesMeFeelIRI scripting:involves ?artworkIRI .
   ?interactionMakesMeFeelIRI a scripting:InteractionWithCulturalProperty .
   ?interactionOfUserMakesMeFeelIRI scripting:executesTask ?interactionMakesMeFeelIRI .
   ?interactionOfUserMakesMeFeelIRI scripting:generated ?makes_me_feel_reification .
+  ?interactionOfUserMakesMeFeelIRI scripting:byAgent ?userIRI .
   ?makes_me_feel_reification rdfs:label ?makes_me_feel .
+
+  ?interactionRemindsMeIRI scripting:involves ?artworkIRI .
+  ?interactionRemindsMeIRI a scripting:InteractionWithCulturalProperty .
+  ?interactionOfUserRemindsMeIRI scripting:executesTask ?interactionRemindsMeIRI .
+  ?interactionOfUserRemindsMeIRI scripting:generated ?reminds_me_reification .
+  ?interactionOfUserRemindsMeIRI scripting:byAgent ?userIRI .
+  ?reminds_me_reification rdfs:label ?reminds_me .
   
 } WHERE { 
   ?cp <http://sparql.xyz/facade-x/data/%40id> ?cpId .
@@ -116,6 +125,13 @@ CONSTRUCT {
   BIND(IRI(CONCAT("https://w3id.org/spice/GAM/InteractionMakesMeFeel_", ?cpId)) AS ?interactionMakesMeFeelIRI) 
   BIND(IRI(CONCAT("https://w3id.org/spice/GAM/InteractionMakesMeFeel_of_",?user_id,"_with_", ?cpId)) AS ?interactionOfUserMakesMeFeelIRI)   
   BIND(IRI(CONCAT("https://w3id.org/spice/GAM/MakesMeFeel_reification_",ENCODE_FOR_URI(?makes_me_feel))) AS ?makes_me_feel_reification) 
+
+  ?user xyz:reminds_me ?reminds_me .
+  BIND(IRI(CONCAT("https://w3id.org/spice/GAM/InteractionRemindsMe_", ?cpId)) AS ?interactionRemindsMeIRI) 
+  BIND(IRI(CONCAT("https://w3id.org/spice/GAM/InteractionRemindsMe_of_",?user_id,"_with_", ?cpId)) AS ?interactionOfRemindsMeIRI)   
+  BIND(IRI(CONCAT("https://w3id.org/spice/GAM/RemindsMe_reification_",ENCODE_FOR_URI(?reminds_me))) AS ?reminds_me_reification) 
+
   
-} LIMIT 1
+  
+} 
 ```
