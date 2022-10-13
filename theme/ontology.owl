@@ -78,6 +78,15 @@
     
 
 
+    <!-- https://w3id.org/spice/SON/theme/isTopicallyAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/theme/isTopicallyAssociatedWith">
+        <rdfs:comment xml:lang="en">It associates two resources that relate to the same topic.</rdfs:comment>
+        <rdfs:label xml:lang="en">is topically associated with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
