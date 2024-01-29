@@ -1,0 +1,2742 @@
+@prefix : <https://w3id.org/spice/SON/ShaverEmotions#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shavem: <https://w3id.org/spice/SON/ShaverEmotions/> .
+@prefix emotion: <https://w3id.org/spice/SON/emotion/> .
+@prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@base <https://w3id.org/spice/SON/ShaverEmotions> .
+
+<https://w3id.org/spice/SON/ShaverEmotions> rdf:type owl:Ontology ;
+                                             owl:versionIRI <https://w3id.org/spice/SON/ShaverEmotions/0.0.5> ;
+                                             owl:imports <https://w3id.org/spice/SON/emotion/0.0.2> ;
+                                             dc:description """This ontology has been developed for the SPICE Project (https://spice-h2020.github.io/) and it is based on Shaver's Emotion Theory.
+
+A visualization of the ontology structure is available here: https://github.com/spice-h2020/SON/blob/main/ShaverEmotions/shavernew.png"""@en ;
+                                             rdfs:comment "Author: Bruno Sartini"@en ;
+                                             owl:priorVersion <https://w3id.org/spice/SON/ShaverEmotions/0.0.4> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#bibRef
+ex:bibRef rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/spice/SON/ShaverEmotions/isPrototypeEmotionOf
+shavem:isPrototypeEmotionOf rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            owl:inverseOf shavem:refersToPrototypeEmotion ;
+                            rdfs:comment "Inverse of Refers to prototype emotion"@en ;
+                            rdfs:label "Is prototype emotion of"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/refersToPrototypeEmotion
+shavem:refersToPrototypeEmotion rdf:type owl:ObjectProperty ;
+                                rdfs:domain shavem:EmotionWord ;
+                                rdfs:range shavem:PrototypeEmotion ;
+                                ex:bibRef "Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."@en ;
+                                rdfs:comment "This property was introduced to link an emotion word to the Emotion Prototype that was chosen to identify a cluster in Shaver studies."@en ;
+                                rdfs:label "refers to prototype emotion"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Adoration
+shavem:Adoration rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Love
+                                 ] ;
+                 rdfs:label "Adoration"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Affection
+shavem:Affection rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Love
+                                 ] ;
+                 rdfs:label "Affection"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Aggravation
+shavem:Aggravation rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Anger
+                                   ] ;
+                   rdfs:label "Aggravation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Agitation
+shavem:Agitation rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Anger
+                                 ] ;
+                 rdfs:label "Agitation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Agony
+shavem:Agony rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Sadness
+                             ] ;
+             rdfs:label "Agony"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Alarm
+shavem:Alarm rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Fear
+                             ] ;
+             rdfs:label "Alarm"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Alienation
+shavem:Alienation rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Sadness
+                                  ] ;
+                  rdfs:label "Alienation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Amazement
+shavem:Amazement rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Surprise
+                                 ] ;
+                 rdfs:label "Amazement"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Amusement
+shavem:Amusement rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Joy
+                                 ] ;
+                 rdfs:label "Amusement"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Anger
+shavem:Anger rdf:type owl:Class ;
+             rdfs:subClassOf shavem:PrototypeEmotion ;
+             ex:bibRef """\"Something (usually
+another person, in these accounts) interferes with the person's
+execution of plans or attainment of goals (by reducing the person's
+power, violating expectations, frustrating or interrupting
+goal-directed activities). Alternatively, the person perceives another
+as harming him or her in some way (inflicting physical or
+psychological pain).\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+             rdfs:comment "Anger is a reaction to an event that complicates, negates, or interferes with the experiences intentions, plans, often making them hard or impossible to carry out. The experiencer stands against this event in a fightful stance."@en ;
+             rdfs:label "Anger"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Anguish
+shavem:Anguish rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Sadness
+                               ] ;
+               rdfs:label "Anguish"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Annoyance
+shavem:Annoyance rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Anger
+                                 ] ;
+                 rdfs:label "Annoyance"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Anxiety
+shavem:Anxiety rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Fear
+                               ] ;
+               rdfs:label "Anxiety"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Apprehension
+shavem:Apprehension rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Fear
+                                    ] ;
+                    rdfs:label "Apprehension"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Arousal
+shavem:Arousal rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Love
+                               ] ;
+               rdfs:label "Arousal"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Astonishment
+shavem:Astonishment rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Surprise
+                                    ] ;
+                    rdfs:label "Astonishment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Attraction
+shavem:Attraction rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Love
+                                  ] ;
+                  rdfs:label "Attraction"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Bitterness
+shavem:Bitterness rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Anger
+                                  ] ;
+                  rdfs:label "Bitterness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Bliss
+shavem:Bliss rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Joy
+                             ] ;
+             rdfs:label "Bliss"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Caring
+shavem:Caring rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Love
+                              ] ;
+              rdfs:label "Caring"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Cheerfulness
+shavem:Cheerfulness rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Joy
+                                    ] ;
+                    rdfs:label "Cheerfulness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Compassion
+shavem:Compassion rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Love
+                                  ] ;
+                  rdfs:label "Compassion"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Contempt
+shavem:Contempt rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Anger
+                                ] ;
+                rdfs:label "Contempt"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Contentment
+shavem:Contentment rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Joy
+                                   ] ;
+                   rdfs:label "Contentment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Defeat
+shavem:Defeat rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Sadness
+                              ] ;
+              rdfs:label "Defeat"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Dejection
+shavem:Dejection rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Sadness
+                                 ] ;
+                 rdfs:label "Dejection"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Delight
+shavem:Delight rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Joy
+                               ] ;
+               rdfs:label "Delight"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Depression
+shavem:Depression rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Sadness
+                                  ] ;
+                  rdfs:label "Depression"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Desire
+shavem:Desire rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Love
+                              ] ;
+              rdfs:label "Desire"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Despair
+shavem:Despair rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Sadness
+                               ] ;
+               rdfs:label "Despair"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Disappointment
+shavem:Disappointment rdf:type owl:Class ;
+                      rdfs:subClassOf shavem:EmotionWord ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty shavem:refersToPrototypeEmotion ;
+                                        owl:allValuesFrom shavem:Sadness
+                                      ] ;
+                      rdfs:label "Disappointment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Disgust
+shavem:Disgust rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Anger
+                               ] ;
+               rdfs:label "Disgust"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Dislike
+shavem:Dislike rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Anger
+                               ] ;
+               rdfs:label "Dislike"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Dismay
+shavem:Dismay rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Sadness
+                              ] ;
+              rdfs:label "Dismay"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Displeasure
+shavem:Displeasure rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Sadness
+                                   ] ;
+                   rdfs:label "Displeasure"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Distress
+shavem:Distress rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Fear
+                                ] ;
+                rdfs:label "Distress"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Dread
+shavem:Dread rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Fear
+                             ] ;
+             rdfs:label "Dread"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Eagerness
+shavem:Eagerness rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Joy
+                                 ] ;
+                 rdfs:label "Eagerness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Ecstasy
+shavem:Ecstasy rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Joy
+                               ] ;
+               rdfs:label "Ecstasy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Elation
+shavem:Elation rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Joy
+                               ] ;
+               rdfs:label "Elation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Embarrassment
+shavem:Embarrassment rdf:type owl:Class ;
+                     rdfs:subClassOf shavem:EmotionWord ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty shavem:refersToPrototypeEmotion ;
+                                       owl:allValuesFrom shavem:Sadness
+                                     ] ;
+                     rdfs:label "Embarrassment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature
+shavem:EmotionFeature rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+                      ex:bibRef """\"The coders' judgments were used to produce a feature summary of
+each narrative account. A feature was scored as present in a given account
+if at least two of three coders agreed that it was present. On the
+basis of these codings, we determined the prototypical features of the
+basic emotion categories.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+                      rdfs:comment "An emotion feature is the event that triggers an emotion or the physical/psychological effect that the emotion triggers on the experiencer. It was extracted by the narration of an emotional episode of the participants of Shaver Study. (In an Earlier version it was called Emotion Event)"@en ;
+                      rdfs:label "Emotion Feature"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/EmotionWord
+shavem:EmotionWord rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject> ,
+                                   emotion:Emotion ;
+                   ex:bibRef "Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."@en ;
+                   rdfs:comment "Emotion words are the emotions that emerged from Shaver's study across various emotion theories"@en ;
+                   rdfs:label "Emotion Word"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Enjoyment
+shavem:Enjoyment rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Joy
+                                 ] ;
+                 rdfs:label "Enjoyment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Enthrallment
+shavem:Enthrallment rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Joy
+                                    ] ;
+                    rdfs:label "Enthrallment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Enthusiasm
+shavem:Enthusiasm rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Joy
+                                  ] ;
+                  rdfs:label "Enthusiasm"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Envy
+shavem:Envy rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Anger
+                            ] ;
+            rdfs:label "Envy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Euphoria
+shavem:Euphoria rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Joy
+                                ] ;
+                rdfs:label "Euphoria"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Exasperation
+shavem:Exasperation rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Anger
+                                    ] ;
+                    rdfs:label "Exasperation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Excitement
+shavem:Excitement rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Joy
+                                  ] ;
+                  rdfs:label "Excitement"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Exhilaration
+shavem:Exhilaration rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Joy
+                                    ] ;
+                    rdfs:label "Exhilaration"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Fear
+shavem:Fear rdf:type owl:Class ;
+            rdfs:subClassOf shavem:PrototypeEmotion ;
+            rdfs:comment """\"[...]fear accounts begin with an interpretation
+of events as potentially dangerous or threatening to
+the self—most commonly, an anticipation of physical harm,
+loss, rejection, or failure. The fear antecedents also include a set
+of situational factors (unfamiliar situation, being in the dark,
+being alone) that probably increase the person's perceived vulnerability
+to such threats and impede his or her chances of coping
+effectively.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ,
+                         "Fear is a reaction towards events that are perceived by the epxeriencer as potentially dangerous, and might cause either physical or psychological harm. This reaction is an anticipation of the potential danger of this event or the event(s) that might follow."@en ;
+            rdfs:label "Fear"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Ferocity
+shavem:Ferocity rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Anger
+                                ] ;
+                rdfs:label "Ferocity"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Fondness
+shavem:Fondness rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Love
+                                ] ;
+                rdfs:label "Fondness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Fright
+shavem:Fright rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Fear
+                              ] ;
+              rdfs:label "Fright"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Frustration
+shavem:Frustration rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Anger
+                                   ] ;
+                   rdfs:label "Frustration"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Fury
+shavem:Fury rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Anger
+                            ] ;
+            rdfs:label "Fury"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Gaiety
+shavem:Gaiety rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Joy
+                              ] ;
+              rdfs:label "Gaiety"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Gladness
+shavem:Gladness rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Joy
+                                ] ;
+                rdfs:label "Gladness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Glee
+shavem:Glee rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Joy
+                            ] ;
+            rdfs:label "Glee"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Gloom
+shavem:Gloom rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Sadness
+                             ] ;
+             rdfs:label "Gloom"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Glumness
+shavem:Glumness rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Sadness
+                                ] ;
+                rdfs:label "Glumness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Grief
+shavem:Grief rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Sadness
+                             ] ;
+             rdfs:label "Grief"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Grouchiness
+shavem:Grouchiness rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Anger
+                                   ] ;
+                   rdfs:label "Grouchiness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Grumpiness
+shavem:Grumpiness rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Anger
+                                  ] ;
+                  rdfs:label "Grumpiness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Guilt
+shavem:Guilt rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Sadness
+                             ] ;
+             rdfs:label "Guilt"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Happiness
+shavem:Happiness rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Joy
+                                 ] ;
+                 rdfs:label "Happiness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Hate
+shavem:Hate rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Anger
+                            ] ;
+            rdfs:label "Hate"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Homesickness
+shavem:Homesickness rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Sadness
+                                    ] ;
+                    rdfs:label "Homesickness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Hope
+shavem:Hope rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Joy
+                            ] ;
+            rdfs:label "Hope"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Hopelessness
+shavem:Hopelessness rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Sadness
+                                    ] ;
+                    rdfs:label "Hopelessness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Horror
+shavem:Horror rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Fear
+                              ] ;
+              rdfs:label "Horror"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Hostility
+shavem:Hostility rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Anger
+                                 ] ;
+                 rdfs:label "Hostility"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Humiliation
+shavem:Humiliation rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Sadness
+                                   ] ;
+                   rdfs:label "Humiliation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Hurt
+shavem:Hurt rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Sadness
+                            ] ;
+            rdfs:label "Hurt"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Hysteria
+shavem:Hysteria rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Fear
+                                ] ;
+                rdfs:label "Hysteria"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Infatuation
+shavem:Infatuation rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Love
+                                   ] ;
+                   rdfs:label "Infatuation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Insecurity
+shavem:Insecurity rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Sadness
+                                  ] ;
+                  rdfs:label "Insecurity"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Insult
+shavem:Insult rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Sadness
+                              ] ;
+              rdfs:label "Insult"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Irritation
+shavem:Irritation rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Anger
+                                  ] ;
+                  rdfs:label "Irritation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Isolation
+shavem:Isolation rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Sadness
+                                 ] ;
+                 rdfs:label "Isolation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Jealousy
+shavem:Jealousy rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Anger
+                                ] ;
+                rdfs:label "Jealousy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Jolliness
+shavem:Jolliness rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Joy
+                                 ] ;
+                 rdfs:label "Jolliness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Joviality
+shavem:Joviality rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Joy
+                                 ] ;
+                 rdfs:label "Joviality"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Joy
+shavem:Joy rdf:type owl:Class ;
+           rdfs:subClassOf shavem:PrototypeEmotion ;
+           ex:bibRef """\"Whereas sadness accounts begin with undesirable
+outcomes (getting what is not wanted, suffering social rejection,
+losing a valued relationship), joy accounts begin with positive
+outcomes—getting something desired or desirable. In contrast
+to the losses and failures that trigger sadness, the desirable outcome
+that initiates happiness is frequently a gain or success in
+the achievement domain (task success, achievement) or in the
+social domain (receiving esteem or affection).\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+           rdfs:comment "Joy is a reaction towards an event that positively influences the experiencer life such as the achievement of something."@en ;
+           rdfs:label "Joy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Jubilation
+shavem:Jubilation rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Joy
+                                  ] ;
+                  rdfs:label "Jubilation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Liking
+shavem:Liking rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Love
+                              ] ;
+              rdfs:label "Liking"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Loathing
+shavem:Loathing rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Anger
+                                ] ;
+                rdfs:label "Loathing"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Loneliness
+shavem:Loneliness rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Sadness
+                                  ] ;
+                  rdfs:label "Loneliness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Longing
+shavem:Longing rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Love
+                               ] ;
+               rdfs:label "Longing"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Love
+shavem:Love rdf:type owl:Class ;
+            rdfs:subClassOf shavem:PrototypeEmotion ;
+            ex:bibRef """\"[...]in the case of love, they promote a similar
+sense of well-being that is personalized (i.e., that is attributed
+to the presence or existence of the love object). Love is marked
+by several additional antecedents. According to our subjects,
+love can occur because one has shared time or special experiences
+with the other person, because one finds the other physically
+or psychologically attractive, because one enjoys exceptionally
+good communication with the other person, or because
+one feels open and trusting in the person's presence.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+            rdfs:comment "Love is a reaction to an event that positively affects the life of the experiencer, that is triggered by someone or something towards which they feel something romantic or simply special. In contrast with joy in which the trigger of the event can be anything."@en ;
+            rdfs:label "Love"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Lust
+shavem:Lust rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Love
+                            ] ;
+            rdfs:label "Lust"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Melancholy
+shavem:Melancholy rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Sadness
+                                  ] ;
+                  rdfs:label "Melancholy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Misery
+shavem:Misery rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Sadness
+                              ] ;
+              rdfs:label "Misery"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Mortification
+shavem:Mortification rdf:type owl:Class ;
+                     rdfs:subClassOf shavem:EmotionWord ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty shavem:refersToPrototypeEmotion ;
+                                       owl:allValuesFrom shavem:Fear
+                                     ] ;
+                     rdfs:label "Mortification"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Neglect
+shavem:Neglect rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Sadness
+                               ] ;
+               rdfs:label "Neglect"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Nervousness
+shavem:Nervousness rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Fear
+                                   ] ;
+                   rdfs:label "Nervousness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Optimism
+shavem:Optimism rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Joy
+                                ] ;
+                rdfs:label "Optimism"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Outrage
+shavem:Outrage rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Anger
+                               ] ;
+               rdfs:label "Outrage"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Panic
+shavem:Panic rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Fear
+                             ] ;
+             rdfs:label "Panic"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Passion
+shavem:Passion rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Love
+                               ] ;
+               rdfs:label "Passion"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Pity
+shavem:Pity rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Sadness
+                            ] ;
+            rdfs:label "Pity"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Pleasure
+shavem:Pleasure rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Joy
+                                ] ;
+                rdfs:label "Pleasure"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Pride
+shavem:Pride rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Joy
+                             ] ;
+             rdfs:label "Pride"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion
+shavem:PrototypeEmotion rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject> ,
+                                        emotion:Emotion ;
+                        ex:bibRef """\"If contemporary
+cognitive psychology is correct in claiming that repeated experiences
+with similar events lead to the construction of generic
+mental representations, then ordinary, untrained subjects
+should construct emotion prototypes and implicitly use them
+when witnessing and recounting emotion episodes.\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+                        rdfs:comment "Prototype emotions are the Emotions that emerged in Shaver as the protypical reactions to events that trigger an emotion."@en ;
+                        rdfs:label "Prototype Emotion"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Rage
+shavem:Rage rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Anger
+                            ] ;
+            rdfs:label "Rage"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Rapture
+shavem:Rapture rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Joy
+                               ] ;
+               rdfs:label "Rapture"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Regret
+shavem:Regret rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Sadness
+                              ] ;
+              rdfs:label "Regret"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Rejection
+shavem:Rejection rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Sadness
+                                 ] ;
+                 rdfs:label "Rejection"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Relief
+shavem:Relief rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Joy
+                              ] ;
+              rdfs:label "Relief"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Remorse
+shavem:Remorse rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Sadness
+                               ] ;
+               rdfs:label "Remorse"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Resentment
+shavem:Resentment rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Anger
+                                  ] ;
+                  rdfs:label "Resentment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Revulsion
+shavem:Revulsion rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Anger
+                                 ] ;
+                 rdfs:label "Revulsion"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Sadness
+shavem:Sadness rdf:type owl:Class ;
+               rdfs:subClassOf shavem:PrototypeEmotion ;
+               ex:bibRef """\"The sad
+person has experienced an undesirable outcome; often he or she
+has experienced one of the events that the fearful person
+dreads—death of a loved one, loss of a relationship, or social
+rejection. Like fear, sadness involves \"discovering that one is
+powerless, helpless, or impotent\" to change the unhappy circumstances
+(cf. Seligman, 1975).\" Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."""@en ;
+               rdfs:comment "Sadness is a reaction to an unpleasant event that leads to a downward spiral of negativity, sense of giving up and hopelessness."@en ;
+               rdfs:label "Sadness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Satisfaction
+shavem:Satisfaction rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Joy
+                                    ] ;
+                    rdfs:label "Satisfaction"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Scorn
+shavem:Scorn rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Anger
+                             ] ;
+             rdfs:label "Scorn"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Sentimentality
+shavem:Sentimentality rdf:type owl:Class ;
+                      rdfs:subClassOf shavem:EmotionWord ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty shavem:refersToPrototypeEmotion ;
+                                        owl:allValuesFrom shavem:Love
+                                      ] ;
+                      rdfs:label "Sentimentality"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Shame
+shavem:Shame rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Sadness
+                             ] ;
+             rdfs:label "Shame"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Shock
+shavem:Shock rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Fear
+                             ] ;
+             rdfs:label "Shock"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Sorrow
+shavem:Sorrow rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Sadness
+                              ] ;
+              rdfs:label "Sorrow"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Spite
+shavem:Spite rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Anger
+                             ] ;
+             rdfs:label "Spite"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Suffering
+shavem:Suffering rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Sadness
+                                 ] ;
+                 rdfs:label "Suffering"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Surprise
+shavem:Surprise rdf:type owl:Class ;
+                rdfs:subClassOf shavem:PrototypeEmotion ;
+                rdfs:comment "Shaver P, Schwartz J, Kirson D, O'Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857."@en ,
+                             "Surprise is only included in a first list of Emotion Prototypes, but it is not given a definition by Shaver."@en ;
+                rdfs:label "Surprise"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Sympathy
+shavem:Sympathy rdf:type owl:Class ;
+                rdfs:subClassOf shavem:EmotionWord ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty shavem:refersToPrototypeEmotion ;
+                                  owl:allValuesFrom shavem:Sadness
+                                ] ;
+                rdfs:label "Sympathy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Tenderness
+shavem:Tenderness rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Love
+                                  ] ;
+                  rdfs:label "Tenderness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Tenseness
+shavem:Tenseness rdf:type owl:Class ;
+                 rdfs:subClassOf shavem:EmotionWord ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty shavem:refersToPrototypeEmotion ;
+                                   owl:allValuesFrom shavem:Fear
+                                 ] ;
+                 rdfs:label "Tenseness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Terror
+shavem:Terror rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Fear
+                              ] ;
+              rdfs:label "Terror"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Thrill
+shavem:Thrill rdf:type owl:Class ;
+              rdfs:subClassOf shavem:EmotionWord ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty shavem:refersToPrototypeEmotion ;
+                                owl:allValuesFrom shavem:Joy
+                              ] ;
+              rdfs:label "Thrill"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Torment
+shavem:Torment rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Anger
+                               ] ;
+               rdfs:label "Torment"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Triumph
+shavem:Triumph rdf:type owl:Class ;
+               rdfs:subClassOf shavem:EmotionWord ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty shavem:refersToPrototypeEmotion ;
+                                 owl:allValuesFrom shavem:Joy
+                               ] ;
+               rdfs:label "Triumph"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Uneasiness
+shavem:Uneasiness rdf:type owl:Class ;
+                  rdfs:subClassOf shavem:EmotionWord ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty shavem:refersToPrototypeEmotion ;
+                                    owl:allValuesFrom shavem:Fear
+                                  ] ;
+                  rdfs:label "Uneasiness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Unhappiness
+shavem:Unhappiness rdf:type owl:Class ;
+                   rdfs:subClassOf shavem:EmotionWord ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty shavem:refersToPrototypeEmotion ;
+                                     owl:allValuesFrom shavem:Sadness
+                                   ] ;
+                   rdfs:label "Unhappiness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Vengefulness
+shavem:Vengefulness rdf:type owl:Class ;
+                    rdfs:subClassOf shavem:EmotionWord ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty shavem:refersToPrototypeEmotion ;
+                                      owl:allValuesFrom shavem:Anger
+                                    ] ;
+                    rdfs:label "Vengefulness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Woe
+shavem:Woe rdf:type owl:Class ;
+           rdfs:subClassOf shavem:EmotionWord ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty shavem:refersToPrototypeEmotion ;
+                             owl:allValuesFrom shavem:Sadness
+                           ] ;
+           rdfs:label "Woe"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Worry
+shavem:Worry rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Fear
+                             ] ;
+             rdfs:label "Worry"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Wrath
+shavem:Wrath rdf:type owl:Class ;
+             rdfs:subClassOf shavem:EmotionWord ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty shavem:refersToPrototypeEmotion ;
+                               owl:allValuesFrom shavem:Anger
+                             ] ;
+             rdfs:label "Wrath"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Zeal
+shavem:Zeal rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Joy
+                            ] ;
+            rdfs:label "Zeal"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/Zest
+shavem:Zest rdf:type owl:Class ;
+            rdfs:subClassOf shavem:EmotionWord ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty shavem:refersToPrototypeEmotion ;
+                              owl:allValuesFrom shavem:Joy
+                            ] ;
+            rdfs:label "Zest"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause
+shavem:attacking_something_other_than_cause rdf:type owl:NamedIndividual ,
+                                                     shavem:EmotionFeature ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty emotion:triggers ;
+                                                       owl:someValuesFrom shavem:Anger
+                                                     ] ;
+                                            emotion:label "Attacking something other than cause"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_alone
+shavem:being_alone rdf:type owl:NamedIndividual ,
+                            shavem:EmotionFeature ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty emotion:triggers ;
+                              owl:someValuesFrom shavem:Fear
+                            ] ;
+                   emotion:label "Being alone"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark
+shavem:being_in_the_dark rdf:type owl:NamedIndividual ,
+                                  shavem:EmotionFeature ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty emotion:triggers ;
+                                    owl:someValuesFrom shavem:Fear
+                                  ] ;
+                         emotion:label "Being in the dark"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling
+shavem:communicating_the_good_feeling rdf:type owl:NamedIndividual ,
+                                               shavem:EmotionFeature ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty emotion:triggers ;
+                                                 owl:someValuesFrom shavem:Joy
+                                               ] ;
+                                      emotion:label "Communicating the good feeling"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/crying
+shavem:crying rdf:type owl:NamedIndividual ,
+                       shavem:EmotionFeature ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty emotion:triggers ;
+                         owl:someValuesFrom shavem:Anger
+                       ] ;
+              emotion:label "Crying"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one
+shavem:death_of_a_loved_one rdf:type owl:NamedIndividual ,
+                                     shavem:EmotionFeature ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty emotion:triggers ;
+                                       owl:someValuesFrom shavem:Sadness
+                                     ] ;
+                            emotion:label "Death of a loved one"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people
+shavem:doing_nice_things_for_other_people rdf:type owl:NamedIndividual ,
+                                                   shavem:EmotionFeature ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty emotion:triggers ;
+                                                     owl:someValuesFrom shavem:Joy
+                                                   ] ;
+                                          emotion:label "Doing nice things for other people"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication
+shavem:exceptionally_good_communication rdf:type owl:NamedIndividual ,
+                                                 shavem:EmotionFeature ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty emotion:triggers ;
+                                                   owl:someValuesFrom shavem:Love
+                                                 ] ;
+                                        emotion:label "Exceptionally good communication"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other
+shavem:expressing_positive_feelings_to_other rdf:type owl:NamedIndividual ,
+                                                      shavem:EmotionFeature ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty emotion:triggers ;
+                                                        owl:someValuesFrom shavem:Love
+                                                      ] ;
+                                             emotion:label "Expressing positive feelings to other"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_excited
+shavem:feeling_excited rdf:type owl:NamedIndividual ,
+                                shavem:EmotionFeature ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty emotion:triggers ;
+                                  owl:someValuesFrom shavem:Joy
+                                ] ;
+                       emotion:label "Feeling excited"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched
+shavem:hands_or_fists_clenched rdf:type owl:NamedIndividual ,
+                                        shavem:EmotionFeature ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty emotion:triggers ;
+                                          owl:someValuesFrom shavem:Anger
+                                        ] ;
+                               emotion:label "Hands or fists clenched"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hugging_people
+shavem:hugging_people rdf:type owl:NamedIndividual ,
+                               shavem:EmotionFeature ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty emotion:triggers ;
+                                 owl:someValuesFrom shavem:Joy
+                               ] ;
+                      emotion:label "Hugging people"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger
+shavem:imagining_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
+                                                       shavem:EmotionFeature ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty emotion:triggers ;
+                                                         owl:someValuesFrom shavem:Anger
+                                                       ] ;
+                                              emotion:label "Imagining attacking the cause of anger"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down
+shavem:jumping_up_and_down rdf:type owl:NamedIndividual ,
+                                    shavem:EmotionFeature ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty emotion:triggers ;
+                                      owl:someValuesFrom shavem:Joy
+                                    ] ;
+                           emotion:label "Jumping up and down"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/kissing
+shavem:kissing rdf:type owl:NamedIndividual ,
+                        shavem:EmotionFeature ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty emotion:triggers ;
+                          owl:someValuesFrom shavem:Love
+                        ] ;
+               emotion:label "Kissing"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention
+shavem:narrowing_of_attention rdf:type owl:NamedIndividual ,
+                                       shavem:EmotionFeature ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty emotion:triggers ;
+                                         owl:someValuesFrom shavem:Anger
+                                       ] ;
+                              emotion:label "Narrowing of attention"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval
+shavem:nonverbally_communicating_disapproval rdf:type owl:NamedIndividual ,
+                                                      shavem:EmotionFeature ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty emotion:triggers ;
+                                                        owl:someValuesFrom shavem:Anger
+                                                      ] ;
+                                             emotion:label "Nonverbally communicating disapproval"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/other_offers_something_wanted
+shavem:other_offers_something_wanted rdf:type owl:NamedIndividual ,
+                                              shavem:EmotionFeature ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty emotion:triggers ;
+                                                owl:someValuesFrom shavem:Love
+                                              ] ;
+                                     emotion:label "Other offers something wanted, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive
+shavem:person_finds_other_attractive rdf:type owl:NamedIndividual ,
+                                              shavem:EmotionFeature ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty emotion:triggers ;
+                                                owl:someValuesFrom shavem:Love
+                                              ] ;
+                                     emotion:label "Person finds other attractive"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger
+shavem:physically_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
+                                                        shavem:EmotionFeature ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty emotion:triggers ;
+                                                          owl:someValuesFrom shavem:Anger
+                                                        ] ;
+                                               emotion:label "Physically attacking the cause of anger"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion
+shavem:picturing_a_disastrous_conclusion rdf:type owl:NamedIndividual ,
+                                                  shavem:EmotionFeature ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty emotion:triggers ;
+                                                    owl:someValuesFrom shavem:Fear
+                                                  ] ;
+                                         emotion:label "Picturing a disastrous conclusion"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger
+shavem:predisposition_to_anger rdf:type owl:NamedIndividual ,
+                                        shavem:EmotionFeature ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty emotion:triggers ;
+                                          owl:someValuesFrom shavem:Anger
+                                        ] ;
+                               emotion:label "Predisposition to anger"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain
+shavem:real_or_threatened_pain rdf:type owl:NamedIndividual ,
+                                        shavem:EmotionFeature ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty emotion:triggers ;
+                                          owl:someValuesFrom shavem:Anger
+                                        ] ;
+                               emotion:label "Real or threatened pain"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations
+shavem:reality_exceeding_expectations rdf:type owl:NamedIndividual ,
+                                               shavem:EmotionFeature ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty emotion:triggers ;
+                                                 owl:someValuesFrom shavem:Joy
+                                               ] ;
+                                      emotion:label "Reality exceeding expectations"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations
+shavem:reality_falling_short_of_expectations rdf:type owl:NamedIndividual ,
+                                                      shavem:EmotionFeature ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty emotion:triggers ;
+                                                        owl:someValuesFrom shavem:Sadness
+                                                      ] ;
+                                             emotion:label "Reality falling short of expectations"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise
+shavem:receiving_a_wonderful_surprise rdf:type owl:NamedIndividual ,
+                                               shavem:EmotionFeature ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty emotion:triggers ;
+                                                 owl:someValuesFrom shavem:Joy
+                                               ] ;
+                                      emotion:label "Receiving a wonderful surprise"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things
+shavem:saying_positive_things rdf:type owl:NamedIndividual ,
+                                       shavem:EmotionFeature ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty emotion:triggers ;
+                                         owl:someValuesFrom shavem:Joy
+                                       ] ;
+                              emotion:label "Saying positive things"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things
+shavem:saying_sad_things rdf:type owl:NamedIndividual ,
+                                  shavem:EmotionFeature ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty emotion:triggers ;
+                                    owl:someValuesFrom shavem:Sadness
+                                  ] ;
+                         emotion:label "Saying sad things"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling
+shavem:sharing_the_feeling rdf:type owl:NamedIndividual ,
+                                    shavem:EmotionFeature ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty emotion:triggers ;
+                                      owl:someValuesFrom shavem:Joy
+                                    ] ;
+                           emotion:label "Sharing the feeling"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/smiling
+shavem:smiling rdf:type owl:NamedIndividual ,
+                        shavem:EmotionFeature ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty emotion:triggers ;
+                          owl:someValuesFrom shavem:Joy
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty emotion:triggers ;
+                          owl:someValuesFrom shavem:Love
+                        ] ;
+               emotion:label "Smiling"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/talking_little_or_not_at_all
+shavem:talking_little_or_not_at_all rdf:type owl:NamedIndividual ,
+                                             shavem:EmotionFeature ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty emotion:triggers ;
+                                               owl:someValuesFrom shavem:Sadness
+                                             ] ;
+                                    emotion:label "Talking little or not at all"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/talking_to_someone_about_sadness
+shavem:talking_to_someone_about_sadness rdf:type owl:NamedIndividual ,
+                                                 shavem:EmotionFeature ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty emotion:triggers ;
+                                                   owl:someValuesFrom shavem:Sadness
+                                                 ] ;
+                                        emotion:label "Talking to someone about sadness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/threat_of_harm_or_death
+shavem:threat_of_harm_or_death rdf:type owl:NamedIndividual ,
+                                        shavem:EmotionFeature ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty emotion:triggers ;
+                                          owl:someValuesFrom shavem:Fear
+                                        ] ;
+                               emotion:label "Threat of harm or death"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection
+shavem:threat_of_social_rejection rdf:type owl:NamedIndividual ,
+                                           shavem:EmotionFeature ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty emotion:triggers ;
+                                             owl:someValuesFrom shavem:Fear
+                                           ] ;
+                                  emotion:label "Threat of social rejection"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body
+shavem:tightness_or_rigidity_in_body rdf:type owl:NamedIndividual ,
+                                              shavem:EmotionFeature ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty emotion:triggers ;
+                                                owl:someValuesFrom shavem:Anger
+                                              ] ;
+                                     emotion:label "Tightness or rigidity in body"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger
+shavem:verbally_attacking_the_cause_of_anger rdf:type owl:NamedIndividual ,
+                                                      shavem:EmotionFeature ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty emotion:triggers ;
+                                                        owl:someValuesFrom shavem:Anger
+                                                      ] ;
+                                             emotion:label "Verbally attacking the cause of anger"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation
+shavem:violation_of_expectation rdf:type owl:NamedIndividual ,
+                                         shavem:EmotionFeature ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty emotion:triggers ;
+                                           owl:someValuesFrom shavem:Anger
+                                         ] ;
+                                emotion:label "Violation of expectation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanted
+shavem:wanted rdf:type owl:NamedIndividual ,
+                       shavem:EmotionFeature ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty emotion:triggers ;
+                         owl:someValuesFrom shavem:Joy
+                       ] ;
+              emotion:label "wanted"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex
+shavem:wanting_physical_closeness_or_sex rdf:type owl:NamedIndividual ,
+                                                  shavem:EmotionFeature ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty emotion:triggers ;
+                                                    owl:someValuesFrom shavem:Love
+                                                  ] ;
+                                         emotion:label "Wanting physical closeness or sex"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact
+shavem:withdrawing_from_social_contact rdf:type owl:NamedIndividual ,
+                                                shavem:EmotionFeature ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty emotion:triggers ;
+                                                  owl:someValuesFrom shavem:Sadness
+                                                ] ;
+                                       emotion:label "Withdrawing from social contact"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear
+<https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear> rdf:type owl:NamedIndividual ,
+                                                                                      shavem:EmotionFeature ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty emotion:triggers ;
+                                                                                        owl:someValuesFrom shavem:Fear
+                                                                                      ] ;
+                                                                             emotion:label "Acting unafraid, hiding the fear"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures
+<https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures> rdf:type owl:NamedIndividual ,
+                                                                                      shavem:EmotionFeature ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty emotion:triggers ;
+                                                                                        owl:someValuesFrom shavem:Anger
+                                                                                      ] ;
+                                                                             emotion:label "Aggressive, threatening gestures"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging
+<https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging> rdf:type owl:NamedIndividual ,
+                                                                               shavem:EmotionFeature ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty emotion:triggers ;
+                                                                                 owl:someValuesFrom shavem:Joy
+                                                                               ] ;
+                                                                      emotion:label "Being accepted, belonging"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly
+<https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly> rdf:type owl:NamedIndividual ,
+                                                                          shavem:EmotionFeature ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty emotion:triggers ;
+                                                                            owl:someValuesFrom shavem:Joy
+                                                                          ] ;
+                                                                 emotion:label "Being bouncy, bubbly"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others
+<https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others> rdf:type owl:NamedIndividual ,
+                                                                                         shavem:EmotionFeature ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty emotion:triggers ;
+                                                                                           owl:someValuesFrom shavem:Joy
+                                                                                         ] ;
+                                                                                emotion:label "Being courteous, friendly to others"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                       shavem:EmotionFeature ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty emotion:triggers ;
+                                                                                         owl:someValuesFrom shavem:Love
+                                                                                       ] ;
+                                                                              emotion:label "Being forgetful, distracted, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot
+<https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot> rdf:type owl:NamedIndividual ,
+                                                                                    shavem:EmotionFeature ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty emotion:triggers ;
+                                                                                      owl:someValuesFrom shavem:Joy
+                                                                                    ] ;
+                                                                           emotion:label "Being talkative, talking a lot"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself
+<https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself> rdf:type owl:NamedIndividual ,
+                                                                                  shavem:EmotionFeature ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty emotion:triggers ;
+                                                                                    owl:someValuesFrom shavem:Sadness
+                                                                                  ] ;
+                                                                         emotion:label "Blaming, criticizing oneself"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face
+<https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face> rdf:type owl:NamedIndividual ,
+                                                                          shavem:EmotionFeature ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty emotion:triggers ;
+                                                                            owl:someValuesFrom shavem:Joy
+                                                                          ] ;
+                                                                 emotion:label "Bright, glowing face"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact
+<https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact> rdf:type owl:NamedIndividual ,
+                                                                                        shavem:EmotionFeature ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty emotion:triggers ;
+                                                                                          owl:someValuesFrom shavem:Anger
+                                                                                        ] ;
+                                                                               emotion:label "Brooding; withdrawing from contact"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm
+<https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Fear
+                                                                                          ] ;
+                                                                                 emotion:label "Comforting self, trying to keep calm"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                 shavem:EmotionFeature ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty emotion:triggers ;
+                                                                                   owl:someValuesFrom shavem:Anger
+                                                                                 ] ;
+                                                                        emotion:label "Complaining, bitching, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering
+<https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering> rdf:type owl:NamedIndividual ,
+                                                                        shavem:EmotionFeature ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty emotion:triggers ;
+                                                                          owl:someValuesFrom shavem:Fear
+                                                                        ] ;
+                                                               emotion:label "Crying, whimpering"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering
+<https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering> rdf:type owl:NamedIndividual ,
+                                                                               shavem:EmotionFeature ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty emotion:triggers ;
+                                                                                 owl:someValuesFrom shavem:Sadness
+                                                                               ] ;
+                                                                      emotion:label "Crying, tears, whimpering"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was
+<https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was> rdf:type owl:NamedIndividual ,
+                                                                                         shavem:EmotionFeature ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty emotion:triggers ;
+                                                                                           owl:someValuesFrom shavem:Joy
+                                                                                         ] ;
+                                                                                emotion:label "Desirable outcome; getting what was"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless
+<https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless> rdf:type owl:NamedIndividual ,
+                                                                                            shavem:EmotionFeature ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty emotion:triggers ;
+                                                                                              owl:someValuesFrom shavem:Sadness
+                                                                                            ] ;
+                                                                                   emotion:label "Discovering one is powerless, helpless"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt
+<https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt> rdf:type owl:NamedIndividual ,
+                                                                                           shavem:EmotionFeature ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty emotion:triggers ;
+                                                                                             owl:someValuesFrom shavem:Sadness
+                                                                                           ] ;
+                                                                                  emotion:label "Empathy with someone who is sad, hurt"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                            shavem:EmotionFeature ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty emotion:triggers ;
+                                                                                              owl:someValuesFrom shavem:Joy
+                                                                                            ] ;
+                                                                                   emotion:label "Experiencing pleasurable stimuli, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze
+<https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze> rdf:type owl:NamedIndividual ,
+                                                                              shavem:EmotionFeature ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty emotion:triggers ;
+                                                                                owl:someValuesFrom shavem:Love
+                                                                              ] ;
+                                                                     emotion:label "Eye contact, mutual gaze"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around
+<https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Fear
+                                                                                          ] ;
+                                                                                 emotion:label "Eyes darting, looking quickly around"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                         shavem:EmotionFeature ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty emotion:triggers ;
+                                                                                           owl:someValuesFrom shavem:Love
+                                                                                         ] ;
+                                                                                emotion:label "Feeling/acting self-confident, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                        shavem:EmotionFeature ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty emotion:triggers ;
+                                                                                          owl:someValuesFrom shavem:Love
+                                                                                        ] ;
+                                                                               emotion:label "Feeling excited, high energy, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                            shavem:EmotionFeature ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty emotion:triggers ;
+                                                                                              owl:someValuesFrom shavem:Love
+                                                                                            ] ;
+                                                                                   emotion:label "Feeling happy, joyful, exuberant, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy> rdf:type owl:NamedIndividual ,
+                                                                                     shavem:EmotionFeature ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty emotion:triggers ;
+                                                                                       owl:someValuesFrom shavem:Fear
+                                                                                     ] ;
+                                                                            emotion:label "Feeling nervous, jittery, jumpy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm> rdf:type owl:NamedIndividual ,
+                                                                           shavem:EmotionFeature ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty emotion:triggers ;
+                                                                             owl:someValuesFrom shavem:Love
+                                                                           ] ;
+                                                                  emotion:label "Feeling relaxed, calm"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Love
+                                                                                          ] ;
+                                                                                 emotion:label "Feeling warm, trusting, secure, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly
+<https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly> rdf:type owl:NamedIndividual ,
+                                                                                         shavem:EmotionFeature ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty emotion:triggers ;
+                                                                                           owl:someValuesFrom shavem:Fear
+                                                                                         ] ;
+                                                                                emotion:label "Fleeing, running, walking hurriedly"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling
+<https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling> rdf:type owl:NamedIndividual ,
+                                                                           shavem:EmotionFeature ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty emotion:triggers ;
+                                                                             owl:someValuesFrom shavem:Sadness
+                                                                           ] ;
+                                                                  emotion:label "Frowning, not smiling"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                 shavem:EmotionFeature ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty emotion:triggers ;
+                                                                                   owl:someValuesFrom shavem:Anger
+                                                                                 ] ;
+                                                                        emotion:label "Frowning, not smiling, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity
+<https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Anger
+                                                                                          ] ;
+                                                                                 emotion:label "Frustration/interruption of activity"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                         shavem:EmotionFeature ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty emotion:triggers ;
+                                                                                           owl:someValuesFrom shavem:Joy
+                                                                                         ] ;
+                                                                                emotion:label "Getting something striven for, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing
+<https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing> rdf:type owl:NamedIndividual ,
+                                                                        shavem:EmotionFeature ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty emotion:triggers ;
+                                                                          owl:someValuesFrom shavem:Joy
+                                                                        ] ;
+                                                               emotion:label "Giggling, laughing"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve
+<https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve> rdf:type owl:NamedIndividual ,
+                                                                                            shavem:EmotionFeature ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty emotion:triggers ;
+                                                                                              owl:someValuesFrom shavem:Sadness
+                                                                                            ] ;
+                                                                                   emotion:label "Giving up; no longer trying to improve"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                         shavem:EmotionFeature ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty emotion:triggers ;
+                                                                                           owl:someValuesFrom shavem:Anger
+                                                                                         ] ;
+                                                                                emotion:label "Gritting teeth, showing teeth, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences
+<https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences> rdf:type owl:NamedIndividual ,
+                                                                                     shavem:EmotionFeature ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty emotion:triggers ;
+                                                                                       owl:someValuesFrom shavem:Love
+                                                                                     ] ;
+                                                                            emotion:label "Having shared time, experiences"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping
+<https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping> rdf:type owl:NamedIndividual ,
+                                                                          shavem:EmotionFeature ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty emotion:triggers ;
+                                                                            owl:someValuesFrom shavem:Anger
+                                                                          ] ;
+                                                                 emotion:label "Heavy walk, stomping"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move
+<https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move> rdf:type owl:NamedIndividual ,
+                                                                                            shavem:EmotionFeature ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty emotion:triggers ;
+                                                                                              owl:someValuesFrom shavem:Fear
+                                                                                            ] ;
+                                                                                   emotion:label "Hiding from threat, trying not to move"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance
+<https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance> rdf:type owl:NamedIndividual ,
+                                                                                           shavem:EmotionFeature ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty emotion:triggers ;
+                                                                                             owl:someValuesFrom shavem:Joy
+                                                                                           ] ;
+                                                                                  emotion:label "High thresh hold for worry, annoyance"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling
+<https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling> rdf:type owl:NamedIndividual ,
+                                                                                shavem:EmotionFeature ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty emotion:triggers ;
+                                                                                  owl:someValuesFrom shavem:Love
+                                                                                ] ;
+                                                                       emotion:label "Hugging, holding, cuddling"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional
+<https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional> rdf:type owl:NamedIndividual ,
+                                                                                           shavem:EmotionFeature ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty emotion:triggers ;
+                                                                                             owl:someValuesFrom shavem:Anger
+                                                                                           ] ;
+                                                                                  emotion:label "Incoherent, out of control, emotional"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy
+<https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy> rdf:type owl:NamedIndividual ,
+                                                                                shavem:EmotionFeature ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty emotion:triggers ;
+                                                                                  owl:someValuesFrom shavem:Sadness
+                                                                                ] ;
+                                                                       emotion:label "Irritable, touchy, grouchy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness
+<https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Anger
+                                                                                          ] ;
+                                                                                 emotion:label "Judgment of illegitimacy, unfairness"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented
+<https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Fear
+                                                                                          ] ;
+                                                                                 emotion:label "Losing ability to focus, disoriented"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence
+<https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence> rdf:type owl:NamedIndividual ,
+                                                                                 shavem:EmotionFeature ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty emotion:triggers ;
+                                                                                   owl:someValuesFrom shavem:Fear
+                                                                                 ] ;
+                                                                        emotion:label "Loss of control, competence"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation
+<https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation> rdf:type owl:NamedIndividual ,
+                                                                                      shavem:EmotionFeature ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty emotion:triggers ;
+                                                                                        owl:someValuesFrom shavem:Sadness
+                                                                                      ] ;
+                                                                             emotion:label "Loss of relationship; separation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming
+<https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming> rdf:type owl:NamedIndividual ,
+                                                                                    shavem:EmotionFeature ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty emotion:triggers ;
+                                                                                      owl:someValuesFrom shavem:Anger
+                                                                                    ] ;
+                                                                           emotion:label "Loud voice, yelling, screaming"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice
+<https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice> rdf:type owl:NamedIndividual ,
+                                                                                        shavem:EmotionFeature ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty emotion:triggers ;
+                                                                                          owl:someValuesFrom shavem:Sadness
+                                                                                        ] ;
+                                                                               emotion:label "Low, quiet, slow, monotonous voice"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody
+<https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody> rdf:type owl:NamedIndividual ,
+                                                                                   shavem:EmotionFeature ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty emotion:triggers ;
+                                                                                     owl:someValuesFrom shavem:Sadness
+                                                                                   ] ;
+                                                                          emotion:label "Moping, brooding, being moody"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively
+<https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively> rdf:type owl:NamedIndividual ,
+                                                                                           shavem:EmotionFeature ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty emotion:triggers ;
+                                                                                             owl:someValuesFrom shavem:Sadness
+                                                                                           ] ;
+                                                                                  emotion:label "Negative outlook; thinking negatively"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk
+<https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk> rdf:type owl:NamedIndividual ,
+                                                                           shavem:EmotionFeature ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty emotion:triggers ;
+                                                                             owl:someValuesFrom shavem:Fear
+                                                                           ] ;
+                                                                  emotion:label "Nervous, fearful talk"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort
+<https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Anger
+                                                                                          ] ;
+                                                                                 emotion:label "Nervous tension, anxiety, discomfort"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                       shavem:EmotionFeature ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty emotion:triggers ;
+                                                                                         owl:someValuesFrom shavem:Sadness
+                                                                                       ] ;
+                                                                              emotion:label "Not getting what was wanted, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation
+<https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation> rdf:type owl:NamedIndividual ,
+                                                                                 shavem:EmotionFeature ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty emotion:triggers ;
+                                                                                   owl:someValuesFrom shavem:Fear
+                                                                                 ] ;
+                                                                        emotion:label "Novel, unfamiliar situation"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing
+<https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing> rdf:type owl:NamedIndividual ,
+                                                                          shavem:EmotionFeature ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty emotion:triggers ;
+                                                                            owl:someValuesFrom shavem:Anger
+                                                                          ] ;
+                                                                 emotion:label "Obscenities, cursing"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Love
+                                                                                          ] ;
+                                                                                 emotion:label "Other inspires openness, trust, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her
+<https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her> rdf:type owl:NamedIndividual ,
+                                                                                                 shavem:EmotionFeature ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty emotion:triggers ;
+                                                                                                   owl:someValuesFrom shavem:Love
+                                                                                                 ] ;
+                                                                                        emotion:label "Person knows other loves, needs, him or her"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper'
+<https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_'hyper'> rdf:type owl:NamedIndividual ,
+                                                                                           shavem:EmotionFeature ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty emotion:triggers ;
+                                                                                             owl:someValuesFrom shavem:Joy
+                                                                                           ] ;
+                                                                                  emotion:label "Physically energetic, active, 'hyper'"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help
+<https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help> rdf:type owl:NamedIndividual ,
+                                                                               shavem:EmotionFeature ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty emotion:triggers ;
+                                                                                 owl:someValuesFrom shavem:Fear
+                                                                               ] ;
+                                                                      emotion:label "Pleading, crying for help"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side
+<https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side> rdf:type owl:NamedIndividual ,
+                                                                                          shavem:EmotionFeature ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty emotion:triggers ;
+                                                                                            owl:someValuesFrom shavem:Joy
+                                                                                          ] ;
+                                                                                 emotion:label "Positive outlook; seeing bright side"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure
+<https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure> rdf:type owl:NamedIndividual ,
+                                                                                  shavem:EmotionFeature ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty emotion:triggers ;
+                                                                                    owl:someValuesFrom shavem:Fear
+                                                                                  ] ;
+                                                                         emotion:label "Possibility of loss, failure"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise
+<https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise> rdf:type owl:NamedIndividual ,
+                                                                                       shavem:EmotionFeature ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty emotion:triggers ;
+                                                                                         owl:someValuesFrom shavem:Joy
+                                                                                       ] ;
+                                                                              emotion:label "Receiving esteem, respect, praise"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection
+<https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection> rdf:type owl:NamedIndividual ,
+                                                                                       shavem:EmotionFeature ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty emotion:triggers ;
+                                                                                         owl:someValuesFrom shavem:Joy
+                                                                                       ] ;
+                                                                              emotion:label "Receiving love, liking, affection"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face
+<https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face> rdf:type owl:NamedIndividual ,
+                                                                       shavem:EmotionFeature ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty emotion:triggers ;
+                                                                         owl:someValuesFrom shavem:Anger
+                                                                       ] ;
+                                                              emotion:label "Red, flushed face"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                    shavem:EmotionFeature ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty emotion:triggers ;
+                                                                                      owl:someValuesFrom shavem:Anger
+                                                                                    ] ;
+                                                                           emotion:label "Redefining the situation, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval
+<https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval> rdf:type owl:NamedIndividual ,
+                                                                                       shavem:EmotionFeature ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty emotion:triggers ;
+                                                                                         owl:someValuesFrom shavem:Sadness
+                                                                                       ] ;
+                                                                              emotion:label "Rejection, exclusion, disapproval"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status
+<https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status> rdf:type owl:NamedIndividual ,
+                                                                                       shavem:EmotionFeature ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty emotion:triggers ;
+                                                                                         owl:someValuesFrom shavem:Anger
+                                                                                       ] ;
+                                                                              emotion:label "Reversal or loss of power, status"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you'
+<https://w3id.org/spice/SON/ShaverEmotions/saying_'i_love_you'> rdf:type owl:NamedIndividual ,
+                                                                         shavem:EmotionFeature ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty emotion:triggers ;
+                                                                           owl:someValuesFrom shavem:Love
+                                                                         ] ;
+                                                                emotion:label "Saying 'I love you'"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling
+<https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling> rdf:type owl:NamedIndividual ,
+                                                                        shavem:EmotionFeature ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty emotion:triggers ;
+                                                                          owl:someValuesFrom shavem:Fear
+                                                                        ] ;
+                                                               emotion:label "Screaming, yelling"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                         shavem:EmotionFeature ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty emotion:triggers ;
+                                                                                           owl:someValuesFrom shavem:Love
+                                                                                         ] ;
+                                                                                emotion:label "Seeing only the positive side, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling
+<https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling> rdf:type owl:NamedIndividual ,
+                                                                                   shavem:EmotionFeature ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty emotion:triggers ;
+                                                                                     owl:someValuesFrom shavem:Fear
+                                                                                   ] ;
+                                                                          emotion:label "Shaking, quivering, trembling"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice
+<https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice> rdf:type owl:NamedIndividual ,
+                                                                            shavem:EmotionFeature ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty emotion:triggers ;
+                                                                              owl:someValuesFrom shavem:Fear
+                                                                            ] ;
+                                                                   emotion:label "Shaky, trembling voice"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                           shavem:EmotionFeature ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty emotion:triggers ;
+                                                                                             owl:someValuesFrom shavem:Sadness
+                                                                                           ] ;
+                                                                                  emotion:label "Sitting, lying around; inactive, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements
+<https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements> rdf:type owl:NamedIndividual ,
+                                                                               shavem:EmotionFeature ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty emotion:triggers ;
+                                                                                 owl:someValuesFrom shavem:Sadness
+                                                                               ] ;
+                                                                      emotion:label "Slow, shuffling movements"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture
+<https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture> rdf:type owl:NamedIndividual ,
+                                                                               shavem:EmotionFeature ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty emotion:triggers ;
+                                                                                 owl:someValuesFrom shavem:Sadness
+                                                                               ] ;
+                                                                      emotion:label "Slumped, drooping posture"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it
+<https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it> rdf:type owl:NamedIndividual ,
+                                                                                              shavem:EmotionFeature ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty emotion:triggers ;
+                                                                                                owl:someValuesFrom shavem:Anger
+                                                                                              ] ;
+                                                                                     emotion:label "Suppressing anger; trying not to show it"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy
+<https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy> rdf:type owl:NamedIndividual ,
+                                                                                        shavem:EmotionFeature ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty emotion:triggers ;
+                                                                                          owl:someValuesFrom shavem:Sadness
+                                                                                        ] ;
+                                                                               emotion:label "Suppressing feelings; acting happy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring
+<https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring> rdf:type owl:NamedIndividual ,
+                                                                          shavem:EmotionFeature ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty emotion:triggers ;
+                                                                            owl:someValuesFrom shavem:Fear
+                                                                          ] ;
+                                                                 emotion:label "Sweating, perspiring"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active
+<https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active> rdf:type owl:NamedIndividual ,
+                                                                                    shavem:EmotionFeature ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty emotion:triggers ;
+                                                                                      owl:someValuesFrom shavem:Sadness
+                                                                                    ] ;
+                                                                           emotion:label "Taking action, becoming active"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless
+<https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless> rdf:type owl:NamedIndividual ,
+                                                                                    shavem:EmotionFeature ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty emotion:triggers ;
+                                                                                      owl:someValuesFrom shavem:Fear
+                                                                                    ] ;
+                                                                           emotion:label "Talking less, being speechless"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement
+<https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement> rdf:type owl:NamedIndividual ,
+                                                                               shavem:EmotionFeature ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty emotion:triggers ;
+                                                                                 owl:someValuesFrom shavem:Joy
+                                                                               ] ;
+                                                                      emotion:label "Task success, achievement"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/thinking_'i'm_right,'_etc.> rdf:type owl:NamedIndividual ,
+                                                                                shavem:EmotionFeature ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty emotion:triggers ;
+                                                                                  owl:someValuesFrom shavem:Anger
+                                                                                ] ;
+                                                                       emotion:label "Thinking 'I'm right,' etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy
+<https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy> rdf:type owl:NamedIndividual ,
+                                                                                    shavem:EmotionFeature ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty emotion:triggers ;
+                                                                                      owl:someValuesFrom shavem:Sadness
+                                                                                    ] ;
+                                                                           emotion:label "Tired, run-down, low in energy"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/touching,_petting
+<https://w3id.org/spice/SON/ShaverEmotions/touching,_petting> rdf:type owl:NamedIndividual ,
+                                                                       shavem:EmotionFeature ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty emotion:triggers ;
+                                                                         owl:someValuesFrom shavem:Love
+                                                                       ] ;
+                                                              emotion:label "Touching, petting"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise
+<https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise> rdf:type owl:NamedIndividual ,
+                                                                                            shavem:EmotionFeature ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty emotion:triggers ;
+                                                                                              owl:someValuesFrom shavem:Sadness
+                                                                                            ] ;
+                                                                                   emotion:label "Undesirable outcome, negative surprise"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited
+<https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited> rdf:type owl:NamedIndividual ,
+                                                                                    shavem:EmotionFeature ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty emotion:triggers ;
+                                                                                      owl:someValuesFrom shavem:Joy
+                                                                                    ] ;
+                                                                           emotion:label "Voice is enthusiastic, excited"@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.
+<https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.> rdf:type owl:NamedIndividual ,
+                                                                                      shavem:EmotionFeature ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty emotion:triggers ;
+                                                                                        owl:someValuesFrom shavem:Love
+                                                                                      ] ;
+                                                                             emotion:label "Wanting the best for other, etc."@en .
+
+
+###  https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other
+<https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other> rdf:type owl:NamedIndividual ,
+                                                                                           shavem:EmotionFeature ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty emotion:triggers ;
+                                                                                             owl:someValuesFrom shavem:Love
+                                                                                           ] ;
+                                                                                  emotion:label "Wanting to see, spend time with other"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
