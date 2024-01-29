@@ -765,7 +765,7 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/EmotionWord">
         <exuviae:bibRef xml:lang="en">Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</exuviae:bibRef>
-        <rdfs:comment xml:lang="en">Emotion words are the emotions that emerged from Shaver&apos;s study across various emotion theories</rdfs:comment>
+        <rdfs:comment xml:lang="en">Emotion words describe the emotions that emerged from Shaver&apos;s study across various emotion theories</rdfs:comment>
         <rdfs:label xml:lang="en">Emotion Word</rdfs:label>
     </owl:Class>
     
