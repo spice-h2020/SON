@@ -1,65 +1,201 @@
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns="https://w3id.org/spice/SON/ekmanEmotions/"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-  <owl:Ontology rdf:about="https://w3id.org/spice/SON/ekmanEmotions">
-    <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
-    <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/ekmanEmotions/0.0.2"/>
-    <owl:priorVersion rdf:resource="https://w3id.org/spice/SON/ekmanEmotions/0.0.1"/>
-    <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/EkmanEmotions.png"/>
-  </owl:Ontology>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Excitement">
-    <rdfs:subClassOf>
-      <rdf:Description rdf:about="https://w3id.org/spice/SON/emotion/Emotion">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
-      </rdf:Description>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Satisfaction">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Sadness">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Anger">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Amusement">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Contentment">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Guilt">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Shame">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/SensoryPleasure">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/PrideInAchievement">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Embarassment">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Fear">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Relief">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Contempt">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Disgust">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-  </owl:Class>
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/spice/SON/ekmanEmotions/"
+     xml:base="https://w3id.org/spice/SON/ekmanEmotions/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:exuviae="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/spice/SON/ekmanEmotions">
+        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/ekmanEmotions/0.0.2"/>
+        <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
+        <dc:description rdf:resource="https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/EkmanEmotions.png"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/spice/SON/ekmanEmotions/0.0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#bibRef -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#bibRef"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Amusement -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Amusement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Anger -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Anger">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Contempt -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Contempt">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Contentment -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Contentment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Disgust -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Disgust">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Embarassment -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Embarassment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Excitement -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Excitement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Fear -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Fear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Guilt -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Guilt">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/PrideInAchievement -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/PrideInAchievement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Relief -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Relief">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Sadness -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Sadness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Satisfaction -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Satisfaction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/SensoryPleasure -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/SensoryPleasure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/ekmanEmotions/Shame -->
+
+    <owl:Class rdf:about="https://w3id.org/spice/SON/ekmanEmotions/Shame">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1 and to be distinguishable one from another: amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt, pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame. Table 3.1: Distinctive universal signals, Distinctive physiology, Automatic appraisal, Distinctive universal antecedent events, Distinctive appearance developmentally, Presence in other primates, Quick onset, Brief duration, Unbidden occurrence, Distinctive Thoughts, Distinctive Subjective experience.&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.</exuviae:bibRef>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spice/SON/emotion/Emotion -->
+
+    <rdf:Description rdf:about="https://w3id.org/spice/SON/emotion/Emotion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <exuviae:bibRef xml:lang="en">&lt;&lt;Each emotion is not a single affective state but a family of related states. Each member of an emotion family shares the characteristics I have described. These shared characteristics within a family differ between emotion families, distinguishing one family from another. Put in other terms, each emotion family can be considered to constitue a theme and variations. The theme is composed of the characteristics unique to that family, the variations on that theme are the product of individual differences, and differences in the specific occasion in which the emotion occurs. The themes are the product of evolution, while the variations reflect learning&gt;&gt; - Ekman, Paul. &quot;Basic emotions.&quot; Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55.</exuviae:bibRef>
+    </owl:Axiom>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

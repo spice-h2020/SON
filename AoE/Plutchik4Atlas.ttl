@@ -1,0 +1,659 @@
+@prefix : <https://w3id.org/spice/SON/PlutchikEmotions-core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix exuviae: <http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#> .
+@prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@base <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas> .
+
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas> rdf:type owl:Ontology ;
+                                                     owl:versionIRI <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/0.0.1> ;
+                                                     owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                     dc:title "Ontological Model of Plutchik's Wheel of Emotions" ;
+                                                     cpannotationschema:hasAuthor "Antonio Lieto and Stefano De Giorgis" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#bibRef
+exuviae:bibRef rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor
+cpannotationschema:hasAuthor rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#hasValue
+owl:hasValue rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ExpressOppositeEmotion
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ExpressOppositeEmotion> rdf:type owl:ObjectProperty ,
+                                                                                    owl:SymmetricProperty .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> rdf:type owl:ObjectProperty ,
+                                                                         owl:FunctionalProperty ,
+                                                                         owl:AsymmetricProperty ,
+                                                                         owl:IrreflexiveProperty ;
+                                                                rdfs:domain <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ;
+                                                                rdfs:range <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> rdf:type owl:ObjectProperty ,
+                                                                        owl:AsymmetricProperty ,
+                                                                        owl:IrreflexiveProperty ;
+                                                               rdfs:domain <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ;
+                                                               rdfs:range <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> rdf:type owl:ObjectProperty ,
+                                                                          owl:AsymmetricProperty ,
+                                                                          owl:IrreflexiveProperty ;
+                                                                 rdfs:domain <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> ;
+                                                                 rdfs:range <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ;
+                                                             rdfs:range xsd:double .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Acceptance
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Acceptance> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust> ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                 owl:hasValue "1.0"^^xsd:double
+                                                                               ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Admiration
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Admiration> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust> ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                 owl:hasValue "3.0"^^xsd:double
+                                                                               ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Aggressiveness
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Aggressiveness> rdf:type owl:Class ;
+                                                                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger>
+                                                                                                              ]
+                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation>
+                                                                                                              ]
+                                                                                                            ) ;
+                                                                                         rdf:type owl:Class
+                                                                                       ] ;
+                                                                   rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Amazement
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Amazement> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                owl:hasValue "3.0"^^xsd:double
+                                                                              ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger> rdf:type owl:Class ;
+                                                          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation>
+                                                                                                     ]
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust>
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear>
+                                                                              ] ;
+                                                          rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                            owl:hasValue "2.0"^^xsd:double
+                                                                          ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Annoyance
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Annoyance> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                owl:hasValue "1.0"^^xsd:double
+                                                                              ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation> rdf:type owl:Class ;
+                                                                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                              owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger>
+                                                                                                            ]
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                              owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy>
+                                                                                                            ]
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                       owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise>
+                                                                                     ] ;
+                                                                 rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                   owl:hasValue "2.0"^^xsd:double
+                                                                                 ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Apprehension
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Apprehension> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear> ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                   owl:hasValue "1.0"^^xsd:double
+                                                                                 ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Awe
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Awe> rdf:type owl:Class ;
+                                                        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                     owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear>
+                                                                                                   ]
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                     owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise>
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ;
+                                                        rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Emotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Boredom
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Boredom> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                              owl:hasValue "1.0"^^xsd:double
+                                                                            ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> rdf:type owl:Class ;
+                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion>
+                                                                                       ] ;
+                                                                   rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Emotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Contempt
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Contempt> rdf:type owl:Class ;
+                                                             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger>
+                                                                                                        ]
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust>
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ] ;
+                                                             rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disapproval
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disapproval> rdf:type owl:Class ;
+                                                                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                             owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness>
+                                                                                                           ]
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                             owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise>
+                                                                                                           ]
+                                                                                                         ) ;
+                                                                                      rdf:type owl:Class
+                                                                                    ] ;
+                                                                rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust> rdf:type owl:Class ;
+                                                            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger>
+                                                                                                       ]
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness>
+                                                                                                       ]
+                                                                                                     ) ;
+                                                                                  rdf:type owl:Class
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust>
+                                                                                ] ;
+                                                            rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                              owl:hasValue "2.0"^^xsd:double
+                                                                            ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Distraction
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Distraction> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise> ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                  owl:hasValue "1.0"^^xsd:double
+                                                                                ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Ecstacy
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Ecstacy> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                              owl:hasValue "3.0"^^xsd:double
+                                                                            ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Emotion
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Emotion> rdf:type owl:Class .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear> rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise>
+                                                                                                    ]
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust>
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                               owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger>
+                                                                             ] ;
+                                                         rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                           owl:hasValue "2.0"^^xsd:double
+                                                                         ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Grief
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Grief> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                            owl:hasValue "3.0"^^xsd:double
+                                                                          ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Interest
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Interest> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                               owl:hasValue "1.0"^^xsd:double
+                                                                             ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy> rdf:type owl:Class ;
+                                                        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                     owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation>
+                                                                                                   ]
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                     owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust>
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                              owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness>
+                                                                            ] ;
+                                                        rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                          owl:hasValue "2.0"^^xsd:double
+                                                                        ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Loathing
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Loathing> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                               owl:hasValue "3.0"^^xsd:double
+                                                                             ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Love
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Love> rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Love>
+                                                                                                    ]
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust>
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Optimism
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Optimism> rdf:type owl:Class ;
+                                                             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation>
+                                                                                                        ]
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy>
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ] ;
+                                                             rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Pensiveness
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Pensiveness> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness> ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                  owl:hasValue "1.0"^^xsd:double
+                                                                                ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Pessimism
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Pessimism> rdf:type owl:Class ;
+                                                              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation>
+                                                                                                         ]
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness>
+                                                                                                         ]
+                                                                                                       ) ;
+                                                                                    rdf:type owl:Class
+                                                                                  ] ;
+                                                              rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Pride
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Pride> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Rage
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Rage> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anger> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                           owl:hasValue "3.0"^^xsd:double
+                                                                         ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Remorse
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Remorse> rdf:type owl:Class ;
+                                                            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust>
+                                                                                                       ]
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness>
+                                                                                                       ]
+                                                                                                     ) ;
+                                                                                  rdf:type owl:Class
+                                                                                ] ;
+                                                            rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness> rdf:type owl:Class ;
+                                                            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust>
+                                                                                                       ]
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise>
+                                                                                                       ]
+                                                                                                     ) ;
+                                                                                  rdf:type owl:Class
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                  owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy>
+                                                                                ] ;
+                                                            rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                                     owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy>
+                                                                                                   ]
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                                     owl:allValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy>
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                              owl:hasValue "2.0"^^xsd:double
+                                                                            ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Serenity
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Serenity> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                               owl:hasValue "1.0"^^xsd:double
+                                                                             ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Shame
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Shame> rdf:type owl:Class ;
+                                                          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust>
+                                                                                                     ]
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Terror>
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ;
+                                                          rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Submission
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Submission> rdf:type owl:Class ;
+                                                               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear>
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/isComposedOf> ;
+                                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust>
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ] ;
+                                                               rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/ComplexEmotion> .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Surprise> rdf:type owl:Class ;
+                                                             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear>
+                                                                                                        ]
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Sadness>
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                   owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation>
+                                                                                 ] ;
+                                                             rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                               owl:hasValue "2.0"^^xsd:double
+                                                                             ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Terror
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Terror> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                             owl:hasValue "3.0"^^xsd:double
+                                                                           ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Trust> rdf:type owl:Class ;
+                                                          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Fear>
+                                                                                                     ]
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasSibling> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Joy>
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasOpposite> ;
+                                                                                owl:someValuesFrom <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Disgust>
+                                                                              ] ;
+                                                          rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/BasicEmotion> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                            owl:hasValue "2.0"^^xsd:double
+                                                                          ] .
+
+
+###  https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Vigilance
+<https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Vigilance> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/Anticipation> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/spice/SON/PlutchikEmotion_4Atlas/hasScore> ;
+                                                                                owl:hasValue "3.0"^^xsd:double
+                                                                              ] .
+
+
+[ owl:hasValue "2.0"^^xsd:double
+] .
+
+[ owl:hasValue "2.0"^^xsd:double
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

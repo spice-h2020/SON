@@ -61,34 +61,36 @@ This is a list of the brand new ontologies developed for the SPICE project.
 - [FULL](https://w3id.org/spice/SON/FULL) ``https://w3id.org/spice/SON/FULL`` is the catch-all that imports all the ontologies within the network.
 
 - **Curatorial Knowledge Area**
-  - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) ``https://w3id.org/spice/SON/curatorialContext`` provides a vocabulary for describing the curatorial context of any activity.
-  - [Scripting](https://w3id.org/spice/SON/scripting) ``https://w3id.org/spice/SON/scripting`` allows us to describe aspects related to the design and execution of citizen curation activities, including engagement activities with museum visitors, web applications for eliciting users' interpretations (e.g., via storytelling, question answering), and social media interactions.
+  - [Curatorial Context](https://w3id.org/spice/SON/curatorialContext) [(DEV version)](https://w3id.org/spice/SON/curatorialContext/0.0.2)``https://w3id.org/spice/SON/curatorialContext`` provides a vocabulary for describing the curatorial context of any activity.
+  - [Scripting](https://w3id.org/spice/SON/scripting) [(DEV version)](https://w3id.org/spice/SON/scripting/0.0.2) ``https://w3id.org/spice/SON/scripting`` allows us to describe aspects related to the design and execution of citizen curation activities, including engagement activities with museum visitors, web applications for eliciting users' interpretations (e.g., via storytelling, question answering), and social media interactions.
 
 - **Narrative Knowledge Area**
-  - [Narrative](https://w3id.org/spice/SON/NO) ``https://w3id.org/spice/SON/NO`` The Narrative Ontology (NO) is employed to describe both: 1) the narrative relations exhibited "within" a cultural entity (e.g. the representation of a certain action, story, character and their narrative connection, the narrative elements and that can be used to group similar museum items sharing exhibiting similar narrative content; 2) the narrative relations projected "about" a cultural entity and used to define narrative projects (this aspect representing "the complementary part" of the scripts).
+  - [Narrative](https://w3id.org/spice/SON/NO) [(DEV version)](https://w3id.org/spice/SON/NO/0.0.2) ``https://w3id.org/spice/SON/NO`` The Narrative Ontology (NO) is employed to describe both: 1) the narrative relations exhibited "within" a cultural entity (e.g. the representation of a certain action, story, character and their narrative connection, the narrative elements and that can be used to group similar museum items sharing exhibiting similar narrative content; 2) the narrative relations projected "about" a cultural entity and used to define narrative projects (this aspect representing "the complementary part" of the scripts).
 
 - **Symbolism Knowledge Area**
   - Symbolism ontology *coming soon*
 
 - **User and Community Knowledge Area**
-  - [Schwartz Values](https://w3id.org/spice/SON/SchwartzValues) ``https://w3id.org/spice/SON/SchwartzValues`` is a formalization of the [Theory of Human Values](https://www.sciencedirect.com/science/article/pii/S2405844018372773)
-  - [Haidt Values](https://w3id.org/spice/SON/HaidtValues) ``https://w3id.org/spice/SON/HaidtValues`` is a formalization of the  [Theory of Moral Foundation](https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0015141) proposed in the model by Haidt et al. 
+  - [Schwartz Values](https://w3id.org/spice/SON/SchwartzValues) [(DEV version)](https://w3id.org/spice/SON/SchwartzValues/0.0.2) ``https://w3id.org/spice/SON/SchwartzValues`` is a formalization of the [Theory of Human Values](https://www.sciencedirect.com/science/article/pii/S2405844018372773)
+  - [Haidt Values](https://w3id.org/spice/SON/HaidtValues) [(DEV version)](https://w3id.org/spice/SON/HaidtValues/0.0.2) ``https://w3id.org/spice/SON/HaidtValues`` is a formalization of the  [Theory of Moral Foundation](https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0015141) proposed in the model by Haidt et al.
+  - [User Profile eXtended](https://w3id.org/spice/SON/upX/0.0.2) [(DEV version)](https://w3id.org/spice/SON/upX/0.0.2) An extension of the [user profile ontology](http://purl.oclc.org/NET/UNIS/up#)
+  - [Community Ontology](https://w3id.org/spice/SON/CommunityOntology/0.0.2) [(DEV Version)](https://w3id.org/spice/SON/CommunityOntology/0.0.2) provides a formal vocabulary for describing communities
 
 - **Interaction Knowledge Area**
-  - [Fruition context](https://w3id.org/spice/SON/fruitionContext) ``https://w3id.org/spice/SON/fruitionContext`` aims at representing the modality and the context of someone’s interaction with a cultural entity
-  - [Affordance](https://w3id.org/spice/SON/affordance) ``https://w3id.org/spice/SON/affordance`` aims at formalising and generalising the [Gibson's theory of affordance](https://cs.brown.edu/courses/cs137/readings/Gibson-AFF.pdf).
+  - [Fruition context](https://w3id.org/spice/SON/fruitionContext) [(DEV version)](https://w3id.org/spice/SON/fruitionContext/0.0.2) ``https://w3id.org/spice/SON/fruitionContext`` aims at representing the modality and the context of someone’s interaction with a cultural entity
+  - [Affordance](https://w3id.org/spice/SON/affordance) [(DEV version)](https://w3id.org/spice/SON/affordance/0.0.2) ``https://w3id.org/spice/SON/affordance`` aims at formalising and generalising the [Gibson's theory of affordance](https://cs.brown.edu/courses/cs137/readings/Gibson-AFF.pdf).
 
 - **Emotion Knowledge Area**
-  - [Emotion](https://w3id.org/spice/SON/emotion) ``https://w3id.org/spice/SON/emotion`` is the closure module for the ontology network developed with the purpose to represent existing theories about Emotions, including the Emotion relation and its roles. 
-  - [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) ``https://w3id.org/spice/SON/emotionInCulturalContext``  specialises the Emotion module in order to represent the Emotion Relation triggered in a User or Community by some Cultural Entity. 
-  - [Ekman emotions](https://w3id.org/spice/SON/ekmanEmotions) ``https://w3id.org/spice/SON/ekmanEmotions`` formalises the Ekman's theory on [Basic Emotions](https://www.paulekman.com/wp-content/uploads/2013/07/Basic-Emotions.pdf)
-  - [Plutchik emotion](https://w3id.org/spice/SON/PlutchikEmotion) ``https://w3id.org/spice/SON/PlutchikEmotion`` formalises the [Pluchick's theory on Emotions](https://www.sciencedirect.com/science/article/pii/B9780125587013500077)
-  - [OCC emotion](https://w3id.org/spice/SON/OCCEmotion) ``https://w3id.org/spice/SON/OCCEmotion`` formalises the [theory on Emotions proposed by Ortony, Clore and Collins](https://books.google.com/books?hl=it&lr=&id=dA3JEEAp6TsC&oi=fnd&pg=PP13&dq=ortony+clore+collins&ots=HXLvSq9Tma&sig=BaFT7kk6TMODde2UYC0BCOGCduQ)
-  - [Shaver Emotions](https://w3id.org/spice/SON/ShaverEmotions) ``https://w3id.org/spice/SON/ShaverEmotions`` formalises the Shaver's theory on [emotions](https://psycnet.apa.org/buy/1987-28161-001).
-  - [GoEmotions] (https://github.com/spice-h2020/SON/tree/main/GoEmotions) formalizes the Google dataset "Go Emotions" (https://arxiv.org/abs/2005.00547)
+  - [Emotion](https://w3id.org/spice/SON/emotion) [(DEV version)](https://w3id.org/spice/SON/emotion/0.0.2) ``https://w3id.org/spice/SON/emotion`` is the closure module for the ontology network developed with the purpose to represent existing theories about Emotions, including the Emotion relation and its roles. 
+  - [Emotion in cultural context](https://w3id.org/spice/SON/emotionInCulturalContext) [(DEV version)](https://w3id.org/spice/SON/emotionInCulturalContext/0.0.2) ``https://w3id.org/spice/SON/emotionInCulturalContext``  specialises the Emotion module in order to represent the Emotion Relation triggered in a User or Community by some Cultural Entity. 
+  - [Ekman emotions](https://w3id.org/spice/SON/ekmanEmotions) [(DEV version)](https://w3id.org/spice/SON/ekmanEmotions/0.0.2) ``https://w3id.org/spice/SON/ekmanEmotions`` formalises the Ekman's theory on [Basic Emotions](https://www.paulekman.com/wp-content/uploads/2013/07/Basic-Emotions.pdf)
+  - [Plutchik emotion](https://w3id.org/spice/SON/PlutchikEmotion) [(DEV version)](https://w3id.org/spice/SON/PlutchikEmotion/0.0.2) ``https://w3id.org/spice/SON/PlutchikEmotion`` formalises the [Pluchick's theory on Emotions](https://www.sciencedirect.com/science/article/pii/B9780125587013500077)
+  - [OCC emotion](https://w3id.org/spice/SON/OCCEmotion) [(DEV version)](https://w3id.org/spice/SON/OCCEmotion/0.0.2) ``https://w3id.org/spice/SON/OCCEmotion`` formalises the [theory on Emotions proposed by Ortony, Clore and Collins](https://books.google.com/books?hl=it&lr=&id=dA3JEEAp6TsC&oi=fnd&pg=PP13&dq=ortony+clore+collins&ots=HXLvSq9Tma&sig=BaFT7kk6TMODde2UYC0BCOGCduQ)
+  - [Shaver Emotions](https://w3id.org/spice/SON/ShaverEmotions) [(DEV version)](https://w3id.org/spice/SON/ShaverEmotions/0.0.2) ``https://w3id.org/spice/SON/ShaverEmotions`` formalises the Shaver's theory on [emotions](https://psycnet.apa.org/buy/1987-28161-001).
+  - [GoEmotions](https://w3id.org/spice/SON/GoEmotions/0.0.2) [(DEV version)](https://w3id.org/spice/SON/GoEmotions/0.0.2) formalizes the Google dataset "Go Emotions" (https://arxiv.org/abs/2005.00547)
 
 - **Artwork Description Knowledge Area**
-  - [Exhibition](https://w3id.org/spice/SON/exhibition) ``https://w3id.org/spice/SON/exhibition`` defines a vocabulary for specifying information related fo cultural exhibitions.
+  - [Exhibition](https://w3id.org/spice/SON/exhibition) [(DEV version)](https://w3id.org/spice/SON/exhibition/0.0.2) ``https://w3id.org/spice/SON/exhibition`` defines a vocabulary for specifying information related fo cultural exhibitions.
 
 
 ### Existing ontologies re-used
