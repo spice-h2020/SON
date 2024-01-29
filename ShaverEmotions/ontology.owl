@@ -2,37 +2,20 @@
 <rdf:RDF xmlns="https://w3id.org/spice/SON/ShaverEmotions#"
      xml:base="https://w3id.org/spice/SON/ShaverEmotions"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-<<<<<<< HEAD
-=======
-     xmlns:ex="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#"
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-<<<<<<< HEAD
      xmlns:0.0.1="https://w3id.org/spice/SON/ShaverEmotions/0.0.1#"
-=======
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
      xmlns:shavem="https://w3id.org/spice/SON/ShaverEmotions/"
      xmlns:emotion="https://w3id.org/spice/SON/emotion/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/spice/SON/ShaverEmotions">
-<<<<<<< HEAD
         <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/0.0.1"/>
         <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.1"/>
         <rdfs:comment xml:lang="en">Author: Bruno Sartini</rdfs:comment>
-=======
-        <owl:versionIRI rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/0.0.2"/>
-        <owl:imports rdf:resource="https://w3id.org/spice/SON/emotion/0.0.2"/>
-        <dc:description xml:lang="en">This ontology has been developed for the SPICE Project (https://spice-h2020.github.io/) and it is based on Shaver&apos;s Emotion Theory.
-
-A visualization of the ontology structure is available here: https://github.com/spice-h2020/SON/blob/main/ShaverEmotions/shavernew.png</dc:description>
-        <rdfs:comment xml:lang="en">Author: Bruno Sartini</rdfs:comment>
-        <owl:priorVersion rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/0.0.1"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Ontology>
     
 
@@ -40,26 +23,6 @@ A visualization of the ontology structure is available here: https://github.com/
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-<<<<<<< HEAD
-=======
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#bibRef -->
-
-    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#bibRef"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -73,11 +36,6 @@ A visualization of the ontology structure is available here: https://github.com/
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/ShaverEmotions/isPrototypeEmotionOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/refersToPrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <rdfs:comment xml:lang="en">Inverse of Refers to prototype emotion</rdfs:comment>
-        <rdfs:label xml:lang="en">Is prototype emotion of</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:ObjectProperty>
     
 
@@ -87,12 +45,6 @@ A visualization of the ontology structure is available here: https://github.com/
     <owl:ObjectProperty rdf:about="https://w3id.org/spice/SON/ShaverEmotions/refersToPrototypeEmotion">
         <rdfs:domain rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionWord"/>
         <rdfs:range rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <ex:bibRef xml:lang="en">Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">This property was introduced to link an emotion word to the Emotion Prototype that was chosen to identify a cluster in Shaver studies.</rdfs:comment>
-        <rdfs:label xml:lang="en">refers to prototype emotion</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:ObjectProperty>
     
 
@@ -118,10 +70,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Adoration</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -136,10 +84,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Affection</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -154,10 +98,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Aggravation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -172,10 +112,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Agitation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -190,10 +126,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Agony</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -208,10 +140,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Alarm</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -226,10 +154,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Alienation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -244,10 +168,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Surprise"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Amazement</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -262,10 +182,6 @@ A visualization of the ontology structure is available here: https://github.com/
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Amusement</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -274,18 +190,6 @@ A visualization of the ontology structure is available here: https://github.com/
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/Anger">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <ex:bibRef xml:lang="en">&quot;Something (usually
-another person, in these accounts) interferes with the person&apos;s
-execution of plans or attainment of goals (by reducing the person&apos;s
-power, violating expectations, frustrating or interrupting
-goal-directed activities). Alternatively, the person perceives another
-as harming him or her in some way (inflicting physical or
-psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">Anger is a reaction to an event that complicates, negates, or interferes with the experiences intentions, plans, often making them hard or impossible to carry out. The experiencer stands against this event in a fightful stance.</rdfs:comment>
-        <rdfs:label xml:lang="en">Anger</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -300,10 +204,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Anguish</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -318,10 +218,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Annoyance</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -336,10 +232,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Anxiety</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -354,10 +246,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Apprehension</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -372,10 +260,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Arousal</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -390,10 +274,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Surprise"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Astonishment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -408,10 +288,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Attraction</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -426,10 +302,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Bitterness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -444,10 +316,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Bliss</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -462,10 +330,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Caring</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -480,10 +344,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Cheerfulness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -498,10 +358,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Compassion</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -516,10 +372,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Contempt</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -534,10 +386,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Contentment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -552,10 +400,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Defeat</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -570,10 +414,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Dejection</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -588,10 +428,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Delight</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -606,10 +442,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Depression</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -624,10 +456,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Desire</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -642,10 +470,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Despair</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -660,10 +484,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Disappointment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -678,10 +498,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Disgust</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -696,10 +512,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Dislike</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -714,10 +526,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Dismay</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -732,10 +540,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Displeasure</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -750,10 +554,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Distress</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -768,10 +568,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Dread</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -786,10 +582,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Eagerness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -804,10 +596,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Ecstasy</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -822,10 +610,6 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Elation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -840,49 +624,21 @@ psychological pain).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emot
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Embarrassment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
 
-<<<<<<< HEAD
     <!-- https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-=======
-    <!-- https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature -->
-
-    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-        <ex:bibRef xml:lang="en">&quot;The coders&apos; judgments were used to produce a feature summary of
-each narrative account. A feature was scored as present in a given account
-if at least two of three coders agreed that it was present. On the
-basis of these codings, we determined the prototypical features of the
-basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">An emotion feature is the event that triggers an emotion or the physical/psychological effect that the emotion triggers on the experiencer. It was extracted by the narration of an emotional episode of the participants of Shaver Study. (In an Earlier version it was called Emotion Event)</rdfs:comment>
-        <rdfs:label xml:lang="en">Emotion Feature</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
 
     <!-- https://w3id.org/spice/SON/ShaverEmotions/EmotionWord -->
 
-<<<<<<< HEAD
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/EmotionWord"/>
-=======
-    <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/EmotionWord">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-        <ex:bibRef xml:lang="en">Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">Emotion words are the emotions that emerged from Shaver&apos;s study across various emotion theories</rdfs:comment>
-        <rdfs:label xml:lang="en">Emotion Word</rdfs:label>
-    </owl:Class>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     
 
 
@@ -896,10 +652,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Enjoyment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -914,10 +666,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Enthrallment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -932,10 +680,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Enthusiasm</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -950,10 +694,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Envy</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -968,10 +708,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Euphoria</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -986,10 +722,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Exasperation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1004,10 +736,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Excitement</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1022,10 +750,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Exhilaration</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1034,19 +758,6 @@ basic emotion categories.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C.
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/Fear">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <rdfs:comment xml:lang="en">&quot;[...]fear accounts begin with an interpretation
-of events as potentially dangerous or threatening to
-the self—most commonly, an anticipation of physical harm,
-loss, rejection, or failure. The fear antecedents also include a set
-of situational factors (unfamiliar situation, being in the dark,
-being alone) that probably increase the person&apos;s perceived vulnerability
-to such threats and impede his or her chances of coping
-effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Fear is a reaction towards events that are perceived by the epxeriencer as potentially dangerous, and might cause either physical or psychological harm. This reaction is an anticipation of the potential danger of this event or the event(s) that might follow.</rdfs:comment>
-        <rdfs:label xml:lang="en">Fear</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1061,10 +772,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Ferocity</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1079,10 +786,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Fondness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1097,10 +800,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Fright</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1115,10 +814,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Frustration</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1133,10 +828,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Fury</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1151,10 +842,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Gaiety</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1169,10 +856,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Gladness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1187,10 +870,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Glee</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1205,10 +884,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Gloom</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1223,10 +898,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Glumness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1241,10 +912,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Grief</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1259,10 +926,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Grouchiness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1277,10 +940,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Grumpiness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1295,10 +954,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Guilt</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1313,10 +968,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Happiness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1331,10 +982,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Hate</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1349,10 +996,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Homesickness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1367,10 +1010,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Hope</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1385,10 +1024,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Hopelessness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1403,10 +1038,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Horror</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1421,10 +1052,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Hostility</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1439,10 +1066,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Humiliation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1457,10 +1080,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Hurt</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1475,10 +1094,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Hysteria</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1493,10 +1108,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Infatuation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1511,10 +1122,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Insecurity</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1529,10 +1136,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Insult</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1547,10 +1150,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Irritation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1565,10 +1164,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Isolation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1583,10 +1178,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Jealousy</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1601,10 +1192,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Jolliness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1619,10 +1206,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Joviality</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1631,19 +1214,6 @@ effectively.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion know
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/Joy">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <ex:bibRef xml:lang="en">&quot;Whereas sadness accounts begin with undesirable
-outcomes (getting what is not wanted, suffering social rejection,
-losing a valued relationship), joy accounts begin with positive
-outcomes—getting something desired or desirable. In contrast
-to the losses and failures that trigger sadness, the desirable outcome
-that initiates happiness is frequently a gain or success in
-the achievement domain (task success, achievement) or in the
-social domain (receiving esteem or affection).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">Joy is a reaction towards an event that positively influences the experiencer life such as the achievement of something.</rdfs:comment>
-        <rdfs:label xml:lang="en">Joy</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1658,10 +1228,6 @@ social domain (receiving esteem or affection).&quot; Shaver P, Schwartz J, Kirso
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Jubilation</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1676,10 +1242,6 @@ social domain (receiving esteem or affection).&quot; Shaver P, Schwartz J, Kirso
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Liking</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1694,10 +1256,6 @@ social domain (receiving esteem or affection).&quot; Shaver P, Schwartz J, Kirso
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Loathing</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1712,10 +1270,6 @@ social domain (receiving esteem or affection).&quot; Shaver P, Schwartz J, Kirso
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Loneliness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1730,10 +1284,6 @@ social domain (receiving esteem or affection).&quot; Shaver P, Schwartz J, Kirso
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Longing</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1742,20 +1292,6 @@ social domain (receiving esteem or affection).&quot; Shaver P, Schwartz J, Kirso
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/Love">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <ex:bibRef xml:lang="en">&quot;[...]in the case of love, they promote a similar
-sense of well-being that is personalized (i.e., that is attributed
-to the presence or existence of the love object). Love is marked
-by several additional antecedents. According to our subjects,
-love can occur because one has shared time or special experiences
-with the other person, because one finds the other physically
-or psychologically attractive, because one enjoys exceptionally
-good communication with the other person, or because
-one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">Love is a reaction to an event that positively affects the life of the experiencer, that is triggered by someone or something towards which they feel something romantic or simply special. In contrast with joy in which the trigger of the event can be anything.</rdfs:comment>
-        <rdfs:label xml:lang="en">Love</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1770,10 +1306,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Lust</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1788,10 +1320,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Melancholy</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1806,10 +1334,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Misery</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1824,10 +1348,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Mortification</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1842,10 +1362,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Neglect</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1860,10 +1376,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Nervousness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1878,10 +1390,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Optimism</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1896,10 +1404,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Outrage</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1914,10 +1418,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Panic</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1932,10 +1432,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Passion</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1950,10 +1446,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Pity</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1968,10 +1460,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Pleasure</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1986,10 +1474,6 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Pride</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -1997,20 +1481,7 @@ one feels open and trusting in the person&apos;s presence.&quot; Shaver P, Schwa
     <!-- https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion -->
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion">
-<<<<<<< HEAD
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-=======
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/emotion/Emotion"/>
-        <ex:bibRef xml:lang="en">&quot;If contemporary
-cognitive psychology is correct in claiming that repeated experiences
-with similar events lead to the construction of generic
-mental representations, then ordinary, untrained subjects
-should construct emotion prototypes and implicitly use them
-when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">Prototype emotions are the Emotions that emerged in Shaver as the protypical reactions to events that trigger an emotion.</rdfs:comment>
-        <rdfs:label xml:lang="en">Prototype Emotion</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2025,10 +1496,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Rage</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2043,10 +1510,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Rapture</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2061,10 +1524,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Regret</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2079,10 +1538,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Rejection</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2097,10 +1552,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Relief</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2115,10 +1566,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Remorse</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2133,10 +1580,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Resentment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2151,10 +1594,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Revulsion</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2163,18 +1602,6 @@ when witnessing and recounting emotion episodes.&quot; Shaver P, Schwartz J, Kir
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/Sadness">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <ex:bibRef xml:lang="en">&quot;The sad
-person has experienced an undesirable outcome; often he or she
-has experienced one of the events that the fearful person
-dreads—death of a loved one, loss of a relationship, or social
-rejection. Like fear, sadness involves &quot;discovering that one is
-powerless, helpless, or impotent&quot; to change the unhappy circumstances
-(cf. Seligman, 1975).&quot; Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</ex:bibRef>
-        <rdfs:comment xml:lang="en">Sadness is a reaction to an unpleasant event that leads to a downward spiral of negativity, sense of giving up and hopelessness.</rdfs:comment>
-        <rdfs:label xml:lang="en">Sadness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2189,10 +1616,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Satisfaction</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2207,10 +1630,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Scorn</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2225,10 +1644,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Sentimentality</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2243,10 +1658,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Shame</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2261,10 +1672,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Shock</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2279,10 +1686,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Sorrow</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2297,10 +1700,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Spite</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2315,10 +1714,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Suffering</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2327,12 +1722,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
 
     <owl:Class rdf:about="https://w3id.org/spice/SON/ShaverEmotions/Surprise">
         <rdfs:subClassOf rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/PrototypeEmotion"/>
-<<<<<<< HEAD
-=======
-        <rdfs:comment xml:lang="en">Shaver P, Schwartz J, Kirson D, O&apos;Connor C. Emotion knowledge: further exploration of a prototype approach. J Pers Soc Psychol. 1987 Jun;52(6):1061-86. doi: 10.1037//0022-3514.52.6.1061. PMID: 3598857.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Surprise is only included in a first list of Emotion Prototypes, but it is not given a definition by Shaver.</rdfs:comment>
-        <rdfs:label xml:lang="en">Surprise</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2347,10 +1736,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Sympathy</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2365,10 +1750,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Love"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Tenderness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2383,10 +1764,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Tenseness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2401,10 +1778,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Terror</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2419,10 +1792,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Thrill</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2437,10 +1806,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Torment</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2455,10 +1820,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Triumph</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2473,10 +1834,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Uneasiness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2491,10 +1848,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Unhappiness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2509,10 +1862,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Vengefulness</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2527,10 +1876,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Sadness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Woe</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2545,10 +1890,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Fear"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Worry</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2563,10 +1904,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Anger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Wrath</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2581,10 +1918,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Zeal</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2599,10 +1932,6 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
                 <owl:allValuesFrom rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/Joy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
-        <rdfs:label xml:lang="en">Zest</rdfs:label>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
     </owl:Class>
     
 
@@ -2621,11 +1950,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/attacking_something_other_than_cause">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2640,11 +1965,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/being_alone -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_alone">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2659,11 +1980,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_in_the_dark">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2678,11 +1995,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/communicating_the_good_feeling">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2697,11 +2010,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/crying -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2716,11 +2025,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/death_of_a_loved_one">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2735,11 +2040,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/doing_nice_things_for_other_people">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2754,11 +2055,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/exceptionally_good_communication">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2773,11 +2070,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/expressing_positive_feelings_to_other">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2792,11 +2085,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_excited -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_excited">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2811,11 +2100,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hands_or_fists_clenched">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2830,11 +2115,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/hugging_people -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hugging_people">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2849,11 +2130,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/imagining_attacking_the_cause_of_anger">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2868,11 +2145,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/jumping_up_and_down">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2887,11 +2160,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/kissing -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/kissing">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2906,11 +2175,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/narrowing_of_attention">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2925,11 +2190,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nonverbally_communicating_disapproval">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2944,11 +2205,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/other_offers_something_wanted -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/other_offers_something_wanted">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2963,11 +2220,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/person_finds_other_attractive">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -2982,11 +2235,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/physically_attacking_the_cause_of_anger">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3001,11 +2250,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/picturing_a_disastrous_conclusion">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3020,11 +2265,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/predisposition_to_anger">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3039,11 +2280,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/real_or_threatened_pain">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3058,11 +2295,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reality_exceeding_expectations">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3077,11 +2310,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reality_falling_short_of_expectations">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3096,11 +2325,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_a_wonderful_surprise">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3115,11 +2340,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_positive_things">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3134,11 +2355,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_sad_things">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3153,11 +2370,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sharing_the_feeling">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3172,11 +2385,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/smiling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/smiling">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3197,11 +2406,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/talking_little_or_not_at_all -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/talking_little_or_not_at_all">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3216,11 +2421,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/talking_to_someone_about_sadness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/talking_to_someone_about_sadness">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3235,11 +2436,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/threat_of_harm_or_death -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/threat_of_harm_or_death">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3254,11 +2451,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/threat_of_social_rejection">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3273,11 +2466,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/tightness_or_rigidity_in_body">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3292,11 +2481,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/verbally_attacking_the_cause_of_anger">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3311,11 +2496,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/violation_of_expectation">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3330,11 +2511,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/wanted -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanted">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3349,11 +2526,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_physical_closeness_or_sex">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3368,11 +2541,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/withdrawing_from_social_contact">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3387,11 +2556,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/acting_unafraid,_hiding_the_fear">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3406,11 +2571,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/aggressive,_threatening_gestures">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3425,11 +2586,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_accepted,_belonging">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3444,11 +2601,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_bouncy,_bubbly">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3463,11 +2616,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_courteous,_friendly_to_others">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3482,11 +2631,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_forgetful,_distracted,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3501,11 +2646,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/being_talkative,_talking_a_lot">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3520,11 +2661,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/blaming,_criticizing_oneself">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3539,11 +2676,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/bright,_glowing_face">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3558,11 +2691,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/brooding;_withdrawing_from_contact">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3577,11 +2706,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/comforting_self,_trying_to_keep_calm">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3596,11 +2721,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/complaining,_bitching,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3615,11 +2736,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying,_whimpering">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3634,11 +2751,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/crying,_tears,_whimpering">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3653,11 +2766,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/desirable_outcome;_getting_what_was">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3672,11 +2781,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/discovering_one_is_powerless,_helpless">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3691,11 +2796,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/empathy_with_someone_who_is_sad,_hurt">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3710,11 +2811,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/experiencing_pleasurable_stimuli,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3729,11 +2826,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/eye_contact,_mutual_gaze">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3748,11 +2841,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/eyes_darting,_looking_quickly_around">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3767,11 +2856,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling/acting_self-confident,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3786,11 +2871,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_excited,_high_energy,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3805,11 +2886,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_happy,_joyful,_exuberant,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3824,11 +2901,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_nervous,_jittery,_jumpy">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3843,11 +2916,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_relaxed,_calm">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3862,11 +2931,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/feeling_warm,_trusting,_secure,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3881,11 +2946,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/fleeing,_running,_walking_hurriedly">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3900,11 +2961,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3919,11 +2976,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frowning,_not_smiling,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3938,11 +2991,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/frustration/interruption_of_activity">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3957,11 +3006,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/getting_something_striven_for,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3976,11 +3021,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/giggling,_laughing">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -3995,11 +3036,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/giving_up;_no_longer_trying_to_improve">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4014,11 +3051,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/gritting_teeth,_showing_teeth,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4033,11 +3066,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/having_shared_time,_experiences">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4052,11 +3081,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/heavy_walk,_stomping">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4071,11 +3096,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hiding_from_threat,_trying_not_to_move">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4090,11 +3111,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/high_thresh_hold_for_worry,_annoyance">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4109,11 +3126,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/hugging,_holding,_cuddling">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4128,11 +3141,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/incoherent,_out_of_control,_emotional">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4147,11 +3156,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/irritable,_touchy,_grouchy">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4166,11 +3171,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/judgment_of_illegitimacy,_unfairness">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4185,11 +3186,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/losing_ability_to_focus,_disoriented">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4204,11 +3201,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loss_of_control,_competence">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4223,11 +3216,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loss_of_relationship;_separation">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4242,11 +3231,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/loud_voice,_yelling,_screaming">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4261,11 +3246,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/low,_quiet,_slow,_monotonous_voice">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4280,11 +3261,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/moping,_brooding,_being_moody">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4299,11 +3276,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/negative_outlook;_thinking_negatively">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4318,11 +3291,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nervous,_fearful_talk">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4337,11 +3306,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/nervous_tension,_anxiety,_discomfort">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4356,11 +3321,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/not_getting_what_was_wanted,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4375,11 +3336,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/novel,_unfamiliar_situation">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4394,11 +3351,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/obscenities,_cursing">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4413,11 +3366,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/other_inspires_openness,_trust,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4432,11 +3381,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/person_knows_other_loves,_needs,_him_or_her">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4451,11 +3396,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_&apos;hyper&apos; -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/physically_energetic,_active,_&apos;hyper&apos;">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4470,11 +3411,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/pleading,_crying_for_help">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4489,11 +3426,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/positive_outlook;_seeing_bright_side">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4508,11 +3441,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/possibility_of_loss,_failure">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4527,11 +3456,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_esteem,_respect,_praise">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4546,11 +3471,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/receiving_love,_liking,_affection">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4565,11 +3486,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/red,_flushed_face">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4584,11 +3501,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/redefining_the_situation,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4603,11 +3516,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/rejection,_exclusion,_disapproval">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4622,11 +3531,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/reversal_or_loss_of_power,_status">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4641,11 +3546,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/saying_&apos;i_love_you&apos; -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/saying_&apos;i_love_you&apos;">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4660,11 +3561,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/screaming,_yelling">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4679,11 +3576,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/seeing_only_the_positive_side,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4698,11 +3591,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/shaking,_quivering,_trembling">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4717,11 +3606,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/shaky,_trembling_voice">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4736,11 +3621,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sitting,_lying_around;_inactive,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4755,11 +3636,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/slow,_shuffling_movements">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4774,11 +3651,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/slumped,_drooping_posture">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4793,11 +3666,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/suppressing_anger;_trying_not_to_show_it">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4812,11 +3681,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/suppressing_feelings;_acting_happy">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4831,11 +3696,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/sweating,_perspiring">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4850,11 +3711,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/taking_action,_becoming_active">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4869,11 +3726,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/talking_less,_being_speechless">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4888,11 +3741,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/task_success,_achievement">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4907,11 +3756,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/thinking_&apos;i&apos;m_right,&apos;_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/thinking_&apos;i&apos;m_right,&apos;_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4926,11 +3771,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/tired,_run-down,_low_in_energy">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4945,11 +3786,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/touching,_petting -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/touching,_petting">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4964,11 +3801,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/undesirable_outcome,_negative_surprise">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -4983,11 +3816,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/voice_is_enthusiastic,_excited">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -5002,11 +3831,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc. -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_the_best_for_other,_etc.">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
@@ -5021,11 +3846,7 @@ powerless, helpless, or impotent&quot; to change the unhappy circumstances
     <!-- https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/spice/SON/ShaverEmotions/wanting_to_see,_spend_time_with_other">
-<<<<<<< HEAD
         <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionEvent"/>
-=======
-        <rdf:type rdf:resource="https://w3id.org/spice/SON/ShaverEmotions/EmotionFeature"/>
->>>>>>> 6c71193e1e304ee73b5598b19de011fb570c4758
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/spice/SON/emotion/triggers"/>
